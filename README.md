@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Labwell
+
+The official website for Labwell, built with [Next.js](https://nextjs.org).
 
 ## Getting Started
 
