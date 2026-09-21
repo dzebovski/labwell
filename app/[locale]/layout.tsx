@@ -82,6 +82,7 @@ export default async function LocaleLayout({
               closeMenu: dictionary.accessibility.closeMenu,
               openSubmenu: dictionary.accessibility.openSubmenu,
               closeSubmenu: dictionary.accessibility.closeSubmenu,
+              closeMegaMenu: dictionary.accessibility.closeMegaMenu,
             }}
           />
         </div>

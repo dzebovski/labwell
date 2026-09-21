@@ -6,15 +6,19 @@ import { localizePath } from "@/lib/site-navigation";
 export function createPageMetadata(
   locale: Locale,
   title: string,
-  path: string,
+  descriptionOrPath: string,
+  path?: string,
 ): Metadata {
+  const canonicalPath = path ?? descriptionOrPath;
+  const description = path ? descriptionOrPath : undefined;
   return {
-    title: `${title} | Labwell`,
+    title,
+    ...(description ? { description } : {}),
     alternates: {
-      canonical: localizePath(locale, path),
+      canonical: localizePath(locale, canonicalPath),
       languages: {
-        uk: localizePath("uk", path),
-        en: localizePath("en", path),
+        uk: localizePath("uk", canonicalPath),
+        en: localizePath("en", canonicalPath),
       },
     },
   };

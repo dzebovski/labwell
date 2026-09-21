@@ -9,13 +9,14 @@
     "en": "English"
   },
   "navigation": {
-    "products": "Products",
-    "allProducts": "All products",
+    "products": "Product catalog",
+    "clinicalDirections": "Clinical directions",
     "brands": "Brands",
-    "allBrands": "All brands",
     "about": "About us",
-    "services": "Services",
-    "contacts": "Contacts"
+    "services": "Service & support",
+    "contacts": "Contacts",
+    "otherSolutions": "Other solutions",
+    "portfolio": "Portfolio"
   },
   "accessibility": {
     "home": "LabWell — home",
@@ -25,14 +26,16 @@
     "closeMenu": "Close menu",
     "openSubmenu": "Open submenu",
     "closeSubmenu": "Close submenu",
+    "closeMegaMenu": "Close navigation panel",
     "breadcrumbs": "Breadcrumbs"
   },
   "pages": {
     "home": "Home",
-    "products": "Products",
+    "products": "Product catalog",
+    "clinicalDirections": "Clinical directions",
     "brands": "Brands",
     "about": "About us",
-    "services": "Services",
+    "services": "Service & support",
     "contacts": "Contacts"
   }
 }

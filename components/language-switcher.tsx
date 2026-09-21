@@ -1,9 +1,12 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Check, ChevronDown } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 
+import styles from "@/components/labwell-ui.module.css";
 import { locales, type Locale } from "@/i18n/config";
+import { LOCALE_COOKIE_NAME, localizePath } from "@/lib/locale-routing";
 
 type LanguageSwitcherProps = {
   currentLocale: Locale;
@@ -11,41 +14,107 @@ type LanguageSwitcherProps = {
   names: Record<Locale, string>;
 };
 
-function localizePath(pathname: string, locale: Locale) {
-  const segments = pathname.split("/");
-  segments[1] = locale;
-
-  return segments.join("/") || `/${locale}`;
-}
+const localeDetails: Record<Locale, { compact: string; flag: string }> = {
+  uk: { compact: "Укр", flag: "🇺🇦" },
+  en: { compact: "EN", flag: "🇬🇧" },
+};
 
 export function LanguageSwitcher({
   currentLocale,
   label,
   names,
 }: LanguageSwitcherProps) {
-  const pathname = usePathname();
+  const pathname = usePathname() || "/";
+  const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false);
+  const [pendingLocale, setPendingLocale] = useState<Locale | null>(null);
+  const switcherRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    function closeOnOutsidePointer(event: PointerEvent) {
+      if (!switcherRef.current?.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    }
+
+    function closeOnEscape(event: KeyboardEvent) {
+      if (event.key === "Escape" && isOpen) {
+        setIsOpen(false);
+        triggerRef.current?.focus();
+      }
+    }
+
+    document.addEventListener("pointerdown", closeOnOutsidePointer);
+    document.addEventListener("keydown", closeOnEscape);
+    return () => {
+      document.removeEventListener("pointerdown", closeOnOutsidePointer);
+      document.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (!pendingLocale) return;
+
+    document.cookie = `${LOCALE_COOKIE_NAME}=${pendingLocale}; Max-Age=31536000; Path=/; SameSite=Lax`;
+    if (pendingLocale !== currentLocale) {
+      router.push(localizePath(pathname, pendingLocale));
+    }
+  }, [currentLocale, pathname, pendingLocale, router]);
+
+  function selectLocale(locale: Locale) {
+    setIsOpen(false);
+    setPendingLocale(locale);
+  }
+
+  const current = localeDetails[currentLocale];
 
   return (
-    <nav aria-label={label} className="flex items-center gap-1 rounded-full bg-zinc-100 p-1 dark:bg-zinc-900">
-      {locales.map((locale) => {
-        const isCurrent = locale === currentLocale;
+    <div ref={switcherRef} className={styles.languageSwitcher}>
+      <div className={styles.languageSwitcherCompact}>
+        <button
+          ref={triggerRef}
+          type="button"
+          aria-label={label}
+          aria-expanded={isOpen}
+          aria-haspopup="listbox"
+          onClick={() => setIsOpen((open) => !open)}
+          className={styles.languageTrigger}
+        >
+          <span aria-hidden="true">{current.flag}</span>
+          <span>{current.compact}</span>
+          <ChevronDown aria-hidden="true" size={14} className={isOpen ? styles.languageChevronOpen : undefined} />
+        </button>
 
-        return (
-          <Link
-            key={locale}
-            href={localizePath(pathname, locale)}
-            hrefLang={locale}
-            aria-current={isCurrent ? "page" : undefined}
-            className={`rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
-              isCurrent
-                ? "bg-white text-zinc-950 shadow-sm dark:bg-zinc-700 dark:text-white"
-                : "text-zinc-600 hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-white"
-            }`}
-          >
-            {names[locale]}
-          </Link>
-        );
-      })}
-    </nav>
+        {isOpen ? (
+          <div role="listbox" aria-label={label} className={styles.languagePopover}>
+            {locales.map((locale) => {
+              const isCurrent = locale === currentLocale;
+              const details = localeDetails[locale];
+              return (
+                <button key={locale} type="button" role="option" aria-selected={isCurrent} onClick={() => selectLocale(locale)} className={`${styles.languageOption} ${isCurrent ? styles.languageOptionActive : ""}`}>
+                  <span aria-hidden="true">{details.flag}</span>
+                  <span>{names[locale]}</span>
+                  {isCurrent ? <Check aria-hidden="true" size={16} /> : null}
+                </button>
+              );
+            })}
+          </div>
+        ) : null}
+      </div>
+
+      <nav aria-label={label} className={styles.languageMobileOptions}>
+        {locales.map((locale) => {
+          const isCurrent = locale === currentLocale;
+          return (
+            <button key={locale} type="button" aria-current={isCurrent ? "page" : undefined} onClick={() => selectLocale(locale)} className={`${styles.languageMobileOption} ${isCurrent ? styles.languageMobileOptionActive : ""}`}>
+              <span aria-hidden="true">{localeDetails[locale].flag}</span>
+              <span>{names[locale]}</span>
+              {isCurrent ? <Check aria-hidden="true" size={16} /> : null}
+            </button>
+          );
+        })}
+      </nav>
+    </div>
   );
 }

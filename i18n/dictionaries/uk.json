@@ -9,13 +9,14 @@
     "en": "English"
   },
   "navigation": {
-    "products": "Продукція",
-    "allProducts": "Уся продукція",
+    "products": "Каталог продукції",
+    "clinicalDirections": "Клінічні напрямки",
     "brands": "Бренди",
-    "allBrands": "Усі бренди",
     "about": "Про компанію",
-    "services": "Послуги",
-    "contacts": "Контакти"
+    "services": "Сервіс та підтримка",
+    "contacts": "Контакти",
+    "otherSolutions": "Інші рішення",
+    "portfolio": "Асортимент"
   },
   "accessibility": {
     "home": "LabWell — головна",
@@ -25,14 +26,16 @@
     "closeMenu": "Закрити меню",
     "openSubmenu": "Відкрити підменю",
     "closeSubmenu": "Закрити підменю",
+    "closeMegaMenu": "Закрити панель навігації",
     "breadcrumbs": "Навігаційний шлях"
   },
   "pages": {
     "home": "Головна",
-    "products": "Продукція",
+    "products": "Каталог продукції",
+    "clinicalDirections": "Клінічні напрямки",
     "brands": "Бренди",
     "about": "Про компанію",
-    "services": "Послуги",
+    "services": "Сервіс та підтримка",
     "contacts": "Контакти"
   }
 }

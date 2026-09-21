@@ -1,193 +1,225 @@
 import type { Locale } from "@/i18n/config";
+import {
+  contentPages,
+  getPageById,
+  navigationPlacements,
+  type ContentPageRecord,
+  type LocalizedText,
+  type NavigationPlacement,
+} from "@/lib/navigation-content";
 
-export type LocalizedName = Record<Locale, string>;
+export type { ContentPageRecord, LocalizedText, NavigationPlacement } from "@/lib/navigation-content";
+export {
+  brandPages,
+  clinicalPages,
+  contentPages,
+  getPageById,
+  getPageByPath,
+  getPageBySlug,
+  navigationPlacements,
+  productPages,
+} from "@/lib/navigation-content";
 
-export type DiagnosticArea = {
-  id: `da-${string}`;
-  slug: string;
-  name: LocalizedName;
-};
-
-export type ProductType = {
-  id: `pt-${string}`;
-  slug: string;
-  name: LocalizedName;
-  areaSlugs: string[];
-};
-
-export type Brand = {
-  id: `brd-${string}`;
-  slug: string;
-  name: LocalizedName;
-};
-
-export type HeaderNavigationLink = {
+export type HeaderMegaLeaf = {
+  id: string;
   label: string;
   href: string;
-  children?: HeaderNavigationLink[];
+  brand: string;
+  title: string;
+  description: string;
 };
 
-export type HeaderNavigationItem = HeaderNavigationLink & {
-  children?: HeaderNavigationLink[];
+export type HeaderMegaSection = {
+  id: string;
+  label: string;
+  links: HeaderMegaLeaf[];
 };
 
-export const diagnosticAreas = [
-  { id: "da-immunoassay", slug: "immunoassay", name: { uk: "Імуноаналіз", en: "Immunoassay" } },
-  { id: "da-autoimmune-testing", slug: "autoimmune-testing", name: { uk: "Автоімунне тестування", en: "Autoimmune testing" } },
-  { id: "da-biochemistry", slug: "biochemistry", name: { uk: "Біохімія", en: "Biochemistry" } },
-  { id: "da-electrolytes", slug: "electrolytes", name: { uk: "Електроліти", en: "Electrolytes" } },
-  { id: "da-integrated-systems", slug: "integrated-systems", name: { uk: "Інтегровані системи", en: "Integrated systems" } },
-  { id: "da-lab-automation", slug: "lab-automation", name: { uk: "Автоматизація лабораторії", en: "Laboratory automation" } },
-  { id: "da-molecular-diagnostics", slug: "molecular-diagnostics", name: { uk: "Молекулярна діагностика", en: "Molecular diagnostics" } },
-  { id: "da-poct", slug: "poct", name: { uk: "Експрес-діагностика POCT", en: "POCT" } },
-  { id: "da-immunohematology", slug: "immunohematology", name: { uk: "Імуногематологія", en: "Immunohematology" } },
-  { id: "da-diabetes", slug: "diabetes", name: { uk: "Діабет", en: "Diabetes" } },
-  { id: "da-hemoglobinopathies", slug: "hemoglobinopathies", name: { uk: "Гемоглобінопатії", en: "Hemoglobinopathies" } },
-  { id: "da-infectious-diseases", slug: "infectious-diseases", name: { uk: "Інфекційні захворювання", en: "Infectious diseases" } },
-  { id: "da-microbiology", slug: "microbiology", name: { uk: "Мікробіологія", en: "Microbiology" } },
-  { id: "da-newborn-screening", slug: "newborn-screening", name: { uk: "Неонатальний скринінг", en: "Newborn screening" } },
-  { id: "da-quality-control", slug: "quality-control", name: { uk: "Контроль якості", en: "Quality control" } },
-  { id: "da-toxicology", slug: "toxicology", name: { uk: "Токсикологія", en: "Toxicology" } },
-  { id: "da-microplate-automation", slug: "microplate-automation", name: { uk: "Автоматизація мікропланшетів", en: "Microplate automation" } },
-  { id: "da-western-blot", slug: "western-blot", name: { uk: "Western Blot", en: "Western blot" } },
-  { id: "da-incubation", slug: "incubation", name: { uk: "Інкубація", en: "Incubation" } },
-] as const satisfies readonly DiagnosticArea[];
+export type HeaderMegaGroup = {
+  id: string;
+  label: string;
+  sections: HeaderMegaSection[];
+};
 
-export const productTypes = [
-  {
-    id: "pt-equipment",
-    slug: "equipment",
-    name: { uk: "Лабораторне обладнання", en: "Laboratory equipment" },
-    areaSlugs: [
-      "immunoassay",
-      "autoimmune-testing",
-      "infectious-diseases",
-      "biochemistry",
-      "electrolytes",
-      "integrated-systems",
-      "lab-automation",
-      "molecular-diagnostics",
-      "immunohematology",
-      "diabetes",
-      "hemoglobinopathies",
-      "newborn-screening",
-      "toxicology",
-      "microplate-automation",
-      "western-blot",
-      "incubation",
-    ],
-  },
-  {
-    id: "pt-reagents-tests",
-    slug: "reagents-tests",
-    name: { uk: "Реагенти й тести", en: "Reagents and tests" },
-    areaSlugs: ["immunoassay", "biochemistry", "electrolytes", "molecular-diagnostics", "poct", "microbiology"],
-  },
-  {
-    id: "pt-quality-control",
-    slug: "quality-control",
-    name: { uk: "Контроль якості", en: "Quality control" },
-    areaSlugs: ["quality-control", "immunoassay", "biochemistry", "molecular-diagnostics"],
-  },
-  {
-    id: "pt-consumables-accessories",
-    slug: "consumables-accessories",
-    name: { uk: "Витратні матеріали й аксесуари", en: "Consumables and accessories" },
-    areaSlugs: [],
-  },
-  {
-    id: "pt-software",
-    slug: "software",
-    name: { uk: "Програмне забезпечення", en: "Software" },
-    areaSlugs: [],
-  },
-] as const satisfies readonly ProductType[];
+export type HeaderNavigationItem =
+  | {
+      type: "link";
+      id: string;
+      label: string;
+      href: string;
+    }
+  | {
+      type: "mega";
+      id: string;
+      label: string;
+      href: string;
+      panel: "catalog" | "clinical" | "brands";
+      groups: HeaderMegaGroup[];
+    };
 
-export const brands = [
-  { id: "brd-snibe", slug: "snibe", name: { uk: "SNIBE", en: "SNIBE" } },
-  { id: "brd-biorad", slug: "bio-rad", name: { uk: "Bio-Rad", en: "Bio-Rad" } },
-] as const satisfies readonly Brand[];
-
-export function getProductType(slug: string) {
-  return productTypes.find((productType) => productType.slug === slug);
-}
-
-export function getDiagnosticArea(slug: string) {
-  return diagnosticAreas.find((area) => area.slug === slug);
-}
-
-export function getAreaForProductType(typeSlug: string, areaSlug: string) {
-  const productType = getProductType(typeSlug);
-
-  if (!productType || !productType.areaSlugs.some((slug) => slug === areaSlug)) {
-    return undefined;
-  }
-
-  return getDiagnosticArea(areaSlug);
-}
-
-export function getBrand(slug: string) {
-  return brands.find((brand) => brand.slug === slug);
-}
+type NavigationLabels = {
+  products: string;
+  clinicalDirections: string;
+  brands: string;
+  about: string;
+  services: string;
+  contacts: string;
+  otherSolutions: string;
+  portfolio: string;
+};
 
 export function localizePath(locale: Locale, path: string) {
   return `/${locale}${path === "/" ? "" : path}`;
 }
 
-type NavigationLabels = {
-  products: string;
-  allProducts: string;
-  brands: string;
-  allBrands: string;
-  about: string;
-  services: string;
-  contacts: string;
-};
+function stableId(value: string) {
+  return value
+    .normalize("NFKD")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
+function uniqueBy<T>(items: readonly T[], getKey: (item: T) => string) {
+  const seen = new Set<string>();
+  return items.filter((item) => {
+    const key = getKey(item);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+function toLeaf(
+  placement: NavigationPlacement,
+  page: ContentPageRecord,
+  locale: Locale,
+): HeaderMegaLeaf {
+  return {
+    id: `${placement.id}-${placement.sourceRow}`,
+    label: placement.navLabel[locale],
+    href: localizePath(locale, page.canonicalPath),
+    brand: page.brand,
+    title: page.title[locale],
+    description: page.description[locale],
+  };
+}
+
+function getPage(placement: NavigationPlacement) {
+  const page = getPageById(placement.id);
+  if (!page) throw new Error(`Navigation placement references unknown page: ${placement.id}`);
+  return page;
+}
+
+function groupPlacements(
+  placements: readonly NavigationPlacement[],
+  locale: Locale,
+  fallbackSection: LocalizedText,
+) {
+  return uniqueBy(placements, (placement) => placement.subcategory.en).map((groupPlacement) => {
+    const groupRows = placements.filter(
+      (placement) => placement.subcategory.en === groupPlacement.subcategory.en,
+    );
+    const sectionKeys = uniqueBy(groupRows, (placement) => placement.group?.en ?? "__other__");
+
+    return {
+      id: stableId(groupPlacement.subcategory.en),
+      label: groupPlacement.subcategory[locale],
+      sections: sectionKeys.map((sectionPlacement) => {
+        const groupKey = sectionPlacement.group?.en ?? "__other__";
+        const rows = groupRows.filter(
+          (placement) => (placement.group?.en ?? "__other__") === groupKey,
+        );
+        return {
+          id: `${stableId(groupPlacement.subcategory.en)}-${stableId(groupKey) || "other"}`,
+          label: sectionPlacement.group?.[locale] ?? fallbackSection[locale],
+          links: rows.map((placement) => toLeaf(placement, getPage(placement), locale)),
+        };
+      }),
+    } satisfies HeaderMegaGroup;
+  });
+}
+
+function buildBrandGroups(locale: Locale) {
+  const placements = navigationPlacements.filter((placement) => placement.kind === "brand");
+  return uniqueBy(placements, (placement) => placement.subcategory.en).map((brandPlacement) => {
+    const rows = placements.filter(
+      (placement) => placement.subcategory.en === brandPlacement.subcategory.en,
+    );
+    return {
+      id: stableId(brandPlacement.subcategory.en),
+      label: brandPlacement.subcategory[locale],
+      sections: [
+        {
+          id: `${stableId(brandPlacement.subcategory.en)}-portfolio`,
+          label: brandPlacement.subcategory[locale],
+          links: rows.map((placement) => toLeaf(placement, getPage(placement), locale)),
+        },
+      ],
+    } satisfies HeaderMegaGroup;
+  });
+}
 
 export function buildHeaderNavigation(
   locale: Locale,
   labels: NavigationLabels,
 ): HeaderNavigationItem[] {
   const productsPath = localizePath(locale, "/products");
+  const clinicalPath = localizePath(locale, "/clinical-directions");
   const brandsPath = localizePath(locale, "/brands");
+  const productPlacements = navigationPlacements.filter(
+    (placement) => placement.category.en === "Product catalog",
+  );
+  const clinicalPlacements = navigationPlacements.filter(
+    (placement) => placement.category.en === "Clinical directions",
+  );
 
   return [
     {
+      type: "mega",
+      id: "products",
+      panel: "catalog",
       label: labels.products,
       href: productsPath,
-      children: [
-        { label: labels.allProducts, href: productsPath },
-        ...productTypes.map((productType) => ({
-          label: productType.name[locale],
-          href: `${productsPath}/${productType.slug}`,
-          children: productType.areaSlugs.map((areaSlug) => {
-            const area = getDiagnosticArea(areaSlug);
-
-            if (!area) {
-              throw new Error(`Unknown diagnostic area: ${areaSlug}`);
-            }
-
-            return {
-              label: area.name[locale],
-              href: `${productsPath}/${productType.slug}/${area.slug}`,
-            };
-          }),
-        })),
-      ],
+      groups: groupPlacements(productPlacements, locale, {
+        en: labels.portfolio,
+        uk: labels.portfolio,
+      }),
     },
     {
+      type: "mega",
+      id: "clinical-directions",
+      panel: "clinical",
+      label: labels.clinicalDirections,
+      href: clinicalPath,
+      groups: groupPlacements(clinicalPlacements, locale, {
+        en: labels.otherSolutions,
+        uk: labels.otherSolutions,
+      }),
+    },
+    {
+      type: "mega",
+      id: "brands",
+      panel: "brands",
       label: labels.brands,
       href: brandsPath,
-      children: [
-        { label: labels.allBrands, href: brandsPath },
-        ...brands.map((brand) => ({
-          label: brand.name[locale],
-          href: `${brandsPath}/${brand.slug}`,
-        })),
-      ],
+      groups: buildBrandGroups(locale),
     },
-    { label: labels.about, href: localizePath(locale, "/about") },
-    { label: labels.services, href: localizePath(locale, "/services") },
-    { label: labels.contacts, href: localizePath(locale, "/contacts") },
+    { type: "link", id: "services", label: labels.services, href: localizePath(locale, "/services") },
+    { type: "link", id: "about", label: labels.about, href: localizePath(locale, "/about") },
+    { type: "link", id: "contacts", label: labels.contacts, href: localizePath(locale, "/contacts") },
   ];
+}
+
+export function getCanonicalPlacement(pageId: string) {
+  const page = contentPages.find((item) => item.id === pageId);
+  if (!page) return undefined;
+
+  if (page.kind === "product") {
+    return navigationPlacements.find(
+      (placement) => placement.id === pageId && placement.category.en === "Product catalog",
+    );
+  }
+
+  return navigationPlacements.find((placement) => placement.id === pageId);
 }

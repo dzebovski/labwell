@@ -73,10 +73,10 @@ const spacingTokens = [
 ] as const;
 
 const navItems: HeaderNavItem[] = [
-  { label: "Обладнання", href: "#patterns" },
-  { label: "Реагенти", href: "#components" },
-  { label: "Сервіс", href: "#principles" },
-  { label: "Про нас", href: "#brand" },
+  { type: "link", id: "equipment", label: "Обладнання", href: "#patterns" },
+  { type: "link", id: "reagents", label: "Реагенти", href: "#components" },
+  { type: "link", id: "services", label: "Сервіс", href: "#principles" },
+  { type: "link", id: "about", label: "Про нас", href: "#brand" },
 ];
 
 const ukrainianProduct: ProductData = {
