@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "title": "Labwell",
+    "description": "Labwell — українська версія сайту"
+  },
+  "languageSwitcher": {
+    "label": "Змінити мову",
+    "uk": "Українська",
+    "en": "English"
+  },
+  "navigation": {
+    "products": "Продукція",
+    "allProducts": "Уся продукція",
+    "brands": "Бренди",
+    "allBrands": "Усі бренди",
+    "about": "Про компанію",
+    "services": "Послуги",
+    "contacts": "Контакти"
+  },
+  "accessibility": {
+    "home": "LabWell — головна",
+    "primaryNavigation": "Основна навігація",
+    "mobileNavigation": "Мобільна навігація",
+    "openMenu": "Відкрити меню",
+    "closeMenu": "Закрити меню",
+    "openSubmenu": "Відкрити підменю",
+    "closeSubmenu": "Закрити підменю",
+    "breadcrumbs": "Навігаційний шлях"
+  },
+  "pages": {
+    "home": "Головна",
+    "products": "Продукція",
+    "brands": "Бренди",
+    "about": "Про компанію",
+    "services": "Послуги",
+    "contacts": "Контакти"
+  }
+}

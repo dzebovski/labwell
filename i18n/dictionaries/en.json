@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "title": "Labwell",
+    "description": "Labwell — English website"
+  },
+  "languageSwitcher": {
+    "label": "Change language",
+    "uk": "Українська",
+    "en": "English"
+  },
+  "navigation": {
+    "products": "Products",
+    "allProducts": "All products",
+    "brands": "Brands",
+    "allBrands": "All brands",
+    "about": "About us",
+    "services": "Services",
+    "contacts": "Contacts"
+  },
+  "accessibility": {
+    "home": "LabWell — home",
+    "primaryNavigation": "Primary navigation",
+    "mobileNavigation": "Mobile navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "openSubmenu": "Open submenu",
+    "closeSubmenu": "Close submenu",
+    "breadcrumbs": "Breadcrumbs"
+  },
+  "pages": {
+    "home": "Home",
+    "products": "Products",
+    "brands": "Brands",
+    "about": "About us",
+    "services": "Services",
+    "contacts": "Contacts"
+  }
+}
