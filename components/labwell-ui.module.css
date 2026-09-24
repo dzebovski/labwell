@@ -745,7 +745,8 @@
   flex: 1;
   width: min(100%, var(--container-max));
   margin-inline: auto;
-  padding: clamp(2.5rem, 7vw, 6rem) var(--container-gutter);
+  /* Same 1rem gap below the header as above it. */
+  padding: 1rem var(--container-gutter) clamp(2rem, 5vw, 4rem);
 }
 
 .pageHeading {
