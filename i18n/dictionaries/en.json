@@ -37,5 +37,9 @@
     "about": "About us",
     "services": "Service & support",
     "contacts": "Contacts"
+  },
+  "contentPage": {
+    "viewSource": "View source",
+    "todoHeading": "What needs completing"
   }
 }

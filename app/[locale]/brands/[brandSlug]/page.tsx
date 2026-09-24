@@ -1,65 +1,23 @@
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-
 import { ContentDetailPage } from "@/components/patterns/content-detail-page";
-import { isLocale } from "@/i18n/config";
-import { getDictionary } from "@/i18n/dictionaries";
-import { brandPages, getPageByPath } from "@/lib/navigation-content";
-import { createPageMetadata } from "@/lib/page-metadata";
-import { getCanonicalPlacement } from "@/lib/site-navigation";
+import { getBrandPage, listPages } from "@/lib/catalog";
+import { contentPageMetadata, requireContentPage } from "@/lib/content-route";
 
-type Props = {
-  params: Promise<{ locale: string; brandSlug: string }>;
-};
+type Props = { params: Promise<{ locale: string; brandSlug: string }> };
 
-const aboutPages = brandPages.filter(
-  (page) => page.canonicalPath.split("/").length === 3,
-);
+export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return aboutPages.map((page) => ({
-    brandSlug: page.canonicalPath.split("/").at(-1)!,
-  }));
+  return listPages("brand")
+    .filter((page) => !page.slug)
+    .map((page) => ({ brandSlug: page.brand.id }));
 }
 
-async function resolve({ params }: Props) {
+export async function generateMetadata({ params }: Props) {
   const { locale, brandSlug } = await params;
-
-  if (!isLocale(locale)) notFound();
-
-  const page = getPageByPath(`/brands/${brandSlug}`);
-  const placement =
-    page?.kind === "brand" ? getCanonicalPlacement(page.id) : undefined;
-
-  if (!page || !placement) notFound();
-
-  return { locale, page, placement };
+  return contentPageMetadata(locale, getBrandPage(brandSlug));
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const result = await resolve({ params });
-
-  return createPageMetadata(
-    result.locale,
-    result.page.title[result.locale],
-    result.page.description[result.locale],
-    result.page.canonicalPath,
-  );
-}
-
-export default async function BrandAboutPage({ params }: Props) {
-  const { locale, page, placement } = await resolve({ params });
-  const dictionary = await getDictionary(locale);
-
-  return (
-    <ContentDetailPage
-      locale={locale}
-      page={page}
-      placement={placement}
-      labels={{
-        ...dictionary.pages,
-        breadcrumbs: dictionary.accessibility.breadcrumbs,
-      }}
-    />
-  );
+export default async function BrandOverviewPage({ params }: Props) {
+  const { locale, brandSlug } = await params;
+  return <ContentDetailPage {...requireContentPage(locale, getBrandPage(brandSlug))} />;
 }

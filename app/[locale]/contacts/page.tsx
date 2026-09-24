@@ -5,7 +5,7 @@ import { PageHeading } from "@/components/patterns/page-heading";
 import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { createPageMetadata } from "@/lib/page-metadata";
-import { localizePath } from "@/lib/site-navigation";
+import { withLocale } from "@/lib/locale-routing";
 
 type ContactsPageProps = { params: Promise<{ locale: string }> };
 
@@ -25,7 +25,7 @@ export default async function ContactsPage({ params }: ContactsPageProps) {
     <PageHeading
       breadcrumbLabel={dictionary.accessibility.breadcrumbs}
       breadcrumbs={[
-        { label: dictionary.pages.home, href: localizePath(locale, "/") },
+        { label: dictionary.pages.home, href: withLocale(locale, "/") },
         { label: dictionary.pages.contacts },
       ]}
       title={dictionary.pages.contacts}

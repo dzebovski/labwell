@@ -22,6 +22,30 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Content and navigation
+
+All catalog pages and the header menus are generated from files in `content/`:
+
+| File | What it holds |
+|---|---|
+| `content/brands.ts` | Brands: id (URL segment), name, logo. Order = columns in the "Brands" menu. |
+| `content/taxonomy.ts` | Menu groups and sections for "Product catalog" and "Clinical directions". Ids are stable; labels can be edited freely. |
+| `content/products/*.ts` | One file per product → `/products/{slug}` |
+| `content/clinical/*.ts` | One file per clinical page → `/clinical-directions/{direction}/{slug}` |
+| `content/brand-pages/*.ts` | Brand overview (`/brands/{brand}`) and brand topic pages (`/brands/{brand}/{slug}`) |
+| `content/index.ts` | Registry of all files. The order in each list is the order in the menus. |
+
+### Add a product
+
+1. Copy an existing file, e.g. `content/products/maglumi-x10.ts`, to `content/products/{slug}.ts`.
+2. Fill in `slug`, `brand`, texts and `catalog: { group, section }` — the editor autocompletes valid ids.
+   Add `clinical: [{ direction: "..." }]` to also list it under "Clinical directions".
+3. Import it in `content/index.ts` and put it in the `products` list where it should appear in the menu.
+4. Run `npm test` — it checks unique URLs, valid menu places and that every file is registered.
+
+To add a menu group or section, add it to `content/taxonomy.ts`; to add a brand, add it to `content/brands.ts` and put its logo in `public/`.
+Use `order: 1` (or higher) on a placement to move an item below the others in its section.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

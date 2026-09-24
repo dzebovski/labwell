@@ -17,6 +17,22 @@ const contentSecurityPolicy = [
 ].join("; ");
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    // Old catalog URLs from the previous category-based navigation.
+    return [
+      {
+        source:
+          "/:locale(uk|en)/products/:legacy(equipment|reagents-tests|quality-control|consumables-accessories|software)",
+        destination: "/:locale/products",
+        permanent: false,
+      },
+      {
+        source: "/:locale(uk|en)/products/:slug/:area",
+        destination: "/:locale/products",
+        permanent: false,
+      },
+    ];
+  },
   async headers() {
     return [
       {

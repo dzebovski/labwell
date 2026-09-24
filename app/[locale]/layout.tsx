@@ -7,7 +7,8 @@ import { SiteHeader } from "@/components/patterns/site-header";
 import styles from "@/components/labwell-ui.module.css";
 import { isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
-import { buildHeaderNavigation, localizePath } from "@/lib/site-navigation";
+import { withLocale } from "@/lib/locale-routing";
+import { buildHeaderNavigation } from "@/lib/site-navigation";
 
 import "../globals.css";
 
@@ -65,7 +66,7 @@ export default async function LocaleLayout({
         <div className={styles.siteHeaderWrap}>
           <SiteHeader
             navItems={navItems}
-            homeHref={localizePath(locale, "/")}
+            homeHref={withLocale(locale, "/")}
             languageSwitcher={{
               currentLocale: locale,
               label: dictionary.languageSwitcher.label,
