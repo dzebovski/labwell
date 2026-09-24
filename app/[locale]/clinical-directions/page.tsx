@@ -4,7 +4,7 @@ import { PageHeading } from "@/components/patterns/page-heading";
 import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { createPageMetadata } from "@/lib/page-metadata";
-import { localizePath } from "@/lib/site-navigation";
+import { withLocale } from "@/lib/locale-routing";
 type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> { const { locale } = await params; if (!isLocale(locale)) return {}; const dictionary = await getDictionary(locale); return createPageMetadata(locale, dictionary.pages.clinicalDirections, "/clinical-directions"); }
-export default async function ClinicalDirectionsPage({ params }: Props) { const { locale } = await params; if (!isLocale(locale)) notFound(); const dictionary = await getDictionary(locale); return <PageHeading breadcrumbLabel={dictionary.accessibility.breadcrumbs} breadcrumbs={[{ label: dictionary.pages.home, href: localizePath(locale, "/") }, { label: dictionary.pages.clinicalDirections }]} title={dictionary.pages.clinicalDirections} />; }
+export default async function ClinicalDirectionsPage({ params }: Props) { const { locale } = await params; if (!isLocale(locale)) notFound(); const dictionary = await getDictionary(locale); return <PageHeading breadcrumbLabel={dictionary.accessibility.breadcrumbs} breadcrumbs={[{ label: dictionary.pages.home, href: withLocale(locale, "/") }, { label: dictionary.pages.clinicalDirections }]} title={dictionary.pages.clinicalDirections} />; }

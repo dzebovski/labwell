@@ -2,8 +2,9 @@ import assert from "node:assert/strict";
 import test from "node:test";
 
 import {
-  localizePath,
   resolvePreferredLocale,
+  switchLocale,
+  withLocale,
 } from "./locale-routing.ts";
 
 test("resolves valid locale cookies", () => {
@@ -17,8 +18,14 @@ test("falls back to Ukrainian for missing or invalid cookies", () => {
   assert.equal(resolvePreferredLocale("de"), "uk");
 });
 
-test("localizes only the first path segment", () => {
-  assert.equal(localizePath("/uk/products/item", "en"), "/en/products/item");
-  assert.equal(localizePath("/en/products/item", "uk"), "/uk/products/item");
-  assert.equal(localizePath("/", "en"), "/en");
+test("switches only the first path segment", () => {
+  assert.equal(switchLocale("/uk/products/item", "en"), "/en/products/item");
+  assert.equal(switchLocale("/en/products/item", "uk"), "/uk/products/item");
+  assert.equal(switchLocale("/", "en"), "/en");
+  assert.equal(switchLocale("/products", "en"), "/en/products");
+});
+
+test("prefixes site paths with a locale", () => {
+  assert.equal(withLocale("uk", "/"), "/uk");
+  assert.equal(withLocale("en", "/products/d-10"), "/en/products/d-10");
 });

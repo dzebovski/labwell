@@ -1,30 +1,19 @@
-import type { Locale } from "@/i18n/config";
+import type { Locale } from "../i18n/config.ts";
+import { brands, type BrandLogo } from "../content/brands.ts";
 import {
-  contentPages,
-  getPageById,
-  navigationPlacements,
-  type ContentPageRecord,
-  type LocalizedText,
-  type NavigationPlacement,
-} from "@/lib/navigation-content";
-
-export type { ContentPageRecord, LocalizedText, NavigationPlacement } from "@/lib/navigation-content";
-export {
-  brandPages,
-  clinicalPages,
-  contentPages,
-  getPageById,
-  getPageByPath,
-  getPageBySlug,
-  navigationPlacements,
-  productPages,
-} from "@/lib/navigation-content";
+  getMenuGroups,
+  getMenuPages,
+  type ContentPage,
+  type MenuId,
+} from "./catalog.ts";
+import { withLocale } from "./locale-routing.ts";
 
 export type HeaderMegaLeaf = {
   id: string;
   label: string;
   href: string;
   brand: string;
+  logo?: BrandLogo;
   title: string;
   description: string;
 };
@@ -38,6 +27,7 @@ export type HeaderMegaSection = {
 export type HeaderMegaGroup = {
   id: string;
   label: string;
+  logo?: BrandLogo;
   sections: HeaderMegaSection[];
 };
 
@@ -68,158 +58,93 @@ type NavigationLabels = {
   portfolio: string;
 };
 
-export function localizePath(locale: Locale, path: string) {
-  return `/${locale}${path === "/" ? "" : path}`;
-}
-
-function stableId(value: string) {
-  return value
-    .normalize("NFKD")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/(^-|-$)/g, "");
-}
-
-function uniqueBy<T>(items: readonly T[], getKey: (item: T) => string) {
-  const seen = new Set<string>();
-  return items.filter((item) => {
-    const key = getKey(item);
-    if (seen.has(key)) return false;
-    seen.add(key);
-    return true;
-  });
-}
-
-function toLeaf(
-  placement: NavigationPlacement,
-  page: ContentPageRecord,
-  locale: Locale,
-): HeaderMegaLeaf {
+function toLeaf(menu: MenuId, page: ContentPage, locale: Locale): HeaderMegaLeaf {
   return {
-    id: `${placement.id}-${placement.sourceRow}`,
-    label: placement.navLabel[locale],
-    href: localizePath(locale, page.canonicalPath),
-    brand: page.brand,
+    id: `${menu}:${page.path}`,
+    label: page.navLabel[locale],
+    href: withLocale(locale, page.path),
+    brand: page.brand.name,
+    logo: page.brand.logo,
     title: page.title[locale],
     description: page.description[locale],
   };
 }
 
-function getPage(placement: NavigationPlacement) {
-  const page = getPageById(placement.id);
-  if (!page) throw new Error(`Navigation placement references unknown page: ${placement.id}`);
-  return page;
-}
-
-function groupPlacements(
-  placements: readonly NavigationPlacement[],
+/** Groups of a taxonomy menu; the default (section-less) items go last under `defaultSectionLabel`. */
+function buildTaxonomyGroups(
+  menu: "catalog" | "clinical",
   locale: Locale,
-  fallbackSection: LocalizedText,
-) {
-  return uniqueBy(placements, (placement) => placement.subcategory.en).map((groupPlacement) => {
-    const groupRows = placements.filter(
-      (placement) => placement.subcategory.en === groupPlacement.subcategory.en,
-    );
-    const sectionKeys = uniqueBy(groupRows, (placement) => placement.group?.en ?? "__other__");
-
-    return {
-      id: stableId(groupPlacement.subcategory.en),
-      label: groupPlacement.subcategory[locale],
-      sections: sectionKeys.map((sectionPlacement) => {
-        const groupKey = sectionPlacement.group?.en ?? "__other__";
-        const rows = groupRows.filter(
-          (placement) => (placement.group?.en ?? "__other__") === groupKey,
-        );
-        return {
-          id: `${stableId(groupPlacement.subcategory.en)}-${stableId(groupKey) || "other"}`,
-          label: sectionPlacement.group?.[locale] ?? fallbackSection[locale],
-          links: rows.map((placement) => toLeaf(placement, getPage(placement), locale)),
-        };
-      }),
-    } satisfies HeaderMegaGroup;
-  });
+  defaultSectionLabel: string,
+): HeaderMegaGroup[] {
+  return getMenuGroups(menu)
+    .map((group) => {
+      const sections = [
+        ...group.sections.map((section) => ({ id: section.id, label: section.label[locale] })),
+        { id: undefined, label: defaultSectionLabel },
+      ];
+      return {
+        id: group.id,
+        label: group.label[locale],
+        sections: sections
+          .map((section) => ({
+            id: `${group.id}-${section.id ?? "other"}`,
+            label: section.label,
+            links: getMenuPages(menu, group.id, section.id).map((page) => toLeaf(menu, page, locale)),
+          }))
+          .filter((section) => section.links.length > 0),
+      };
+    })
+    .filter((group) => group.sections.length > 0);
 }
 
-function buildBrandGroups(locale: Locale) {
-  const placements = navigationPlacements.filter((placement) => placement.kind === "brand");
-  return uniqueBy(placements, (placement) => placement.subcategory.en).map((brandPlacement) => {
-    const rows = placements.filter(
-      (placement) => placement.subcategory.en === brandPlacement.subcategory.en,
-    );
-    return {
-      id: stableId(brandPlacement.subcategory.en),
-      label: brandPlacement.subcategory[locale],
+function buildBrandGroups(locale: Locale): HeaderMegaGroup[] {
+  return brands
+    .map((brand) => ({
+      id: brand.id,
+      label: brand.name,
+      logo: brand.logo,
       sections: [
         {
-          id: `${stableId(brandPlacement.subcategory.en)}-portfolio`,
-          label: brandPlacement.subcategory[locale],
-          links: rows.map((placement) => toLeaf(placement, getPage(placement), locale)),
+          id: `${brand.id}-portfolio`,
+          label: brand.name,
+          links: getMenuPages("brands", brand.id).map((page) => toLeaf("brands", page, locale)),
         },
       ],
-    } satisfies HeaderMegaGroup;
-  });
+    }))
+    .filter((group) => group.sections[0].links.length > 0);
 }
 
 export function buildHeaderNavigation(
   locale: Locale,
   labels: NavigationLabels,
 ): HeaderNavigationItem[] {
-  const productsPath = localizePath(locale, "/products");
-  const clinicalPath = localizePath(locale, "/clinical-directions");
-  const brandsPath = localizePath(locale, "/brands");
-  const productPlacements = navigationPlacements.filter(
-    (placement) => placement.category.en === "Product catalog",
-  );
-  const clinicalPlacements = navigationPlacements.filter(
-    (placement) => placement.category.en === "Clinical directions",
-  );
-
   return [
     {
       type: "mega",
       id: "products",
       panel: "catalog",
       label: labels.products,
-      href: productsPath,
-      groups: groupPlacements(productPlacements, locale, {
-        en: labels.portfolio,
-        uk: labels.portfolio,
-      }),
+      href: withLocale(locale, "/products"),
+      groups: buildTaxonomyGroups("catalog", locale, labels.portfolio),
     },
     {
       type: "mega",
       id: "clinical-directions",
       panel: "clinical",
       label: labels.clinicalDirections,
-      href: clinicalPath,
-      groups: groupPlacements(clinicalPlacements, locale, {
-        en: labels.otherSolutions,
-        uk: labels.otherSolutions,
-      }),
+      href: withLocale(locale, "/clinical-directions"),
+      groups: buildTaxonomyGroups("clinical", locale, labels.otherSolutions),
     },
     {
       type: "mega",
       id: "brands",
       panel: "brands",
       label: labels.brands,
-      href: brandsPath,
+      href: withLocale(locale, "/brands"),
       groups: buildBrandGroups(locale),
     },
-    { type: "link", id: "services", label: labels.services, href: localizePath(locale, "/services") },
-    { type: "link", id: "about", label: labels.about, href: localizePath(locale, "/about") },
-    { type: "link", id: "contacts", label: labels.contacts, href: localizePath(locale, "/contacts") },
+    { type: "link", id: "services", label: labels.services, href: withLocale(locale, "/services") },
+    { type: "link", id: "about", label: labels.about, href: withLocale(locale, "/about") },
+    { type: "link", id: "contacts", label: labels.contacts, href: withLocale(locale, "/contacts") },
   ];
-}
-
-export function getCanonicalPlacement(pageId: string) {
-  const page = contentPages.find((item) => item.id === pageId);
-  if (!page) return undefined;
-
-  if (page.kind === "product") {
-    return navigationPlacements.find(
-      (placement) => placement.id === pageId && placement.category.en === "Product catalog",
-    );
-  }
-
-  return navigationPlacements.find((placement) => placement.id === pageId);
 }

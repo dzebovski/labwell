@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 
 import styles from "@/components/labwell-ui.module.css";
 import { locales, type Locale } from "@/i18n/config";
-import { LOCALE_COOKIE_NAME, localizePath } from "@/lib/locale-routing";
+import { LOCALE_COOKIE_NAME, switchLocale } from "@/lib/locale-routing";
 
 type LanguageSwitcherProps = {
   currentLocale: Locale;
@@ -19,6 +19,10 @@ const localeDetails: Record<Locale, { compact: string; flag: string }> = {
   en: { compact: "EN", flag: "🇬🇧" },
 };
 
+function rememberLocale(locale: Locale) {
+  document.cookie = `${LOCALE_COOKIE_NAME}=${locale}; Max-Age=31536000; Path=/; SameSite=Lax`;
+}
+
 export function LanguageSwitcher({
   currentLocale,
   label,
@@ -27,7 +31,6 @@ export function LanguageSwitcher({
   const pathname = usePathname() || "/";
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
-  const [pendingLocale, setPendingLocale] = useState<Locale | null>(null);
   const switcherRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
 
@@ -53,18 +56,10 @@ export function LanguageSwitcher({
     };
   }, [isOpen]);
 
-  useEffect(() => {
-    if (!pendingLocale) return;
-
-    document.cookie = `${LOCALE_COOKIE_NAME}=${pendingLocale}; Max-Age=31536000; Path=/; SameSite=Lax`;
-    if (pendingLocale !== currentLocale) {
-      router.push(localizePath(pathname, pendingLocale));
-    }
-  }, [currentLocale, pathname, pendingLocale, router]);
-
   function selectLocale(locale: Locale) {
     setIsOpen(false);
-    setPendingLocale(locale);
+    rememberLocale(locale);
+    if (locale !== currentLocale) router.push(switchLocale(pathname, locale));
   }
 
   const current = localeDetails[currentLocale];

@@ -4,7 +4,7 @@ import { ChevronDown, ChevronRight, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useId, useMemo, useRef, useState } from "react";
+import { Fragment, useEffect, useId, useMemo, useRef, useState, type FocusEvent } from "react";
 
 import { LanguageSwitcher } from "@/components/language-switcher";
 import styles from "@/components/labwell-ui.module.css";
@@ -56,16 +56,6 @@ function isCurrentPath(pathname: string, href: string) {
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
-function logoForBrand(brand: string) {
-  if (brand === "Bio-Rad") {
-    return { src: "/bio-rad-logo 1.png", width: 133, height: 36 };
-  }
-  if (brand === "Snibe") {
-    return { src: "/snibe-logo-1.png", width: 113, height: 36 };
-  }
-  return undefined;
-}
-
 function groupLinksByBrand(links: HeaderMegaLeaf[]) {
   const groups = new Map<string, HeaderMegaLeaf[]>();
   links.forEach((link) => groups.set(link.brand, [...(groups.get(link.brand) ?? []), link]));
@@ -100,7 +90,6 @@ export function SiteHeader({
   const headerRef = useRef<HTMLElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const activeTriggerRef = useRef<HTMLButtonElement | null>(null);
-  const suppressNextTriggerFocusRef = useRef(false);
 
   const activeItem = useMemo(
     () =>
@@ -120,10 +109,7 @@ export function SiteHeader({
 
   function closeDesktopNavigation({ restoreFocus = false } = {}) {
     setDesktopOpen(null);
-    if (restoreFocus) {
-      suppressNextTriggerFocusRef.current = true;
-      requestAnimationFrame(() => activeTriggerRef.current?.focus());
-    }
+    if (restoreFocus) activeTriggerRef.current?.focus();
   }
 
   function closeNavigation() {
@@ -188,6 +174,101 @@ export function SiteHeader({
     );
   }
 
+  function closeOnFocusLeave(event: FocusEvent<HTMLElement>) {
+    // relatedTarget is null for clicks on non-focusable areas; outside clicks are handled by pointerdown.
+    const next = event.relatedTarget;
+    if (next && !event.currentTarget.contains(next as Node)) closeDesktopNavigation();
+  }
+
+  function renderMegaPanel(activeItem: Extract<HeaderNavigationItem, { type: "mega" }>) {
+    return (
+      <div id={`${panelId}-${activeItem.id}`} className={styles.megaPanel} role="region" aria-labelledby={`${panelId}-${activeItem.id}-trigger`}>
+        <div className={styles.megaPanelHeader}>
+          <div className={styles.megaBreadcrumb}>
+            <span>LABWELL</span><ChevronRight size={13} aria-hidden="true" />
+            <Link href={activeItem.href} onClick={closeNavigation}>{activeItem.label}</Link>
+          </div>
+          <IconButton label={accessibility.closeMegaMenu ?? accessibility.closeMenu} className={styles.megaCloseButton} onClick={() => closeDesktopNavigation({ restoreFocus: true })}>
+            <X size={18} aria-hidden="true" />
+          </IconButton>
+        </div>
+
+        {activeItem.panel === "brands" ? (
+          <div className={styles.brandMegaGrid}>
+            {activeItem.groups.map((group) => {
+              const logo = group.logo;
+              return (
+                <section key={group.id} className={styles.brandMegaColumn}>
+                  <div className={styles.brandMegaHeading}>
+                    <h2>{group.label}</h2>
+                    {logo ? <Image src={logo.src} alt={`${group.label} logo`} width={logo.width} height={logo.height} /> : null}
+                  </div>
+                  <div className={styles.brandMegaLinks}>
+                    {group.sections.flatMap((section) => section.links).map((leaf) => (
+                      <Link key={leaf.id} href={leaf.href} className={styles.megaLeafLink} onClick={closeNavigation}>
+                        <span>{leaf.label}</span><ChevronRight size={15} aria-hidden="true" />
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              );
+            })}
+          </div>
+        ) : (
+          <div className={styles.megaGrid}>
+            <div className={styles.megaRail}>
+              {activeItem.groups.map((group) => (
+                <button key={group.id} type="button" className={`${styles.megaRailButton} ${activeGroup?.id === group.id ? styles.megaRailButtonActive : ""}`} aria-pressed={activeGroup?.id === group.id} onPointerEnter={() => activateGroup(group)} onClick={() => activateGroup(group)}>
+                  <span>{group.label}</span><ChevronRight size={16} aria-hidden="true" />
+                </button>
+              ))}
+            </div>
+
+            <div className={styles.megaSections}>
+              {activeGroup?.sections.map((section) => (
+                <button key={section.id} type="button" className={`${styles.megaSectionButton} ${activeSection?.id === section.id ? styles.megaSectionButtonActive : ""}`} aria-pressed={activeSection?.id === section.id} onPointerEnter={() => activateSection(section)} onClick={() => activateSection(section)}>
+                  <span>{section.label}</span><ChevronRight size={15} aria-hidden="true" />
+                </button>
+              ))}
+            </div>
+
+            <div className={styles.megaResults}>
+              <div className={styles.megaBrandGroups}>
+                {groupLinksByBrand(activeSection?.links ?? []).map(([brand, links]) => {
+                  const logo = links[0]?.logo;
+                  return (
+                    <section key={brand} className={styles.megaBrandGroup}>
+                      <div className={styles.megaBrandLabel}>
+                        <span>{brand}</span>
+                        {logo ? <Image src={logo.src} alt={`${brand} logo`} width={logo.width} height={logo.height} /> : null}
+                      </div>
+                      <div>
+                        {links.map((leaf) => (
+                          <Link key={leaf.id} href={leaf.href} className={`${styles.megaLeafLink} ${activeLeaf?.id === leaf.id ? styles.megaLeafLinkActive : ""}`} onPointerEnter={() => setActiveLeafId(leaf.id)} onFocus={() => setActiveLeafId(leaf.id)} onClick={closeNavigation}>
+                            <span>{leaf.label}</span><ChevronRight size={15} aria-hidden="true" />
+                          </Link>
+                        ))}
+                      </div>
+                    </section>
+                  );
+                })}
+              </div>
+
+              {activeLeaf ? (
+                <aside className={styles.megaPreview} aria-live="polite">
+                  <span className={styles.megaPreviewBrand}>{activeLeaf.brand}</span>
+                  <h3>{activeLeaf.title}</h3>
+                  <p>{activeLeaf.description}</p>
+                  <span className={styles.megaPreviewAction}>{activeLeaf.label}<ChevronRight size={15} aria-hidden="true" /></span>
+                </aside>
+              ) : null}
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  }
+
   return (
     <header ref={headerRef} className={styles.headerFrame}>
       <div className={styles.headerBar}>
@@ -195,7 +276,7 @@ export function SiteHeader({
           <Image src="/logo_LABWELL.png" alt="LabWell" width={180} height={40} className={styles.headerLogo} priority />
         </Link>
 
-        <nav className={styles.headerDesktopNav} aria-label={accessibility.primaryNavigation}>
+        <nav className={styles.headerDesktopNav} aria-label={accessibility.primaryNavigation} onBlur={closeOnFocusLeave}>
           {navItems.map((item) => {
             const isActive = isCurrentPath(pathname, item.href);
             if (item.type === "link") {
@@ -216,25 +297,27 @@ export function SiteHeader({
 
             const isDropdownOpen = desktopOpen === item.id;
             return (
-              <button
-                key={item.id}
-                type="button"
-                className={`${styles.headerNavButton} ${isActive ? styles.headerNavLinkActive : ""}`}
-                aria-expanded={isDropdownOpen}
-                aria-controls={`${panelId}-${item.id}`}
-                onPointerEnter={(event) => activateMegaMenu(item, event.currentTarget)}
-                onFocus={(event) => {
-                  if (suppressNextTriggerFocusRef.current) {
-                    suppressNextTriggerFocusRef.current = false;
-                    return;
+              <Fragment key={item.id}>
+                <button
+                  id={`${panelId}-${item.id}-trigger`}
+                  type="button"
+                  className={`${styles.headerNavButton} ${isActive ? styles.headerNavLinkActive : ""}`}
+                  aria-expanded={isDropdownOpen}
+                  aria-controls={`${panelId}-${item.id}`}
+                  onPointerEnter={(event) => activateMegaMenu(item, event.currentTarget)}
+                  onFocus={() => {
+                    if (desktopOpen && !isDropdownOpen) closeDesktopNavigation();
+                  }}
+                  onClick={(event) =>
+                    isDropdownOpen ? closeDesktopNavigation() : activateMegaMenu(item, event.currentTarget)
                   }
-                  activateMegaMenu(item, event.currentTarget);
-                }}
-                onClick={(event) => activateMegaMenu(item, event.currentTarget)}
-              >
-                {item.label}
-                <ChevronDown size={14} aria-hidden="true" />
-              </button>
+                >
+                  {item.label}
+                  <ChevronDown size={14} aria-hidden="true" />
+                </button>
+                {/* Rendered right after its trigger so Tab moves from the trigger into the panel. */}
+                {isDropdownOpen && activeItem ? renderMegaPanel(activeItem) : null}
+              </Fragment>
             );
           })}
         </nav>
@@ -249,93 +332,6 @@ export function SiteHeader({
           {isOpen ? <X aria-hidden="true" size={20} /> : <Menu aria-hidden="true" size={20} />}
         </IconButton>
       </div>
-
-      {activeItem ? (
-        <div id={`${panelId}-${activeItem.id}`} className={styles.megaPanel} aria-label={activeItem.label}>
-          <div className={styles.megaPanelHeader}>
-            <div className={styles.megaBreadcrumb}>
-              <span>LABWELL</span><ChevronRight size={13} aria-hidden="true" />
-              <Link href={activeItem.href} onClick={closeNavigation}>{activeItem.label}</Link>
-            </div>
-            <IconButton label={accessibility.closeMegaMenu ?? accessibility.closeMenu} className={styles.megaCloseButton} onClick={() => closeDesktopNavigation({ restoreFocus: true })}>
-              <X size={18} aria-hidden="true" />
-            </IconButton>
-          </div>
-
-          {activeItem.panel === "brands" ? (
-            <div className={styles.brandMegaGrid}>
-              {activeItem.groups.map((group) => {
-                const logo = logoForBrand(group.label);
-                return (
-                  <section key={group.id} className={styles.brandMegaColumn}>
-                    <div className={styles.brandMegaHeading}>
-                      <h2>{group.label}</h2>
-                      {logo ? <Image src={logo.src} alt={`${group.label} logo`} width={logo.width} height={logo.height} /> : null}
-                    </div>
-                    <div className={styles.brandMegaLinks}>
-                      {group.sections.flatMap((section) => section.links).map((leaf) => (
-                        <Link key={leaf.id} href={leaf.href} className={styles.megaLeafLink} onClick={closeNavigation}>
-                          <span>{leaf.label}</span><ChevronRight size={15} aria-hidden="true" />
-                        </Link>
-                      ))}
-                    </div>
-                  </section>
-                );
-              })}
-            </div>
-          ) : (
-            <div className={styles.megaGrid}>
-              <div className={styles.megaRail}>
-                {activeItem.groups.map((group) => (
-                  <button key={group.id} type="button" className={`${styles.megaRailButton} ${activeGroup?.id === group.id ? styles.megaRailButtonActive : ""}`} onPointerEnter={() => activateGroup(group)} onFocus={() => activateGroup(group)} onClick={() => activateGroup(group)}>
-                    <span>{group.label}</span><ChevronRight size={16} aria-hidden="true" />
-                  </button>
-                ))}
-              </div>
-
-              <div className={styles.megaSections}>
-                {activeGroup?.sections.map((section) => (
-                  <button key={section.id} type="button" className={`${styles.megaSectionButton} ${activeSection?.id === section.id ? styles.megaSectionButtonActive : ""}`} onPointerEnter={() => activateSection(section)} onFocus={() => activateSection(section)} onClick={() => activateSection(section)}>
-                    <span>{section.label}</span><ChevronRight size={15} aria-hidden="true" />
-                  </button>
-                ))}
-              </div>
-
-              <div className={styles.megaResults}>
-                <div className={styles.megaBrandGroups}>
-                  {groupLinksByBrand(activeSection?.links ?? []).map(([brand, links]) => {
-                    const logo = logoForBrand(brand);
-                    return (
-                      <section key={brand} className={styles.megaBrandGroup}>
-                        <div className={styles.megaBrandLabel}>
-                          <span>{brand}</span>
-                          {logo ? <Image src={logo.src} alt={`${brand} logo`} width={logo.width} height={logo.height} /> : null}
-                        </div>
-                        <div>
-                          {links.map((leaf) => (
-                            <Link key={leaf.id} href={leaf.href} className={`${styles.megaLeafLink} ${activeLeaf?.id === leaf.id ? styles.megaLeafLinkActive : ""}`} onPointerEnter={() => setActiveLeafId(leaf.id)} onFocus={() => setActiveLeafId(leaf.id)} onClick={closeNavigation}>
-                              <span>{leaf.label}</span><ChevronRight size={15} aria-hidden="true" />
-                            </Link>
-                          ))}
-                        </div>
-                      </section>
-                    );
-                  })}
-                </div>
-
-                {activeLeaf ? (
-                  <aside className={styles.megaPreview} aria-live="polite">
-                    <span className={styles.megaPreviewBrand}>{activeLeaf.brand}</span>
-                    <h3>{activeLeaf.title}</h3>
-                    <p>{activeLeaf.description}</p>
-                    <span className={styles.megaPreviewAction}>{activeLeaf.label}<ChevronRight size={15} aria-hidden="true" /></span>
-                  </aside>
-                ) : null}
-              </div>
-            </div>
-          )}
-        </div>
-      ) : null}
 
       {isOpen ? (
         <div id={panelId} className={styles.headerMobilePanel}>
