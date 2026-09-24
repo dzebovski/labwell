@@ -1,6 +1,6 @@
-import { ArrowUpRight, ChevronRight, ClipboardCheck } from "lucide-react";
-import Link from "next/link";
+import { ArrowUpRight, ClipboardCheck } from "lucide-react";
 
+import { Breadcrumbs } from "@/components/patterns/breadcrumbs";
 import styles from "@/components/labwell-ui.module.css";
 import type { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
@@ -22,31 +22,11 @@ export async function ContentDetailPage({ locale, page }: ContentDetailPageProps
   return (
     <main className={styles.pageMain}>
       <article className={styles.contentDetail}>
-        <nav aria-label={dictionary.accessibility.breadcrumbs}>
-          <ol className={styles.breadcrumbList}>
-            {breadcrumbs.map((item, index) => {
-              const isCurrent = index === breadcrumbs.length - 1;
-              return (
-                <li key={`${item.label}-${index}`} className={styles.breadcrumbItem}>
-                  {index > 0 ? (
-                    <ChevronRight
-                      className={styles.breadcrumbSeparator}
-                      size={14}
-                      aria-hidden="true"
-                    />
-                  ) : null}
-                  {item.href && !isCurrent ? (
-                    <Link href={item.href} className={styles.breadcrumbLink}>
-                      {item.label}
-                    </Link>
-                  ) : (
-                    <span aria-current={isCurrent ? "page" : undefined}>{item.label}</span>
-                  )}
-                </li>
-              );
-            })}
-          </ol>
-        </nav>
+        <Breadcrumbs
+          items={breadcrumbs}
+          label={dictionary.accessibility.breadcrumbs}
+          chooseLabel={dictionary.accessibility.chooseCategory}
+        />
 
         <div className={styles.contentDetailGrid}>
           <div className={styles.contentDetailCopy}>

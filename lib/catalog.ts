@@ -2,7 +2,12 @@ import type { Locale } from "../i18n/config.ts";
 import { brands, type Brand, type BrandId } from "../content/brands.ts";
 import type { LocalizedText } from "../content/define.ts";
 import { brandPages, clinicalPages, products } from "../content/index.ts";
-import { catalogGroups, clinicalDirections, type TaxonomyGroup } from "../content/taxonomy.ts";
+import {
+  catalogGroups,
+  clinicalDirections,
+  type TaxonomyGroup,
+  type TaxonomySection,
+} from "../content/taxonomy.ts";
 import { withLocale } from "./locale-routing.ts";
 
 export type { LocalizedText } from "../content/define.ts";
@@ -33,7 +38,26 @@ export type ContentPage = Readonly<{
   placements: readonly MenuPlacement[];
 }>;
 
-export type Breadcrumb = { label: string; href?: string };
+export type BreadcrumbOption = { label: string; href: string; current: boolean };
+/** `options` lists sibling categories to switch to; present only when there is more than one. */
+export type Breadcrumb = { label: string; href?: string; options?: BreadcrumbOption[] };
+
+export type CategoryMenu = Exclude<MenuId, "brands">;
+
+/** A menu group, or one of its named sections, that has its own listing page. */
+export type Category = Readonly<{
+  menu: CategoryMenu;
+  group: TaxonomyGroup;
+  section?: TaxonomySection;
+  path: string;
+}>;
+
+/** A block of links on a listing page; `href` links the block title to its own page. */
+export type ListingBlock = { title?: string; href?: string; pages: ContentPage[] };
+
+export type RouteTarget =
+  | { type: "page"; page: ContentPage }
+  | { type: "category"; category: Category };
 
 const menuGroups: Record<Exclude<MenuId, "brands">, readonly TaxonomyGroup[]> = {
   catalog: catalogGroups,
@@ -116,7 +140,26 @@ export function findCatalogProblems(pages: readonly ContentPage[] = contentPages
     }
   }
 
+  for (const menu of ["catalog", "clinical"] as const) {
+    for (const group of menuGroups[menu]) {
+      for (const section of [undefined, ...group.sections]) {
+        const path = categoryPath(menu, group.id, section?.id);
+        if (seenPaths.has(path)) problems.push(`Category URL ${path} is also used by a content page`);
+      }
+    }
+  }
+
   return problems;
+}
+
+const rootPaths: Record<MenuId, string> = {
+  catalog: "/products",
+  clinical: "/clinical-directions",
+  brands: "/brands",
+};
+
+function categoryPath(menu: CategoryMenu, group: string, section?: string) {
+  return `${rootPaths[menu]}/${group}${section ? `/${section}` : ""}`;
 }
 
 const problems = findCatalogProblems();
@@ -146,7 +189,7 @@ export function getBrandPage(brand: string, topic?: string) {
   return getPageByPath(topic ? `/brands/${brand}/${topic}` : `/brands/${brand}`);
 }
 
-export function getMenuGroups(menu: Exclude<MenuId, "brands">) {
+export function getMenuGroups(menu: CategoryMenu) {
   return menuGroups[menu];
 }
 
@@ -162,42 +205,190 @@ export function getMenuPages(menu: MenuId, group: string, section?: string) {
     .map((item) => item.page);
 }
 
-const rootPaths: Record<MenuId, string> = {
-  catalog: "/products",
-  clinical: "/clinical-directions",
-  brands: "/brands",
-};
+/** All pages of a group: named sections in taxonomy order, then the default section. */
+function getGroupPages(menu: CategoryMenu, group: TaxonomyGroup) {
+  return [...group.sections.map((section) => section.id), undefined].flatMap((section) =>
+    getMenuPages(menu, group.id, section),
+  );
+}
 
-export function getBreadcrumbs(
-  page: ContentPage,
+/** Categories with at least one page; empty groups and sections get no listing page. */
+export const categories: readonly Category[] = (["catalog", "clinical"] as const).flatMap((menu) =>
+  menuGroups[menu].flatMap((group): Category[] => {
+    if (getGroupPages(menu, group).length === 0) return [];
+    const sections = group.sections
+      .filter((section) => getMenuPages(menu, group.id, section.id).length > 0)
+      .map((section) => ({ menu, group, section, path: categoryPath(menu, group.id, section.id) }));
+    return [{ menu, group, path: categoryPath(menu, group.id) }, ...sections];
+  }),
+);
+
+const categoriesByPath = new Map(categories.map((category) => [category.path, category]));
+
+export function getCategory(menu: CategoryMenu, group: string, section?: string) {
+  return categoriesByPath.get(categoryPath(menu, group, section));
+}
+
+/** What a site path (without locale) renders: a content page or a category listing. */
+export function getRouteTarget(path: string): RouteTarget | undefined {
+  const page = pagesByPath.get(path);
+  if (page) return { type: "page", page };
+  const category = categoriesByPath.get(path);
+  return category ? { type: "category", category } : undefined;
+}
+
+/** Route params for every page or category path `prefix/{a}/{b}…` with exactly `names.length` segments. */
+export function getRouteParams<Name extends string>(prefix: string, names: readonly Name[]) {
+  return [...pagesByPath.keys(), ...categoriesByPath.keys()]
+    .filter((path) => path.startsWith(`${prefix}/`))
+    .map((path) => path.slice(prefix.length + 1).split("/"))
+    .filter((segments) => segments.length === names.length)
+    .map((segments) => Object.fromEntries(names.map((name, index) => [name, segments[index]])) as Record<Name, string>);
+}
+
+/** Link blocks for a listing page: a menu root (one block per group or brand) or a category. */
+export function getListingBlocks(
+  menu: MenuId,
   locale: Locale,
-  labels: { home: string; products: string; clinicalDirections: string; brands: string },
-): Breadcrumb[] {
-  const [placement] = page.placements;
+  defaultSectionLabel: string,
+  category?: Category,
+): ListingBlock[] {
+  if (menu === "brands") {
+    return brands
+      .map((brand) => ({
+        title: brand.name,
+        href: getBrandPage(brand.id) ? withLocale(locale, `/brands/${brand.id}`) : undefined,
+        pages: getMenuPages("brands", brand.id),
+      }))
+      .filter((block) => block.pages.length > 0);
+  }
+
+  if (!category) {
+    return categories
+      .filter((item) => item.menu === menu && !item.section)
+      .map((item) => ({
+        title: item.group.label[locale],
+        href: withLocale(locale, item.path),
+        pages: getGroupPages(menu, item.group),
+      }));
+  }
+
+  if (category.section) {
+    return [{ pages: getMenuPages(menu, category.group.id, category.section.id) }];
+  }
+
+  const named = categories
+    .filter((item) => item.menu === menu && item.group.id === category.group.id && item.section)
+    .map((item) => ({
+      title: item.section!.label[locale],
+      href: withLocale(locale, item.path),
+      pages: getMenuPages(menu, category.group.id, item.section!.id),
+    }));
+  const other = getMenuPages(menu, category.group.id);
+  const blocks = other.length > 0 ? [...named, { title: defaultSectionLabel, pages: other }] : named;
+  // A group without named sections needs no block heading.
+  return named.length === 0 ? blocks.map((block) => ({ pages: block.pages })) : blocks;
+}
+
+type RootLabels = { products: string; clinicalDirections: string; brands: string };
+
+function rootCrumb(menu: MenuId, labels: RootLabels): Breadcrumb {
   const rootLabels: Record<MenuId, string> = {
     catalog: labels.products,
     clinical: labels.clinicalDirections,
     brands: labels.brands,
   };
-  const breadcrumbs: Breadcrumb[] = [
-    { label: labels.home, href: withLocale(locale, "/") },
-    { label: rootLabels[placement.menu], href: withLocale(locale, rootPaths[placement.menu]) },
-  ];
+  return { label: rootLabels[menu] };
+}
+
+function withOptions(crumb: Breadcrumb, options: BreadcrumbOption[]): Breadcrumb {
+  return options.length > 1 ? { ...crumb, options } : crumb;
+}
+
+function groupCrumb(menu: CategoryMenu, group: TaxonomyGroup, locale: Locale, isCurrent: boolean) {
+  const siblings = categories.filter((item) => item.menu === menu && !item.section);
+  return withOptions(
+    {
+      label: group.label[locale],
+      href: isCurrent ? undefined : withLocale(locale, categoryPath(menu, group.id)),
+    },
+    siblings.map((item) => ({
+      label: item.group.label[locale],
+      href: withLocale(locale, item.path),
+      current: item.group.id === group.id,
+    })),
+  );
+}
+
+function sectionCrumb(
+  menu: CategoryMenu,
+  group: TaxonomyGroup,
+  section: TaxonomySection,
+  locale: Locale,
+  isCurrent: boolean,
+) {
+  const siblings = categories.filter(
+    (item) => item.menu === menu && item.group.id === group.id && item.section,
+  );
+  return withOptions(
+    {
+      label: section.label[locale],
+      href: isCurrent ? undefined : withLocale(locale, categoryPath(menu, group.id, section.id)),
+    },
+    siblings.map((item) => ({
+      label: item.section!.label[locale],
+      href: withLocale(locale, item.path),
+      current: item.section!.id === section.id,
+    })),
+  );
+}
+
+function brandCrumb(brand: Brand, locale: Locale, isCurrent: boolean) {
+  const siblings = brands.filter((item) => getBrandPage(item.id));
+  return withOptions(
+    { label: brand.name, href: isCurrent ? undefined : withLocale(locale, `/brands/${brand.id}`) },
+    siblings.map((item) => ({
+      label: item.name,
+      href: withLocale(locale, `/brands/${item.id}`),
+      current: item.id === brand.id,
+    })),
+  );
+}
+
+/**
+ * Breadcrumbs of a content page: section root (not a link) › group › section › page.
+ * Group and section crumbs link to their listing and offer sibling categories.
+ */
+export function getBreadcrumbs(page: ContentPage, locale: Locale, labels: RootLabels): Breadcrumb[] {
+  const [placement] = page.placements;
+  const breadcrumbs = [rootCrumb(placement.menu, labels)];
 
   if (placement.menu === "brands") {
     const isOverview = !page.slug;
-    breadcrumbs.push({
-      label: page.brand.name,
-      href: isOverview ? undefined : withLocale(locale, `/brands/${page.brand.id}`),
-    });
+    breadcrumbs.push(brandCrumb(page.brand, locale, isOverview));
     if (!isOverview) breadcrumbs.push({ label: page.navLabel[locale] });
     return breadcrumbs;
   }
 
   const group = menuGroups[placement.menu].find((item) => item.id === placement.group)!;
-  breadcrumbs.push({ label: group.label[locale] });
+  breadcrumbs.push(groupCrumb(placement.menu, group, locale, false));
   const section = group.sections.find((item) => item.id === placement.section);
-  if (section) breadcrumbs.push({ label: section.label[locale] });
+  if (section) breadcrumbs.push(sectionCrumb(placement.menu, group, section, locale, false));
   breadcrumbs.push({ label: page.navLabel[locale] });
   return breadcrumbs;
+}
+
+export function getCategoryBreadcrumbs(
+  category: Category,
+  locale: Locale,
+  labels: RootLabels,
+): Breadcrumb[] {
+  const { menu, group, section } = category;
+  const breadcrumbs = [rootCrumb(menu, labels), groupCrumb(menu, group, locale, !section)];
+  if (section) breadcrumbs.push(sectionCrumb(menu, group, section, locale, true));
+  return breadcrumbs;
+}
+
+export function getRootBreadcrumbs(menu: MenuId, labels: RootLabels): Breadcrumb[] {
+  return [rootCrumb(menu, labels)];
 }

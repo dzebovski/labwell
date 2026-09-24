@@ -1,23 +1,21 @@
-import { ContentDetailPage } from "@/components/patterns/content-detail-page";
-import { getBrandPage, listPages } from "@/lib/catalog";
-import { contentPageMetadata, requireContentPage } from "@/lib/content-route";
+import { RouteTargetPage } from "@/components/patterns/route-target-page";
+import { getRouteParams } from "@/lib/catalog";
+import { routeMetadata } from "@/lib/content-route";
 
 type Props = { params: Promise<{ locale: string; brandSlug: string; topicSlug: string }> };
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return listPages("brand")
-    .filter((page) => page.slug)
-    .map((page) => ({ brandSlug: page.brand.id, topicSlug: page.slug }));
+  return getRouteParams("/brands", ["brandSlug", "topicSlug"]);
 }
 
 export async function generateMetadata({ params }: Props) {
   const { locale, brandSlug, topicSlug } = await params;
-  return contentPageMetadata(locale, getBrandPage(brandSlug, topicSlug));
+  return routeMetadata(locale, `/brands/${brandSlug}/${topicSlug}`);
 }
 
 export default async function BrandTopicPage({ params }: Props) {
   const { locale, brandSlug, topicSlug } = await params;
-  return <ContentDetailPage {...requireContentPage(locale, getBrandPage(brandSlug, topicSlug))} />;
+  return <RouteTargetPage locale={locale} path={`/brands/${brandSlug}/${topicSlug}`} />;
 }
