@@ -25,7 +25,7 @@ export default async function ClinicalDirectionsPage({ params }: Props) {
     <ListingPage
       locale={locale}
       title={dictionary.pages.clinicalDirections}
-      breadcrumbs={getRootBreadcrumbs("clinical", dictionary.pages)}
+      breadcrumbs={getRootBreadcrumbs("clinical", locale, dictionary.pages)}
       blocks={getListingBlocks("clinical", locale, dictionary.navigation.otherSolutions)}
     />
   );

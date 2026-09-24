@@ -25,7 +25,7 @@ export default async function ProductsPage({ params }: Props) {
     <ListingPage
       locale={locale}
       title={dictionary.pages.products}
-      breadcrumbs={getRootBreadcrumbs("catalog", dictionary.pages)}
+      breadcrumbs={getRootBreadcrumbs("catalog", locale, dictionary.pages)}
       blocks={getListingBlocks("catalog", locale, dictionary.navigation.portfolio)}
     />
   );

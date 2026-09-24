@@ -15,6 +15,7 @@ import {
   getListingBlocks,
   getMenuPages,
   getProduct,
+  getRootBreadcrumbs,
   getRouteParams,
   getRouteTarget,
   type Breadcrumb,
@@ -101,18 +102,18 @@ const simplify = (crumbs: Breadcrumb[]) =>
     options: item.options?.map((option) => `${option.current ? "*" : ""}${option.href}`) ?? null,
   }));
 
-test("breadcrumbs skip Home, keep the root as text and offer sibling categories", () => {
+test("breadcrumbs skip Home, link every level and offer siblings", () => {
   const crumbs = simplify(getBreadcrumbs(getProduct("biossays-240-plus")!, "uk", labels));
   assert.deepEqual(
     crumbs.map((item) => [item.label, item.href]),
     [
-      ["Products", null],
+      ["Products", "/uk/products"],
       ["Обладнання / Аналізатори", "/uk/products/equipment"],
       ["Біохімічні аналізатори", "/uk/products/equipment/biochemistry"],
       ["Biossays 240 Plus", null],
     ],
   );
-  assert.equal(crumbs[0].options, null);
+  assert.deepEqual(crumbs[0].options, ["*/uk/products", "/uk/clinical-directions", "/uk/brands"]);
   assert.deepEqual(crumbs[1].options, [
     "*/uk/products/equipment",
     "/uk/products/reagents",
@@ -133,12 +134,12 @@ test("breadcrumbs of section-less pages and brand pages", () => {
   assert.equal(clinical[1].options?.length, 7);
 
   const overview = simplify(getBreadcrumbs(getBrandPage("snibe")!, "en", labels));
-  assert.deepEqual(overview.map((item) => [item.label, item.href]), [["Brands", null], ["Snibe", null]]);
+  assert.deepEqual(overview.map((item) => [item.label, item.href]), [["Brands", "/en/brands"], ["Snibe", null]]);
   assert.deepEqual(overview[1].options, ["/en/brands/bio-rad", "*/en/brands/snibe"]);
 
   const topic = simplify(getBreadcrumbs(getBrandPage("snibe", "satlars-automation")!, "en", labels));
   assert.deepEqual(topic.map((item) => [item.label, item.href]), [
-    ["Brands", null],
+    ["Brands", "/en/brands"],
     ["Snibe", "/en/brands/snibe"],
     ["SATLARS (Automation)", null],
   ]);
@@ -158,13 +159,13 @@ test("category pages exist only for non-empty groups and sections", () => {
 test("category breadcrumbs mark the category itself as current", () => {
   const crumbs = simplify(getCategoryBreadcrumbs(getCategory("catalog", "equipment", "biochemistry")!, "en", labels));
   assert.deepEqual(crumbs.map((item) => [item.label, item.href]), [
-    ["Products", null],
+    ["Products", "/en/products"],
     ["Equipment / Analyzers", "/en/products/equipment"],
     ["Biochemical analyzers", null],
   ]);
   assert.equal(crumbs[2].options?.length, 8);
   const group = simplify(getCategoryBreadcrumbs(getCategory("catalog", "equipment")!, "en", labels));
-  assert.deepEqual(group.map((item) => item.href), [null, null]);
+  assert.deepEqual(group.map((item) => item.href), ["/en/products", null]);
 });
 
 test("listing blocks for a group list named sections, then the default one", () => {
@@ -197,6 +198,15 @@ test("routes resolve both content pages and categories", () => {
   assert.deepEqual(getRouteParams("/products", ["slug", "sectionSlug"]).find((params) => params.sectionSlug === "clia"), {
     slug: "equipment",
     sectionSlug: "clia",
+  });
+});
+
+test("root breadcrumbs mark the section root as current", () => {
+  const [root] = simplify(getRootBreadcrumbs("clinical", "en", labels));
+  assert.deepEqual(root, {
+    label: "Clinical",
+    href: null,
+    options: ["/en/products", "*/en/clinical-directions", "/en/brands"],
   });
 });
 

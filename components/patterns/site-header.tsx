@@ -269,12 +269,21 @@ export function SiteHeader({
     );
   }
 
+  const logo = (
+    <Image src="/logo_LABWELL.png" alt="LabWell" width={180} height={40} className={styles.headerLogo} priority />
+  );
+
   return (
     <header ref={headerRef} className={styles.headerFrame}>
       <div className={styles.headerBar}>
-        <Link href={homeHref} className={styles.headerLogoLink} aria-label={accessibility.home}>
-          <Image src="/logo_LABWELL.png" alt="LabWell" width={180} height={40} className={styles.headerLogo} priority />
-        </Link>
+        {pathname === homeHref ? (
+          // Already on the home page: the logo is not a link to itself.
+          <span className={styles.headerLogoLink}>{logo}</span>
+        ) : (
+          <Link href={homeHref} className={styles.headerLogoLink} aria-label={accessibility.home}>
+            {logo}
+          </Link>
+        )}
 
         <nav className={styles.headerDesktopNav} aria-label={accessibility.primaryNavigation} onBlur={closeOnFocusLeave}>
           {navItems.map((item) => {
