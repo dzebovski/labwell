@@ -46,6 +46,11 @@ All catalog pages and the header menus are generated from files in `content/`:
 To add a menu group or section, add it to `content/taxonomy.ts`; to add a brand, add it to `content/brands.ts` and put its logo in `public/`.
 Use `order: 1` (or higher) on a placement to move an item below the others in its section.
 
+Every non-empty group and section also gets a listing page, e.g. `/products/equipment` and
+`/products/equipment/biochemistry` (clinical directions: `/clinical-directions/{direction}[/{section}]`).
+Breadcrumbs link to these pages and offer a menu to switch to sibling categories.
+Group and section ids therefore must not match a product or clinical page slug — the build fails if they do.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

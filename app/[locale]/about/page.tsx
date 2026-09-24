@@ -5,7 +5,6 @@ import { PageHeading } from "@/components/patterns/page-heading";
 import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { createPageMetadata } from "@/lib/page-metadata";
-import { withLocale } from "@/lib/locale-routing";
 
 type AboutPageProps = { params: Promise<{ locale: string }> };
 
@@ -24,10 +23,8 @@ export default async function AboutPage({ params }: AboutPageProps) {
   return (
     <PageHeading
       breadcrumbLabel={dictionary.accessibility.breadcrumbs}
-      breadcrumbs={[
-        { label: dictionary.pages.home, href: withLocale(locale, "/") },
-        { label: dictionary.pages.about },
-      ]}
+      chooseLabel={dictionary.accessibility.chooseCategory}
+      breadcrumbs={[{ label: dictionary.pages.about }]}
       title={dictionary.pages.about}
     />
   );

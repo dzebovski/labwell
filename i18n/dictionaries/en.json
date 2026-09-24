@@ -27,7 +27,8 @@
     "openSubmenu": "Open submenu",
     "closeSubmenu": "Close submenu",
     "closeMegaMenu": "Close navigation panel",
-    "breadcrumbs": "Breadcrumbs"
+    "breadcrumbs": "Breadcrumbs",
+    "chooseCategory": "Choose another category"
   },
   "pages": {
     "home": "Home",

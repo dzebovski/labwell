@@ -27,7 +27,8 @@
     "openSubmenu": "Відкрити підменю",
     "closeSubmenu": "Закрити підменю",
     "closeMegaMenu": "Закрити панель навігації",
-    "breadcrumbs": "Навігаційний шлях"
+    "breadcrumbs": "Навігаційний шлях",
+    "chooseCategory": "Вибрати іншу категорію"
   },
   "pages": {
     "home": "Головна",

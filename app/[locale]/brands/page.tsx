@@ -1,44 +1,32 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { PageHeading } from "@/components/patterns/page-heading";
+import { ListingPage } from "@/components/patterns/listing-page";
 import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
+import { getListingBlocks, getRootBreadcrumbs } from "@/lib/catalog";
 import { createPageMetadata } from "@/lib/page-metadata";
-import { withLocale } from "@/lib/locale-routing";
 
-type BrandsPageProps = {
-  params: Promise<{ locale: string }>;
-};
+type Props = { params: Promise<{ locale: string }> };
 
-export async function generateMetadata({ params }: BrandsPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-
-  if (!isLocale(locale)) {
-    return {};
-  }
-
+  if (!isLocale(locale)) return {};
   const dictionary = await getDictionary(locale);
   return createPageMetadata(locale, dictionary.pages.brands, "/brands");
 }
 
-export default async function BrandsPage({ params }: BrandsPageProps) {
+export default async function BrandsPage({ params }: Props) {
   const { locale } = await params;
-
-  if (!isLocale(locale)) {
-    notFound();
-  }
-
+  if (!isLocale(locale)) notFound();
   const dictionary = await getDictionary(locale);
 
   return (
-    <PageHeading
-      breadcrumbLabel={dictionary.accessibility.breadcrumbs}
-      breadcrumbs={[
-        { label: dictionary.pages.home, href: withLocale(locale, "/") },
-        { label: dictionary.pages.brands },
-      ]}
+    <ListingPage
+      locale={locale}
       title={dictionary.pages.brands}
+      breadcrumbs={getRootBreadcrumbs("brands", dictionary.pages)}
+      blocks={getListingBlocks("brands", locale, dictionary.navigation.portfolio)}
     />
   );
 }

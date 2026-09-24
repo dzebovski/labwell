@@ -2,24 +2,26 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { isLocale, type Locale } from "@/i18n/config";
-import type { ContentPage } from "@/lib/catalog";
+import { getRouteTarget, type RouteTarget } from "@/lib/catalog";
 import { createPageMetadata } from "@/lib/page-metadata";
 
-/** Shared by the content detail routes: 404 for an unknown locale or page. */
-export function requireContentPage(
+/** Shared by the catalog routes: 404 for an unknown locale or path. */
+export function requireRouteTarget(
   locale: string,
-  page: ContentPage | undefined,
-): { locale: Locale; page: ContentPage } {
-  if (!isLocale(locale) || !page) notFound();
-  return { locale, page };
+  path: string,
+): { locale: Locale; target: RouteTarget } {
+  const target = getRouteTarget(path);
+  if (!isLocale(locale) || !target) notFound();
+  return { locale, target };
 }
 
-export function contentPageMetadata(locale: string, page: ContentPage | undefined): Metadata {
-  const resolved = requireContentPage(locale, page);
-  return createPageMetadata(
-    resolved.locale,
-    resolved.page.title[resolved.locale],
-    resolved.page.description[resolved.locale],
-    resolved.page.path,
-  );
+export function routeMetadata(locale: string, path: string): Metadata {
+  const { locale: resolvedLocale, target } = requireRouteTarget(locale, path);
+  if (target.type === "page") {
+    const { page } = target;
+    return createPageMetadata(resolvedLocale, page.title[resolvedLocale], page.description[resolvedLocale], page.path);
+  }
+  const { category } = target;
+  const label = (category.section ?? category.group).label[resolvedLocale];
+  return createPageMetadata(resolvedLocale, `${label} | Labwell`, category.path);
 }

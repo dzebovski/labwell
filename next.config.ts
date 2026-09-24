@@ -19,15 +19,15 @@ const contentSecurityPolicy = [
 const nextConfig: NextConfig = {
   async redirects() {
     // Old catalog URLs from the previous category-based navigation.
+    const legacyCategories = "reagents-tests|quality-control|consumables-accessories|software";
     return [
       {
-        source:
-          "/:locale(uk|en)/products/:legacy(equipment|reagents-tests|quality-control|consumables-accessories|software)",
+        source: `/:locale(uk|en)/products/:legacy(${legacyCategories})`,
         destination: "/:locale/products",
         permanent: false,
       },
       {
-        source: "/:locale(uk|en)/products/:slug/:area",
+        source: `/:locale(uk|en)/products/:legacy(${legacyCategories})/:area`,
         destination: "/:locale/products",
         permanent: false,
       },
