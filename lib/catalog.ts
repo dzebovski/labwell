@@ -292,17 +292,26 @@ export function getListingBlocks(
 
 type RootLabels = { products: string; clinicalDirections: string; brands: string };
 
-function rootCrumb(menu: MenuId, labels: RootLabels): Breadcrumb {
+function withOptions(crumb: Breadcrumb, options: BreadcrumbOption[]): Breadcrumb {
+  return options.length > 1 ? { ...crumb, options } : crumb;
+}
+
+/** Section root (Product catalog / Clinical directions / Brands), with the other roots as options. */
+function rootCrumb(menu: MenuId, locale: Locale, labels: RootLabels, isCurrent: boolean): Breadcrumb {
   const rootLabels: Record<MenuId, string> = {
     catalog: labels.products,
     clinical: labels.clinicalDirections,
     brands: labels.brands,
   };
-  return { label: rootLabels[menu] };
-}
-
-function withOptions(crumb: Breadcrumb, options: BreadcrumbOption[]): Breadcrumb {
-  return options.length > 1 ? { ...crumb, options } : crumb;
+  const menus = Object.keys(rootPaths) as MenuId[];
+  return withOptions(
+    { label: rootLabels[menu], href: isCurrent ? undefined : withLocale(locale, rootPaths[menu]) },
+    menus.map((item) => ({
+      label: rootLabels[item],
+      href: withLocale(locale, rootPaths[item]),
+      current: item === menu,
+    })),
+  );
 }
 
 function groupCrumb(menu: CategoryMenu, group: TaxonomyGroup, locale: Locale, isCurrent: boolean) {
@@ -356,12 +365,12 @@ function brandCrumb(brand: Brand, locale: Locale, isCurrent: boolean) {
 }
 
 /**
- * Breadcrumbs of a content page: section root (not a link) › group › section › page.
- * Group and section crumbs link to their listing and offer sibling categories.
+ * Breadcrumbs of a content page: section root › group › section › page.
+ * Every crumb above the page links to its listing and offers sibling sections or categories.
  */
 export function getBreadcrumbs(page: ContentPage, locale: Locale, labels: RootLabels): Breadcrumb[] {
   const [placement] = page.placements;
-  const breadcrumbs = [rootCrumb(placement.menu, labels)];
+  const breadcrumbs = [rootCrumb(placement.menu, locale, labels, false)];
 
   if (placement.menu === "brands") {
     const isOverview = !page.slug;
@@ -384,11 +393,11 @@ export function getCategoryBreadcrumbs(
   labels: RootLabels,
 ): Breadcrumb[] {
   const { menu, group, section } = category;
-  const breadcrumbs = [rootCrumb(menu, labels), groupCrumb(menu, group, locale, !section)];
+  const breadcrumbs = [rootCrumb(menu, locale, labels, false), groupCrumb(menu, group, locale, !section)];
   if (section) breadcrumbs.push(sectionCrumb(menu, group, section, locale, true));
   return breadcrumbs;
 }
 
-export function getRootBreadcrumbs(menu: MenuId, labels: RootLabels): Breadcrumb[] {
-  return [rootCrumb(menu, labels)];
+export function getRootBreadcrumbs(menu: MenuId, locale: Locale, labels: RootLabels): Breadcrumb[] {
+  return [rootCrumb(menu, locale, labels, true)];
 }
