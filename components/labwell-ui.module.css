@@ -7,7 +7,7 @@
   gap: 0.5rem;
   border: 1px solid transparent;
   border-radius: var(--radius-control);
-  font-weight: 650;
+  font-weight: var(--font-weight-semibold);
   letter-spacing: -0.01em;
   cursor: pointer;
   transition:
@@ -90,21 +90,28 @@
 }
 
 .sizeSm {
-  min-height: 2.25rem;
+  min-height: var(--control-sm);
   padding: 0.5rem 0.75rem;
   font-size: 0.8125rem;
 }
 
 .sizeMd {
-  min-height: 2.75rem;
-  padding: 0.6875rem 1rem;
+  min-height: var(--control-md);
+  padding: 0.5rem 1rem;
   font-size: 0.875rem;
 }
 
 .sizeLg {
-  min-height: 3.25rem;
-  padding: 0.8125rem 1.25rem;
+  min-height: var(--control-lg);
+  padding: 0.75rem 1.25rem;
   font-size: 0.9375rem;
+}
+
+@media (pointer: coarse) {
+  .sizeSm,
+  .sizeMd {
+    min-height: var(--touch-target);
+  }
 }
 
 .iconButton {
@@ -130,7 +137,7 @@
 .fieldLabel {
   color: var(--color-text-primary);
   font-size: 0.8125rem;
-  font-weight: 650;
+  font-weight: var(--font-weight-semibold);
 }
 
 .visuallyHidden {
@@ -153,7 +160,7 @@
   padding: 0 0.875rem;
   color: var(--color-text-muted);
   background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-border-control);
   border-radius: var(--radius-control);
   transition:
     border-color var(--duration-fast) var(--ease-standard),
@@ -162,7 +169,7 @@
 }
 
 .inputShell:hover {
-  border-color: var(--color-border-strong);
+  border-color: var(--color-text-secondary);
 }
 
 .inputShell:focus-within {
@@ -212,7 +219,7 @@
   padding: 0.25rem 0.5625rem;
   border-radius: 0.375rem;
   font-size: 0.6875rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.08em;
   line-height: 1;
   text-transform: uppercase;
@@ -250,7 +257,7 @@
   width: fit-content;
   color: var(--color-brand-700);
   font-size: 0.875rem;
-  font-weight: 650;
+  font-weight: var(--font-weight-semibold);
   text-decoration: none;
   text-underline-offset: 0.2em;
 }
@@ -389,7 +396,7 @@
   border-radius: 0.375rem;
   backdrop-filter: blur(8px);
   font-size: 0.625rem;
-  font-weight: 750;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -448,7 +455,7 @@
   min-height: 2.5rem;
   color: var(--color-text-secondary);
   font-size: 0.8125rem;
-  font-weight: 570;
+  font-weight: var(--font-weight-medium);
   text-decoration: none;
   transition: color var(--duration-fast) var(--ease-standard);
 }
@@ -477,7 +484,7 @@
   background: transparent;
   border: 0;
   font-size: 0.8125rem;
-  font-weight: 570;
+  font-weight: var(--font-weight-medium);
   cursor: pointer;
   transition: color var(--duration-fast) var(--ease-standard);
 }
@@ -536,7 +543,7 @@
   color: var(--color-text-secondary);
   border-radius: var(--radius-control);
   font-size: 0.8125rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   line-height: 1.25;
   text-decoration: none;
   transition:
@@ -578,7 +585,7 @@
   color: var(--color-text-primary);
   border-bottom: 1px solid var(--color-border);
   font-size: 0.75rem;
-  font-weight: 750;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -593,7 +600,7 @@
   justify-content: flex-start;
   min-height: 2.25rem;
   padding: 0.5rem;
-  font-weight: 540;
+  font-weight: var(--font-weight-medium);
 }
 
 .headerActions {
@@ -652,7 +659,7 @@
   border: 0;
   border-radius: var(--radius-control);
   font-size: 0.875rem;
-  font-weight: 650;
+  font-weight: var(--font-weight-semibold);
   text-align: left;
   cursor: pointer;
 }
@@ -687,7 +694,7 @@
   color: var(--color-text-secondary);
   border-radius: var(--radius-control);
   font-size: 0.8125rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   text-decoration: none;
 }
 
@@ -720,7 +727,7 @@
 }
 
 .headerMobileNestedLink {
-  font-weight: 520;
+  font-weight: var(--font-weight-medium);
 }
 
 @container (min-width: 68rem) {
@@ -768,7 +775,7 @@
   gap: 0.375rem;
   color: var(--color-text-muted);
   font-size: 0.8125rem;
-  font-weight: 540;
+  font-weight: var(--font-weight-medium);
 }
 
 .breadcrumbItem {
@@ -779,7 +786,7 @@
 
 .breadcrumbSeparator {
   flex: 0 0 auto;
-  color: var(--color-border-strong);
+  color: var(--color-border-control);
 }
 
 .breadcrumbLink {
@@ -857,7 +864,7 @@
   color: var(--color-text-secondary);
   border-radius: var(--radius-control);
   font-size: 0.8125rem;
-  font-weight: 560;
+  font-weight: var(--font-weight-medium);
   text-decoration: none;
 }
 
@@ -868,7 +875,7 @@
 }
 
 .breadcrumbMenuOptionActive {
-  font-weight: 680;
+  font-weight: var(--font-weight-semibold);
 }
 
 .listing {
@@ -881,7 +888,7 @@
   margin: 0 0 1rem;
   color: var(--color-text-primary);
   font-size: 1.125rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   letter-spacing: -0.015em;
 }
 
@@ -932,7 +939,7 @@
 .listingCardBrand {
   color: var(--color-brand-700);
   font-size: 0.6875rem;
-  font-weight: 760;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -940,7 +947,7 @@
 .listingCardTitle {
   color: var(--color-text-primary);
   font-size: 1rem;
-  font-weight: 680;
+  font-weight: var(--font-weight-semibold);
 }
 
 .listingCardDescription {
@@ -957,7 +964,7 @@
   margin: clamp(1.5rem, 4vw, 3rem) 0 0;
   color: var(--color-text-primary);
   font-size: clamp(2.25rem, 6vw, 5rem);
-  font-weight: 690;
+  font-weight: var(--font-weight-bold);
   letter-spacing: -0.045em;
   line-height: 0.98;
   text-wrap: balance;
@@ -1006,7 +1013,7 @@
   margin: 0 0 1rem;
   color: var(--color-brand-700);
   font-size: 0.75rem;
-  font-weight: 760;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -1023,7 +1030,7 @@
   margin: 0;
   color: var(--color-text-primary);
   font-size: clamp(2.1rem, 5.5vw, 4.75rem);
-  font-weight: 690;
+  font-weight: var(--font-weight-bold);
   letter-spacing: -0.048em;
   line-height: 1;
   text-wrap: balance;
@@ -1049,7 +1056,7 @@
   border: 1px solid var(--color-brand-300);
   border-radius: var(--radius-control);
   font-size: 0.875rem;
-  font-weight: 670;
+  font-weight: var(--font-weight-semibold);
   text-decoration: none;
   box-shadow: 0 6px 18px rgb(11 38 63 / 0.06);
   transition:
@@ -1093,7 +1100,7 @@
   margin: 0;
   color: var(--color-text-primary);
   font-size: 0.875rem;
-  font-weight: 720;
+  font-weight: var(--font-weight-bold);
 }
 
 .editorialNote p {
@@ -1184,7 +1191,7 @@
   margin-bottom: 1.25rem;
   color: var(--color-brand-700);
   font-size: 0.75rem;
-  font-weight: 750;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -1201,7 +1208,7 @@
   margin: 0;
   color: var(--color-text-primary);
   font-size: clamp(2.25rem, 7cqw, 4.4rem);
-  font-weight: 680;
+  font-weight: var(--font-weight-bold);
   letter-spacing: -0.055em;
   line-height: 0.98;
   text-wrap: balance;
@@ -1273,7 +1280,7 @@
   color: var(--color-text-secondary);
   font-size: 0.75rem;
   font-style: italic;
-  font-weight: 650;
+  font-weight: var(--font-weight-semibold);
 }
 
 .productMedia {
@@ -1292,7 +1299,7 @@
   margin: 0;
   color: var(--color-text-primary);
   font-size: 1.25rem;
-  font-weight: 650;
+  font-weight: var(--font-weight-bold);
   letter-spacing: -0.025em;
   line-height: 1.2;
 }
@@ -1318,7 +1325,7 @@
   margin-bottom: 0.2rem;
   color: var(--color-text-muted);
   font-size: 0.6rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.09em;
   text-transform: uppercase;
 }
@@ -1326,7 +1333,7 @@
 .productSpecValue {
   color: var(--color-text-primary);
   font-size: 0.75rem;
-  font-weight: 570;
+  font-weight: var(--font-weight-medium);
 }
 
 .productCta {
@@ -1368,7 +1375,7 @@
   min-width: 0;
   color: var(--color-text-muted);
   font-size: 0.75rem;
-  font-weight: 620;
+  font-weight: var(--font-weight-semibold);
   letter-spacing: 0.04em;
 }
 
@@ -1431,7 +1438,7 @@
   border: 0;
   border-radius: var(--radius-control);
   font-size: 0.8125rem;
-  font-weight: 590;
+  font-weight: var(--font-weight-medium);
   line-height: 1.35;
   text-align: left;
   cursor: pointer;
@@ -1453,7 +1460,7 @@
 
 .megaRailButtonActive,
 .megaSectionButtonActive {
-  font-weight: 680;
+  font-weight: var(--font-weight-semibold);
 }
 
 .megaRailButtonActive svg,
@@ -1489,7 +1496,7 @@
   color: var(--color-text-muted);
   border-bottom: 1px solid var(--color-border);
   font-size: 0.6875rem;
-  font-weight: 760;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -1511,7 +1518,7 @@
   color: var(--color-text-secondary);
   border-radius: var(--radius-control);
   font-size: 0.8125rem;
-  font-weight: 560;
+  font-weight: var(--font-weight-medium);
   line-height: 1.35;
   text-decoration: none;
   transition:
@@ -1563,7 +1570,7 @@
 .megaPreviewBrand {
   color: var(--color-brand-700);
   font-size: 0.6875rem;
-  font-weight: 760;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -1573,7 +1580,7 @@
   margin: 0.45rem 0 0;
   color: var(--color-text-primary);
   font-size: 1rem;
-  font-weight: 680;
+  font-weight: var(--font-weight-bold);
   line-height: 1.3;
 }
 
@@ -1592,7 +1599,7 @@
   margin-top: 0.75rem;
   color: var(--color-brand-700);
   font-size: 0.75rem;
-  font-weight: 680;
+  font-weight: var(--font-weight-semibold);
 }
 
 .brandMegaGrid {
@@ -1625,7 +1632,7 @@
   margin: 0;
   color: var(--color-text-primary);
   font-size: 1rem;
-  font-weight: 680;
+  font-weight: var(--font-weight-bold);
 }
 
 .brandMegaHeading img {
@@ -1645,7 +1652,7 @@
   margin-bottom: 0.35rem;
   color: var(--color-brand-700);
   background: var(--color-brand-50);
-  font-weight: 680;
+  font-weight: var(--font-weight-semibold);
   text-decoration: none;
 }
 
@@ -1676,7 +1683,7 @@
   padding: 0.4rem 0.75rem;
   color: var(--color-text-muted);
   font-size: 0.6875rem;
-  font-weight: 740;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -1701,7 +1708,7 @@
   border: 1px solid transparent;
   border-radius: var(--radius-round);
   font-size: 0.8125rem;
-  font-weight: 650;
+  font-weight: var(--font-weight-semibold);
   cursor: pointer;
   transition:
     color var(--duration-fast) var(--ease-standard),
@@ -1752,7 +1759,7 @@
   border: 0;
   border-radius: var(--radius-control);
   font-size: 0.8125rem;
-  font-weight: 560;
+  font-weight: var(--font-weight-medium);
   text-align: left;
   cursor: pointer;
 }
@@ -1767,7 +1774,7 @@
 
 .languageOptionActive,
 .languageMobileOptionActive {
-  font-weight: 680;
+  font-weight: var(--font-weight-semibold);
 }
 
 .languageMobileOptions {

@@ -44,7 +44,7 @@
 .brandLabel {
   color: var(--color-text-secondary);
   font-size: 0.75rem;
-  font-weight: 650;
+  font-weight: var(--font-weight-semibold);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -59,7 +59,7 @@
   border: 1px solid var(--color-brand-100);
   border-radius: var(--radius-round);
   font-size: 0.6875rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -126,7 +126,7 @@
   margin: 0 0 1.5rem;
   color: var(--color-brand-700);
   font-size: 0.75rem;
-  font-weight: 750;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
@@ -143,7 +143,7 @@
   margin: 0;
   color: var(--color-text-primary);
   font-size: clamp(3rem, 8vw, 6.7rem);
-  font-weight: 660;
+  font-weight: var(--font-weight-bold);
   letter-spacing: -0.065em;
   line-height: 0.88;
   text-wrap: balance;
@@ -185,14 +185,14 @@
   margin-bottom: 0.4rem;
   color: var(--color-brand-500);
   font-size: 0.65rem;
-  font-weight: 750;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.1em;
 }
 
 .principle strong {
   display: block;
   font-size: 0.875rem;
-  font-weight: 650;
+  font-weight: var(--font-weight-semibold);
 }
 
 .shell {
@@ -215,7 +215,7 @@
   margin: 0 0 0.75rem 0.75rem;
   color: var(--color-text-muted);
   font-size: 0.625rem;
-  font-weight: 750;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -229,7 +229,7 @@
   color: var(--color-text-secondary);
   border-radius: var(--radius-control);
   font-size: 0.8125rem;
-  font-weight: 570;
+  font-weight: var(--font-weight-medium);
   text-decoration: none;
   transition:
     color var(--duration-fast) var(--ease-standard),
@@ -279,7 +279,7 @@
   margin-bottom: 0.75rem;
   color: var(--color-brand-600);
   font-size: 0.6875rem;
-  font-weight: 750;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
@@ -288,7 +288,7 @@
   margin: 0;
   color: var(--color-text-primary);
   font-size: clamp(2rem, 4vw, 3.3rem);
-  font-weight: 650;
+  font-weight: var(--font-weight-bold);
   letter-spacing: -0.045em;
   line-height: 1;
 }
@@ -337,7 +337,7 @@
 .principleCard h3 {
   margin: 0;
   font-size: 1rem;
-  font-weight: 650;
+  font-weight: var(--font-weight-semibold);
 }
 
 .principleCard p {
@@ -417,7 +417,7 @@
 .responsivePanel h3 {
   margin: 1.25rem 0 0;
   font-size: 1rem;
-  font-weight: 650;
+  font-weight: var(--font-weight-semibold);
 }
 
 .brandRulePanel p,
@@ -454,7 +454,6 @@
 }
 
 .tokenCard:hover {
-  transform: translateY(-2px);
   border-color: var(--color-brand-300);
   box-shadow: var(--shadow-card);
 }
@@ -484,12 +483,33 @@
   color: var(--color-text-primary);
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 0.6875rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 }
 
 .tokenMeta span {
   color: var(--color-text-muted);
   font-size: 0.6875rem;
+}
+
+.tokenMeta .tokenRole {
+  color: var(--color-text-secondary);
+  font-size: 0.75rem;
+  line-height: 1.35;
+  white-space: normal;
+}
+
+.tokenMeta .tokenChange {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.05rem 0.4rem;
+  color: white;
+  background: var(--color-brand-950);
+  border-radius: var(--radius-round);
+  font-family: var(--font-onest), sans-serif;
+  font-size: 0.625rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.06em;
+  vertical-align: 0.1em;
 }
 
 .copyIcon {
@@ -518,7 +538,7 @@
 
 .typeRow {
   display: grid;
-  grid-template-columns: 8rem minmax(0, 1fr) 8rem;
+  grid-template-columns: 7rem minmax(0, 1fr) 12rem;
   align-items: baseline;
   gap: 1rem;
   padding: 1.5rem;
@@ -539,40 +559,121 @@
   text-align: right;
 }
 
-.typeDisplay {
-  font-size: clamp(2.8rem, 7vw, 5rem);
-  font-weight: 660;
-  letter-spacing: -0.06em;
-  line-height: 0.95;
+.typeSample {
+  min-width: 0;
+  color: var(--color-text-primary);
+  overflow-wrap: anywhere;
 }
 
-.typeH1 {
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
-  font-weight: 650;
-  letter-spacing: -0.045em;
-  line-height: 1;
+.auditTable {
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
 }
 
-.typeH2 {
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  font-weight: 640;
-  letter-spacing: -0.035em;
-  line-height: 1.1;
+.auditHead,
+.auditRow {
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 1rem 1.5rem;
 }
 
-.typeBody {
-  max-width: 44rem;
-  color: var(--color-text-secondary);
-  font-size: 1rem;
-  line-height: 1.65;
-}
-
-.typeLabel {
-  color: var(--color-brand-700);
-  font-size: 0.75rem;
-  font-weight: 750;
-  letter-spacing: 0.12em;
+.auditHead {
+  color: var(--color-text-muted);
+  background: var(--color-surface-subtle);
+  font-size: var(--text-label-size);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--text-label-tracking);
+  line-height: var(--text-label-line);
   text-transform: uppercase;
+}
+
+.auditRow {
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-size: var(--text-small-size);
+  line-height: var(--text-small-line);
+}
+
+.auditRow strong {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.auditRow span:last-child {
+  color: var(--color-text-primary);
+}
+
+.auditRange {
+  display: block;
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-medium);
+}
+
+.ruleGrid,
+.depthGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.ruleCard {
+  padding: 1.25rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+
+.ruleCard h3 {
+  margin: 0 0 0.25rem;
+  font-size: var(--text-small-size);
+  font-weight: var(--font-weight-semibold);
+}
+
+.ruleCard p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--text-small-size);
+  line-height: var(--text-small-line);
+}
+
+.shapeGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.radiusSample,
+.depthSample {
+  display: grid;
+  align-content: center;
+  gap: 0.25rem;
+  min-height: 5rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--color-surface);
+  font-size: var(--text-meta-size);
+}
+
+.radiusSample {
+  border: 1.5px solid var(--color-border-control);
+}
+
+.depthSample {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+
+.radiusSample span,
+.depthSample span {
+  color: var(--color-text-muted);
+}
+
+.responsiveGrid {
+  margin-top: 1rem;
 }
 
 .spacingPanel {
@@ -691,7 +792,7 @@
 .patternLabel h3 {
   margin: 0;
   font-size: 1rem;
-  font-weight: 650;
+  font-weight: var(--font-weight-semibold);
 }
 
 .patternLabel code {
@@ -791,6 +892,15 @@
 }
 
 @media (max-width: 64rem) {
+  .ruleGrid,
+  .depthGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .shapeGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .intro::after {
     opacity: 0.5;
   }
@@ -832,6 +942,15 @@
 }
 
 @media (max-width: 48rem) {
+  .auditHead {
+    display: none;
+  }
+
+  .auditRow {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
   .topbarInner {
     min-height: 3.5rem;
   }

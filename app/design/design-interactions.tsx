@@ -9,6 +9,11 @@ export type DesignToken = {
   name: string;
   value: string;
   color?: string;
+  /** Contrast against white, shown only where it matters for text or borders. */
+  ratio?: string;
+  role?: string;
+  /** "NEW" or "FIX" for tokens changed in the current Foundations version. */
+  change?: "NEW" | "FIX";
 };
 
 function fallbackCopy(value: string) {
@@ -79,8 +84,15 @@ export function TokenGrid({ tokens }: { tokens: DesignToken[] }) {
                 />
               ) : null}
               <span className={styles.tokenMeta}>
-                <strong>{token.name}</strong>
-                <span>{token.value}</span>
+                <strong>
+                  {token.name}
+                  {token.change ? <span className={styles.tokenChange}>{token.change}</span> : null}
+                </strong>
+                <span>
+                  {token.value}
+                  {token.ratio ? ` · ${token.ratio}` : ""}
+                </span>
+                {token.role ? <span className={styles.tokenRole}>{token.role}</span> : null}
               </span>
               <span className={styles.copyIcon} aria-hidden="true">
                 {isCopied ? <Check size={16} /> : <Copy size={16} />}
