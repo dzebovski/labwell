@@ -36,28 +36,96 @@ export const metadata: Metadata = {
 
 const sections = [
   ["principles", "Principles"],
+  ["changes", "Changes v1.1"],
   ["brand", "Brand"],
   ["colors", "Colors"],
   ["typography", "Typography"],
   ["spacing", "Spacing"],
+  ["shape", "Shape"],
+  ["depth", "Depth & motion"],
   ["components", "Components"],
   ["patterns", "Patterns"],
   ["responsive", "Responsive"],
 ] as const;
 
+const auditRows = [
+  ["Контраст тексту", "text-muted #738494: 3.85:1 на білому, 3.44:1 на surface-subtle — нижче WCAG AA.", "text-muted → #5F7082: 5.09:1 на білому, 4.54:1 на subtle. Назва токена та сама."],
+  ["Межі полів", "border-strong #ACBEC9 — 1.92:1; для меж інтерактивних елементів потрібно ≥ 3:1.", "Новий border-control #7F93A2 (3.18:1): поля, перемикачі, роздільники крихт. border-strong — лише декор."],
+  ["Ваги шрифту", "У CSS було 20 різних ваг: 520, 560, 650, 690, 760…", "4 ваги: 400 текст, 500 UI, 600 акценти й кнопки, 700 заголовки й labels."],
+  ["Шкала шрифтів", "Розміри задавалися в кожному компоненті окремо.", "10 ролей із токенами --text-*; на mobile Display, H1–H3 зменшуються."],
+  ["Висоти контролів", "Кнопки 36 / 44 / 52 px.", "sm 32 / md 40 / lg 48; на touch-пристроях мінімум 44."],
+] as const;
+
+const colorRules = [
+  ["Текст на світлому", "Лише text-primary, text-secondary, text-muted, brand-700/800. brand-500 (3.74:1) і cyan (1.96:1) — ніколи для тексту."],
+  ["Одна заливка дії", "brand-600 — фон primary-кнопки (білий текст 5.21:1). Hover brand-700, pressed brand-800. Активні пункти меню — brand-50 фон + brand-700 текст."],
+  ["Cyan — лише акцент", "Лінія eyebrow, декоративні сигнали, м’які фони. Не для станів і не як другий колір дії."],
+] as const;
+
+type TypeRole = {
+  name: string;
+  sample: string;
+  meta: string;
+  size: string;
+  line: string;
+  weight: number;
+  tracking?: string;
+  caps?: boolean;
+  color?: string;
+};
+
+const typeRoles: TypeRole[] = [
+  { name: "Display", sample: "Діагностика", meta: "72/72 · 700 · −3.5% · mobile 44/48", size: "--text-display-size", line: "--text-display-line", weight: 700, tracking: "var(--text-display-tracking)" },
+  { name: "H1", sample: "MAGLUMI X8", meta: "56/60 · 700 · −3% · mobile 36/40", size: "--text-h1-size", line: "--text-h1-line", weight: 700, tracking: "var(--text-h1-tracking)" },
+  { name: "H2", sample: "Технічні характеристики", meta: "36/42 · 700 · −2% · mobile 28/34", size: "--text-h2-size", line: "--text-h2-line", weight: 700, tracking: "var(--text-h2-tracking)" },
+  { name: "H3", sample: "Масштабовані конфігурації", meta: "24/30 · 600 · −1% · mobile 22/28", size: "--text-h3-size", line: "--text-h3-line", weight: 600, tracking: "var(--text-h3-tracking)" },
+  { name: "H4", sample: "Імунохімічні аналізатори (CLIA)", meta: "18/26 · 600", size: "--text-h4-size", line: "--text-h4-line", weight: 600 },
+  { name: "Nav", sample: "Каталог продукції · Бренди", meta: "15/20 · 500, активний 600", size: "--text-nav-size", line: "--text-nav-line", weight: 500 },
+  { name: "Body L", sample: "Автоматизований аналізатор CLIA для середніх і великих лабораторій.", meta: "18/28 · 400 · lead", size: "--text-body-lg-size", line: "--text-body-lg-line", weight: 400, color: "var(--color-text-secondary)" },
+  { name: "Body", sample: "Обладнання, реагенти й сервісна підтримка для сучасних клінічних лабораторій України.", meta: "16/26 · 400", size: "--text-body-size", line: "--text-body-line", weight: 400 },
+  { name: "Small / UI", sample: "Каталог продукції · Запит ціни · Детальніше", meta: "14/22 · 500 · кнопки 600", size: "--text-small-size", line: "--text-small-line", weight: 500 },
+  { name: "Meta", sample: "Snibe · до 600 тестів/год · PDF, 2.4 МБ", meta: "13/18 · 500 · text-muted", size: "--text-meta-size", line: "--text-meta-line", weight: 500, color: "var(--color-text-muted)" },
+  { name: "Label", sample: "Snibe · Імунохімічні аналізатори", meta: "12/16 · 700 · +10% · caps", size: "--text-label-size", line: "--text-label-line", weight: 700, tracking: "var(--text-label-tracking)", caps: true, color: "var(--color-brand-700)" },
+];
+
+const radii = [
+  ["8", "control", "кнопки, поля, пункти", "var(--radius-control)"],
+  ["12", "card", "картки, header, dropdown", "var(--radius-card)"],
+  ["20", "panel", "мега-меню, hero, секції", "var(--radius-panel)"],
+  ["999", "pill", "бейджі, чипи", "var(--radius-round)"],
+] as const;
+
+const depths = [
+  ["flat", "секції, картки у сітці", "none"],
+  ["card", "header, sticky-панель", "var(--shadow-card)"],
+  ["elevated", "мега-меню, dropdown, modal", "var(--shadow-elevated)"],
+] as const;
+
+const breakpoints = [
+  ["mobile", "0–767 px", "Лого + бургер, повноекранне меню drill-down. Крихти — лише «‹ Батько».", "390"],
+  ["tablet", "768–1279 px", "Лого + бургер. Крихти згортають середні рівні в «…» до 1023 px.", "768, 1024"],
+  ["desktop", "≥ 1280 px", "Повна шапка й мега-меню, повний рядок крихт.", "1280, 1440"],
+] as const;
+
 const colorTokens: DesignToken[] = [
-  { name: "--color-brand-50", value: "#EFF8FF", color: "#eff8ff" },
-  { name: "--color-brand-200", value: "#B9DDFF", color: "#b9ddff" },
-  { name: "--color-brand-500", value: "#2389D5", color: "#2389d5" },
-  { name: "--color-brand-700", value: "#115B9A", color: "#115b9a" },
-  { name: "--color-brand-950", value: "#0B263F", color: "#0b263f" },
-  { name: "--color-cyan", value: "#63C8D2", color: "#63c8d2" },
-  { name: "--color-canvas", value: "#F3F7F9", color: "#f3f7f9" },
-  { name: "--color-surface", value: "#FFFFFF", color: "#ffffff" },
-  { name: "--color-border", value: "#D5E0E7", color: "#d5e0e7" },
-  { name: "--color-text-primary", value: "#0A1927", color: "#0a1927" },
-  { name: "--color-success", value: "#167A5D", color: "#167a5d" },
-  { name: "--color-danger", value: "#C53F4E", color: "#c53f4e" },
+  { name: "--color-brand-50", value: "#EFF8FF", color: "#eff8ff", role: "Активний пункт, hover-фон" },
+  { name: "--color-brand-100", value: "#DCEEFF", color: "#dceeff", role: "Бейдж brand, виділення" },
+  { name: "--color-brand-300", value: "#84C5F4", color: "#84c5f4", role: "Рамка secondary-кнопки" },
+  { name: "--color-brand-600", value: "#126FBD", color: "#126fbd", ratio: "5.21:1", role: "Заливка primary, focus-кільце" },
+  { name: "--color-brand-700", value: "#115B9A", color: "#115b9a", ratio: "7.03:1", role: "Посилання, активний текст" },
+  { name: "--color-brand-950", value: "#0B263F", color: "#0b263f", ratio: "15.4:1", role: "Темні блоки, футер" },
+  { name: "--color-canvas", value: "#F3F7F9", color: "#f3f7f9", role: "Фон сторінки" },
+  { name: "--color-surface", value: "#FFFFFF", color: "#ffffff", role: "Картки, панелі" },
+  { name: "--color-surface-subtle", value: "#EDF3F6", color: "#edf3f6", role: "Рейка меню, таблиці" },
+  { name: "--color-border", value: "#D5E0E7", color: "#d5e0e7", ratio: "1.34:1", role: "Межі карток і секцій" },
+  { name: "--color-border-control", value: "#7F93A2", color: "#7f93a2", ratio: "3.18:1", role: "Межі полів, роздільники", change: "NEW" },
+  { name: "--color-text-primary", value: "#0A1927", color: "#0a1927", ratio: "17.8:1", role: "Заголовки, основний текст" },
+  { name: "--color-text-secondary", value: "#41576B", color: "#41576b", ratio: "7.50:1", role: "Описи, пункти навігації" },
+  { name: "--color-text-muted", value: "#5F7082", color: "#5f7082", ratio: "5.09:1", role: "Мета, labels (було #738494)", change: "FIX" },
+  { name: "--color-cyan", value: "#63C8D2", color: "#63c8d2", ratio: "1.96:1", role: "Лише декор і eyebrow-лінія" },
+  { name: "--color-success", value: "#167A5D", color: "#167a5d", ratio: "5.28:1", role: "В наявності, сертифіковано" },
+  { name: "--color-warning", value: "#9A650A", color: "#9a650a", ratio: "4.95:1", role: "Під замовлення" },
+  { name: "--color-danger", value: "#C53F4E", color: "#c53f4e", ratio: "5.01:1", role: "Помилки форм" },
 ];
 
 const spacingTokens = [
@@ -169,7 +237,7 @@ export default function DesignSystemPage() {
           </div>
           <span className={styles.version}>
             <span className={styles.versionDot} aria-hidden="true" />
-            Foundations v1
+            Foundations v1.1
           </span>
         </div>
       </header>
@@ -204,7 +272,7 @@ export default function DesignSystemPage() {
 
       <div className={styles.shell}>
         <nav className={styles.sideNav} aria-label="Навігація дизайн-системи">
-          <span className={styles.sideNavLabel}>Index / 01—08</span>
+          <span className={styles.sideNavLabel}>Index / 01—11</span>
           {sections.map(([id, label]) => (
             <a key={id} href={`#${id}`}>
               {label}
@@ -244,9 +312,31 @@ export default function DesignSystemPage() {
             </div>
           </section>
 
+          <section id="changes" className={styles.section}>
+            <SectionHeader
+              index="02 / Changes"
+              title="Що змінилося у v1.1"
+              description="Аудит v1 з коду: контраст, ваги, шкала шрифтів, висоти. Назви токенів не змінилися — лише значення й роль."
+            />
+            <div className={styles.auditTable} role="table" aria-label="Зміни Foundations v1.1">
+              <div className={styles.auditHead} role="row">
+                <span role="columnheader">Область</span>
+                <span role="columnheader">Що було у v1</span>
+                <span role="columnheader">Рішення v1.1</span>
+              </div>
+              {auditRows.map(([area, found, fix]) => (
+                <div key={area} className={styles.auditRow} role="row">
+                  <strong role="cell">{area}</strong>
+                  <span role="cell">{found}</span>
+                  <span role="cell">{fix}</span>
+                </div>
+              ))}
+            </div>
+          </section>
+
           <section id="brand" className={styles.section}>
             <SectionHeader
-              index="02 / Brand"
+              index="03 / Brand"
               title="Знак і простір"
               description="Офіційний логотип використовується без перемальовування. Навколо нього завжди залишається спокійна зона, рівна висоті знака."
             />
@@ -271,55 +361,55 @@ export default function DesignSystemPage() {
 
           <section id="colors" className={styles.section}>
             <SectionHeader
-              index="03 / Colors"
+              index="04 / Colors"
               title="Колір як сигнал"
               description="Brand blue відповідає за дію й довіру, cyan — за технологічну свіжість. Нейтральні поверхні тримають інформацію чистою."
             />
             <TokenGrid tokens={colorTokens} />
+            <div className={styles.ruleGrid}>
+              {colorRules.map(([title, text]) => (
+                <article key={title} className={styles.ruleCard}>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </article>
+              ))}
+            </div>
           </section>
 
           <section id="typography" className={styles.section}>
             <SectionHeader
-              index="04 / Typography"
-              title="Onest, без компромісів"
-              description="Humanist sans підтримує кирилицю, зберігає технічний характер у малих розмірах і не виглядає холодним у великих заголовках."
+              index="05 / Typography"
+              title="Onest · 4 ваги · 11 ролей"
+              description="400 — текст, 500 — UI, 600 — акценти й кнопки, 700 — заголовки й labels. Розміри беруться з токенів --text-*; на mobile великі ролі зменшуються."
             />
             <div className={styles.typeSpecimen}>
-              <div className={styles.typeRow}>
-                <span className={styles.typeName}>Display</span>
-                <span className={styles.typeDisplay}>Діагностика</span>
-                <span className={styles.typeMeta}>80 / 76 · 660</span>
-              </div>
-              <div className={styles.typeRow}>
-                <span className={styles.typeName}>Heading 1</span>
-                <span className={styles.typeH1}>Лабораторна точність</span>
-                <span className={styles.typeMeta}>56 / 56 · 650</span>
-              </div>
-              <div className={styles.typeRow}>
-                <span className={styles.typeName}>Heading 2</span>
-                <span className={styles.typeH2}>Системи для точних рішень</span>
-                <span className={styles.typeMeta}>40 / 44 · 640</span>
-              </div>
-              <div className={styles.typeRow}>
-                <span className={styles.typeName}>Body</span>
-                <span className={styles.typeBody}>
-                  Обладнання, реагенти й сервісна підтримка для сучасних клінічних лабораторій України.
-                </span>
-                <span className={styles.typeMeta}>16 / 26 · 400</span>
-              </div>
-              <div className={styles.typeRow}>
-                <span className={styles.typeName}>Label</span>
-                <span className={styles.typeLabel}>Official distribution partner</span>
-                <span className={styles.typeMeta}>12 / 16 · 750</span>
-              </div>
+              {typeRoles.map((role) => (
+                <div key={role.name} className={styles.typeRow}>
+                  <span className={styles.typeName}>{role.name}</span>
+                  <span
+                    className={styles.typeSample}
+                    style={{
+                      fontSize: `var(${role.size})`,
+                      lineHeight: `var(${role.line})`,
+                      fontWeight: role.weight,
+                      letterSpacing: role.tracking,
+                      textTransform: role.caps ? "uppercase" : undefined,
+                      color: role.color,
+                    }}
+                  >
+                    {role.sample}
+                  </span>
+                  <span className={styles.typeMeta}>{role.meta}</span>
+                </div>
+              ))}
             </div>
           </section>
 
           <section id="spacing" className={styles.section}>
             <SectionHeader
-              index="05 / Spacing"
+              index="06 / Spacing"
               title="Ритм 4 px"
-              description="Компактні controls живуть на кроках 4–16 px, композиції — на 24–96 px. Радіуси: 8 px для controls, 12 px для cards, 20 px для великих panels."
+              description="4–16 px — усередині компонентів, 24–48 px — між блоками, 64–96 px — між секціями сторінки."
             />
             <div className={styles.spacingPanel}>
               {spacingTokens.map(([name, value, width]) => (
@@ -334,9 +424,46 @@ export default function DesignSystemPage() {
             </div>
           </section>
 
+          <section id="shape" className={styles.section}>
+            <SectionHeader
+              index="07 / Shape"
+              title="Радіуси й висоти"
+              description="Чотири радіуси за роллю елемента. Три висоти контролів; на touch-пристроях зона дотику не менша за 44 px, навіть для sm."
+            />
+            <div className={styles.shapeGrid}>
+              {radii.map(([px, name, use, value]) => (
+                <div key={name} className={styles.radiusSample} style={{ borderRadius: value }}>
+                  <strong>{px}</strong> {name}
+                  <span>{use}</span>
+                </div>
+              ))}
+            </div>
+            <div className={styles.componentRow}>
+              <Button size="sm" variant="secondary">sm 32</Button>
+              <Button size="md">md 40</Button>
+              <Button size="lg">lg 48</Button>
+            </div>
+          </section>
+
+          <section id="depth" className={styles.section}>
+            <SectionHeader
+              index="08 / Depth & motion"
+              title="Тінь = над сторінкою"
+              description="140 ms — hover і фокус, 200 ms — відкриття меню, easing (0.2, 0.8, 0.2, 1). Без translateY на пунктах меню: зсув ламає сітку."
+            />
+            <div className={styles.depthGrid}>
+              {depths.map(([name, use, shadow]) => (
+                <div key={name} className={styles.depthSample} style={{ boxShadow: shadow }}>
+                  <strong>{name}</strong>
+                  <span>{use}</span>
+                </div>
+              ))}
+            </div>
+          </section>
+
           <section id="components" className={styles.section}>
             <SectionHeader
-              index="06 / Components"
+              index="09 / Components"
               title="Тихі за замовчуванням"
               description="Компоненти не імітують ефектність. Вони стають помітними у момент взаємодії — через контраст, фокус і короткий рух."
             />
@@ -440,7 +567,7 @@ export default function DesignSystemPage() {
 
           <section id="patterns" className={styles.section}>
             <SectionHeader
-              index="07 / Patterns"
+              index="10 / Patterns"
               title="Композиції, готові до даних"
               description="Header, Hero та Product Card приймають контент через props. Реальні фото можна підставити замість placeholders без зміни layout."
             />
@@ -500,10 +627,26 @@ export default function DesignSystemPage() {
 
           <section id="responsive" className={styles.section}>
             <SectionHeader
-              index="08 / Responsive"
-              title="Одна система, два ритми"
+              index="11 / Responsive"
+              title="Три брейкпоінти, одна система"
               description="Desktop розкриває навігацію й інформаційну щільність. Mobile зберігає 44 px touch targets, вертикальну ієрархію та той самий характер."
             />
+            <div className={styles.auditTable} role="table" aria-label="Брейкпоінти">
+              <div className={styles.auditHead} role="row">
+                <span role="columnheader">Брейкпоінт</span>
+                <span role="columnheader">Поведінка</span>
+                <span role="columnheader">Перевіряємо на</span>
+              </div>
+              {breakpoints.map(([name, range, behavior, widths]) => (
+                <div key={name} className={styles.auditRow} role="row">
+                  <strong role="cell">
+                    {name} <span className={styles.auditRange}>{range}</span>
+                  </strong>
+                  <span role="cell">{behavior}</span>
+                  <span role="cell">{widths} px</span>
+                </div>
+              ))}
+            </div>
             <div className={styles.responsiveGrid}>
               <div className={styles.responsivePanel}>
                 <ViewportChrome label="DESKTOP / FLUID" />
@@ -540,7 +683,7 @@ export default function DesignSystemPage() {
       </div>
 
       <footer className={styles.footer}>
-        LabWell Design System · Foundations v1 · Onest / 4px grid / WCAG AA
+        LabWell Design System · Foundations v1.1 · Onest / 4px grid / WCAG AA
       </footer>
     </main>
   );
