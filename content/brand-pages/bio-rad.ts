@@ -7,9 +7,9 @@ export default defineBrandPage({
     en: "About Bio-Rad Clinical Diagnostics",
     uk: "Про Clinical Diagnostics Bio-Rad",
   },
-  title: {
-    en: "Bio-Rad Clinical Diagnostics | Labwell",
-    uk: "Клінічна діагностика Bio-Rad | Labwell",
+  seoTitle: {
+    en: "Bio-Rad Clinical Diagnostics",
+    uk: "Клінічна діагностика Bio-Rad",
   },
   description: {
     en: "Discover Bio-Rad’s clinical diagnostics portfolio, including diabetes testing, immunohematology, autoimmunity and quality control.",

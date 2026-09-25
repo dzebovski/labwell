@@ -7,9 +7,13 @@ export default defineProduct({
     en: "IH-1000",
     uk: "IH-1000",
   },
-  title: {
-    en: "IH-1000 Immunohematology System | Bio-Rad | Labwell",
-    uk: "IH-1000 Імуно-гематологічна система | Bio-Rad | Labwell",
+  itemType: {
+    en: "Immunohematology system",
+    uk: "Імуногематологічна система",
+  },
+  seoTitle: {
+    en: "IH-1000 Immunohematology System | Bio-Rad",
+    uk: "IH-1000 Імуно-гематологічна система | Bio-Rad",
   },
   description: {
     en: "Fully automated gel-card system for blood group serology, with continuous loading of samples and reagents.",

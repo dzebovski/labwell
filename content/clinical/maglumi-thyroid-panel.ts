@@ -7,9 +7,9 @@ export default defineClinicalPage({
     en: "MAGLUMI Thyroid Panel",
     uk: "Тиреоїдна панель MAGLUMI",
   },
-  title: {
-    en: "MAGLUMI Thyroid Tests | Snibe | Labwell",
-    uk: "Тиреоїдні тести MAGLUMI | Snibe | Labwell",
+  seoTitle: {
+    en: "MAGLUMI Thyroid Tests | Snibe",
+    uk: "Тиреоїдні тести MAGLUMI | Snibe",
   },
   description: {
     en: "Explore thyroid function assays in Snibe’s MAGLUMI CLIA test menu.",

@@ -7,9 +7,9 @@ export default defineClinicalPage({
     en: "Gel/Tube testing",
     uk: "Gel/Tube testing",
   },
-  title: {
-    en: "Gel and Tube Blood Typing | Bio-Rad | Labwell",
-    uk: "Визначення групи крові гелевим і пробірковим методами | Bio-Rad | Labwell",
+  seoTitle: {
+    en: "Gel and Tube Blood Typing | Bio-Rad",
+    uk: "Визначення групи крові гелевим і пробірковим методами | Bio-Rad",
   },
   description: {
     en: "Explore Bio-Rad gel-card and tube-based methods for blood group serology.",

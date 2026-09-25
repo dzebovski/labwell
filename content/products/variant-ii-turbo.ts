@@ -7,9 +7,13 @@ export default defineProduct({
     en: "VARIANT II TURBO",
     uk: "VARIANT II TURBO",
   },
-  title: {
-    en: "VARIANT II TURBO Hemoglobin Testing System | Bio-Rad | Labwell",
-    uk: "VARIANT II TURBO Система визначення гемоглобіну | Bio-Rad | Labwell",
+  itemType: {
+    en: "Hemoglobin testing system",
+    uk: "Система визначення гемоглобіну",
+  },
+  seoTitle: {
+    en: "VARIANT II TURBO Hemoglobin Testing System | Bio-Rad",
+    uk: "VARIANT II TURBO Система визначення гемоглобіну | Bio-Rad",
   },
   description: {
     en: "Automated HPLC system for high-volume HbA1c testing with integrated data management.",

@@ -7,9 +7,13 @@ export default defineProduct({
     en: "Biossays C10",
     uk: "Biossays C10",
   },
-  title: {
-    en: "Biossays C10 Biochemistry Analyzer | Snibe | Labwell",
-    uk: "Biossays C10 Біохімічний аналізатор | Snibe | Labwell",
+  itemType: {
+    en: "Biochemistry analyzer",
+    uk: "Біохімічний аналізатор",
+  },
+  seoTitle: {
+    en: "Biossays C10 Biochemistry Analyzer | Snibe",
+    uk: "Biossays C10 Біохімічний аналізатор | Snibe",
   },
   description: {
     en: "Automated clinical chemistry analyzer with biochemistry and ISE testing, flexible scalability and high sample throughput.",

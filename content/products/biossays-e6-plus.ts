@@ -7,9 +7,13 @@ export default defineProduct({
     en: "Biossays E6 Plus",
     uk: "Biossays E6 Plus",
   },
-  title: {
-    en: "Biossays E6 Plus Biochemistry Analyzer | Snibe | Labwell",
-    uk: "Biossays E6 Plus Біохімічний аналізатор | Snibe | Labwell",
+  itemType: {
+    en: "Biochemistry analyzer",
+    uk: "Біохімічний аналізатор",
+  },
+  seoTitle: {
+    en: "Biossays E6 Plus Biochemistry Analyzer | Snibe",
+    uk: "Biossays E6 Plus Біохімічний аналізатор | Snibe",
   },
   description: {
     en: "Automated biochemistry and electrolyte analyzer for clinical laboratory testing.",

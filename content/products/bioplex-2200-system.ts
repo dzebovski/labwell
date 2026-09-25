@@ -7,9 +7,13 @@ export default defineProduct({
     en: "BioPlex 2200 System",
     uk: "BioPlex 2200 System",
   },
-  title: {
-    en: "BioPlex 2200 Multiplex System | Bio-Rad | Labwell",
-    uk: "BioPlex 2200 Мультиплексна система | Bio-Rad | Labwell",
+  itemType: {
+    en: "Multiplex system",
+    uk: "Мультиплексна система",
+  },
+  seoTitle: {
+    en: "BioPlex 2200 Multiplex System | Bio-Rad",
+    uk: "BioPlex 2200 Мультиплексна система | Bio-Rad",
   },
   description: {
     en: "Fully automated random-access multiplex platform for autoimmune and infectious disease assays.",

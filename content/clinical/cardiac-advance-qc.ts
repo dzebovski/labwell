@@ -7,9 +7,9 @@ export default defineClinicalPage({
     en: "Cardiac Advance QC",
     uk: "Cardiac Advance QC",
   },
-  title: {
-    en: "Cardiac Advance Control | Bio-Rad | Labwell",
-    uk: "Контрольний матеріал Cardiac Advance | Bio-Rad | Labwell",
+  seoTitle: {
+    en: "Cardiac Advance Control | Bio-Rad",
+    uk: "Контрольний матеріал Cardiac Advance | Bio-Rad",
   },
   description: {
     en: "Multi-analyte quality control material for cardiac marker assays, including high-sensitivity troponin.",

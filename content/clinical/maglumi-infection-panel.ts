@@ -7,9 +7,9 @@ export default defineClinicalPage({
     en: "MAGLUMI Infection Panel",
     uk: "Інфекційна панель MAGLUMI",
   },
-  title: {
-    en: "MAGLUMI Infectious Disease Tests | Snibe | Labwell",
-    uk: "Тести MAGLUMI для інфекційних захворювань | Snibe | Labwell",
+  seoTitle: {
+    en: "MAGLUMI Infectious Disease Tests | Snibe",
+    uk: "Тести MAGLUMI для інфекційних захворювань | Snibe",
   },
   description: {
     en: "Explore infectious disease assays in Snibe’s MAGLUMI CLIA menu.",

@@ -8,10 +8,14 @@ type EntryBase = {
   /** URL segment: lowercase latin letters, digits and hyphens. Never change after publishing. */
   slug: string;
   brand: BrandId;
-  /** Text of the link in menus and the last breadcrumb. */
+  /** Name: the page H1, the link in menus and the last breadcrumb. */
   navLabel: LocalizedText;
-  /** Browser/SEO title; the visible heading drops the trailing "| Labwell". */
-  title: LocalizedText;
+  /** What the item is ("CLIA analyzer"), shown under the name. Required for products. */
+  itemType?: LocalizedText;
+  /** One confirmed key figure ("up to 600 tests/h") for menus and the model switcher. */
+  keySpec?: LocalizedText;
+  /** Browser/SEO title without the site name: the layout appends "| Labwell". */
+  seoTitle: LocalizedText;
   description: LocalizedText;
   /** Editorial note shown on the page under "What needs completing". */
   todoNote?: LocalizedText;
@@ -19,6 +23,7 @@ type EntryBase = {
 };
 
 export type ProductEntry = EntryBase & {
+  itemType: LocalizedText;
   /** Canonical place in the "Product catalog" menu; the page lives at /products/{slug}. */
   catalog: CatalogPlacement;
   /** Extra links from "Clinical directions" to this same product page. */

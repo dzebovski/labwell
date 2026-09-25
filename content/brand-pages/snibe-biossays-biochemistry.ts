@@ -7,9 +7,9 @@ export default defineBrandPage({
     en: "Biossays (Biochemistry)",
     uk: "Biossays (Біохімія)",
   },
-  title: {
-    en: "Snibe Biossays Biochemistry | Labwell",
-    uk: "Біохімічні системи Snibe Biossays | Labwell",
+  seoTitle: {
+    en: "Snibe Biossays Biochemistry",
+    uk: "Біохімічні системи Snibe Biossays",
   },
   description: {
     en: "Explore Biossays analyzers and clinical chemistry testing solutions from Snibe.",

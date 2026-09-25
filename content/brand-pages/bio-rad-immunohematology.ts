@@ -7,9 +7,9 @@ export default defineBrandPage({
     en: "Immunohematology",
     uk: "Імуногематологія",
   },
-  title: {
-    en: "Bio-Rad Immunohematology | Labwell",
-    uk: "Імуногематологія Bio-Rad | Labwell",
+  seoTitle: {
+    en: "Bio-Rad Immunohematology",
+    uk: "Імуногематологія Bio-Rad",
   },
   description: {
     en: "Bio-Rad instruments, reagents and software for blood group serology and blood banks.",

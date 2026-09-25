@@ -7,9 +7,9 @@ export default defineClinicalPage({
     en: "Vasculitis",
     uk: "Васкуліти",
   },
-  title: {
-    en: "Vasculitis Autoantibody Testing | Bio-Rad | Labwell",
-    uk: "Дослідження автоантитіл при васкулітах | Bio-Rad | Labwell",
+  seoTitle: {
+    en: "Vasculitis Autoantibody Testing | Bio-Rad",
+    uk: "Дослідження автоантитіл при васкулітах | Bio-Rad",
   },
   description: {
     en: "Explore autoantibody testing options relevant to vasculitis investigations.",

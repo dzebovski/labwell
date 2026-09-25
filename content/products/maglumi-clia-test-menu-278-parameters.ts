@@ -7,9 +7,17 @@ export default defineProduct({
     en: "MAGLUMI CLIA Test Menu (278 parameters)",
     uk: "MAGLUMI CLIA Test Menu (278 parameters)",
   },
-  title: {
-    en: "MAGLUMI CLIA Test Menu | Snibe | Labwell",
-    uk: "Меню CLIA-тестів MAGLUMI | Snibe | Labwell",
+  itemType: {
+    en: "CLIA test menu",
+    uk: "Меню CLIA-тестів",
+  },
+  keySpec: {
+    en: "278 parameters",
+    uk: "278 параметрів",
+  },
+  seoTitle: {
+    en: "MAGLUMI CLIA Test Menu | Snibe",
+    uk: "Меню CLIA-тестів MAGLUMI | Snibe",
   },
   description: {
     en: "Browse Snibe’s MAGLUMI chemiluminescence immunoassay menu across clinical specialties.",

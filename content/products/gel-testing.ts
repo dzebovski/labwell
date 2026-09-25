@@ -7,9 +7,13 @@ export default defineProduct({
     en: "Gel Testing",
     uk: "Gel Testing",
   },
-  title: {
-    en: "Gel Testing for Blood Banks | Bio-Rad | Labwell",
-    uk: "Гелеве тестування для банків крові | Bio-Rad | Labwell",
+  itemType: {
+    en: "Gel testing for blood banks",
+    uk: "Гелеве тестування для банків крові",
+  },
+  seoTitle: {
+    en: "Gel Testing for Blood Banks | Bio-Rad",
+    uk: "Гелеве тестування для банків крові | Bio-Rad",
   },
   description: {
     en: "Bio-Rad gel-card testing solutions for blood typing, antibody screening and other immunohematology procedures.",

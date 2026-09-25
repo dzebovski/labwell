@@ -7,9 +7,9 @@ export default defineBrandPage({
     en: "Autoimmunity",
     uk: "Аутоімунітет",
   },
-  title: {
-    en: "Bio-Rad Autoimmune Testing | Labwell",
-    uk: "Аутоімунні дослідження Bio-Rad | Labwell",
+  seoTitle: {
+    en: "Bio-Rad Autoimmune Testing",
+    uk: "Аутоімунні дослідження Bio-Rad",
   },
   description: {
     en: "Bio-Rad autoantibody assays and automated systems for autoimmune testing laboratories.",

@@ -7,9 +7,13 @@ export default defineProduct({
     en: "Hemolumi H6",
     uk: "Hemolumi H6",
   },
-  title: {
-    en: "Hemolumi H6 Coagulation Analyzer | Snibe | Labwell",
-    uk: "Hemolumi H6 Коагулологічний аналізатор | Snibe | Labwell",
+  itemType: {
+    en: "Coagulation analyzer",
+    uk: "Коагулологічний аналізатор",
+  },
+  seoTitle: {
+    en: "Hemolumi H6 Coagulation Analyzer | Snibe",
+    uk: "Hemolumi H6 Коагулологічний аналізатор | Snibe",
   },
   description: {
     en: "Automated coagulation analyzer combining clotting and optical detection for hemostasis testing.",

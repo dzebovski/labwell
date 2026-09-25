@@ -7,9 +7,13 @@ export default defineProduct({
     en: "Geenius System",
     uk: "Geenius System",
   },
-  title: {
-    en: "Geenius Confirmatory Testing System | Bio-Rad | Labwell",
-    uk: "Geenius Система підтверджувального тестування | Bio-Rad | Labwell",
+  itemType: {
+    en: "Confirmatory testing system",
+    uk: "Система підтверджувального тестування",
+  },
+  seoTitle: {
+    en: "Geenius Confirmatory Testing System | Bio-Rad",
+    uk: "Geenius Система підтверджувального тестування | Bio-Rad",
   },
   description: {
     en: "Rapid confirmatory assay platform for HIV and HCV antibody testing, with automated result interpretation.",

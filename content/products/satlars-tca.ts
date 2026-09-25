@@ -7,9 +7,13 @@ export default defineProduct({
     en: "SATLARS-TCA",
     uk: "SATLARS-TCA",
   },
-  title: {
-    en: "SATLARS-TCA Lab Automation | Snibe | Labwell",
-    uk: "SATLARS-TCA Лабораторна автоматизація | Snibe | Labwell",
+  itemType: {
+    en: "Laboratory automation",
+    uk: "Лабораторна автоматизація",
+  },
+  seoTitle: {
+    en: "SATLARS-TCA Lab Automation | Snibe",
+    uk: "SATLARS-TCA Лабораторна автоматизація | Snibe",
   },
   description: {
     en: "Laboratory automation solution for connecting analytical systems and streamlining sample workflows.",

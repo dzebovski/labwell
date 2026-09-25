@@ -7,9 +7,9 @@ export default defineClinicalPage({
     en: "Metabolic panel",
     uk: "Метаболічна панель",
   },
-  title: {
-    en: "Metabolic Testing | Snibe | Labwell",
-    uk: "Метаболічні дослідження | Snibe | Labwell",
+  seoTitle: {
+    en: "Metabolic Testing | Snibe",
+    uk: "Метаболічні дослідження | Snibe",
   },
   description: {
     en: "Clinical chemistry and immunoassay options relevant to metabolic health testing.",

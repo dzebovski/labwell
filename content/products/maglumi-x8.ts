@@ -7,9 +7,17 @@ export default defineProduct({
     en: "MAGLUMI X8",
     uk: "MAGLUMI X8",
   },
-  title: {
-    en: "MAGLUMI X8 CLIA Analyzer | Snibe | Labwell",
-    uk: "MAGLUMI X8 CLIA-аналізатор | Snibe | Labwell",
+  itemType: {
+    en: "CLIA analyzer",
+    uk: "CLIA-аналізатор",
+  },
+  keySpec: {
+    en: "up to 600 tests/h",
+    uk: "до 600 тестів/год",
+  },
+  seoTitle: {
+    en: "MAGLUMI X8 CLIA Analyzer | Snibe",
+    uk: "MAGLUMI X8 CLIA-аналізатор | Snibe",
   },
   description: {
     en: "Automated CLIA analyzer for medium and large laboratories, with up to 600 tests per hour per module and scalable configurations.",

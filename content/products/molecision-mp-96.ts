@@ -7,9 +7,13 @@ export default defineProduct({
     en: "Molecision MP-96",
     uk: "Molecision MP-96",
   },
-  title: {
-    en: "Molecision MP-96 Molecular Analyzer | Snibe | Labwell",
-    uk: "Molecision MP-96 Молекулярний аналізатор | Snibe | Labwell",
+  itemType: {
+    en: "Molecular analyzer",
+    uk: "Молекулярний аналізатор",
+  },
+  seoTitle: {
+    en: "Molecision MP-96 Molecular Analyzer | Snibe",
+    uk: "Molecision MP-96 Молекулярний аналізатор | Snibe",
   },
   description: {
     en: "Molecular testing instrument in Snibe’s Molecision portfolio for automated laboratory workflows.",

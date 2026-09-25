@@ -7,9 +7,13 @@ export default defineProduct({
     en: "Unity Real Time",
     uk: "Unity Real Time",
   },
-  title: {
-    en: "Unity Real Time QC Software | Bio-Rad | Labwell",
-    uk: "Програмне забезпечення QC Unity Real Time | Bio-Rad | Labwell",
+  itemType: {
+    en: "QC software",
+    uk: "ПЗ для контролю якості",
+  },
+  seoTitle: {
+    en: "Unity Real Time QC Software | Bio-Rad",
+    uk: "Програмне забезпечення QC Unity Real Time | Bio-Rad",
   },
   description: {
     en: "Quality control software for reviewing QC results and supporting laboratory performance monitoring.",

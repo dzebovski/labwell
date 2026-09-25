@@ -7,9 +7,13 @@ export default defineProduct({
     en: "InteliQ",
     uk: "InteliQ",
   },
-  title: {
-    en: "InteliQ Quality Controls | Bio-Rad | Labwell",
-    uk: "Контролі якості InteliQ | Bio-Rad | Labwell",
+  itemType: {
+    en: "Quality controls",
+    uk: "Контролі якості",
+  },
+  seoTitle: {
+    en: "InteliQ Quality Controls | Bio-Rad",
+    uk: "Контролі якості InteliQ | Bio-Rad",
   },
   description: {
     en: "Ready-to-use barcoded independent quality controls for chemistry and immunoassay laboratory platforms.",

@@ -7,9 +7,13 @@ export default defineProduct({
     en: "IH-Com",
     uk: "IH-Com",
   },
-  title: {
-    en: "IH-Com Connectivity Software | Bio-Rad | Labwell",
-    uk: "Програмне забезпечення для інтеграції IH-Com | Bio-Rad | Labwell",
+  itemType: {
+    en: "LIS connectivity software",
+    uk: "ПЗ для інтеграції з ЛІС",
+  },
+  seoTitle: {
+    en: "IH-Com Connectivity Software | Bio-Rad",
+    uk: "Програмне забезпечення для інтеграції IH-Com | Bio-Rad",
   },
   description: {
     en: "Connectivity solution supporting immunohematology instruments and laboratory information workflows.",

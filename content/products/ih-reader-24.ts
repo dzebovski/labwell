@@ -7,9 +7,13 @@ export default defineProduct({
     en: "IH-Reader 24",
     uk: "IH-Reader 24",
   },
-  title: {
-    en: "IH-Reader 24 System | Bio-Rad | Labwell",
-    uk: "IH-Reader 24 — система зчитування | Bio-Rad | Labwell",
+  itemType: {
+    en: "Card reader system",
+    uk: "Система зчитування ID-карт",
+  },
+  seoTitle: {
+    en: "IH-Reader 24 System | Bio-Rad",
+    uk: "IH-Reader 24 — система зчитування | Bio-Rad",
   },
   description: {
     en: "Semi-automated reader for manually prepared IH-Cards in blood typing and antibody testing workflows.",

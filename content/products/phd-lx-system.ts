@@ -7,9 +7,13 @@ export default defineProduct({
     en: "PhD lx System",
     uk: "PhD lx System",
   },
-  title: {
-    en: "PhD lx System | Bio-Rad | Labwell",
-    uk: "PhD lx System | Bio-Rad | Labwell",
+  itemType: {
+    en: "ELISA and IFA processor",
+    uk: "Процесор для ІФА та імунофлуоресценції",
+  },
+  seoTitle: {
+    en: "PhD lx System | Bio-Rad",
+    uk: "PhD lx System | Bio-Rad",
   },
   description: {
     en: "Automated processor supporting immunofluorescence and enzyme immunoassay workflows for autoimmune and infectious disease testing.",

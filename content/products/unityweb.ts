@@ -7,9 +7,13 @@ export default defineProduct({
     en: "UnityWeb",
     uk: "UnityWeb",
   },
-  title: {
-    en: "UnityWeb QC Software | Bio-Rad | Labwell",
-    uk: "Програмне забезпечення QC UnityWeb | Bio-Rad | Labwell",
+  itemType: {
+    en: "Online QC software",
+    uk: "Онлайн-ПЗ для контролю якості",
+  },
+  seoTitle: {
+    en: "UnityWeb QC Software | Bio-Rad",
+    uk: "Програмне забезпечення QC UnityWeb | Bio-Rad",
   },
   description: {
     en: "Online quality control data management for laboratory performance monitoring and peer comparison.",

@@ -7,9 +7,13 @@ export default defineProduct({
     en: "Chromogenic Culture Media",
     uk: "Chromogenic Culture Media",
   },
-  title: {
-    en: "Chromogenic Culture Media | Bio-Rad | Labwell",
-    uk: "Хромогенні культуральні середовища | Bio-Rad | Labwell",
+  itemType: {
+    en: "Chromogenic culture media",
+    uk: "Хромогенні культуральні середовища",
+  },
+  seoTitle: {
+    en: "Chromogenic Culture Media | Bio-Rad",
+    uk: "Хромогенні культуральні середовища | Bio-Rad",
   },
   description: {
     en: "Chromogenic culture media for microbiology laboratories to support differentiation of bacterial colonies.",
