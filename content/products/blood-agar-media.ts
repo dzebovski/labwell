@@ -7,9 +7,13 @@ export default defineProduct({
     en: "Blood Agar Media",
     uk: "Blood Agar Media",
   },
-  title: {
-    en: "Blood Agar Culture Media | Bio-Rad | Labwell",
-    uk: "Культуральні середовища з кров'яним агаром | Bio-Rad | Labwell",
+  itemType: {
+    en: "Blood agar culture media",
+    uk: "Культуральні середовища з кров'яним агаром",
+  },
+  seoTitle: {
+    en: "Blood Agar Culture Media | Bio-Rad",
+    uk: "Культуральні середовища з кров'яним агаром | Bio-Rad",
   },
   description: {
     en: "Blood agar culture media for isolation and examination of microorganisms in routine bacteriology.",

@@ -7,9 +7,13 @@ export default defineProduct({
     en: "Tube Testing",
     uk: "Tube Testing",
   },
-  title: {
-    en: "Tube Testing Reagents | Bio-Rad | Labwell",
-    uk: "Реагенти для пробіркового тестування | Bio-Rad | Labwell",
+  itemType: {
+    en: "Tube testing reagents",
+    uk: "Реагенти для пробіркового тестування",
+  },
+  seoTitle: {
+    en: "Tube Testing Reagents | Bio-Rad",
+    uk: "Реагенти для пробіркового тестування | Bio-Rad",
   },
   description: {
     en: "Traditional tube-based blood group serology reagents and solutions for immunohematology laboratories.",

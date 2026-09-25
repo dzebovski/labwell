@@ -7,9 +7,9 @@ export default defineBrandPage({
     en: "About Snibe",
     uk: "Про компанію Snibe",
   },
-  title: {
-    en: "About Snibe | Labwell",
-    uk: "Про Snibe | Labwell",
+  seoTitle: {
+    en: "About Snibe",
+    uk: "Про Snibe",
   },
   description: {
     en: "Learn about Snibe, a manufacturer of clinical laboratory instruments and in vitro diagnostic reagents.",

@@ -7,9 +7,13 @@ export default defineProduct({
     en: "Immunoassay Controls",
     uk: "Immunoassay Controls",
   },
-  title: {
-    en: "Immunoassay Quality Controls | Bio-Rad | Labwell",
-    uk: "Контролі якості для імуноаналізу | Bio-Rad | Labwell",
+  itemType: {
+    en: "Immunoassay quality controls",
+    uk: "Контролі якості для імуноаналізу",
+  },
+  seoTitle: {
+    en: "Immunoassay Quality Controls | Bio-Rad",
+    uk: "Контролі якості для імуноаналізу | Bio-Rad",
   },
   description: {
     en: "Independent controls for monitoring the analytical performance of immunoassay testing.",

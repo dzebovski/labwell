@@ -7,9 +7,9 @@ export default defineBrandPage({
     en: "Diabetes",
     uk: "Діабет",
   },
-  title: {
-    en: "Bio-Rad Diabetes Testing | Labwell",
-    uk: "Дослідження діабету Bio-Rad | Labwell",
+  seoTitle: {
+    en: "Bio-Rad Diabetes Testing",
+    uk: "Дослідження діабету Bio-Rad",
   },
   description: {
     en: "Explore Bio-Rad HPLC systems and solutions for HbA1c and hemoglobin testing.",

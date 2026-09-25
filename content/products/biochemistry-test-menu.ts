@@ -7,9 +7,13 @@ export default defineProduct({
     en: "Biochemistry Test Menu",
     uk: "Biochemistry Test Menu",
   },
-  title: {
-    en: "Biochemistry Test Menu | Snibe | Labwell",
-    uk: "Меню біохімічних тестів | Snibe | Labwell",
+  itemType: {
+    en: "Biochemistry test menu",
+    uk: "Меню біохімічних тестів",
+  },
+  seoTitle: {
+    en: "Biochemistry Test Menu | Snibe",
+    uk: "Меню біохімічних тестів | Snibe",
   },
   description: {
     en: "Explore Snibe’s clinical chemistry and electrolyte assays for Biossays analyzers.",

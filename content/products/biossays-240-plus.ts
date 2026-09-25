@@ -7,9 +7,13 @@ export default defineProduct({
     en: "Biossays 240 Plus",
     uk: "Biossays 240 Plus",
   },
-  title: {
-    en: "Biossays 240 Plus Biochemistry Analyzer | Snibe | Labwell",
-    uk: "Biossays 240 Plus Біохімічний аналізатор | Snibe | Labwell",
+  itemType: {
+    en: "Biochemistry analyzer",
+    uk: "Біохімічний аналізатор",
+  },
+  seoTitle: {
+    en: "Biossays 240 Plus Biochemistry Analyzer | Snibe",
+    uk: "Biossays 240 Plus Біохімічний аналізатор | Snibe",
   },
   description: {
     en: "Automated biochemistry analyzer for routine clinical chemistry testing in laboratory workflows.",

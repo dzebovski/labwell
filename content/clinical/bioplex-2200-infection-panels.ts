@@ -7,9 +7,9 @@ export default defineClinicalPage({
     en: "BioPlex 2200 Infection Panels",
     uk: "BioPlex 2200 Інфекційні панелі",
   },
-  title: {
-    en: "BioPlex 2200 Infectious Disease Assays | Bio-Rad | Labwell",
-    uk: "Тести BioPlex 2200 для інфекційних захворювань | Bio-Rad | Labwell",
+  seoTitle: {
+    en: "BioPlex 2200 Infectious Disease Assays | Bio-Rad",
+    uk: "Тести BioPlex 2200 для інфекційних захворювань | Bio-Rad",
   },
   description: {
     en: "Multiplex infectious disease testing on the fully automated BioPlex 2200 platform.",

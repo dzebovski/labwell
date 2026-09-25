@@ -19,9 +19,9 @@ export function routeMetadata(locale: string, path: string): Metadata {
   const { locale: resolvedLocale, target } = requireRouteTarget(locale, path);
   if (target.type === "page") {
     const { page } = target;
-    return createPageMetadata(resolvedLocale, page.title[resolvedLocale], page.description[resolvedLocale], page.path);
+    return createPageMetadata(resolvedLocale, page.seoTitle[resolvedLocale], page.description[resolvedLocale], page.path);
   }
   const { category } = target;
   const label = (category.section ?? category.group).label[resolvedLocale];
-  return createPageMetadata(resolvedLocale, `${label} | Labwell`, category.path);
+  return createPageMetadata(resolvedLocale, label, category.path);
 }

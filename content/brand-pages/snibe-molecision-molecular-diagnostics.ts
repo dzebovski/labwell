@@ -7,9 +7,9 @@ export default defineBrandPage({
     en: "Molecision (Molecular diagnostics)",
     uk: "Molecision (Молекулярна діагностика)",
   },
-  title: {
-    en: "Snibe Molecision Molecular Diagnostics | Labwell",
-    uk: "Молекулярна діагностика Snibe Molecision | Labwell",
+  seoTitle: {
+    en: "Snibe Molecision Molecular Diagnostics",
+    uk: "Молекулярна діагностика Snibe Molecision",
   },
   description: {
     en: "Explore Molecision molecular instruments for clinical laboratory testing.",

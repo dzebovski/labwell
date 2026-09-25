@@ -7,9 +7,13 @@ export default defineProduct({
     en: "Liquichek Serum Indices",
     uk: "Liquichek Serum Indices",
   },
-  title: {
-    en: "Liquichek Serum Indices | Bio-Rad | Labwell",
-    uk: "Liquichek Serum Indices | Bio-Rad | Labwell",
+  itemType: {
+    en: "Serum indices control",
+    uk: "Контроль сироваткових індексів",
+  },
+  seoTitle: {
+    en: "Liquichek Serum Indices | Bio-Rad",
+    uk: "Liquichek Serum Indices | Bio-Rad",
   },
   description: {
     en: "Liquid control material for monitoring serum index measurements in clinical chemistry workflows.",

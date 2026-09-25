@@ -18,6 +18,7 @@ import {
   getRootBreadcrumbs,
   getRouteParams,
   getRouteTarget,
+  listPages,
   type Breadcrumb,
   type ContentPage,
 } from "./catalog.ts";
@@ -246,4 +247,44 @@ test("header navigation links products from both catalog and clinical menus", ()
   const brandGroups = mega("brands").groups;
   assert.deepEqual(brandGroups.map((group) => group.label), ["Bio-Rad", "Snibe"]);
   assert.ok(brandGroups.every((group) => group.logo));
+});
+
+test("reports SEO titles with the site name, duplicate titles and missing item types", () => {
+  const product = getProduct("maglumi-x8")!;
+  const other = getProduct("maglumi-x6")!;
+  const x3 = getProduct("maglumi-x3")!;
+  const problems = findCatalogProblems([
+    product,
+    { ...other, seoTitle: product.seoTitle, itemType: undefined, description: { uk: " ", en: "" } },
+    { ...x3, seoTitle: { uk: "MAGLUMI X3 | Labwell", en: "MAGLUMI X3 | Labwell" } },
+  ]);
+  assert.ok(problems.some((item) => item.includes('must not end with "Labwell" (uk)')));
+  assert.ok(problems.some((item) => item.includes("seoTitle duplicates /products/maglumi-x8 (en)")));
+  assert.ok(problems.some((item) => item.includes("products need an itemType (uk)")));
+  assert.ok(problems.some((item) => item.includes("empty description (en)")));
+});
+
+test("every product has a name, type and SEO title in both languages", () => {
+  for (const page of listPages("product")) {
+    for (const locale of ["uk", "en"] as const) {
+      assert.ok(page.navLabel[locale], `${page.path}: navLabel (${locale})`);
+      assert.ok(page.itemType?.[locale], `${page.path}: itemType (${locale})`);
+      assert.ok(!page.seoTitle[locale].includes("Labwell"), `${page.path}: seoTitle (${locale})`);
+    }
+  }
+});
+
+test("menu leaves carry the item type and a meta line from the key figure", () => {
+  const nav = buildHeaderNavigation("uk", navLabels);
+  const products = nav.find((entry) => entry.id === "products");
+  assert.ok(products?.type === "mega");
+  const leaves = products.groups.flatMap((group) => group.sections.flatMap((section) => section.links));
+  const x8 = leaves.find((leaf) => leaf.href === "/uk/products/maglumi-x8");
+  assert.deepEqual(
+    { label: x8?.label, itemType: x8?.itemType, meta: x8?.meta },
+    { label: "MAGLUMI X8", itemType: "CLIA-аналізатор", meta: "до 600 тестів/год" },
+  );
+  const d10 = leaves.find((leaf) => leaf.href === "/uk/products/d-10");
+  assert.equal(d10?.meta, "Система визначення гемоглобіну");
+  assert.ok(leaves.every((leaf) => !("title" in leaf)));
 });

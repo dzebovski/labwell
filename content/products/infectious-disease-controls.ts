@@ -7,9 +7,13 @@ export default defineProduct({
     en: "Infectious Disease Controls",
     uk: "Infectious Disease Controls",
   },
-  title: {
-    en: "Infectious Disease Controls | Bio-Rad | Labwell",
-    uk: "Контролі для досліджень інфекційних захворювань | Bio-Rad | Labwell",
+  itemType: {
+    en: "Infectious disease controls",
+    uk: "Контролі для досліджень інфекційних захворювань",
+  },
+  seoTitle: {
+    en: "Infectious Disease Controls | Bio-Rad",
+    uk: "Контролі для досліджень інфекційних захворювань | Bio-Rad",
   },
   description: {
     en: "Quality controls for laboratory infectious disease assays and serology workflows.",

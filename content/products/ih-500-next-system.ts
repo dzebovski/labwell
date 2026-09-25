@@ -7,9 +7,13 @@ export default defineProduct({
     en: "IH-500 NEXT System",
     uk: "IH-500 NEXT System",
   },
-  title: {
-    en: "IH-500 NEXT Blood Typing System | Bio-Rad | Labwell",
-    uk: "IH-500 NEXT Система визначення групи крові | Bio-Rad | Labwell",
+  itemType: {
+    en: "Blood typing system",
+    uk: "Система визначення групи крові",
+  },
+  seoTitle: {
+    en: "IH-500 NEXT Blood Typing System | Bio-Rad",
+    uk: "IH-500 NEXT Система визначення групи крові | Bio-Rad",
   },
   description: {
     en: "Fully automated immunohematology system for blood grouping and compatibility testing.",

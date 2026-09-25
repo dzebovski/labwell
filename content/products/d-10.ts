@@ -7,9 +7,13 @@ export default defineProduct({
     en: "D-10",
     uk: "D-10",
   },
-  title: {
-    en: "D-10 Hemoglobin Testing System | Bio-Rad | Labwell",
-    uk: "D-10 Система визначення гемоглобіну | Bio-Rad | Labwell",
+  itemType: {
+    en: "Hemoglobin testing system",
+    uk: "Система визначення гемоглобіну",
+  },
+  seoTitle: {
+    en: "D-10 Hemoglobin Testing System | Bio-Rad",
+    uk: "D-10 Система визначення гемоглобіну | Bio-Rad",
   },
   description: {
     en: "Compact HPLC system for HbA1c and hemoglobin testing, with straightforward laboratory workflow.",

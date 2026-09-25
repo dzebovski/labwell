@@ -7,9 +7,17 @@ export default defineProduct({
     en: "MAGLUMI X6",
     uk: "MAGLUMI X6",
   },
-  title: {
-    en: "MAGLUMI X6 CLIA Analyzer | Snibe | Labwell",
-    uk: "MAGLUMI X6 CLIA-аналізатор | Snibe | Labwell",
+  itemType: {
+    en: "CLIA analyzer",
+    uk: "CLIA-аналізатор",
+  },
+  keySpec: {
+    en: "up to 450 tests/h",
+    uk: "до 450 тестів/год",
+  },
+  seoTitle: {
+    en: "MAGLUMI X6 CLIA Analyzer | Snibe",
+    uk: "MAGLUMI X6 CLIA-аналізатор | Snibe",
   },
   description: {
     en: "Scalable chemiluminescence immunoassay system for laboratories with high test demand; throughput of up to 450 tests per hour.",

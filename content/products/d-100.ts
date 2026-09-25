@@ -7,9 +7,13 @@ export default defineProduct({
     en: "D-100",
     uk: "D-100",
   },
-  title: {
-    en: "D-100 Hemoglobin Testing System | Bio-Rad | Labwell",
-    uk: "D-100 Система визначення гемоглобіну | Bio-Rad | Labwell",
+  itemType: {
+    en: "Hemoglobin testing system",
+    uk: "Система визначення гемоглобіну",
+  },
+  seoTitle: {
+    en: "D-100 Hemoglobin Testing System | Bio-Rad",
+    uk: "D-100 Система визначення гемоглобіну | Bio-Rad",
   },
   description: {
     en: "Automated HPLC system for HbA1c testing, designed to streamline diabetes laboratory workflows.",

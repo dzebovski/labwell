@@ -7,9 +7,13 @@ export default defineProduct({
     en: "VARIANT II",
     uk: "VARIANT II",
   },
-  title: {
-    en: "VARIANT II Hemoglobin Testing System | Bio-Rad | Labwell",
-    uk: "VARIANT II Система визначення гемоглобіну | Bio-Rad | Labwell",
+  itemType: {
+    en: "Hemoglobin testing system",
+    uk: "Система визначення гемоглобіну",
+  },
+  seoTitle: {
+    en: "VARIANT II Hemoglobin Testing System | Bio-Rad",
+    uk: "VARIANT II Система визначення гемоглобіну | Bio-Rad",
   },
   description: {
     en: "HPLC hemoglobin testing system for HbA2 and HbF analysis and investigation of abnormal hemoglobins.",

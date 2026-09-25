@@ -7,9 +7,9 @@ export default defineClinicalPage({
     en: "Oncopanel MAGLUMI (Oncomarkers)",
     uk: "Онкопанель MAGLUMI (Онкомаркери)",
   },
-  title: {
-    en: "MAGLUMI Tumor Marker Tests | Snibe | Labwell",
-    uk: "Тести на онкомаркери MAGLUMI | Snibe | Labwell",
+  seoTitle: {
+    en: "MAGLUMI Tumor Marker Tests | Snibe",
+    uk: "Тести на онкомаркери MAGLUMI | Snibe",
   },
   description: {
     en: "Explore tumor marker immunoassays in the MAGLUMI test menu for oncology laboratory workflows.",

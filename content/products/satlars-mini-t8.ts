@@ -7,9 +7,13 @@ export default defineProduct({
     en: "SATLARS mini-T8",
     uk: "SATLARS mini-T8",
   },
-  title: {
-    en: "SATLARS mini-T8 Lab Automation | Snibe | Labwell",
-    uk: "SATLARS mini-T8 Лабораторна автоматизація | Snibe | Labwell",
+  itemType: {
+    en: "Laboratory automation",
+    uk: "Лабораторна автоматизація",
+  },
+  seoTitle: {
+    en: "SATLARS mini-T8 Lab Automation | Snibe",
+    uk: "SATLARS mini-T8 Лабораторна автоматизація | Snibe",
   },
   description: {
     en: "Compact laboratory automation solution for integrated sample processing and testing workflows.",

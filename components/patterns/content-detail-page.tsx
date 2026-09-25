@@ -11,10 +11,6 @@ type ContentDetailPageProps = {
   page: ContentPage;
 };
 
-function visualTitle(title: string) {
-  return title.replace(/\s*\|\s*Labwell\s*$/i, "");
-}
-
 export async function ContentDetailPage({ locale, page }: ContentDetailPageProps) {
   const dictionary = await getDictionary(locale);
   const breadcrumbs = getBreadcrumbs(page, locale, dictionary.pages);
@@ -31,7 +27,8 @@ export async function ContentDetailPage({ locale, page }: ContentDetailPageProps
         <div className={styles.contentDetailGrid}>
           <div className={styles.contentDetailCopy}>
             <p className={styles.contentDetailBrand}>{page.brand.name}</p>
-            <h1 className={styles.contentDetailTitle}>{visualTitle(page.title[locale])}</h1>
+            <h1 className={styles.contentDetailTitle}>{page.navLabel[locale]}</h1>
+            {page.itemType ? <p className={styles.contentDetailType}>{page.itemType[locale]}</p> : null}
             <p className={styles.contentDetailDescription}>{page.description[locale]}</p>
             <a
               href={page.sourceUrl}

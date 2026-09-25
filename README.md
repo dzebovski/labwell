@@ -39,6 +39,10 @@ All catalog pages and the header menus are generated from files in `content/`:
 
 1. Copy an existing file, e.g. `content/products/maglumi-x10.ts`, to `content/products/{slug}.ts`.
 2. Fill in `slug`, `brand`, texts and `catalog: { group, section }` — the editor autocompletes valid ids.
+   - `navLabel` is the name: the page H1, the menu link and the last breadcrumb.
+   - `itemType` says what it is ("CLIA analyzer"); it is shown on its own line under the name.
+   - `keySpec` (optional) is one confirmed key figure ("up to 600 tests/h") for menus.
+   - `seoTitle` is the browser/search title without the site name — "| Labwell" is added automatically.
    Add `clinical: [{ direction: "..." }]` to also list it under "Clinical directions".
 3. Import it in `content/index.ts` and put it in the `products` list where it should appear in the menu.
 4. Run `npm test` — it checks unique URLs, valid menu places and that every file is registered.

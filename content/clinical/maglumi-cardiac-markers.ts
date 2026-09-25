@@ -7,9 +7,9 @@ export default defineClinicalPage({
     en: "MAGLUMI cardiac markers",
     uk: "Кардіомаркери MAGLUMI",
   },
-  title: {
-    en: "MAGLUMI Cardiac Markers | Snibe | Labwell",
-    uk: "Кардіомаркери MAGLUMI | Snibe | Labwell",
+  seoTitle: {
+    en: "MAGLUMI Cardiac Markers | Snibe",
+    uk: "Кардіомаркери MAGLUMI | Snibe",
   },
   description: {
     en: "Cardiac biomarker assays available through Snibe’s MAGLUMI CLIA test menu.",

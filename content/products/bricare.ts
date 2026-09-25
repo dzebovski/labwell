@@ -7,9 +7,13 @@ export default defineProduct({
     en: "BRiCare",
     uk: "BRiCare",
   },
-  title: {
-    en: "BRiCare Remote Diagnostics | Bio-Rad | Labwell",
-    uk: "Віддалена діагностика BRiCare | Bio-Rad | Labwell",
+  itemType: {
+    en: "Remote diagnostics software",
+    uk: "ПЗ для віддаленої діагностики",
+  },
+  seoTitle: {
+    en: "BRiCare Remote Diagnostics | Bio-Rad",
+    uk: "Віддалена діагностика BRiCare | Bio-Rad",
   },
   description: {
     en: "Secure remote diagnostics and support software for Bio-Rad clinical diagnostic instruments.",

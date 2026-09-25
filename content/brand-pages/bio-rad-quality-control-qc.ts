@@ -7,9 +7,9 @@ export default defineBrandPage({
     en: "Quality Control (QC)",
     uk: "Контроль якості (QC)",
   },
-  title: {
-    en: "Bio-Rad Quality Controls | Labwell",
-    uk: "Контролі якості Bio-Rad | Labwell",
+  seoTitle: {
+    en: "Bio-Rad Quality Controls",
+    uk: "Контролі якості Bio-Rad",
   },
   description: {
     en: "Explore Bio-Rad independent quality controls and laboratory QC solutions.",

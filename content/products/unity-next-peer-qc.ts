@@ -7,9 +7,13 @@ export default defineProduct({
     en: "Unity Next Peer QC",
     uk: "Unity Next Peer QC",
   },
-  title: {
-    en: "Unity Next Peer QC | Bio-Rad | Labwell",
-    uk: "Unity Next Peer QC | Bio-Rad | Labwell",
+  itemType: {
+    en: "Peer QC comparison software",
+    uk: "ПЗ для міжлабораторного порівняння QC",
+  },
+  seoTitle: {
+    en: "Unity Next Peer QC | Bio-Rad",
+    uk: "Unity Next Peer QC | Bio-Rad",
   },
   description: {
     en: "Peer comparison and quality control data tools for reviewing laboratory analytical performance.",

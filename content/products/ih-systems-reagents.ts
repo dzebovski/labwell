@@ -7,9 +7,13 @@ export default defineProduct({
     en: "IH-Systems reagents",
     uk: "IH-Systems reagents",
   },
-  title: {
-    en: "IH-System Reagents | Bio-Rad | Labwell",
-    uk: "Реагенти IH-System | Bio-Rad | Labwell",
+  itemType: {
+    en: "Immunohematology reagents",
+    uk: "Реагенти для імуногематології",
+  },
+  seoTitle: {
+    en: "IH-System Reagents | Bio-Rad",
+    uk: "Реагенти IH-System | Bio-Rad",
   },
   description: {
     en: "Explore Bio-Rad reagents and testing supplies for blood grouping and immunohematology workflows.",

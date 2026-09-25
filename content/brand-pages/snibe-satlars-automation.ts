@@ -7,9 +7,9 @@ export default defineBrandPage({
     en: "SATLARS (Automation)",
     uk: "SATLARS (Автоматизація)",
   },
-  title: {
-    en: "Snibe SATLARS Lab Automation | Labwell",
-    uk: "Лабораторна автоматизація Snibe SATLARS | Labwell",
+  seoTitle: {
+    en: "Snibe SATLARS Lab Automation",
+    uk: "Лабораторна автоматизація Snibe SATLARS",
   },
   description: {
     en: "Explore SATLARS automation systems for connected clinical laboratory workflows.",

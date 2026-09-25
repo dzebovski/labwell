@@ -7,9 +7,9 @@ export default defineClinicalPage({
     en: "Systemic autoimmune tests",
     uk: "Системні аутоімунні тести",
   },
-  title: {
-    en: "Systemic Autoimmune Testing | Bio-Rad | Labwell",
-    uk: "Системні аутоімунні дослідження | Bio-Rad | Labwell",
+  seoTitle: {
+    en: "Systemic Autoimmune Testing | Bio-Rad",
+    uk: "Системні аутоімунні дослідження | Bio-Rad",
   },
   description: {
     en: "Autoantibody testing solutions for systemic autoimmune diseases from Bio-Rad.",

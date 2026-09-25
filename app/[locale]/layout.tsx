@@ -33,7 +33,8 @@ export async function generateMetadata({
   const dictionary = await getDictionary(locale);
 
   return {
-    title: dictionary.metadata.title,
+    // Page titles come without the site name; the template appends it.
+    title: { template: `%s | ${dictionary.metadata.title}`, default: dictionary.metadata.title },
     description: dictionary.metadata.description,
     alternates: {
       languages: {

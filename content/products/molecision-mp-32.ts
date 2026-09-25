@@ -7,9 +7,13 @@ export default defineProduct({
     en: "Molecision MP-32",
     uk: "Molecision MP-32",
   },
-  title: {
-    en: "Molecision MP-32 Molecular Analyzer | Snibe | Labwell",
-    uk: "Molecision MP-32 Молекулярний аналізатор | Snibe | Labwell",
+  itemType: {
+    en: "Molecular analyzer",
+    uk: "Молекулярний аналізатор",
+  },
+  seoTitle: {
+    en: "Molecision MP-32 Molecular Analyzer | Snibe",
+    uk: "Molecision MP-32 Молекулярний аналізатор | Snibe",
   },
   description: {
     en: "Molecular testing instrument in the Molecision range for clinical laboratory workflows.",

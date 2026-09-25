@@ -1,4 +1,4 @@
-import type { Locale } from "../i18n/config.ts";
+import { locales, type Locale } from "../i18n/config.ts";
 import { brands, type Brand, type BrandId } from "../content/brands.ts";
 import type { LocalizedText } from "../content/define.ts";
 import { brandPages, clinicalPages, products } from "../content/index.ts";
@@ -30,7 +30,9 @@ export type ContentPage = Readonly<{
   path: string;
   brand: Brand;
   navLabel: LocalizedText;
-  title: LocalizedText;
+  itemType?: LocalizedText;
+  keySpec?: LocalizedText;
+  seoTitle: LocalizedText;
   description: LocalizedText;
   todoNote?: LocalizedText;
   sourceUrl: string;
@@ -115,8 +117,24 @@ export const contentPages: readonly ContentPage[] = buildPages();
 export function findCatalogProblems(pages: readonly ContentPage[] = contentPages): string[] {
   const problems: string[] = [];
   const seenPaths = new Set<string>();
+  const seenTitles = new Map<string, string>();
 
   for (const page of pages) {
+    for (const locale of locales) {
+      const title = page.seoTitle[locale]?.trim() ?? "";
+      if (!title) problems.push(`${page.path}: empty seoTitle (${locale})`);
+      // The layout's title template appends the site name.
+      if (/labwell\s*$/i.test(title)) problems.push(`${page.path}: seoTitle must not end with "Labwell" (${locale})`);
+      const titleKey = `${locale}:${title.toLowerCase()}`;
+      const titleOwner = seenTitles.get(titleKey);
+      if (title && titleOwner) problems.push(`${page.path}: seoTitle duplicates ${titleOwner} (${locale})`);
+      seenTitles.set(titleKey, page.path);
+      if (!page.description[locale]?.trim()) problems.push(`${page.path}: empty description (${locale})`);
+      if (page.kind === "product" && !page.itemType?.[locale]?.trim()) {
+        problems.push(`${page.path}: products need an itemType (${locale})`);
+      }
+    }
+
     if (seenPaths.has(page.path)) problems.push(`Duplicate URL: ${page.path}`);
     seenPaths.add(page.path);
 

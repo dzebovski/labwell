@@ -257,7 +257,8 @@ export function SiteHeader({
               {activeLeaf ? (
                 <aside className={styles.megaPreview} aria-live="polite">
                   <span className={styles.megaPreviewBrand}>{activeLeaf.brand}</span>
-                  <h3>{activeLeaf.title}</h3>
+                  <h3>{activeLeaf.label}</h3>
+                  {activeLeaf.itemType ? <p className={styles.megaPreviewType}>{activeLeaf.itemType}</p> : null}
                   <p>{activeLeaf.description}</p>
                   <span className={styles.megaPreviewAction}>{activeLeaf.label}<ChevronRight size={15} aria-hidden="true" /></span>
                 </aside>

@@ -7,9 +7,13 @@ export default defineProduct({
     en: "Molecision S6",
     uk: "Molecision S6",
   },
-  title: {
-    en: "Molecision S6 Molecular Analyzer | Snibe | Labwell",
-    uk: "Molecision S6 Молекулярний аналізатор | Snibe | Labwell",
+  itemType: {
+    en: "Molecular analyzer",
+    uk: "Молекулярний аналізатор",
+  },
+  seoTitle: {
+    en: "Molecision S6 Molecular Analyzer | Snibe",
+    uk: "Molecision S6 Молекулярний аналізатор | Snibe",
   },
   description: {
     en: "Molecision molecular diagnostics system for laboratory testing workflows.",

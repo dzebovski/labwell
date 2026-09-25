@@ -14,7 +14,10 @@ export type HeaderMegaLeaf = {
   href: string;
   brand: string;
   logo?: BrandLogo;
-  title: string;
+  /** What the item is ("CLIA analyzer"); empty when the content has no type. */
+  itemType: string;
+  /** Short line under the name in lists: the key figure, else the type. */
+  meta: string;
   description: string;
 };
 
@@ -65,7 +68,8 @@ function toLeaf(menu: MenuId, page: ContentPage, locale: Locale): HeaderMegaLeaf
     href: withLocale(locale, page.path),
     brand: page.brand.name,
     logo: page.brand.logo,
-    title: page.title[locale],
+    itemType: page.itemType?.[locale] ?? "",
+    meta: page.keySpec?.[locale] ?? page.itemType?.[locale] ?? "",
     description: page.description[locale],
   };
 }

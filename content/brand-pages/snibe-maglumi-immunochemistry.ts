@@ -7,9 +7,9 @@ export default defineBrandPage({
     en: "MAGLUMI (Immunochemistry)",
     uk: "MAGLUMI (Імунохімія)",
   },
-  title: {
-    en: "Snibe MAGLUMI CLIA Systems | Labwell",
-    uk: "CLIA-системи Snibe MAGLUMI | Labwell",
+  seoTitle: {
+    en: "Snibe MAGLUMI CLIA Systems",
+    uk: "CLIA-системи Snibe MAGLUMI",
   },
   description: {
     en: "Explore MAGLUMI chemiluminescence immunoassay analyzers and their assay menu.",
