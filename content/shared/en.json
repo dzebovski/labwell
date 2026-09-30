@@ -1,0 +1,83 @@
+{
+  "labwell": {
+    "eyebrow": "LabWell",
+    "h2": "How LabWell supports your laboratory",
+    "link": {
+      "label": "Service and support",
+      "href": "/services"
+    },
+    "items": [
+      {
+        "icon": "truck",
+        "title": "Supply",
+        "text": "Instruments, reagents and controls."
+      },
+      {
+        "icon": "box",
+        "title": "Installation",
+        "text": "Instrument installation and start-up in your laboratory."
+      },
+      {
+        "icon": "graduation-cap",
+        "title": "Training",
+        "text": "Training laboratory staff to operate the instrument."
+      },
+      {
+        "icon": "wrench",
+        "title": "Service",
+        "text": "Service support after start-up."
+      }
+    ],
+    "itemsForLine": [
+      {
+        "icon": "message",
+        "title": "Consultation",
+        "text": "We can help select the appropriate controls and levels."
+      },
+      {
+        "icon": "truck",
+        "title": "Supply",
+        "text": "Controls, reagents and instruments."
+      }
+    ]
+  },
+  "contact": {
+    "phone": "[PHONE]",
+    "email": "[EMAIL]",
+    "form": {
+      "fields": [
+        {
+          "name": "name",
+          "label": "Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "phone",
+          "label": "Phone",
+          "type": "tel",
+          "required": true
+        },
+        {
+          "name": "email",
+          "label": "Email",
+          "type": "email",
+          "required": false
+        },
+        {
+          "name": "message",
+          "label": "Message",
+          "type": "textarea",
+          "required": false
+        }
+      ],
+      "consent": "By submitting this form, you agree to the [privacy policy].",
+      "submit": "Send"
+    }
+  },
+  "faqAside": {
+    "text": "Still have a question?",
+    "link": "Ask a specialist"
+  },
+  "footer": "© LabWell · Instruments, reagents and controls for clinical laboratories"
+}

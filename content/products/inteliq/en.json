@@ -1,0 +1,248 @@
+{
+  "slug": "inteliq",
+  "url": "/products/inteliq",
+  "kind": "line",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "InteliQ — barcoded Bio-Rad quality controls | LabWell",
+    "description": "InteliQ is a Bio-Rad range of barcoded liquid controls for clinical chemistry and immunoassay testing: 5 control types, each in 3 levels. Supplied by LabWell."
+  },
+  "T1_breadcrumbs": [
+    "Home",
+    "Products",
+    "Quality control",
+    "InteliQ"
+  ],
+  "T2_hero": {
+    "brand": "Bio-Rad",
+    "eyebrow": "Quality control range",
+    "h1": "InteliQ — barcoded quality controls",
+    "lead": "Bio-Rad control materials for clinical chemistry and immunoassay testing, designed for load-and-go use without manual transfer of target value data.",
+    "keyFacts": [
+      {
+        "value": "5 types",
+        "label": "of controls, each in 3 levels"
+      },
+      {
+        "value": "80",
+        "label": "analytes in Assayed Multiqual Control"
+      },
+      {
+        "value": "14 days",
+        "label": "on board at 2–8 °C"
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Ordering information",
+      "href": "#items"
+    },
+    "image": {
+      "alt": "InteliQ Assayed Multiqual control tubes"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "What is InteliQ and who is it for?",
+    "text": "InteliQ is a Bio-Rad range of liquid control materials for clinical chemistry and immunoassay testing. It includes multianalyte, diabetes, homocysteine, immunology and tumor marker controls. The range is designed for laboratories seeking fewer manual steps in routine quality control."
+  },
+  "T4_specs": {
+    "show": false
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "Benefits of InteliQ",
+    "items": [
+      {
+        "icon": "barcode",
+        "h3": "Barcoded control tubes",
+        "text": "The controls can be loaded into an analyzer without manually transferring target value data, according to the manufacturer."
+      },
+      {
+        "icon": "flask",
+        "h3": "Liquid control material",
+        "text": "The controls use a human serum-based matrix."
+      },
+      {
+        "icon": "layers",
+        "h3": "Three control levels",
+        "text": "Each of the five controls is available in levels 1, 2 and 3."
+      }
+    ]
+  },
+  "T6_items": {
+    "show": true,
+    "h2": "InteliQ range and ordering information",
+    "summary": "15 catalog numbers · 5 controls × 3 levels",
+    "columns": [
+      "Control",
+      "Level 1",
+      "Level 2",
+      "Level 3"
+    ],
+    "rows": [
+      {
+        "name": "Assayed Multiqual Control",
+        "nameUk": "multianalyte control",
+        "catalogNumbers": [
+          "12008256",
+          "12008257",
+          "12008258"
+        ]
+      },
+      {
+        "name": "Diabetes Control",
+        "nameUk": "diabetes control",
+        "catalogNumbers": [
+          "12008309",
+          "12008310",
+          "12008311"
+        ]
+      },
+      {
+        "name": "Homocysteine Control",
+        "nameUk": "homocysteine control",
+        "catalogNumbers": [
+          "12004309",
+          "12004310",
+          "12004311"
+        ]
+      },
+      {
+        "name": "Immunology Control",
+        "nameUk": "immunology control",
+        "catalogNumbers": [
+          "12009941",
+          "12009942",
+          "12009943"
+        ]
+      },
+      {
+        "name": "Tumor Marker Control",
+        "nameUk": "tumor marker control",
+        "catalogNumbers": [
+          "12008289",
+          "12008290",
+          "12008291"
+        ]
+      }
+    ],
+    "footnote": "Catalog numbers are from the official Bio-Rad catalog. Ask a LabWell manager about availability in Ukraine.",
+    "cta": {
+      "label": "Request these products",
+      "href": "#contact"
+    }
+  },
+  "T7_storage": {
+    "show": true,
+    "h2": "InteliQ storage and stability",
+    "caption": "Data for Assayed Multiqual Control and most analytes. According to the manufacturer.",
+    "rows": [
+      {
+        "label": "Matrix",
+        "value": "Liquid",
+        "detail": "human serum-based"
+      },
+      {
+        "label": "Closed vial",
+        "value": "3 years",
+        "detail": "at −20…−70 °C"
+      },
+      {
+        "label": "After opening",
+        "value": "7 days",
+        "detail": "at 2–8 °C"
+      },
+      {
+        "label": "On board",
+        "value": "14 days",
+        "detail": "at 2–8 °C"
+      }
+    ]
+  },
+  "T8_related": {
+    "show": true,
+    "h2": "Other Bio-Rad quality controls",
+    "allLink": {
+      "label": "All quality control products",
+      "href": "/brands/bio-rad/quality-control-qc"
+    },
+    "cards": [
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Immunoassay controls",
+        "href": "/products/immunoassay-controls"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Chemistry controls",
+        "href": "/products/chemistry-controls"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Infectious disease controls",
+        "href": "/products/infectious-disease-controls"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Molecular controls",
+        "href": "/products/molecular-controls"
+      }
+    ]
+  },
+  "T9_documents": {
+    "show": true,
+    "h2": "InteliQ documents",
+    "items": [
+      {
+        "title": "InteliQ Quality Controls",
+        "meta": "Brochure · PDF · English",
+        "href": "https://www.bio-rad.com/sites/default/files/webroot/web/pdf/cdg/literature/Q-1665.pdf"
+      },
+      {
+        "title": "InteliQ Load-and-Go Quality Controls",
+        "meta": "Brochure · PDF · English",
+        "href": "https://www.bio-rad.com/sites/default/files/2025-12/Q-1236.pdf"
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Questions and answers about InteliQ",
+    "items": [
+      {
+        "q": "What are InteliQ controls?",
+        "a": "They are Bio-Rad liquid control materials in barcoded tubes for clinical chemistry and immunoassay testing."
+      },
+      {
+        "q": "Which controls are included in the InteliQ range?",
+        "a": "The range includes Assayed Multiqual, diabetes, homocysteine, immunology and tumor marker controls. Each is available in three levels."
+      },
+      {
+        "q": "How should InteliQ controls be stored?",
+        "a": "Closed vials remain stable for 3 years at −20…−70 °C. Once opened, stability is 7 days at 2–8 °C, according to manufacturer data for Assayed Multiqual and most analytes."
+      },
+      {
+        "q": "Is InteliQ compatible with our analyzer?",
+        "a": "Compatibility depends on the analyzer model. Send LabWell the model and analyte list so a manager can check compatibility and recommend controls."
+      },
+      {
+        "q": "Who supplies InteliQ in Ukraine?",
+        "a": "LabWell is a Bio-Rad partner and supplier in Ukraine."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.itemsForLine"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Request a consultation about InteliQ",
+    "text": "Tell us which analyzers and analytes you use, and we will suggest the appropriate controls and levels.",
+    "messagePrefill": "I am interested in InteliQ. "
+  }
+}
