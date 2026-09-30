@@ -7,7 +7,7 @@
   gap: 0.5rem;
   border: 1px solid transparent;
   border-radius: var(--radius-control);
-  font-weight: 650;
+  font-weight: var(--font-weight-semibold);
   letter-spacing: -0.01em;
   cursor: pointer;
   transition:
@@ -90,21 +90,28 @@
 }
 
 .sizeSm {
-  min-height: 2.25rem;
+  min-height: var(--control-sm);
   padding: 0.5rem 0.75rem;
   font-size: 0.8125rem;
 }
 
 .sizeMd {
-  min-height: 2.75rem;
-  padding: 0.6875rem 1rem;
+  min-height: var(--control-md);
+  padding: 0.5rem 1rem;
   font-size: 0.875rem;
 }
 
 .sizeLg {
-  min-height: 3.25rem;
-  padding: 0.8125rem 1.25rem;
+  min-height: var(--control-lg);
+  padding: 0.75rem 1.25rem;
   font-size: 0.9375rem;
+}
+
+@media (pointer: coarse) {
+  .sizeSm,
+  .sizeMd {
+    min-height: var(--touch-target);
+  }
 }
 
 .iconButton {
@@ -130,7 +137,7 @@
 .fieldLabel {
   color: var(--color-text-primary);
   font-size: 0.8125rem;
-  font-weight: 650;
+  font-weight: var(--font-weight-semibold);
 }
 
 .visuallyHidden {
@@ -153,7 +160,7 @@
   padding: 0 0.875rem;
   color: var(--color-text-muted);
   background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-border-control);
   border-radius: var(--radius-control);
   transition:
     border-color var(--duration-fast) var(--ease-standard),
@@ -162,7 +169,7 @@
 }
 
 .inputShell:hover {
-  border-color: var(--color-border-strong);
+  border-color: var(--color-text-secondary);
 }
 
 .inputShell:focus-within {
@@ -212,7 +219,7 @@
   padding: 0.25rem 0.5625rem;
   border-radius: 0.375rem;
   font-size: 0.6875rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.08em;
   line-height: 1;
   text-transform: uppercase;
@@ -250,7 +257,7 @@
   width: fit-content;
   color: var(--color-brand-700);
   font-size: 0.875rem;
-  font-weight: 650;
+  font-weight: var(--font-weight-semibold);
   text-decoration: none;
   text-underline-offset: 0.2em;
 }
@@ -389,7 +396,7 @@
   border-radius: 0.375rem;
   backdrop-filter: blur(8px);
   font-size: 0.625rem;
-  font-weight: 750;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -448,7 +455,7 @@
   min-height: 2.5rem;
   color: var(--color-text-secondary);
   font-size: 0.8125rem;
-  font-weight: 570;
+  font-weight: var(--font-weight-medium);
   text-decoration: none;
   transition: color var(--duration-fast) var(--ease-standard);
 }
@@ -477,7 +484,7 @@
   background: transparent;
   border: 0;
   font-size: 0.8125rem;
-  font-weight: 570;
+  font-weight: var(--font-weight-medium);
   cursor: pointer;
   transition: color var(--duration-fast) var(--ease-standard);
 }
@@ -536,7 +543,7 @@
   color: var(--color-text-secondary);
   border-radius: var(--radius-control);
   font-size: 0.8125rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   line-height: 1.25;
   text-decoration: none;
   transition:
@@ -578,7 +585,7 @@
   color: var(--color-text-primary);
   border-bottom: 1px solid var(--color-border);
   font-size: 0.75rem;
-  font-weight: 750;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -593,7 +600,7 @@
   justify-content: flex-start;
   min-height: 2.25rem;
   padding: 0.5rem;
-  font-weight: 540;
+  font-weight: var(--font-weight-medium);
 }
 
 .headerActions {
@@ -652,7 +659,7 @@
   border: 0;
   border-radius: var(--radius-control);
   font-size: 0.875rem;
-  font-weight: 650;
+  font-weight: var(--font-weight-semibold);
   text-align: left;
   cursor: pointer;
 }
@@ -687,7 +694,7 @@
   color: var(--color-text-secondary);
   border-radius: var(--radius-control);
   font-size: 0.8125rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   text-decoration: none;
 }
 
@@ -720,7 +727,7 @@
 }
 
 .headerMobileNestedLink {
-  font-weight: 520;
+  font-weight: var(--font-weight-medium);
 }
 
 @container (min-width: 68rem) {
@@ -745,7 +752,8 @@
   flex: 1;
   width: min(100%, var(--container-max));
   margin-inline: auto;
-  padding: clamp(2.5rem, 7vw, 6rem) var(--container-gutter);
+  /* Same 1rem gap below the header as above it. */
+  padding: 1rem var(--container-gutter) clamp(2rem, 5vw, 4rem);
 }
 
 .pageHeading {
@@ -767,7 +775,7 @@
   gap: 0.375rem;
   color: var(--color-text-muted);
   font-size: 0.8125rem;
-  font-weight: 540;
+  font-weight: var(--font-weight-medium);
 }
 
 .breadcrumbItem {
@@ -778,7 +786,7 @@
 
 .breadcrumbSeparator {
   flex: 0 0 auto;
-  color: var(--color-border-strong);
+  color: var(--color-border-control);
 }
 
 .breadcrumbLink {
@@ -792,12 +800,171 @@
   text-decoration: underline;
 }
 
+.breadcrumbMenu {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.125rem;
+}
+
+.breadcrumbMenuTrigger {
+  display: inline-grid;
+  width: 1.5rem;
+  height: 1.5rem;
+  place-items: center;
+  padding: 0;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-control);
+  cursor: pointer;
+  transition:
+    color var(--duration-fast) var(--ease-standard),
+    background-color var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard);
+}
+
+.breadcrumbMenuTrigger:hover,
+.breadcrumbMenuTrigger[aria-expanded="true"] {
+  color: var(--color-brand-800);
+  background: var(--color-brand-50);
+  border-color: var(--color-brand-200);
+}
+
+.breadcrumbMenuTrigger svg {
+  transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+.breadcrumbMenuList {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  left: 0;
+  z-index: 30;
+  display: grid;
+  width: max-content;
+  min-width: 14rem;
+  max-width: min(22rem, calc(100vw - 2 * var(--container-gutter)));
+  margin: 0;
+  padding: 0.35rem;
+  list-style: none;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-elevated);
+  animation: reveal var(--duration-base) var(--ease-standard) both;
+}
+
+.breadcrumbMenuOption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-height: 2.5rem;
+  padding: 0.55rem 0.7rem;
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-control);
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+}
+
+.breadcrumbMenuOption:hover,
+.breadcrumbMenuOptionActive {
+  color: var(--color-brand-800);
+  background: var(--color-brand-50);
+}
+
+.breadcrumbMenuOptionActive {
+  font-weight: var(--font-weight-semibold);
+}
+
+.listing {
+  display: grid;
+  gap: clamp(2rem, 4vw, 3rem);
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.listingBlockTitle {
+  margin: 0 0 1rem;
+  color: var(--color-text-primary);
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.015em;
+}
+
+.listingBlockTitle a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.listingBlockTitle a:hover {
+  color: var(--color-brand-700);
+}
+
+.listingGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr));
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.listingCard {
+  display: grid;
+  align-content: start;
+  gap: 0.4rem;
+  height: 100%;
+  padding: 1rem 1.1rem;
+  color: var(--color-text-secondary);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  text-decoration: none;
+  transition:
+    border-color var(--duration-fast) var(--ease-standard),
+    box-shadow var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
+}
+
+.listingCard:hover {
+  border-color: var(--color-brand-300);
+  box-shadow: var(--shadow-card);
+  transform: translateY(-1px);
+}
+
+.listingCardBrand {
+  color: var(--color-brand-700);
+  font-size: 0.6875rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.listingCardTitle {
+  color: var(--color-text-primary);
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.listingCardDescription {
+  display: -webkit-box;
+  overflow: hidden;
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
 .pageTitle {
   max-width: 18ch;
   margin: clamp(1.5rem, 4vw, 3rem) 0 0;
   color: var(--color-text-primary);
   font-size: clamp(2.25rem, 6vw, 5rem);
-  font-weight: 690;
+  font-weight: var(--font-weight-bold);
   letter-spacing: -0.045em;
   line-height: 0.98;
   text-wrap: balance;
@@ -846,7 +1013,7 @@
   margin: 0 0 1rem;
   color: var(--color-brand-700);
   font-size: 0.75rem;
-  font-weight: 760;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -862,11 +1029,20 @@
   max-width: 19ch;
   margin: 0;
   color: var(--color-text-primary);
-  font-size: clamp(2.1rem, 5.5vw, 4.75rem);
-  font-weight: 690;
-  letter-spacing: -0.048em;
-  line-height: 1;
+  font-size: var(--text-h1-size);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--text-h1-tracking);
+  line-height: var(--text-h1-line);
   text-wrap: balance;
+}
+
+/* The item type sits on its own line under the name, never inside the H1. */
+.contentDetailType {
+  margin: 0.5rem 0 0;
+  color: var(--color-text-secondary);
+  font-size: 1.375rem;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.875rem;
 }
 
 .contentDetailDescription {
@@ -889,7 +1065,7 @@
   border: 1px solid var(--color-brand-300);
   border-radius: var(--radius-control);
   font-size: 0.875rem;
-  font-weight: 670;
+  font-weight: var(--font-weight-semibold);
   text-decoration: none;
   box-shadow: 0 6px 18px rgb(11 38 63 / 0.06);
   transition:
@@ -933,7 +1109,7 @@
   margin: 0;
   color: var(--color-text-primary);
   font-size: 0.875rem;
-  font-weight: 720;
+  font-weight: var(--font-weight-bold);
 }
 
 .editorialNote p {
@@ -1024,7 +1200,7 @@
   margin-bottom: 1.25rem;
   color: var(--color-brand-700);
   font-size: 0.75rem;
-  font-weight: 750;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -1041,7 +1217,7 @@
   margin: 0;
   color: var(--color-text-primary);
   font-size: clamp(2.25rem, 7cqw, 4.4rem);
-  font-weight: 680;
+  font-weight: var(--font-weight-bold);
   letter-spacing: -0.055em;
   line-height: 0.98;
   text-wrap: balance;
@@ -1113,7 +1289,7 @@
   color: var(--color-text-secondary);
   font-size: 0.75rem;
   font-style: italic;
-  font-weight: 650;
+  font-weight: var(--font-weight-semibold);
 }
 
 .productMedia {
@@ -1132,7 +1308,7 @@
   margin: 0;
   color: var(--color-text-primary);
   font-size: 1.25rem;
-  font-weight: 650;
+  font-weight: var(--font-weight-bold);
   letter-spacing: -0.025em;
   line-height: 1.2;
 }
@@ -1158,7 +1334,7 @@
   margin-bottom: 0.2rem;
   color: var(--color-text-muted);
   font-size: 0.6rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.09em;
   text-transform: uppercase;
 }
@@ -1166,7 +1342,7 @@
 .productSpecValue {
   color: var(--color-text-primary);
   font-size: 0.75rem;
-  font-weight: 570;
+  font-weight: var(--font-weight-medium);
 }
 
 .productCta {
@@ -1208,7 +1384,7 @@
   min-width: 0;
   color: var(--color-text-muted);
   font-size: 0.75rem;
-  font-weight: 620;
+  font-weight: var(--font-weight-semibold);
   letter-spacing: 0.04em;
 }
 
@@ -1271,7 +1447,7 @@
   border: 0;
   border-radius: var(--radius-control);
   font-size: 0.8125rem;
-  font-weight: 590;
+  font-weight: var(--font-weight-medium);
   line-height: 1.35;
   text-align: left;
   cursor: pointer;
@@ -1293,7 +1469,7 @@
 
 .megaRailButtonActive,
 .megaSectionButtonActive {
-  font-weight: 680;
+  font-weight: var(--font-weight-semibold);
 }
 
 .megaRailButtonActive svg,
@@ -1329,7 +1505,7 @@
   color: var(--color-text-muted);
   border-bottom: 1px solid var(--color-border);
   font-size: 0.6875rem;
-  font-weight: 760;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -1351,7 +1527,7 @@
   color: var(--color-text-secondary);
   border-radius: var(--radius-control);
   font-size: 0.8125rem;
-  font-weight: 560;
+  font-weight: var(--font-weight-medium);
   line-height: 1.35;
   text-decoration: none;
   transition:
@@ -1403,7 +1579,7 @@
 .megaPreviewBrand {
   color: var(--color-brand-700);
   font-size: 0.6875rem;
-  font-weight: 760;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -1413,8 +1589,15 @@
   margin: 0.45rem 0 0;
   color: var(--color-text-primary);
   font-size: 1rem;
-  font-weight: 680;
+  font-weight: var(--font-weight-bold);
   line-height: 1.3;
+}
+
+.megaPreview .megaPreviewType {
+  margin: 0.15rem 0 0;
+  color: var(--color-text-secondary);
+  font-size: var(--text-small-size);
+  font-weight: var(--font-weight-medium);
 }
 
 .megaPreview p {
@@ -1432,7 +1615,7 @@
   margin-top: 0.75rem;
   color: var(--color-brand-700);
   font-size: 0.75rem;
-  font-weight: 680;
+  font-weight: var(--font-weight-semibold);
 }
 
 .brandMegaGrid {
@@ -1465,7 +1648,7 @@
   margin: 0;
   color: var(--color-text-primary);
   font-size: 1rem;
-  font-weight: 680;
+  font-weight: var(--font-weight-bold);
 }
 
 .brandMegaHeading img {
@@ -1485,7 +1668,7 @@
   margin-bottom: 0.35rem;
   color: var(--color-brand-700);
   background: var(--color-brand-50);
-  font-weight: 680;
+  font-weight: var(--font-weight-semibold);
   text-decoration: none;
 }
 
@@ -1516,7 +1699,7 @@
   padding: 0.4rem 0.75rem;
   color: var(--color-text-muted);
   font-size: 0.6875rem;
-  font-weight: 740;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -1541,7 +1724,7 @@
   border: 1px solid transparent;
   border-radius: var(--radius-round);
   font-size: 0.8125rem;
-  font-weight: 650;
+  font-weight: var(--font-weight-semibold);
   cursor: pointer;
   transition:
     color var(--duration-fast) var(--ease-standard),
@@ -1592,7 +1775,7 @@
   border: 0;
   border-radius: var(--radius-control);
   font-size: 0.8125rem;
-  font-weight: 560;
+  font-weight: var(--font-weight-medium);
   text-align: left;
   cursor: pointer;
 }
@@ -1607,7 +1790,7 @@
 
 .languageOptionActive,
 .languageMobileOptionActive {
-  font-weight: 680;
+  font-weight: var(--font-weight-semibold);
 }
 
 .languageMobileOptions {

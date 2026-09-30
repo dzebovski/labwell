@@ -2,9 +2,9 @@
  * Turns hrefs from `content/` into hrefs that exist on the site today.
  * The content points at pages that are not built yet (test menus, the MAGLUMI
  * overview, `/products/molecision-mp`); those are mapped to the current address
- * from `navigation-content.ts` or dropped (`null`), so the page never links to a 404.
+ * from the catalog (`lib/catalog.ts`) or dropped (`null`), so the page never links to a 404.
  */
-import { getPageByPath } from "../navigation-content.ts";
+import { getRouteTarget } from "../catalog.ts";
 import { hasProductContent } from "./load.ts";
 
 export type SiteLocale = "uk" | "en";
@@ -43,7 +43,7 @@ export function resolveHref(href: string, locale: SiteLocale): string | null {
   if (!href.startsWith("/")) return null;
 
   const path = currentAddress[href] ?? href;
-  if (sectionRoots.has(path) || getPageByPath(path)) return prefixed(locale, path);
+  if (sectionRoots.has(path) || getRouteTarget(path)) return prefixed(locale, path);
 
   const productSlug = /^\/products\/([^/]+)$/.exec(path)?.[1];
   if (productSlug && hasProductContent(productSlug)) return prefixed(locale, path);

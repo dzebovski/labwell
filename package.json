@@ -10,7 +10,8 @@
     "content:check": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/content-check.ts",
     "content:images": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/content-images.ts",
     "test:content": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test lib/content/*.test.ts",
-    "test:site-content": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test lib/site-content/*.test.ts"
+    "test:site-content": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test lib/site-content/*.test.ts",
+    "test": "node --test lib/*.test.ts"
   },
   "dependencies": {
     "lucide-react": "^1.47.0",

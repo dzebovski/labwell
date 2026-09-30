@@ -27,7 +27,8 @@
     "openSubmenu": "Open submenu",
     "closeSubmenu": "Close submenu",
     "closeMegaMenu": "Close navigation panel",
-    "breadcrumbs": "Breadcrumbs"
+    "breadcrumbs": "Breadcrumbs",
+    "chooseCategory": "Choose another category"
   },
   "pages": {
     "home": "Home",
@@ -51,5 +52,9 @@
       "phone": "Enter a valid phone number",
       "email": "Enter a valid email address"
     }
+  },
+  "contentPage": {
+    "viewSource": "View source",
+    "todoHeading": "What needs completing"
   }
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import type { Locale } from "@/i18n/config";
-import { localizePath } from "@/lib/site-navigation";
+import { withLocale } from "@/lib/locale-routing";
 
 export function createPageMetadata(
   locale: Locale,
@@ -15,10 +15,10 @@ export function createPageMetadata(
     title,
     ...(description ? { description } : {}),
     alternates: {
-      canonical: localizePath(locale, canonicalPath),
+      canonical: withLocale(locale, canonicalPath),
       languages: {
-        uk: localizePath("uk", canonicalPath),
-        en: localizePath("en", canonicalPath),
+        uk: withLocale("uk", canonicalPath),
+        en: withLocale("en", canonicalPath),
       },
     },
   };

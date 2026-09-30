@@ -1,50 +1,32 @@
-import { ChevronRight } from "lucide-react";
-import Link from "next/link";
+import type { ReactNode } from "react";
 
+import { Breadcrumbs } from "@/components/patterns/breadcrumbs";
 import styles from "@/components/labwell-ui.module.css";
+import type { Breadcrumb } from "@/lib/catalog";
 
-export type BreadcrumbItem = {
-  label: string;
-  href?: string;
-};
+export type BreadcrumbItem = Breadcrumb;
 
 type PageHeadingProps = {
-  breadcrumbs: BreadcrumbItem[];
+  breadcrumbs: Breadcrumb[];
   title: string;
   breadcrumbLabel: string;
+  chooseLabel: string;
+  children?: ReactNode;
 };
 
 export function PageHeading({
   breadcrumbs,
   title,
   breadcrumbLabel,
+  chooseLabel,
+  children,
 }: PageHeadingProps) {
   return (
     <main className={styles.pageMain}>
       <section className={styles.pageHeading}>
-        <nav aria-label={breadcrumbLabel}>
-          <ol className={styles.breadcrumbList}>
-            {breadcrumbs.map((item, index) => {
-              const isCurrent = index === breadcrumbs.length - 1;
-
-              return (
-                <li key={`${item.href ?? "current"}-${item.label}`} className={styles.breadcrumbItem}>
-                  {index > 0 ? (
-                    <ChevronRight className={styles.breadcrumbSeparator} size={14} aria-hidden="true" />
-                  ) : null}
-                  {item.href && !isCurrent ? (
-                    <Link href={item.href} className={styles.breadcrumbLink}>
-                      {item.label}
-                    </Link>
-                  ) : (
-                    <span aria-current={isCurrent ? "page" : undefined}>{item.label}</span>
-                  )}
-                </li>
-              );
-            })}
-          </ol>
-        </nav>
+        <Breadcrumbs items={breadcrumbs} label={breadcrumbLabel} chooseLabel={chooseLabel} />
         <h1 className={styles.pageTitle}>{title}</h1>
+        {children}
       </section>
     </main>
   );

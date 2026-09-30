@@ -1,24 +1,25 @@
-import type { Locale } from "@/i18n/config";
-
-const supportedLocales = new Set<string>(["uk", "en"]);
+import { isLocale, type Locale } from "../i18n/config.ts";
 
 export const LOCALE_COOKIE_NAME = "labwell-locale";
 
 export function resolvePreferredLocale(cookieValue?: string | null): Locale {
-  return cookieValue && supportedLocales.has(cookieValue)
-    ? (cookieValue as Locale)
-    : "uk";
+  return cookieValue && isLocale(cookieValue) ? cookieValue : "uk";
 }
 
-/** Replace the first path segment when it is a locale, otherwise prefix one. */
-export function localizePath(pathname: string, locale: Locale): string {
+/** Build a link to a site path in the given locale: withLocale("en", "/products") → "/en/products". */
+export function withLocale(locale: Locale, path: string): string {
+  return `/${locale}${path === "/" ? "" : path}`;
+}
+
+/** Move the current URL to another locale: replace the first segment when it is a locale, otherwise prefix one. */
+export function switchLocale(pathname: string, locale: Locale): string {
   const normalizedPath = pathname.startsWith("/") ? pathname : `/${pathname}`;
   const segments = normalizedPath.split("/");
 
-  if (supportedLocales.has(segments[1] ?? "")) {
+  if (isLocale(segments[1] ?? "")) {
     segments[1] = locale;
     return segments.join("/") || `/${locale}`;
   }
 
-  return `/${locale}${normalizedPath === "/" ? "" : normalizedPath}`;
+  return withLocale(locale, normalizedPath);
 }
