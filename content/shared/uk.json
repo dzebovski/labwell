@@ -1,0 +1,83 @@
+{
+  "labwell": {
+    "eyebrow": "LabWell",
+    "h2": "Що робить LabWell",
+    "link": {
+      "label": "Сервіс та підтримка",
+      "href": "/services"
+    },
+    "items": [
+      {
+        "icon": "truck",
+        "title": "Постачання",
+        "text": "Обладнання, реагенти й контролі."
+      },
+      {
+        "icon": "box",
+        "title": "Інсталяція",
+        "text": "Встановлення і запуск приладу в лабораторії."
+      },
+      {
+        "icon": "graduation-cap",
+        "title": "Навчання",
+        "text": "Навчання персоналу роботі з приладом."
+      },
+      {
+        "icon": "wrench",
+        "title": "Сервіс",
+        "text": "Сервісна підтримка після запуску."
+      }
+    ],
+    "itemsForLine": [
+      {
+        "icon": "message",
+        "title": "Консультація",
+        "text": "Допоможемо підібрати контролі й рівні."
+      },
+      {
+        "icon": "truck",
+        "title": "Постачання",
+        "text": "Контролі, реагенти й обладнання."
+      }
+    ]
+  },
+  "contact": {
+    "phone": "[ТЕЛЕФОН]",
+    "email": "[EMAIL]",
+    "form": {
+      "fields": [
+        {
+          "name": "name",
+          "label": "Ім’я",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "phone",
+          "label": "Телефон",
+          "type": "tel",
+          "required": true
+        },
+        {
+          "name": "email",
+          "label": "Email",
+          "type": "email",
+          "required": false
+        },
+        {
+          "name": "message",
+          "label": "Повідомлення",
+          "type": "textarea",
+          "required": false
+        }
+      ],
+      "consent": "Надсилаючи форму, ви погоджуєтеся з [політикою конфіденційності].",
+      "submit": "Надіслати"
+    }
+  },
+  "faqAside": {
+    "text": "Не знайшли відповідь?",
+    "link": "Запитайте спеціаліста"
+  },
+  "footer": "© LabWell · Обладнання, реагенти та контролі для клінічних лабораторій"
+}

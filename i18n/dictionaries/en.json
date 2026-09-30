@@ -37,5 +37,19 @@
     "about": "About us",
     "services": "Service & support",
     "contacts": "Contacts"
+  },
+  "productPage": {
+    "home": "Home",
+    "fullTechnicalData": "Full technical data",
+    "newTab": "opens in a new tab",
+    "photoPlaceholder": "Photo coming soon",
+    "phone": "Phone",
+    "email": "Email",
+    "documentBadge": "PDF",
+    "form": {
+      "required": "Fill in this field",
+      "phone": "Enter a valid phone number",
+      "email": "Enter a valid email address"
+    }
   }
 }

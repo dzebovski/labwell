@@ -1,0 +1,180 @@
+{
+  "slug": "biossays-240-plus",
+  "url": "/products/biossays-240-plus",
+  "kind": "instrument",
+  "brand": "Snibe",
+  "seo": {
+    "title": "Biossays 240 Plus — біохімічний аналізатор Snibe | LabWell",
+    "description": "Biossays 240 Plus — автоматичний біохімічний аналізатор Snibe для рутинних досліджень: до 240 тестів/год, додатковий ISE-модуль. Постачання в Україні — LabWell."
+  },
+  "T1_breadcrumbs": [
+    "Головна",
+    "Продукція",
+    "Лабораторне обладнання",
+    "Біохімія",
+    "Biossays 240 Plus"
+  ],
+  "T2_hero": {
+    "brand": "Snibe",
+    "eyebrow": "Автоматичний біохімічний аналізатор",
+    "h1": "Biossays 240 Plus — автоматичний біохімічний аналізатор",
+    "lead": "Аналізатор Snibe для рутинних біохімічних досліджень. Доступний з додатковим ISE-модулем.",
+    "keyFacts": [
+      {
+        "value": "до 240",
+        "label": "тестів на годину"
+      },
+      {
+        "value": "до 200",
+        "label": "тестів на годину — додатковий ISE-модуль"
+      },
+      {
+        "value": "80",
+        "label": "багаторазових кювет"
+      }
+    ],
+    "primaryCta": {
+      "label": "Отримати консультацію",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Характеристики",
+      "href": "#specs"
+    },
+    "image": {
+      "alt": "Автоматичний біохімічний аналізатор Biossays 240 Plus"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "Що таке Biossays 240 Plus і для кого він",
+    "text": "Biossays 240 Plus — це автоматичний біохімічний аналізатор Snibe для рутинних досліджень. Виконує до 240 тестів на годину; з додатковим ISE-модулем на тому самому приладі можна виконувати ISE-дослідження."
+  },
+  "T4_specs": {
+    "show": true,
+    "h2": "Характеристики Biossays 240 Plus",
+    "caption": "За даними виробника",
+    "rows": [
+      {
+        "label": "Продуктивність",
+        "value": "до 240 тестів/год"
+      },
+      {
+        "label": "Продуктивність додаткового ISE-модуля",
+        "value": "до 200 тестів/год"
+      },
+      {
+        "label": "Багаторазові кювети",
+        "value": "80"
+      },
+      {
+        "label": "Мінімальний реакційний об’єм",
+        "value": "100 мкл"
+      }
+    ]
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "Переваги Biossays 240 Plus",
+    "items": [
+      {
+        "icon": "plus-square",
+        "h3": "Біохімія та ISE на одному приладі",
+        "text": "Додатковий ISE-модуль виконує до 200 тестів на годину."
+      },
+      {
+        "icon": "test-tubes",
+        "h3": "Багаторазові кювети",
+        "text": "Аналізатор працює з 80 багаторазовими кюветами."
+      }
+    ]
+  },
+  "T6_items": {
+    "show": false
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": true,
+    "testMenu": {
+      "h2": "Які тести виконує Biossays 240 Plus",
+      "title": "Меню біохімічних тестів Snibe",
+      "text": "13 груп тестів. Доступність окремих тестів в Україні уточнює менеджер.",
+      "cta": {
+        "label": "Відкрити меню тестів",
+        "href": "/test-menus/snibe-biochemistry-test-menu"
+      },
+      "bigNumber": {
+        "value": "114",
+        "label": "тестів у меню"
+      }
+    },
+    "models": {
+      "h2": "Інші біохімічні та електролітні аналізатори Snibe",
+      "allLink": {
+        "label": "Уся біохімія",
+        "href": "/brands/snibe/biossays-biochemistry"
+      },
+      "cards": [
+        {
+          "eyebrow": "Snibe · Біохімія",
+          "title": "Biossays C10",
+          "href": "/products/biossays-c10",
+          "facts": [
+            [
+              "Продуктивність",
+              "до 3 000 тестів/год"
+            ],
+            [
+              "Позиції для зразків",
+              "300"
+            ]
+          ]
+        },
+        {
+          "eyebrow": "Snibe · Електроліти",
+          "title": "Biossays E6 Plus",
+          "href": "/products/biossays-e6-plus",
+          "facts": [
+            [
+              "Продуктивність",
+              "540 тестів/год"
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "T9_documents": {
+    "show": false
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Питання й відповіді про Biossays 240 Plus",
+    "items": [
+      {
+        "q": "Яка продуктивність Biossays 240 Plus?",
+        "a": "До 240 тестів на годину."
+      },
+      {
+        "q": "Чи можна виконувати ISE-дослідження на Biossays 240 Plus?",
+        "a": "Так, з додатковим ISE-модулем — до 200 тестів на годину."
+      },
+      {
+        "q": "Хто постачає Biossays 240 Plus в Україні?",
+        "a": "LabWell — партнер і постачальник Snibe в Україні."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Отримати консультацію щодо Biossays 240 Plus",
+    "text": "Розкажіть про потік досліджень і потрібні тести — допоможемо оцінити, чи підходить Biossays 240 Plus вашій лабораторії.",
+    "messagePrefill": "Цікавить Biossays 240 Plus. "
+  }
+}

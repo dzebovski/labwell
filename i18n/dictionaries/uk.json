@@ -37,5 +37,19 @@
     "about": "Про компанію",
     "services": "Сервіс та підтримка",
     "contacts": "Контакти"
+  },
+  "productPage": {
+    "home": "Головна",
+    "fullTechnicalData": "Повні технічні дані",
+    "newTab": "відкривається в новій вкладці",
+    "photoPlaceholder": "Фото буде додано",
+    "phone": "Телефон",
+    "email": "Email",
+    "documentBadge": "PDF",
+    "form": {
+      "required": "Заповніть це поле",
+      "phone": "Вкажіть коректний номер телефону",
+      "email": "Вкажіть коректну адресу email"
+    }
   }
 }

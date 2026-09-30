@@ -1,0 +1,98 @@
+import {
+  ArrowLeftRight,
+  Barcode,
+  Box,
+  CalendarClock,
+  ChartLine,
+  ChartNoAxesCombined,
+  Clock,
+  Combine,
+  Database,
+  Droplet,
+  FileCheck,
+  FlaskConical,
+  GraduationCap,
+  Layers,
+  LayoutGrid,
+  LayoutPanelTop,
+  List,
+  Maximize,
+  MessageCircle,
+  Minimize,
+  MonitorCog,
+  PanelRight,
+  PanelTopClose,
+  Pipette,
+  RefreshCw,
+  Repeat2,
+  ScanLine,
+  ScanSearch,
+  Settings,
+  ShieldCheck,
+  SlidersHorizontal,
+  Snowflake,
+  SquarePlus,
+  TestTubes,
+  Thermometer,
+  Truck,
+  Workflow,
+  Wrench,
+  Zap,
+  type LucideIcon,
+} from "lucide-react";
+
+/**
+ * Icon names used in `content/` (kebab-case, as in lucide) → components.
+ * Some content names are older lucide names: flask, layout-panel, message, plus-square.
+ */
+const icons: Record<string, LucideIcon> = {
+  "arrow-left-right": ArrowLeftRight,
+  barcode: Barcode,
+  box: Box,
+  "calendar-clock": CalendarClock,
+  "chart-line": ChartLine,
+  "chart-no-axes-combined": ChartNoAxesCombined,
+  clock: Clock,
+  combine: Combine,
+  database: Database,
+  droplet: Droplet,
+  "file-check": FileCheck,
+  flask: FlaskConical,
+  "graduation-cap": GraduationCap,
+  layers: Layers,
+  "layout-grid": LayoutGrid,
+  "layout-panel": LayoutPanelTop,
+  list: List,
+  maximize: Maximize,
+  message: MessageCircle,
+  minimize: Minimize,
+  "monitor-cog": MonitorCog,
+  "panel-right": PanelRight,
+  "panel-top-close": PanelTopClose,
+  pipette: Pipette,
+  "plus-square": SquarePlus,
+  "refresh-cw": RefreshCw,
+  "repeat-2": Repeat2,
+  "scan-line": ScanLine,
+  "scan-search": ScanSearch,
+  settings: Settings,
+  "shield-check": ShieldCheck,
+  "sliders-horizontal": SlidersHorizontal,
+  snowflake: Snowflake,
+  "test-tubes": TestTubes,
+  thermometer: Thermometer,
+  truck: Truck,
+  workflow: Workflow,
+  wrench: Wrench,
+  zap: Zap,
+};
+
+export function ContentIcon({ name, size = 22 }: { name: string; size?: number }) {
+  const Icon = icons[name];
+  if (!Icon) {
+    throw new Error(
+      `Unknown icon "${name}" in content/. Add it to components/product-page/icons.tsx.`,
+    );
+  }
+  return <Icon aria-hidden="true" size={size} strokeWidth={1.8} />;
+}
