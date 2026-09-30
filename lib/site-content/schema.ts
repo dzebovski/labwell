@@ -88,7 +88,7 @@ const related = block({
       h2: text,
       title: text,
       text,
-      cta: link,
+      cta: link.optional(),
       bigNumber: z.strictObject({ value: text, label: text }).optional(),
     })
     .optional(),

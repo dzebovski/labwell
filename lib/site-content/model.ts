@@ -80,7 +80,8 @@ export type ProductPageModel = {
     h2: string;
     title: string;
     text: string;
-    cta: LinkModel;
+    /** Missing when the menu has no page yet: the banner is shown without a link. */
+    cta?: LinkModel;
     bigNumber?: { value: string; label: string };
   };
   items?: ItemsModel;
@@ -225,9 +226,9 @@ export function buildProductPage(input: {
   }
 
   const testMenuSource = t8.show ? t8.testMenu : undefined;
-  const testMenuCta = testMenuSource && link(testMenuSource.cta, locale);
+  const testMenuCta = testMenuSource?.cta && link(testMenuSource.cta, locale);
   const testMenu =
-    testMenuSource && testMenuCta
+    testMenuSource
       ? {
           h2: testMenuSource.h2,
           title: testMenuSource.title,
