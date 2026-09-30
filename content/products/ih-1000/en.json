@@ -1,0 +1,195 @@
+{
+  "slug": "ih-1000",
+  "url": "/products/ih-1000",
+  "kind": "instrument",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "IH-1000 — immunohematology system | LabWell",
+    "description": "IH-1000 is an automated Bio-Rad immunohematology system with capacity for up to 180 samples. Supply, installation, and service in Ukraine from LabWell."
+  },
+  "T1_breadcrumbs": [
+    "Home",
+    "Products",
+    "Laboratory equipment",
+    "Immunohematology",
+    "IH-1000"
+  ],
+  "T2_hero": {
+    "brand": "Bio-Rad",
+    "eyebrow": "Automated immunohematology system",
+    "h1": "IH-1000 — automated immunohematology system",
+    "lead": "A Bio-Rad system for ID-Card testing, designed for high capacity and continuous access during operation.",
+    "keyFacts": [
+      {
+        "value": "180",
+        "label": "sample positions"
+      },
+      {
+        "value": "240",
+        "label": "ID-Cards"
+      },
+      {
+        "value": "28",
+        "label": "reagent positions"
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Specifications",
+      "href": "#specs"
+    },
+    "image": {
+      "alt": "IH-1000 System, front view"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "What IH-1000 is and who it is for",
+    "text": "IH-1000 is a fully automated Bio-Rad system for immunohematology testing with ID-Cards. It is designed for laboratories that need high capacity for samples, cards, and reagents while retaining continuous access during operation. Materials can be loaded during processing, and STAT samples can be handled as a priority."
+  },
+  "T4_specs": {
+    "show": true,
+    "h2": "IH-1000 specifications",
+    "caption": "According to the manufacturer",
+    "rows": [
+      {
+        "label": "Sample positions",
+        "value": "180"
+      },
+      {
+        "label": "Reagent positions",
+        "value": "28"
+      },
+      {
+        "label": "ID-Card capacity",
+        "value": "240 ID-Cards"
+      },
+      {
+        "label": "Dimensions (W × D × H)",
+        "value": "173 × 83 × 170 cm"
+      },
+      {
+        "label": "Weight",
+        "value": "540 kg"
+      },
+      {
+        "label": "Electrical data",
+        "value": "100–240 VAC, 50/60 Hz; 1,350 VA"
+      },
+      {
+        "label": "Operating conditions",
+        "value": "15–27°C; 5–80% RH; altitude up to 2,000 m"
+      }
+    ]
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "Benefits of IH-1000",
+    "items": [
+      {
+        "icon": "refresh-cw",
+        "h3": "Keep work moving",
+        "text": "Samples and reagents can be loaded during processing. Two independent pipetting arms, three centrifuges, and a separate ID-Card transport arm support parallel operations."
+      },
+      {
+        "icon": "zap",
+        "h3": "Prioritize urgent samples",
+        "text": "The system handles STAT samples immediately. According to the manufacturer, it is also optimized for small blood volumes, including pediatric samples."
+      }
+    ]
+  },
+  "T6_items": {
+    "show": true,
+    "h2": "IH-1000 ordering information",
+    "summary": "System and software",
+    "columns": [
+      "Catalog no.",
+      "Name"
+    ],
+    "rows": [
+      {
+        "catalogNumber": "001000",
+        "name": "IH-1000 including IH-Com Kit Fullversion"
+      },
+      {
+        "catalogNumber": "12009844",
+        "name": "IH-AbID, Integrated Antibody Identification Software"
+      },
+      {
+        "catalogNumber": "009030",
+        "name": "IH-Web, Remote Result Management Software"
+      },
+      {
+        "catalogNumber": "2000050",
+        "name": "BRiCare, Remote Service and Support Software"
+      }
+    ],
+    "footnote": "Ask a LabWell manager to confirm the configuration and availability of individual entries in Ukraine.",
+    "cta": {
+      "label": "Request ordering information",
+      "href": "#contact"
+    }
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": true,
+    "models": {
+      "h2": "Other automated blood typing systems",
+      "cards": [
+        {
+          "eyebrow": "Bio-Rad · Immunohematology",
+          "title": "IH-500 NEXT",
+          "href": "/products/ih-500-next-system"
+        }
+      ]
+    }
+  },
+  "T9_documents": {
+    "show": true,
+    "h2": "IH-1000 documents",
+    "items": [
+      {
+        "title": "IH-1000 brochure",
+        "meta": "Brochure · PDF · English",
+        "href": "https://www.bio-rad.com/sites/default/files/2022-05/H010256_IH-1000_EN_2018.09.pdf"
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "IH-1000 questions and answers",
+    "items": [
+      {
+        "q": "What tests is IH-1000 designed for?",
+        "a": "It is designed for automated immunohematology testing with ID-Cards."
+      },
+      {
+        "q": "What is the capacity of IH-1000?",
+        "a": "The system holds up to 180 samples, 240 ID-Cards, and 28 reagent vials."
+      },
+      {
+        "q": "Can IH-1000 handle small blood volumes?",
+        "a": "Yes. According to the manufacturer, the system is optimized for small volumes, including pediatric samples."
+      },
+      {
+        "q": "Who supplies IH-1000 in Ukraine?",
+        "a": "LabWell is a Bio-Rad partner and supplier in Ukraine."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Request an IH-1000 consultation",
+    "text": "Tell us about your test menu and sample workload, and we will help assess whether IH-1000 fits your laboratory.",
+    "messagePrefill": "I am interested in IH-1000. "
+  }
+}

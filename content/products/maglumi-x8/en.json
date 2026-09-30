@@ -1,0 +1,230 @@
+{
+  "slug": "maglumi-x8",
+  "url": "/products/maglumi-x8",
+  "kind": "instrument",
+  "brand": "Snibe",
+  "seo": {
+    "title": "MAGLUMI X8 — automated CLIA analyzer | LabWell",
+    "description": "MAGLUMI X8 is a fully automated Snibe CLIA analyzer delivering up to 600 tests/hour for medium and large laboratories. Supply and service in Ukraine by LabWell."
+  },
+  "T1_breadcrumbs": [
+    "Home",
+    "Products",
+    "Laboratory equipment",
+    "Immunoassay",
+    "MAGLUMI X8"
+  ],
+  "T2_hero": {
+    "brand": "Snibe",
+    "eyebrow": "Automated CLIA analyzer",
+    "h1": "MAGLUMI X8 — analyzer for chemiluminescence immunoassay",
+    "lead": "A fully automated Snibe analyzer for medium and large laboratories, with modular throughput expansion.",
+    "keyFacts": [
+      {
+        "value": "up to 600",
+        "label": "tests per hour"
+      },
+      {
+        "value": "300",
+        "label": "sample positions"
+      },
+      {
+        "value": "42",
+        "label": "reagent positions"
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Specifications",
+      "href": "#specs"
+    },
+    "image": {
+      "alt": "MAGLUMI X8 automated CLIA analyzer, front view"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "What MAGLUMI X8 is and who it is for",
+    "text": "MAGLUMI X8 is a fully automated Snibe CLIA analyzer for chemiluminescence immunoassay in medium and large laboratories. A single module can operate independently, or four modules can be combined for higher testing volumes. SATLARS automation connectivity and the availability of individual assays should be confirmed for the relevant market and laboratory project."
+  },
+  "T4_specs": {
+    "show": true,
+    "h2": "MAGLUMI X8 specifications",
+    "caption": "According to the manufacturer",
+    "rows": [
+      {
+        "label": "Throughput",
+        "value": "up to 600 tests/h"
+      },
+      {
+        "label": "Throughput, four-module configuration",
+        "value": "up to 2,400 tests/h"
+      },
+      {
+        "label": "Sample positions",
+        "value": "300"
+      },
+      {
+        "label": "Reagent positions",
+        "value": "42"
+      },
+      {
+        "label": "Walk-away capacity",
+        "value": "up to 2,800 tests"
+      },
+      {
+        "label": "Manufacturer assay menu",
+        "value": "up to 278 assays"
+      }
+    ],
+    "fullTechnicalData": {
+      "show": false
+    }
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "MAGLUMI X8 benefits",
+    "items": [
+      {
+        "icon": "combine",
+        "h3": "Scale with the workload",
+        "text": "A laboratory can begin with one module and combine modules as testing volume grows. The exact configuration can be planned for each project."
+      },
+      {
+        "icon": "shield-check",
+        "h3": "Controlled pipetting and washing",
+        "text": "Disposable tips are designed to reduce cross-contamination, according to the manufacturer. Four independent groups perform magnetic-separation washing."
+      },
+      {
+        "icon": "monitor-cog",
+        "h3": "Clear operational oversight",
+        "text": "The interface displays testing progress and reagent and consumable levels in real time. Software can schedule instrument power-on and power-off times."
+      }
+    ],
+    "image": {
+      "alt": "MAGLUMI X8 monitoring interface"
+    }
+  },
+  "T6_items": {
+    "show": false
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": true,
+    "testMenu": {
+      "h2": "Which tests MAGLUMI X8 performs",
+      "title": "MAGLUMI CLIA test menu",
+      "text": "The menu spans hormones, tumor markers, infectious and cardiac markers, and other areas. Ask LabWell to confirm which individual assays are available in Ukraine.",
+      "cta": {
+        "label": "Open the test menu",
+        "href": "/test-menus/snibe-clia-test-menu"
+      },
+      "bigNumber": {
+        "value": "278",
+        "label": "parameters, according to Snibe"
+      }
+    },
+    "models": {
+      "h2": "Other MAGLUMI analyzers",
+      "allLink": {
+        "label": "All MAGLUMI analyzers",
+        "href": "/products/maglumi"
+      },
+      "cards": [
+        {
+          "eyebrow": "Snibe · CLIA",
+          "title": "MAGLUMI X3",
+          "href": "/products/maglumi-x3",
+          "facts": [
+            [
+              "Throughput",
+              "up to 200 tests/h"
+            ],
+            [
+              "Sample positions",
+              "72"
+            ]
+          ]
+        },
+        {
+          "eyebrow": "Snibe · CLIA",
+          "title": "MAGLUMI X6",
+          "href": "/products/maglumi-x6",
+          "facts": [
+            [
+              "Throughput",
+              "up to 450 tests/h"
+            ],
+            [
+              "Sample positions",
+              "up to 112"
+            ]
+          ]
+        },
+        {
+          "eyebrow": "Snibe · CLIA",
+          "title": "MAGLUMI X10",
+          "href": "/products/maglumi-x10",
+          "facts": [
+            [
+              "Throughput",
+              "up to 1,000 tests/h"
+            ],
+            [
+              "Sample positions",
+              "300"
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "T9_documents": {
+    "show": false
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "MAGLUMI X8 questions and answers",
+    "items": [
+      {
+        "q": "What is the throughput of MAGLUMI X8?",
+        "a": "A single MAGLUMI X8 module delivers up to 600 tests per hour, while a four-module configuration delivers up to 2,400 tests per hour."
+      },
+      {
+        "q": "Which laboratories is MAGLUMI X8 designed for?",
+        "a": "MAGLUMI X8 is designed for medium and large laboratories. Its modular configuration allows the system to be adapted to testing volume."
+      },
+      {
+        "q": "How many samples and reagents can be loaded?",
+        "a": "A single module provides 300 sample positions and 42 reagent positions."
+      },
+      {
+        "q": "Which tests can MAGLUMI X8 perform?",
+        "a": "The analyzer uses the MAGLUMI CLIA test menu; ask LabWell to confirm which individual assays are available in Ukraine.",
+        "link": {
+          "label": "MAGLUMI CLIA test menu",
+          "href": "/test-menus/snibe-clia-test-menu"
+        }
+      },
+      {
+        "q": "Who supplies MAGLUMI X8 in Ukraine?",
+        "a": "LabWell is a Snibe partner and supplier in Ukraine, providing supply, installation, staff training and service support."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Request a MAGLUMI X8 consultation",
+    "text": "Tell us about your testing workload, required assays and automation needs, and we will help assess a MAGLUMI X8 configuration for your laboratory.",
+    "messagePrefill": "I am interested in MAGLUMI X8. "
+  }
+}

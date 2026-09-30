@@ -1,0 +1,178 @@
+{
+  "slug": "biossays-c10",
+  "url": "/products/biossays-c10",
+  "kind": "instrument",
+  "brand": "Snibe",
+  "seo": {
+    "title": "Biossays C10 — automated biochemistry analyzer | LabWell",
+    "description": "Biossays C10 is a Snibe automated biochemistry analyzer with up to 3,000 tests/h across separate biochemistry and ISE channels. Supplied in Ukraine by LabWell."
+  },
+  "T1_breadcrumbs": [
+    "Home",
+    "Products",
+    "Laboratory equipment",
+    "Biochemistry",
+    "Biossays C10"
+  ],
+  "T2_hero": {
+    "brand": "Snibe",
+    "eyebrow": "Automated biochemistry analyzer",
+    "h1": "Biossays C10 — automated biochemistry analyzer",
+    "lead": "A Snibe analyzer with separate channels for biochemistry and ISE testing, plus support for whole-blood HbA1c measurement.",
+    "keyFacts": [
+      {
+        "value": "up to 3,000",
+        "label": "tests per hour"
+      },
+      {
+        "value": "300",
+        "label": "sample positions"
+      },
+      {
+        "value": "200",
+        "label": "reagent positions"
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Specifications",
+      "href": "#specs"
+    },
+    "image": {
+      "alt": "Biossays C10 automated biochemistry analyzer by Snibe"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "What Biossays C10 is and who it is for",
+    "text": "Biossays C10 is an automated Snibe biochemistry analyzer for biochemistry and ISE testing. Its separate channels allow both areas to be managed on one instrument while preserving the throughput of each method. The analyzer also supports HbA1c measurement in whole blood."
+  },
+  "T4_specs": {
+    "show": true,
+    "h2": "Biossays C10 specifications",
+    "caption": "Manufacturer data",
+    "rows": [
+      {
+        "label": "Total throughput",
+        "value": "up to 3,000 tests/h"
+      },
+      {
+        "label": "Sample positions",
+        "value": "300"
+      },
+      {
+        "label": "Reagent positions",
+        "value": "200"
+      },
+      {
+        "label": "Biochemistry throughput",
+        "value": "up to 2,000 tests/h"
+      },
+      {
+        "label": "ISE throughput",
+        "value": "up to 1,000 tests/h"
+      },
+      {
+        "label": "Minimum reaction volume",
+        "value": "70 µL"
+      }
+    ]
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "Benefits of Biossays C10",
+    "items": [
+      {
+        "icon": "workflow",
+        "h3": "Two independent channels",
+        "text": "Biochemistry and ISE testing run through separate channels. According to the manufacturer, this arrangement helps preserve the throughput of each method."
+      },
+      {
+        "icon": "layout-grid",
+        "h3": "Capacity for routine flow",
+        "text": "The instrument provides 300 sample positions and 200 reagent positions, allowing both to be loaded on the analyzer at the same time."
+      },
+      {
+        "icon": "droplet",
+        "h3": "Whole-blood HbA1c",
+        "text": "Biossays C10 supports HbA1c measurement in whole-blood samples alongside biochemistry and ISE testing."
+      }
+    ]
+  },
+  "T6_items": {
+    "show": false
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": true,
+    "testMenu": {
+      "h2": "Tests available for Biossays C10",
+      "title": "Snibe biochemistry test menu",
+      "text": "Explore the Snibe biochemistry test menu. Ask a LabWell representative about the availability of individual tests in Ukraine.",
+      "cta": {
+        "label": "View the test menu",
+        "href": "/test-menus/snibe-biochemistry-test-menu"
+      }
+    },
+    "models": {
+      "h2": "Other Snibe biochemistry and electrolyte analyzers",
+      "text": "Explore other Snibe models for biochemistry and electrolyte testing.",
+      "cards": [
+        {
+          "eyebrow": "Snibe · Biochemistry",
+          "title": "Biossays 240 Plus",
+          "href": "/products/biossays-240-plus"
+        },
+        {
+          "eyebrow": "Snibe · Electrolytes",
+          "title": "Biossays E6 Plus",
+          "href": "/products/biossays-e6-plus"
+        }
+      ]
+    }
+  },
+  "T9_documents": {
+    "show": false
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Questions about Biossays C10",
+    "items": [
+      {
+        "q": "What is the throughput of Biossays C10?",
+        "a": "The total throughput of Biossays C10 is up to 3,000 tests per hour. The biochemistry channel processes up to 2,000 tests per hour, while the ISE channel processes up to 1,000."
+      },
+      {
+        "q": "What testing does Biossays C10 perform?",
+        "a": "Biossays C10 performs biochemistry and ISE testing through separate channels. It also supports HbA1c measurement in whole blood."
+      },
+      {
+        "q": "How many positions does Biossays C10 provide?",
+        "a": "The analyzer provides 300 sample positions and 200 reagent positions."
+      },
+      {
+        "q": "What is the minimum reaction volume for Biossays C10?",
+        "a": "The minimum reaction volume is 70 µL."
+      },
+      {
+        "q": "Who supplies Biossays C10 in Ukraine?",
+        "a": "LabWell is a Snibe partner and supplier in Ukraine."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Request a consultation about Biossays C10",
+    "text": "Tell us about your biochemistry and ISE workload and required tests, and we will help assess Biossays C10 for your laboratory and discuss its separate-channel workflow.",
+    "messagePrefill": "I am interested in Biossays C10. "
+  }
+}

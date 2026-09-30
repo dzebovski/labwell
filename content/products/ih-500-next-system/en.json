@@ -1,0 +1,207 @@
+{
+  "slug": "ih-500-next-system",
+  "url": "/products/ih-500-next-system",
+  "kind": "instrument",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "IH-500 NEXT — immunohematology system | LabWell",
+    "description": "IH-500 NEXT is an automated Bio-Rad immunohematology system with capacity for 50 samples. Supply, installation, and service in Ukraine from LabWell."
+  },
+  "T1_breadcrumbs": [
+    "Home",
+    "Products",
+    "Laboratory equipment",
+    "Immunohematology",
+    "IH-500 NEXT System"
+  ],
+  "T2_hero": {
+    "brand": "Bio-Rad",
+    "eyebrow": "Automated immunohematology system",
+    "h1": "IH-500 NEXT — automated immunohematology system",
+    "lead": "A Bio-Rad system for ID-Card testing, continuous loading, and automation of blood grouping, antibody screening, and titration.",
+    "keyFacts": [
+      {
+        "value": "50",
+        "label": "sample positions"
+      },
+      {
+        "value": "164",
+        "label": "ID-Cards"
+      },
+      {
+        "value": "34",
+        "label": "reagent positions"
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Specifications",
+      "href": "#specs"
+    },
+    "image": {
+      "alt": "IH-500 NEXT System, front view"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "What IH-500 NEXT is and who it is for",
+    "text": "IH-500 NEXT is a fully automated Bio-Rad system for immunohematology testing with ID-Cards. It is intended for laboratories that need continuous loading and automated blood grouping, antibody screening, and titration. Individual tests and STAT samples can be processed without waiting for the entire batch to finish."
+  },
+  "T4_specs": {
+    "show": true,
+    "h2": "IH-500 NEXT specifications",
+    "caption": "According to the manufacturer",
+    "rows": [
+      {
+        "label": "Sample positions",
+        "value": "50"
+      },
+      {
+        "label": "Reagent positions",
+        "value": "34"
+      },
+      {
+        "label": "ID-Card capacity",
+        "value": "164 ID-Cards"
+      },
+      {
+        "label": "ID-diluent positions",
+        "value": "4"
+      },
+      {
+        "label": "Dimensions (W × D × H)",
+        "value": "115 × 85 × 98 cm"
+      },
+      {
+        "label": "Weight",
+        "value": "213 kg"
+      },
+      {
+        "label": "Electrical data",
+        "value": "100–230 VAC, 50/60 Hz; 1,350 VA"
+      },
+      {
+        "label": "Operating conditions",
+        "value": "18–28°C; 5–80% RH; altitude up to 2,000 m"
+      }
+    ]
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "Benefits of IH-500 NEXT",
+    "items": [
+      {
+        "icon": "refresh-cw",
+        "h3": "Flexible daily loading",
+        "text": "Samples and reagents can be loaded continuously, while ID-Cards are processed well by well. This allows laboratories to run individual tests and prioritize STAT samples."
+      },
+      {
+        "icon": "thermometer",
+        "h3": "Fewer manual steps",
+        "text": "Active cooling supports onboard reagent stability for up to seven days, while two-fold dilutions for antibody titration are automated, according to the manufacturer."
+      }
+    ]
+  },
+  "T6_items": {
+    "show": true,
+    "h2": "IH-500 NEXT ordering information",
+    "summary": "System, accessory, and software",
+    "columns": [
+      "Catalog no.",
+      "Name"
+    ],
+    "rows": [
+      {
+        "catalogNumber": "001500",
+        "name": "IH-500"
+      },
+      {
+        "catalogNumber": "0595002",
+        "name": "Stand-alone table (optional)"
+      },
+      {
+        "catalogNumber": "009000",
+        "name": "IH-Com Kit Fullversion, Data Management Software"
+      },
+      {
+        "catalogNumber": "12009844",
+        "name": "IH-AbID, Integrated Antibody Identification Software"
+      },
+      {
+        "catalogNumber": "009030",
+        "name": "IH-Web, Remote Result Management Software"
+      },
+      {
+        "catalogNumber": "2000050",
+        "name": "BRiCare, Remote Service and Support Software"
+      }
+    ],
+    "footnote": "Ask a LabWell manager to confirm the configuration and availability of individual entries in Ukraine.",
+    "cta": {
+      "label": "Request ordering information",
+      "href": "#contact"
+    }
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": true,
+    "models": {
+      "h2": "Other automated blood typing systems",
+      "cards": [
+        {
+          "eyebrow": "Bio-Rad · Immunohematology",
+          "title": "IH-1000",
+          "href": "/products/ih-1000"
+        }
+      ]
+    }
+  },
+  "T9_documents": {
+    "show": true,
+    "h2": "IH-500 NEXT documents",
+    "items": [
+      {
+        "title": "IH-500 NEXT brochure",
+        "meta": "Brochure · PDF · English",
+        "href": "https://backend.ih-area.bio-rad.com/system/files/H008575_IH-500%20NEXT_EN_2023.05.pdf"
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "IH-500 NEXT questions and answers",
+    "items": [
+      {
+        "q": "What tests is IH-500 NEXT designed for?",
+        "a": "It automates immunohematology testing with ID-Cards, including blood grouping, antibody screening, and titration."
+      },
+      {
+        "q": "What is the capacity of IH-500 NEXT?",
+        "a": "The system has 50 sample positions, capacity for 164 ID-Cards, and 34 reagent positions."
+      },
+      {
+        "q": "Can STAT samples be added during operation?",
+        "a": "Yes. Continuous loading and well-by-well ID-Card processing allow STAT samples to be prioritized."
+      },
+      {
+        "q": "Who supplies IH-500 NEXT in Ukraine?",
+        "a": "LabWell is a Bio-Rad partner and supplier in Ukraine."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Request an IH-500 NEXT consultation",
+    "text": "Tell us about your test menu and sample workload, and we will help assess whether IH-500 NEXT fits your laboratory.",
+    "messagePrefill": "I am interested in IH-500 NEXT. "
+  }
+}

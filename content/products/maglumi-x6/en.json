@@ -1,0 +1,226 @@
+{
+  "slug": "maglumi-x6",
+  "url": "/products/maglumi-x6",
+  "kind": "instrument",
+  "brand": "Snibe",
+  "seo": {
+    "title": "MAGLUMI X6 — automated CLIA analyzer | LabWell",
+    "description": "MAGLUMI X6 is a fully automated Snibe CLIA analyzer delivering up to 450 tests/hour for high-volume laboratories. Supply and service in Ukraine by LabWell."
+  },
+  "T1_breadcrumbs": [
+    "Home",
+    "Products",
+    "Laboratory equipment",
+    "Immunoassay",
+    "MAGLUMI X6"
+  ],
+  "T2_hero": {
+    "brand": "Snibe",
+    "eyebrow": "Automated CLIA analyzer",
+    "h1": "MAGLUMI X6 — analyzer for chemiluminescence immunoassay",
+    "lead": "A fully automated Snibe analyzer for laboratories handling substantial immunoassay workloads.",
+    "keyFacts": [
+      {
+        "value": "up to 450",
+        "label": "tests per hour"
+      },
+      {
+        "value": "up to 112",
+        "label": "sample positions"
+      },
+      {
+        "value": "30",
+        "label": "reagent positions"
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Specifications",
+      "href": "#specs"
+    },
+    "image": {
+      "alt": "MAGLUMI X6 automated CLIA analyzer, front view"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "What MAGLUMI X6 is and who it is for",
+    "text": "MAGLUMI X6 is a fully automated Snibe CLIA analyzer for chemiluminescence immunoassay in laboratories with substantial testing workloads. It supports walk-away operation after loading and can form part of a modular configuration. The exact TLA/LAS integration should be checked for each laboratory project."
+  },
+  "T4_specs": {
+    "show": true,
+    "h2": "MAGLUMI X6 specifications",
+    "caption": "According to the manufacturer",
+    "rows": [
+      {
+        "label": "Throughput",
+        "value": "up to 450 tests/h"
+      },
+      {
+        "label": "Sample positions",
+        "value": "up to 112"
+      },
+      {
+        "label": "Reagent positions",
+        "value": "30"
+      },
+      {
+        "label": "Walk-away capacity",
+        "value": "up to 2,000 tests"
+      },
+      {
+        "label": "Reagent refrigeration",
+        "value": "24 h"
+      }
+    ],
+    "fullTechnicalData": {
+      "show": false
+    }
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "MAGLUMI X6 benefits",
+    "items": [
+      {
+        "icon": "combine",
+        "h3": "Flexible workload scaling",
+        "text": "Multiple X6 analyzers can be combined, or X6 can operate alongside other modules. This lets the laboratory plan a configuration around its testing workload."
+      },
+      {
+        "icon": "shield-check",
+        "h3": "Lower carryover risk",
+        "text": "Filtered disposable tips are designed to reduce cross-contamination between samples, according to the manufacturer. Individual reaction cups are heated from five sides."
+      },
+      {
+        "icon": "panel-right",
+        "h3": "Simpler daily workflow",
+        "text": "Loading, unloading and status checks are performed from one side of the instrument. Wash solution can be prepared in automatic or manual mode."
+      }
+    ],
+    "image": {
+      "alt": "One-sided operation of MAGLUMI X6"
+    }
+  },
+  "T6_items": {
+    "show": false
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": true,
+    "testMenu": {
+      "h2": "Which tests MAGLUMI X6 performs",
+      "title": "MAGLUMI CLIA test menu",
+      "text": "The menu spans hormones, tumor markers, infectious and cardiac markers, and other areas. Ask LabWell to confirm which individual assays are available in Ukraine.",
+      "cta": {
+        "label": "Open the test menu",
+        "href": "/test-menus/snibe-clia-test-menu"
+      },
+      "bigNumber": {
+        "value": "278",
+        "label": "parameters, according to Snibe"
+      }
+    },
+    "models": {
+      "h2": "Other MAGLUMI analyzers",
+      "allLink": {
+        "label": "All MAGLUMI analyzers",
+        "href": "/products/maglumi"
+      },
+      "cards": [
+        {
+          "eyebrow": "Snibe · CLIA",
+          "title": "MAGLUMI X3",
+          "href": "/products/maglumi-x3",
+          "facts": [
+            [
+              "Throughput",
+              "up to 200 tests/h"
+            ],
+            [
+              "Sample positions",
+              "72"
+            ]
+          ]
+        },
+        {
+          "eyebrow": "Snibe · CLIA",
+          "title": "MAGLUMI X8",
+          "href": "/products/maglumi-x8",
+          "facts": [
+            [
+              "Throughput",
+              "up to 600 tests/h"
+            ],
+            [
+              "Sample positions",
+              "300"
+            ]
+          ]
+        },
+        {
+          "eyebrow": "Snibe · CLIA",
+          "title": "MAGLUMI X10",
+          "href": "/products/maglumi-x10",
+          "facts": [
+            [
+              "Throughput",
+              "up to 1,000 tests/h"
+            ],
+            [
+              "Sample positions",
+              "300"
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "T9_documents": {
+    "show": false
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "MAGLUMI X6 questions and answers",
+    "items": [
+      {
+        "q": "What is the throughput of MAGLUMI X6?",
+        "a": "MAGLUMI X6 delivers up to 450 tests per hour."
+      },
+      {
+        "q": "Which laboratories is MAGLUMI X6 designed for?",
+        "a": "MAGLUMI X6 is designed for laboratories with substantial immunoassay workloads. The modular configuration should be selected for the needs of each project."
+      },
+      {
+        "q": "How many samples and reagents can be loaded?",
+        "a": "The analyzer provides up to 112 sample positions and 30 reagent positions."
+      },
+      {
+        "q": "Which tests can MAGLUMI X6 perform?",
+        "a": "The analyzer uses the MAGLUMI CLIA test menu; ask LabWell to confirm which individual assays are available in Ukraine.",
+        "link": {
+          "label": "MAGLUMI CLIA test menu",
+          "href": "/test-menus/snibe-clia-test-menu"
+        }
+      },
+      {
+        "q": "Who supplies MAGLUMI X6 in Ukraine?",
+        "a": "LabWell is a Snibe partner and supplier in Ukraine, providing supply, installation, staff training and service support."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Request a MAGLUMI X6 consultation",
+    "text": "Tell us about your testing workload, required assays and automation needs, and we will help assess a MAGLUMI X6 configuration for your laboratory.",
+    "messagePrefill": "I am interested in MAGLUMI X6. "
+  }
+}

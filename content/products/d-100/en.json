@@ -1,0 +1,204 @@
+{
+  "slug": "d-100",
+  "url": "/products/d-100",
+  "kind": "instrument",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "D-100 — HPLC system for HbA1c by Bio-Rad | LabWell",
+    "description": "D-100 is an automated Bio-Rad HPLC system for HbA1c testing at 80 tests per hour. For medium- and high-volume laboratories. Service in Ukraine by LabWell."
+  },
+  "T1_breadcrumbs": [
+    "Home",
+    "Products",
+    "Laboratory equipment",
+    "Diabetes",
+    "D-100"
+  ],
+  "T2_hero": {
+    "brand": "Bio-Rad",
+    "eyebrow": "Automated HPLC system",
+    "h1": "D-100 — system for HbA1c measurement",
+    "lead": "An automated Bio-Rad system for medium- and high-volume laboratories that need continuous HbA1c testing.",
+    "keyFacts": [
+      {
+        "value": "80",
+        "label": "tests per hour"
+      },
+      {
+        "value": "HPLC",
+        "label": "method for HbA1c measurement"
+      },
+      {
+        "value": "RFID",
+        "label": "consumable traceability"
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Specifications",
+      "href": "#specs"
+    },
+    "image": {
+      "alt": "D-100 Hemoglobin Testing System, front view"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "What D-100 is and who it is for",
+    "text": "D-100 is an automated Bio-Rad HPLC system for HbA1c measurement. It is designed for medium- and high-volume laboratories that need continuous HbA1c testing. Its throughput supports planning a routine workload without moving to a different measurement method."
+  },
+  "T4_specs": {
+    "show": true,
+    "h2": "D-100 specifications",
+    "caption": "According to the manufacturer",
+    "rows": [
+      {
+        "label": "Throughput",
+        "value": "80 tests/hour"
+      },
+      {
+        "label": "Dimensions (W × D × H)",
+        "value": "660 × 650 × 725 mm"
+      },
+      {
+        "label": "Weight",
+        "value": "95 kg dry; 113 kg wet"
+      },
+      {
+        "label": "Power input requirements",
+        "value": "100–240 V~, 50–60 Hz; 800 VA maximum"
+      },
+      {
+        "label": "Operating conditions",
+        "value": "15–35 °C; 20–80% relative humidity, non-condensing; altitude up to 3,048 m"
+      },
+      {
+        "label": "Storage conditions",
+        "value": "−10–50 °C; 20–80% relative humidity"
+      }
+    ]
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "Benefits of D-100",
+    "items": [
+      {
+        "icon": "refresh-cw",
+        "h3": "Continuous sample processing",
+        "text": "Buffer can be replaced while the system is running, helping the laboratory maintain a continuous testing workflow. According to the manufacturer, the software automatically reviews and flags results for easier review."
+      },
+      {
+        "icon": "scan-line",
+        "h3": "Less manual data entry",
+        "text": "RFID tags on the cartridge, calibrator and reagents carry lot, expiry and assay parameter data. The system reads this information automatically."
+      },
+      {
+        "icon": "thermometer",
+        "h3": "Defined operating conditions",
+        "text": "Manufacturer-specified temperature and humidity ranges help a laboratory assess installation requirements in advance. Power and storage requirements are listed in the specifications."
+      }
+    ]
+  },
+  "T6_items": {
+    "show": true,
+    "h2": "D-100 ordering information",
+    "columns": [
+      "Catalog number",
+      "Name",
+      "Pack size"
+    ],
+    "rows": [
+      {
+        "catalogNumber": "12008984",
+        "name": "D-100 Hemoglobin Testing System",
+        "packSize": "1 each"
+      },
+      {
+        "catalogNumber": "2901004",
+        "name": "D-100 HbA1c Analytical Cartridge/Calibrator Pack",
+        "packSize": "1 each"
+      },
+      {
+        "catalogNumber": "2901006",
+        "name": "D-100 HbA1c Calibrator Pack",
+        "packSize": "1 each"
+      },
+      {
+        "catalogNumber": "740",
+        "name": "Lyphochek Diabetes Control, Bilevel",
+        "packSize": "6 × 0.5 mL"
+      },
+      {
+        "catalogNumber": "12011343",
+        "name": "Liquichek Diabetes Control, Level 1",
+        "packSize": "6 × 1 mL"
+      },
+      {
+        "catalogNumber": "12011344",
+        "name": "Liquichek Diabetes Control, Level 2",
+        "packSize": "6 × 1 mL"
+      },
+      {
+        "catalogNumber": "12011345",
+        "name": "Liquichek Diabetes Control, Level 3",
+        "packSize": "6 × 1 mL"
+      }
+    ],
+    "cta": {
+      "label": "Send an item request",
+      "href": "#contact"
+    }
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": true,
+    "h2": "Other Bio-Rad systems for HbA1c",
+    "cards": [
+      {
+        "eyebrow": "Bio-Rad · HPLC",
+        "title": "VARIANT II TURBO",
+        "href": "/products/variant-ii-turbo"
+      }
+    ]
+  },
+  "T9_documents": {
+    "show": false
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "D-100 questions and answers",
+    "items": [
+      {
+        "q": "What is the D-100 system used for?",
+        "a": "D-100 is used for HbA1c measurement by HPLC in medium- and high-volume laboratories."
+      },
+      {
+        "q": "What is the throughput of D-100?",
+        "a": "D-100 has a throughput of 80 tests per hour."
+      },
+      {
+        "q": "How does D-100 track consumables?",
+        "a": "The system reads RFID tags on the cartridge, calibrator and reagents for lot, expiry and assay parameter data."
+      },
+      {
+        "q": "Who supplies D-100 in Ukraine?",
+        "a": "LabWell is a Bio-Rad partner and supplier in Ukraine."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Request a consultation about D-100",
+    "text": "Tell us about your HbA1c workload and laboratory conditions, and we will help assess the system, configuration and required materials.",
+    "messagePrefill": "I am interested in D-100. "
+  }
+}

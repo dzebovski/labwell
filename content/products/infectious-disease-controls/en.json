@@ -1,0 +1,195 @@
+{
+  "slug": "infectious-disease-controls",
+  "url": "/products/infectious-disease-controls",
+  "kind": "line",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "Bio-Rad Infectious Disease Controls | LabWell",
+    "description": "Bio-Rad controls for serological and molecular infectious disease testing, with positive and negative materials. Supplied in Ukraine through LabWell."
+  },
+  "T1_breadcrumbs": [
+    "Home",
+    "Products",
+    "Quality control",
+    "Infectious disease controls"
+  ],
+  "T2_hero": {
+    "brand": "Bio-Rad",
+    "eyebrow": "Quality control range",
+    "h1": "Bio-Rad controls for infectious disease testing",
+    "lead": "Control materials for checking the performance of serological and molecular infectious disease testing methods.",
+    "keyFacts": [
+      {
+        "value": "Serology",
+        "label": "control materials for testing methods"
+      },
+      {
+        "value": "Molecular testing",
+        "label": "controls for infectious targets"
+      },
+      {
+        "value": "Positive and negative",
+        "label": "control options in the range"
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Ordering information",
+      "href": "#items"
+    },
+    "image": {
+      "alt": "VIROTROL I serology control vials"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "What Bio-Rad infectious disease controls are",
+    "text": "Infectious Disease Controls are Bio-Rad control materials for serological and molecular infectious disease testing. The range includes positive and negative controls for checking the performance of testing methods. It covers viral and other infectious targets, while the specific composition depends on the product."
+  },
+  "T4_specs": {
+    "show": false
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "Benefits of infectious disease controls",
+    "items": [
+      {
+        "icon": "shield-check",
+        "h3": "Independent method monitoring",
+        "text": "The materials let laboratories monitor applicable testing procedures independently of the test kit. Positive and negative options support checks of testing method performance."
+      }
+    ]
+  },
+  "T6_items": {
+    "show": true,
+    "h2": "Infectious disease control ordering information",
+    "summary": "Amplichek II, VIROTROL, and VIROCLEAR controls",
+    "columns": [
+      "Catalog no.",
+      "Name"
+    ],
+    "rows": [
+      {
+        "catalogNumber": "12000201",
+        "name": "Amplichek II, Negative"
+      },
+      {
+        "catalogNumber": "12000202",
+        "name": "Amplichek II, Level 1"
+      },
+      {
+        "catalogNumber": "12000203",
+        "name": "Amplichek II, Level 2"
+      },
+      {
+        "catalogNumber": "12000204",
+        "name": "Amplichek II, Level 3"
+      },
+      {
+        "catalogNumber": "200300A",
+        "name": "VIROTROL SARS-CoV-2"
+      },
+      {
+        "catalogNumber": "200500",
+        "name": "VIROCLEAR SARS-CoV-2"
+      },
+      {
+        "catalogNumber": "00100A",
+        "name": "VIROTROL I (5 mL)"
+      },
+      {
+        "catalogNumber": "00110A",
+        "name": "VIROTROL III"
+      }
+    ],
+    "footnote": "Catalog numbers are from the official Bio-Rad catalog. Pack sizes were not collected; ask a LabWell manager about the range supplied in Ukraine.",
+    "cta": {
+      "label": "Request ordering information",
+      "href": "#contact"
+    }
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": true,
+    "h2": "Other Bio-Rad quality controls",
+    "allLink": {
+      "label": "All quality controls",
+      "href": "/products"
+    },
+    "cards": [
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "InteliQ",
+        "href": "/products/inteliq"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Immunoassay controls",
+        "href": "/products/immunoassay-controls"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Chemistry controls",
+        "href": "/products/chemistry-controls"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Molecular controls",
+        "href": "/products/molecular-controls"
+      }
+    ]
+  },
+  "T9_documents": {
+    "show": true,
+    "h2": "Infectious disease control documents",
+    "items": [
+      {
+        "title": "Infectious Disease Controls for Serology Testing",
+        "meta": "Brochure · PDF · English",
+        "href": "https://www.bio-rad.com/webroot/web/pdf/cdg/literature/Q-1565.pdf"
+      },
+      {
+        "title": "Quality Control Products Catalog",
+        "meta": "Catalog · PDF · English",
+        "href": "https://www.bio-rad.com/sites/default/files/webroot/web/pdf/cdg/literature/Q-1118.pdf"
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Infectious disease controls: questions and answers",
+    "items": [
+      {
+        "q": "What are Infectious Disease Controls used for?",
+        "a": "They are used to check the performance of serological and molecular infectious disease testing methods."
+      },
+      {
+        "q": "Which control options are included?",
+        "a": "The range includes positive and negative controls. Specific composition depends on the product."
+      },
+      {
+        "q": "Which targets does the range cover?",
+        "a": "The range covers viral and other infectious targets."
+      },
+      {
+        "q": "Who supplies Bio-Rad controls in Ukraine?",
+        "a": "LabWell is a Bio-Rad partner and supplier in Ukraine."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.itemsForLine"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Ask about infectious disease controls",
+    "text": "Tell us the testing method and infectious target, and we will help identify the relevant Bio-Rad items.",
+    "messagePrefill": "I am interested in Bio-Rad infectious disease controls. "
+  }
+}

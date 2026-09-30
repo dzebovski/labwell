@@ -1,0 +1,224 @@
+{
+  "slug": "bioplex-2200-system",
+  "url": "/products/bioplex-2200-system",
+  "kind": "instrument",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "BioPlex 2200 — Bio-Rad multiplex system | LabWell",
+    "description": "BioPlex 2200 is an automated Bio-Rad multiplex system processing up to 100 samples/hour for autoimmune and infectious disease testing. Supplied by LabWell."
+  },
+  "T1_breadcrumbs": [
+    "Home",
+    "Products",
+    "Laboratory equipment",
+    "Autoimmune testing",
+    "BioPlex 2200 System"
+  ],
+  "T2_hero": {
+    "brand": "Bio-Rad",
+    "eyebrow": "Automated multiplex system",
+    "h1": "BioPlex 2200 — system for multiplex immunoassays",
+    "lead": "An automated random-access Bio-Rad platform for autoimmune, infectious disease, and specialty immunoassay testing.",
+    "keyFacts": [
+      {
+        "value": "up to 100",
+        "label": "samples per hour"
+      },
+      {
+        "value": "50",
+        "label": "samples loaded at once"
+      },
+      {
+        "value": "less than 45 min",
+        "label": "to the first result"
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Specifications",
+      "href": "#specs"
+    },
+    "image": {
+      "alt": "BioPlex 2200 multiplex system, front view"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "What BioPlex 2200 is and who it is for",
+    "text": "BioPlex 2200 System is a fully automated Bio-Rad system for multiplex immunoassays. It consolidates autoimmune and infectious disease testing on one platform and suits laboratories that need to measure several markers within a single test. Random and continuous access allows STAT samples to be loaded as a priority."
+  },
+  "T4_specs": {
+    "show": true,
+    "h2": "BioPlex 2200 specifications",
+    "caption": "According to the manufacturer",
+    "rows": [
+      {
+        "label": "Throughput",
+        "value": "up to 100 samples/hour"
+      },
+      {
+        "label": "Sample positions",
+        "value": "50"
+      },
+      {
+        "label": "Time to first result",
+        "value": "less than 45 min"
+      },
+      {
+        "label": "Sample volume",
+        "value": "as little as 5 µL"
+      },
+      {
+        "label": "Sample types",
+        "value": "Serum, plasma, or CSF (assay dependent)"
+      },
+      {
+        "label": "Operational mode",
+        "value": "Random and continuous access with priority STAT loading"
+      },
+      {
+        "label": "Walkaway capacity",
+        "value": "8 hours of continuous use"
+      },
+      {
+        "label": "Power requirements",
+        "value": "100–240 VAC, 50–60 Hz, 1,000 W"
+      },
+      {
+        "label": "Water quality",
+        "value": "CLSI Type II or better"
+      }
+    ]
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "Benefits of BioPlex 2200",
+    "items": [
+      {
+        "icon": "layers",
+        "h3": "Several markers per test",
+        "text": "The multiplex format measures several markers within a single test. This can reduce the number of separate runs needed for autoimmune and infectious disease panels."
+      },
+      {
+        "icon": "refresh-cw",
+        "h3": "Flexible sample handling",
+        "text": "Samples, consumables, and waste remain accessible during processing. Priority STAT loading is available for urgent samples."
+      },
+      {
+        "icon": "list",
+        "h3": "Broad assay menu",
+        "text": "According to the manufacturer, the menu includes more than 50 assays for autoimmune disease, infectious disease, and specialty immunoassay testing."
+      }
+    ]
+  },
+  "T6_items": {
+    "show": true,
+    "h2": "BioPlex 2200 ordering information",
+    "summary": "System, accessories, reagents, and consumables",
+    "columns": [
+      "Catalog no.",
+      "Name",
+      "Pack size"
+    ],
+    "rows": [
+      {
+        "catalogNumber": "660-0000",
+        "name": "BioPlex 2200 System",
+        "packSize": "—"
+      },
+      {
+        "catalogNumber": "660-0800",
+        "name": "Sample Racks",
+        "packSize": "Box of 30 racks"
+      },
+      {
+        "catalogNumber": "660-0801",
+        "name": "Sample Tray",
+        "packSize": "—"
+      },
+      {
+        "catalogNumber": "660-0817",
+        "name": "Instrument Sheath Fluid",
+        "packSize": "2 × 4 L"
+      },
+      {
+        "catalogNumber": "660-0818",
+        "name": "Instrument Wash Buffer",
+        "packSize": "10 L"
+      },
+      {
+        "catalogNumber": "660-2003",
+        "name": "Reaction Vessels",
+        "packSize": "1,000 vessels"
+      },
+      {
+        "catalogNumber": "666-0001",
+        "name": "Instrument Detector Calibration Pack",
+        "packSize": "1 pack"
+      },
+      {
+        "catalogNumber": "666-0002",
+        "name": "Instrument Detector Clean Pack",
+        "packSize": "1 pack"
+      },
+      {
+        "catalogNumber": "666-0003",
+        "name": "Instrument Probe Cleaning Solution",
+        "packSize": "4 × 30 mL"
+      }
+    ],
+    "footnote": "Ask a LabWell manager to confirm the configuration and availability of individual entries in Ukraine.",
+    "cta": {
+      "label": "Request ordering information",
+      "href": "#contact"
+    }
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": false
+  },
+  "T9_documents": {
+    "show": false
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "BioPlex 2200 questions and answers",
+    "items": [
+      {
+        "q": "What is the throughput of BioPlex 2200?",
+        "a": "It processes up to 100 samples per hour, with the first result in less than 45 minutes depending on the panel."
+      },
+      {
+        "q": "What sample types can BioPlex 2200 process?",
+        "a": "It can process serum, plasma, or CSF depending on the assay. Sample volume starts at 5 µL."
+      },
+      {
+        "q": "Which tests are available for BioPlex 2200?",
+        "a": "According to the manufacturer, the menu includes more than 50 assays for autoimmune disease, infectious disease, and specialty immunoassays."
+      },
+      {
+        "q": "Can urgent samples be added during operation?",
+        "a": "Yes. The system provides random and continuous access with priority STAT loading."
+      },
+      {
+        "q": "Who supplies BioPlex 2200 in Ukraine?",
+        "a": "LabWell is a Bio-Rad partner and supplier in Ukraine."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Request a BioPlex 2200 consultation",
+    "text": "Tell us which panels and sample workload you need, and we will help assess whether BioPlex 2200 fits your laboratory.",
+    "messagePrefill": "I am interested in BioPlex 2200. "
+  }
+}

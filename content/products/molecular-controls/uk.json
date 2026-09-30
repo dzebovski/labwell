@@ -1,0 +1,189 @@
+{
+  "slug": "molecular-controls",
+  "url": "/products/molecular-controls",
+  "kind": "line",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "Молекулярні контролі Bio-Rad | LabWell",
+    "description": "Молекулярні контролі й верифікаційні панелі Exact Diagnostics від Bio-Rad для лабораторних досліджень. Партнер і постачальник в Україні — LabWell."
+  },
+  "T1_breadcrumbs": [
+    "Головна",
+    "Продукція",
+    "Контроль якості",
+    "Молекулярні контролі"
+  ],
+  "T2_hero": {
+    "brand": "Bio-Rad",
+    "eyebrow": "Контролі для молекулярної діагностики",
+    "h1": "Молекулярні контролі — контрольні матеріали та панелі",
+    "lead": "Контрольні матеріали та верифікаційні панелі Exact Diagnostics від Bio-Rad для молекулярних досліджень у різних діагностичних напрямах.",
+    "keyFacts": [
+      {
+        "value": "Run controls",
+        "label": "контрольні матеріали для запуску тесту"
+      },
+      {
+        "value": "Verification panels",
+        "label": "панелі з кількома рівнями або концентраціями"
+      },
+      {
+        "value": "JCV та CT/NG",
+        "label": "напрями у вибірці позицій"
+      }
+    ],
+    "primaryCta": {
+      "label": "Отримати консультацію",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Позиції для замовлення",
+      "href": "#items"
+    },
+    "image": {
+      "alt": "Набір молекулярного контролю Exact Diagnostics CT/NG"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "Що таке молекулярні контролі Bio-Rad",
+    "text": "Molecular Quality Controls and Panels — це лінійка контрольних матеріалів та верифікаційних панелей Exact Diagnostics від Bio-Rad для молекулярної діагностики. Каталог охоплює трансплантацію, вірусологію, ІПСШ, мікробіологію, внутрішньолікарняні й респіраторні інфекції та кліщові захворювання. У вибірці позицій представлені продукти для JCV та CT/NG. Склад матеріалів і кількість рівнів або концентрацій залежать від конкретного дослідження."
+  },
+  "T4_specs": {
+    "show": false
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "Переваги молекулярних контролів",
+    "items": [
+      {
+        "icon": "chart-no-axes-combined",
+        "h3": "Охарактеризовані цільові значення",
+        "text": "За даними виробника, для деяких продуктів цільові значення встановлюють методом ddPCR, а окремі показники калібрують за міжнародними стандартами ВООЗ."
+      }
+    ]
+  },
+  "T6_items": {
+    "show": true,
+    "h2": "Позиції молекулярних контролів для замовлення",
+    "summary": "Вибірка позицій JCV та CT/NG",
+    "columns": [
+      "Кат. №",
+      "Назва",
+      "Фасування"
+    ],
+    "rows": [
+      {
+        "catalogNumber": "JCVL101",
+        "name": "Exact Diagnostics JCV, Low Run Control",
+        "packSize": "5 × 1.0 mL"
+      },
+      {
+        "catalogNumber": "JCVH102",
+        "name": "Exact Diagnostics JCV, High Run Control",
+        "packSize": "5 × 1.0 mL"
+      },
+      {
+        "catalogNumber": "JCVP100",
+        "name": "Exact Diagnostics JCV, Verification Panel",
+        "packSize": "6 × 1.0 mL"
+      },
+      {
+        "catalogNumber": "CTNGPOS",
+        "name": "Exact Diagnostics CT/NG, Positive Run Control",
+        "packSize": "6 × 2.0 mL"
+      },
+      {
+        "catalogNumber": "CTNGP200",
+        "name": "Exact Diagnostics CT/NG, Verification Panel",
+        "packSize": "9 × 1.0 mL"
+      },
+      {
+        "catalogNumber": "CTNGB200",
+        "name": "Exact Diagnostics CT/NG, Verification Bundle",
+        "packSize": "5 kits"
+      }
+    ],
+    "footnote": "Наведено вибірку позицій JCV та CT/NG. Асортимент для України уточнює менеджер LabWell.",
+    "cta": {
+      "label": "Надіслати запит на позиції",
+      "href": "#contact"
+    }
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": true,
+    "h2": "Інші контролі якості Bio-Rad",
+    "allLink": {
+      "label": "Увесь контроль якості",
+      "href": "/products"
+    },
+    "cards": [
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "InteliQ",
+        "href": "/products/inteliq"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Контролі для імуноаналізу",
+        "href": "/products/immunoassay-controls"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Контролі для інфекційних досліджень",
+        "href": "/products/infectious-disease-controls"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Контролі для біохімії",
+        "href": "/products/chemistry-controls"
+      }
+    ]
+  },
+  "T9_documents": {
+    "show": true,
+    "h2": "Документи про молекулярні контролі",
+    "items": [
+      {
+        "title": "Quality Control Products Catalog",
+        "meta": "Каталог · PDF · англійською",
+        "href": "https://www.bio-rad.com/sites/default/files/webroot/web/pdf/cdg/literature/Q-1118.pdf"
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Питання й відповіді про молекулярні контролі",
+    "items": [
+      {
+        "q": "Що таке молекулярні контролі Exact Diagnostics?",
+        "a": "Це контрольні матеріали та верифікаційні панелі Bio-Rad для молекулярної діагностики."
+      },
+      {
+        "q": "Які напрями охоплює лінійка?",
+        "a": "Лінійка охоплює трансплантацію, вірусологію, ІПСШ, мікробіологію, внутрішньолікарняні й респіраторні інфекції та кліщові захворювання."
+      },
+      {
+        "q": "Що входить до лінійки молекулярних контролів?",
+        "a": "До лінійки входять контрольні матеріали для запуску тесту та верифікаційні панелі з кількома рівнями або концентраціями. Склад залежить від конкретного дослідження."
+      },
+      {
+        "q": "Хто постачає молекулярні контролі Bio-Rad в Україні?",
+        "a": "LabWell — партнер і постачальник Bio-Rad в Україні. Асортимент конкретних позицій уточнює менеджер."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.itemsForLine"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Отримати консультацію щодо молекулярних контролів",
+    "text": "Вкажіть напрям дослідження та потрібний контроль або панель — менеджер уточнить доступний асортимент.",
+    "messagePrefill": "Цікавлять молекулярні контролі Bio-Rad. "
+  }
+}

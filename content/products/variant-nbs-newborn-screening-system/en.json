@@ -1,0 +1,158 @@
+{
+  "slug": "variant-nbs-newborn-screening-system",
+  "url": "/products/variant-nbs-newborn-screening-system",
+  "kind": "instrument",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "VARIANT nbs — Bio-Rad newborn screening | LabWell",
+    "description": "VARIANT nbs is an automated Bio-Rad HPLC system for newborn hemoglobinopathy screening with up to 1,128 samples per run. Supply and service in Ukraine by LabWell."
+  },
+  "T1_breadcrumbs": [
+    "Home",
+    "Products",
+    "Laboratory equipment",
+    "Newborn screening",
+    "VARIANT nbs"
+  ],
+  "T2_hero": {
+    "brand": "Bio-Rad",
+    "eyebrow": "Automated HPLC system",
+    "h1": "VARIANT nbs — system for newborn screening",
+    "lead": "An automated Bio-Rad HPLC system for newborn hemoglobinopathy screening using dried blood spots.",
+    "keyFacts": [
+      {
+        "value": "up to 1,128",
+        "label": "samples per run"
+      },
+      {
+        "value": "Dried blood spots",
+        "label": "sample type"
+      },
+      {
+        "value": "F, A, S, C, D, E",
+        "label": "hemoglobins detected according to the manufacturer"
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Specifications",
+      "href": "#specs"
+    },
+    "image": {
+      "alt": "VARIANT nbs Newborn Hemoglobin Screening System"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "What VARIANT nbs is and who it is for",
+    "text": "VARIANT nbs is an automated Bio-Rad HPLC system for newborn hemoglobinopathy screening. It uses dried blood spots and is designed for newborn screening. According to the manufacturer, the system detects hemoglobins F, A, S, C, D and E."
+  },
+  "T4_specs": {
+    "show": true,
+    "h2": "VARIANT nbs specifications",
+    "caption": "According to the manufacturer",
+    "rows": [
+      {
+        "label": "Sample positions",
+        "value": "up to 1,128 per run"
+      },
+      {
+        "label": "Sample type",
+        "value": "Dried blood spots"
+      }
+    ]
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "Benefits of VARIANT nbs",
+    "items": [
+      {
+        "icon": "scan-line",
+        "h3": "Positive-sample tracking",
+        "text": "The system automates analysis and produces advanced reports for result review. According to the manufacturer, its onboard barcode reader supports positive-sample tracking."
+      },
+      {
+        "icon": "layers",
+        "h3": "Capacity for large runs",
+        "text": "Capacity of up to 1,128 samples per run supports planning large newborn screening batches. The system uses dried blood spots for testing."
+      }
+    ]
+  },
+  "T6_items": {
+    "show": true,
+    "h2": "VARIANT nbs ordering information",
+    "columns": [
+      "Catalog number",
+      "Name",
+      "Pack size"
+    ],
+    "rows": [
+      {
+        "catalogNumber": "250-3010",
+        "name": "VARIANT nbs Newborn Screening System",
+        "packSize": "1 unit"
+      },
+      {
+        "catalogNumber": "250-3000",
+        "name": "VARIANT nbs Sickle Cell Program Reorder Pack",
+        "packSize": "1,000 tests"
+      }
+    ],
+    "cta": {
+      "label": "Send an item request",
+      "href": "#contact"
+    }
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": false
+  },
+  "T9_documents": {
+    "show": true,
+    "h2": "VARIANT nbs documents",
+    "items": [
+      {
+        "title": "VARIANTnbs Brochure",
+        "meta": "Brochure · PDF · English",
+        "href": "https://www.bio-rad.com/sites/default/files/2024-10/B-213_VARIANTnbs-Brochure.pdf"
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "VARIANT nbs questions and answers",
+    "items": [
+      {
+        "q": "What is VARIANT nbs used for?",
+        "a": "VARIANT nbs is used for newborn hemoglobinopathy screening by HPLC."
+      },
+      {
+        "q": "Which samples does VARIANT nbs use?",
+        "a": "The system uses dried blood spots."
+      },
+      {
+        "q": "How many samples does VARIANT nbs process?",
+        "a": "According to the manufacturer, the system processes up to 1,128 samples per run."
+      },
+      {
+        "q": "Who supplies VARIANT nbs in Ukraine?",
+        "a": "LabWell is a Bio-Rad partner and supplier in Ukraine."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Request a consultation about VARIANT nbs",
+    "text": "Tell us about your newborn screening needs and expected run size, and we will help assess the system and required materials.",
+    "messagePrefill": "I am interested in VARIANT nbs. "
+  }
+}

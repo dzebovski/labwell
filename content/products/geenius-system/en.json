@@ -1,0 +1,161 @@
+{
+  "slug": "geenius-system",
+  "url": "/products/geenius-system",
+  "kind": "instrument",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "Geenius System — HIV and HCV test reader | LabWell",
+    "description": "Geenius System is a Bio-Rad platform for automated reading and interpretation of HIV-1, HIV-2, and HCV assays with bidirectional LIS data exchange."
+  },
+  "T1_breadcrumbs": [
+    "Home",
+    "Products",
+    "Laboratory equipment",
+    "Infectious diseases",
+    "Geenius System"
+  ],
+  "T2_hero": {
+    "brand": "Bio-Rad",
+    "eyebrow": "System for HIV and HCV assays",
+    "h1": "Geenius System — reader for HIV and HCV assays",
+    "lead": "A Bio-Rad system for automated reading and interpretation of individual HIV-1, HIV-2, and HCV assays.",
+    "keyFacts": [
+      {
+        "value": "HIV-1 / HIV-2",
+        "label": "antibody confirmation and differentiation"
+      },
+      {
+        "value": "HCV",
+        "label": "supplemental testing"
+      },
+      {
+        "value": "LIS",
+        "label": "bidirectional data exchange"
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Ordering information",
+      "href": "#items"
+    },
+    "image": {
+      "alt": "Geenius System with reader and HIV and HCV assay cassettes"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "What Geenius System is and who it is for",
+    "text": "Geenius System is a Bio-Rad platform for automated reading and interpretation of individual HIV-1, HIV-2, and HCV assays. It supports confirmation and differentiation of HIV-1 and HIV-2 antibodies as well as supplemental HCV testing. The system suits laboratories of different sizes that need automated interpretation of individual assay strips, a detailed report with a cassette image, and result transfer to an LIS."
+  },
+  "T4_specs": {
+    "show": false
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "Geenius System benefits",
+    "items": [
+      {
+        "icon": "file-check",
+        "h3": "Automated interpretation",
+        "text": "The software evaluates individual cassette bands and automatically produces a patient-status conclusion using the manufacturer's algorithms. The detailed report includes a cassette image."
+      },
+      {
+        "icon": "database",
+        "h3": "Workflow checks",
+        "text": "Geenius automatically calibrates the reader and checks lot validation. These checks are built into the system workflow before results are produced."
+      },
+      {
+        "icon": "arrow-left-right",
+        "h3": "Archive and data exchange",
+        "text": "Results can be securely archived and transferred to an LIS through a bidirectional interface. The laboratory receives the system-generated conclusion and cassette image."
+      }
+    ]
+  },
+  "T6_items": {
+    "show": true,
+    "h2": "Geenius System ordering information",
+    "columns": [
+      "Catalog no.",
+      "Name",
+      "Pack size"
+    ],
+    "rows": [
+      {
+        "catalogNumber": "92465",
+        "name": "Geenius Reader",
+        "packSize": "[PACK SIZE NOT PROVIDED]"
+      },
+      {
+        "catalogNumber": "72460",
+        "name": "Geenius HIV 1/2 Confirmatory Assay",
+        "packSize": "20 tests"
+      },
+      {
+        "catalogNumber": "92501",
+        "name": "Geenius HCV Supplemental Assay",
+        "packSize": "20 tests"
+      },
+      {
+        "catalogNumber": "92502",
+        "name": "Geenius HCV Supplemental Controls",
+        "packSize": "1 positive + 1 negative, 2 × 150 µL"
+      }
+    ],
+    "cta": {
+      "label": "Request ordering information",
+      "href": "#contact"
+    }
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": true,
+    "h2": "Related Bio-Rad solutions",
+    "cards": [
+      {
+        "eyebrow": "Bio-Rad · Quality control",
+        "title": "Infectious disease controls",
+        "href": "/products/infectious-disease-controls"
+      }
+    ]
+  },
+  "T9_documents": {
+    "show": false
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Geenius System questions and answers",
+    "items": [
+      {
+        "q": "Which assays is Geenius System intended for?",
+        "a": "It supports confirmation and differentiation of HIV-1 and HIV-2 antibodies and supplemental HCV testing."
+      },
+      {
+        "q": "How does Geenius System interpret a result?",
+        "a": "It automatically evaluates individual cassette bands and produces a conclusion using the manufacturer's algorithms. The report includes a cassette image."
+      },
+      {
+        "q": "Can Geenius System send results to an LIS?",
+        "a": "Yes. The system supports bidirectional data exchange with an LIS."
+      },
+      {
+        "q": "Who supplies Geenius System in Ukraine?",
+        "a": "LabWell is a Bio-Rad partner and supplier in Ukraine, providing supply, installation, staff training, and service support."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Request a Geenius System consultation",
+    "text": "Tell us which HIV or HCV assays and LIS data exchange you need, and we will help clarify the system configuration and ordering items for your laboratory.",
+    "messagePrefill": "I am interested in Geenius System. "
+  }
+}

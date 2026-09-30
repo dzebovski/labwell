@@ -1,0 +1,156 @@
+{
+  "slug": "biossays-e6-plus",
+  "url": "/products/biossays-e6-plus",
+  "kind": "instrument",
+  "brand": "Snibe",
+  "seo": {
+    "title": "Biossays E6 Plus — electrolyte analyzer Snibe | LabWell",
+    "description": "Biossays E6 Plus is an automated Snibe electrolyte analyzer for serum, whole blood and urine, with throughput of 540 tests/h. Supplied in Ukraine by LabWell."
+  },
+  "T1_breadcrumbs": [
+    "Home",
+    "Products",
+    "Laboratory equipment",
+    "Electrolytes",
+    "Biossays E6 Plus"
+  ],
+  "T2_hero": {
+    "brand": "Snibe",
+    "eyebrow": "Automated electrolyte analyzer",
+    "h1": "Biossays E6 Plus — automated electrolyte analyzer",
+    "lead": "A Snibe analyzer for measuring Li+, K+, Na+, Cl−, iCa2+ and pH in serum, whole blood and urine, with connection to a laboratory automation track.",
+    "keyFacts": [
+      {
+        "value": "540",
+        "label": "tests per hour"
+      },
+      {
+        "value": "100 µL",
+        "label": "sample volume"
+      },
+      {
+        "value": "Li+, K+, Na+, Cl−, iCa2+, pH",
+        "label": "analytes"
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Specifications",
+      "href": "#specs"
+    },
+    "image": {
+      "alt": "Biossays E6 Plus automated electrolyte analyzer by Snibe"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "What Biossays E6 Plus is and who it is for",
+    "text": "Biossays E6 Plus is an automated Snibe electrolyte analyzer for measuring Li+, K+, Na+, Cl−, iCa2+ and pH. It accepts serum, whole blood and urine, allowing a laboratory to handle the listed sample types on one system. The analyzer can connect to a laboratory automation track."
+  },
+  "T4_specs": {
+    "show": true,
+    "h2": "Biossays E6 Plus specifications",
+    "caption": "Manufacturer data",
+    "rows": [
+      {
+        "label": "Throughput",
+        "value": "540 tests/h"
+      },
+      {
+        "label": "Sample types",
+        "value": "serum, whole blood, urine"
+      },
+      {
+        "label": "Sample volume",
+        "value": "100 µL"
+      },
+      {
+        "label": "Analytes",
+        "value": "Li+, K+, Na+, Cl−, iCa2+, pH"
+      }
+    ]
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "Benefits of Biossays E6 Plus",
+    "items": [
+      {
+        "icon": "test-tubes",
+        "h3": "Multiple sample types",
+        "text": "The system accepts serum, whole blood and urine. This enables the listed sample types to be handled on one electrolyte analyzer. For supported samples, the system measures Li+, K+, Na+, Cl−, iCa2+ and pH."
+      },
+      {
+        "icon": "workflow",
+        "h3": "Automation track connection",
+        "text": "Biossays E6 Plus can connect to a laboratory automation track and operate within an automated workflow. According to Snibe, the system processes up to 90 samples per hour."
+      }
+    ]
+  },
+  "T6_items": {
+    "show": false
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": true,
+    "models": {
+      "h2": "Other Snibe biochemistry analyzers",
+      "text": "Explore other Snibe models for biochemistry testing.",
+      "cards": [
+        {
+          "eyebrow": "Snibe · Biochemistry",
+          "title": "Biossays C10",
+          "href": "/products/biossays-c10"
+        },
+        {
+          "eyebrow": "Snibe · Biochemistry",
+          "title": "Biossays 240 Plus",
+          "href": "/products/biossays-240-plus"
+        }
+      ]
+    }
+  },
+  "T9_documents": {
+    "show": false
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Questions about Biossays E6 Plus",
+    "items": [
+      {
+        "q": "What is the throughput of Biossays E6 Plus?",
+        "a": "Throughput is 540 tests per hour. According to Snibe, the system processes up to 90 samples per hour."
+      },
+      {
+        "q": "Which analytes does Biossays E6 Plus measure?",
+        "a": "Biossays E6 Plus measures Li+, K+, Na+, Cl−, iCa2+ and pH."
+      },
+      {
+        "q": "Which sample types can Biossays E6 Plus process?",
+        "a": "The analyzer accepts serum, whole blood and urine. The sample volume is 100 µL."
+      },
+      {
+        "q": "Can Biossays E6 Plus connect to an automation track?",
+        "a": "Yes. According to Snibe, the analyzer can connect to a laboratory automation track."
+      },
+      {
+        "q": "Who supplies Biossays E6 Plus in Ukraine?",
+        "a": "LabWell is a Snibe partner and supplier in Ukraine."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Request a consultation about Biossays E6 Plus",
+    "text": "Tell us about your sample types, required analytes and testing workload, and we will help assess Biossays E6 Plus for your laboratory and discuss connection to an automation track.",
+    "messagePrefill": "I am interested in Biossays E6 Plus. "
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "slug": "infectious-disease-controls",
+  "url": "/products/infectious-disease-controls",
+  "kind": "line",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "Контролі інфекційних досліджень Bio-Rad | LabWell",
+    "description": "Контролі Bio-Rad для серологічних і молекулярних досліджень інфекційних захворювань: позитивні й негативні матеріали. Постачання в Україні — LabWell."
+  },
+  "T1_breadcrumbs": [
+    "Головна",
+    "Продукція",
+    "Контроль якості",
+    "Контролі для інфекційних досліджень"
+  ],
+  "T2_hero": {
+    "brand": "Bio-Rad",
+    "eyebrow": "Лінійка контролів якості",
+    "h1": "Контролі Bio-Rad для інфекційних досліджень",
+    "lead": "Контрольні матеріали для перевірки роботи серологічних і молекулярних методів дослідження інфекційних захворювань.",
+    "keyFacts": [
+      {
+        "value": "Серологія",
+        "label": "контрольні матеріали для тестових методів"
+      },
+      {
+        "value": "Молекулярні дослідження",
+        "label": "контролі для інфекційних мішеней"
+      },
+      {
+        "value": "Позитивні й негативні",
+        "label": "варіанти контролів у лінійці"
+      }
+    ],
+    "primaryCta": {
+      "label": "Отримати консультацію",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Позиції для замовлення",
+      "href": "#items"
+    },
+    "image": {
+      "alt": "Флакони серологічного контролю VIROTROL I"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "Що таке контролі Bio-Rad для інфекційних досліджень",
+    "text": "Infectious Disease Controls — це лінійка контрольних матеріалів Bio-Rad для серологічних і молекулярних досліджень інфекційних захворювань. Вона містить позитивні й негативні контролі для перевірки роботи тестових методів. Асортимент охоплює вірусні та інші інфекційні мішені, а конкретний склад залежить від продукту."
+  },
+  "T4_specs": {
+    "show": false
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "Переваги контролів для інфекційних досліджень",
+    "items": [
+      {
+        "icon": "shield-check",
+        "h3": "Незалежний контроль методів",
+        "text": "Матеріали дають лабораторії змогу окремо від тест-набору контролювати виконання відповідних досліджень. Позитивні й негативні варіанти допомагають перевіряти роботу тестових методів."
+      }
+    ]
+  },
+  "T6_items": {
+    "show": true,
+    "h2": "Позиції контролів для інфекційних досліджень",
+    "summary": "Контролі Amplichek II, VIROTROL і VIROCLEAR",
+    "columns": [
+      "Кат. №",
+      "Назва"
+    ],
+    "rows": [
+      {
+        "catalogNumber": "12000201",
+        "name": "Amplichek II, Negative"
+      },
+      {
+        "catalogNumber": "12000202",
+        "name": "Amplichek II, Level 1"
+      },
+      {
+        "catalogNumber": "12000203",
+        "name": "Amplichek II, Level 2"
+      },
+      {
+        "catalogNumber": "12000204",
+        "name": "Amplichek II, Level 3"
+      },
+      {
+        "catalogNumber": "200300A",
+        "name": "VIROTROL SARS-CoV-2"
+      },
+      {
+        "catalogNumber": "200500",
+        "name": "VIROCLEAR SARS-CoV-2"
+      },
+      {
+        "catalogNumber": "00100A",
+        "name": "VIROTROL I (5 mL)"
+      },
+      {
+        "catalogNumber": "00110A",
+        "name": "VIROTROL III"
+      }
+    ],
+    "footnote": "Каталожні номери — за офіційним каталогом Bio-Rad. Фасування не зібрано; асортимент для України уточнює менеджер.",
+    "cta": {
+      "label": "Надіслати запит на позиції",
+      "href": "#contact"
+    }
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": true,
+    "h2": "Інші контролі якості Bio-Rad",
+    "allLink": {
+      "label": "Увесь контроль якості",
+      "href": "/products"
+    },
+    "cards": [
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "InteliQ",
+        "href": "/products/inteliq"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Контролі для імуноаналізу",
+        "href": "/products/immunoassay-controls"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Контролі для біохімії",
+        "href": "/products/chemistry-controls"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Молекулярні контролі",
+        "href": "/products/molecular-controls"
+      }
+    ]
+  },
+  "T9_documents": {
+    "show": true,
+    "h2": "Документи контролів для інфекційних досліджень",
+    "items": [
+      {
+        "title": "Infectious Disease Controls for Serology Testing",
+        "meta": "Брошура · PDF · англійською",
+        "href": "https://www.bio-rad.com/webroot/web/pdf/cdg/literature/Q-1565.pdf"
+      },
+      {
+        "title": "Quality Control Products Catalog",
+        "meta": "Каталог · PDF · англійською",
+        "href": "https://www.bio-rad.com/sites/default/files/webroot/web/pdf/cdg/literature/Q-1118.pdf"
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Питання й відповіді про контролі інфекційних досліджень",
+    "items": [
+      {
+        "q": "Для чого призначені Infectious Disease Controls?",
+        "a": "Вони призначені для перевірки роботи серологічних і молекулярних методів дослідження інфекційних захворювань."
+      },
+      {
+        "q": "Які варіанти контролів є в лінійці?",
+        "a": "У лінійці є позитивні та негативні контролі. Конкретний склад залежить від продукту."
+      },
+      {
+        "q": "Які мішені охоплює асортимент?",
+        "a": "Асортимент охоплює вірусні та інші інфекційні мішені."
+      },
+      {
+        "q": "Хто постачає контролі Bio-Rad в Україні?",
+        "a": "LabWell — партнер і постачальник Bio-Rad в Україні."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.itemsForLine"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Отримати консультацію щодо контролів інфекційних досліджень",
+    "text": "Вкажіть метод і потрібну інфекційну мішень — допоможемо уточнити відповідні позиції Bio-Rad.",
+    "messagePrefill": "Цікавлять контролі Bio-Rad для інфекційних досліджень. "
+  }
+}

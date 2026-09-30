@@ -1,0 +1,194 @@
+{
+  "slug": "chemistry-controls",
+  "url": "/products/chemistry-controls",
+  "kind": "line",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "Біохімічні контролі Bio-Rad | LabWell",
+    "description": "Біохімічні контролі Bio-Rad для моніторингу прецизійності досліджень сироватки й сечі. Рідкі Liquichek і ліофілізовані Lyphochek — LabWell в Україні."
+  },
+  "T1_breadcrumbs": [
+    "Головна",
+    "Продукція",
+    "Контроль якості",
+    "Контролі для біохімії"
+  ],
+  "T2_hero": {
+    "brand": "Bio-Rad",
+    "eyebrow": "Лінійка контролів якості",
+    "h1": "Контролі Bio-Rad для біохімії",
+    "lead": "Контрольні матеріали для моніторингу прецизійності загальних і спеціалізованих біохімічних досліджень.",
+    "keyFacts": [
+      {
+        "value": "Liquichek",
+        "label": "рідкі біохімічні контролі"
+      },
+      {
+        "value": "Lyphochek",
+        "label": "ліофілізовані біохімічні контролі"
+      },
+      {
+        "value": "6 × 3 mL",
+        "label": "Liquichek Lipids Control рівнів 1 і 2"
+      }
+    ],
+    "primaryCta": {
+      "label": "Отримати консультацію",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Позиції для замовлення",
+      "href": "#items"
+    },
+    "image": {
+      "alt": "Флакони контролю Lyphochek Assayed Chemistry Control із лінійки біохімічних контролів"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "Що таке біохімічні контролі Bio-Rad",
+    "text": "Chemistry Quality Controls — це лінійка контрольних матеріалів Bio-Rad для моніторингу прецизійності клініко-біохімічних досліджень. Вона охоплює матеріали для аналізів сироватки та сечі у рідкому й ліофілізованому форматах. Є атестовані й неатестовані варіанти, а багаторівневі набори дають змогу контролювати результати в різних діапазонах концентрацій."
+  },
+  "T4_specs": {
+    "show": false
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "Переваги біохімічних контролів",
+    "items": [
+      {
+        "icon": "flask",
+        "h3": "Вибір формату",
+        "text": "Рідкі матеріали не потребують відновлення, а ліофілізовані відновлюють перед використанням. Це дає змогу підібрати формат до робочого процесу лабораторії."
+      },
+      {
+        "icon": "layers",
+        "h3": "Контроль багатьох показників",
+        "text": "Багатоаналітні матеріали охоплюють широкий набір біохімічних досліджень. Для окремих продуктів Bio-Rad наводить значення для багатьох методик і приладів."
+      }
+    ]
+  },
+  "T6_items": {
+    "show": true,
+    "h2": "Позиції біохімічних контролів",
+    "summary": "Контролі Liquichek і Lyphochek",
+    "columns": [
+      "Кат. №",
+      "Назва",
+      "Фасування"
+    ],
+    "rows": [
+      {
+        "catalogNumber": "641",
+        "name": "Liquichek Lipids Control, Level 1",
+        "packSize": "6 × 3 mL"
+      },
+      {
+        "catalogNumber": "642",
+        "name": "Liquichek Lipids Control, Level 2",
+        "packSize": "6 × 3 mL"
+      },
+      {
+        "catalogNumber": "640X",
+        "name": "Liquichek Lipids Control, Bilevel MiniPak",
+        "packSize": "2 × 3 mL"
+      },
+      {
+        "catalogNumber": "C-310-5",
+        "name": "Lyphochek Assayed Chemistry Control, Level 1",
+        "packSize": "12 × 5 mL"
+      },
+      {
+        "catalogNumber": "C-315-5",
+        "name": "Lyphochek Assayed Chemistry Control, Level 2",
+        "packSize": "12 × 5 mL"
+      },
+      {
+        "catalogNumber": "313X",
+        "name": "Lyphochek Assayed Chemistry Control, Bilevel MiniPak",
+        "packSize": "2 × 5 mL"
+      }
+    ],
+    "footnote": "Каталожні номери й фасування — за офіційним каталогом Bio-Rad. Асортимент для України уточнює менеджер.",
+    "cta": {
+      "label": "Надіслати запит на позиції",
+      "href": "#contact"
+    }
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": true,
+    "h2": "Інші контролі якості Bio-Rad",
+    "allLink": {
+      "label": "Увесь контроль якості",
+      "href": "/products"
+    },
+    "cards": [
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "InteliQ",
+        "href": "/products/inteliq"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Контролі для імуноаналізу",
+        "href": "/products/immunoassay-controls"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Контролі для інфекційних досліджень",
+        "href": "/products/infectious-disease-controls"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Молекулярні контролі",
+        "href": "/products/molecular-controls"
+      }
+    ]
+  },
+  "T9_documents": {
+    "show": true,
+    "h2": "Документи біохімічних контролів",
+    "items": [
+      {
+        "title": "Quality Control Products Catalog",
+        "meta": "Каталог · PDF · англійською",
+        "href": "https://www.bio-rad.com/webroot/web/pdf/cdg/literature/Q-1118.pdf"
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Питання й відповіді про біохімічні контролі",
+    "items": [
+      {
+        "q": "Для чого призначені Chemistry Quality Controls?",
+        "a": "Для моніторингу прецизійності загальних і спеціалізованих клініко-біохімічних досліджень. Лінійка охоплює матеріали для аналізів сироватки й сечі."
+      },
+      {
+        "q": "Чим відрізняються Liquichek і Lyphochek?",
+        "a": "Liquichek — рідкі контролі, які не потребують відновлення. Lyphochek — ліофілізовані контролі, які відновлюють перед використанням."
+      },
+      {
+        "q": "Які фасування є в переліку?",
+        "a": "Для Liquichek Lipids Control наведено 6 × 3 mL і Bilevel MiniPak 2 × 3 mL; для Lyphochek Assayed Chemistry Control — 12 × 5 mL і Bilevel MiniPak 2 × 5 mL."
+      },
+      {
+        "q": "Хто постачає біохімічні контролі Bio-Rad в Україні?",
+        "a": "LabWell — партнер і постачальник Bio-Rad в Україні."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.itemsForLine"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Отримати консультацію щодо біохімічних контролів",
+    "text": "Вкажіть дослідження, потрібний формат і рівні — допоможемо уточнити відповідні позиції Bio-Rad.",
+    "messagePrefill": "Цікавлять біохімічні контролі Bio-Rad. "
+  }
+}

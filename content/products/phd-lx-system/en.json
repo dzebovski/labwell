@@ -1,0 +1,176 @@
+{
+  "slug": "phd-lx-system",
+  "url": "/products/phd-lx-system",
+  "kind": "instrument",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "PhD lx System — IFA and EIA automation | LabWell",
+    "description": "PhD lx System is an open Bio-Rad IFA and EIA platform with 4 reader filters and bidirectional LIS connectivity. Supply and service in Ukraine from LabWell."
+  },
+  "T1_breadcrumbs": [
+    "Home",
+    "Products",
+    "Laboratory equipment",
+    "Autoimmune testing",
+    "PhD lx System"
+  ],
+  "T2_hero": {
+    "brand": "Bio-Rad",
+    "eyebrow": "Automated IFA and EIA platform",
+    "h1": "PhD lx System — platform for IFA and EIA automation",
+    "lead": "An open Bio-Rad system that automates routine stages of serology testing.",
+    "keyFacts": [
+      {
+        "value": "IFA + EIA",
+        "label": "methods on one platform"
+      },
+      {
+        "value": "405–620 nm",
+        "label": "range across 4 reader filters"
+      },
+      {
+        "value": "RS-232 or TCP/IP",
+        "label": "bidirectional LIS connectivity"
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Specifications",
+      "href": "#specs"
+    },
+    "image": {
+      "alt": "PhD lx EIA automation system"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "What PhD lx System is and who it is for",
+    "text": "PhD lx System is an open Bio-Rad automation platform for IFA and EIA processing. It supports Bio-Rad and third-party protocols and helps automate routine stages of preparing and performing serology assays. A programming wizard helps configure protocols, while bidirectional ASTM connectivity through RS-232 or TCP/IP allows worklists to be imported from an LIS."
+  },
+  "T4_specs": {
+    "show": true,
+    "h2": "PhD lx System specifications",
+    "caption": "According to the manufacturer",
+    "rows": [
+      {
+        "label": "Microplate-reader filters",
+        "value": "405, 450, 550, 620 nm"
+      },
+      {
+        "label": "LIS connectivity",
+        "value": "bidirectional ASTM; RS-232 or TCP/IP"
+      }
+    ]
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "PhD lx System benefits",
+    "items": [
+      {
+        "icon": "settings",
+        "h3": "Flexible automation",
+        "text": "The system handles IFA and EIA assays while supporting Bio-Rad and third-party protocols. Magnetic racks and a reagent rack help organize reagents during a run."
+      },
+      {
+        "icon": "shield-check",
+        "h3": "Workflow control",
+        "text": "According to the manufacturer, the system records audit trails, imports LIS worklists, and automatically removes air bubbles. This gives the laboratory a record of actions performed during a run."
+      },
+      {
+        "icon": "panel-top-close",
+        "h3": "Sensitive-assay protection",
+        "text": "A dark cover protects sensitive assays from light, dust, and drafts. The microplate reader operates with 405, 450, 550, and 620 nm filters."
+      }
+    ]
+  },
+  "T6_items": {
+    "show": true,
+    "h2": "PhD lx System ordering information",
+    "columns": [
+      "Catalog no.",
+      "Name",
+      "Pack size"
+    ],
+    "rows": [
+      {
+        "catalogNumber": "426-0400",
+        "name": "PhD lx System (110/220V)",
+        "packSize": "1 unit"
+      },
+      {
+        "catalogNumber": "426-0401",
+        "name": "PhD lx Workstation with IFA and EIA hardware",
+        "packSize": "1 unit"
+      },
+      {
+        "catalogNumber": "426-0138",
+        "name": "PhD IFA Conjugate Reagent Tubes and Caps",
+        "packSize": "4/pk"
+      }
+    ],
+    "cta": {
+      "label": "Request ordering information",
+      "href": "#contact"
+    }
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": true,
+    "h2": "Related Bio-Rad equipment",
+    "cards": [
+      {
+        "eyebrow": "Bio-Rad · EIA",
+        "title": "EVOLIS System",
+        "href": "/products/evolis-system"
+      }
+    ]
+  },
+  "T9_documents": {
+    "show": true,
+    "h2": "PhD lx System documents",
+    "items": [
+      {
+        "title": "PhD lx System brochure",
+        "meta": "Brochure · PDF · English",
+        "href": "https://www.bio-rad.com/webroot/web/pdf/cdg/solutions/Clinical%20Immunology/doc_Q-800_dg18-0035.pdf"
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "PhD lx System questions and answers",
+    "items": [
+      {
+        "q": "Which methods does PhD lx System automate?",
+        "a": "The system automates IFA and EIA processing. It supports Bio-Rad and third-party protocols."
+      },
+      {
+        "q": "Which filters does the PhD lx microplate reader have?",
+        "a": "The reader has 405, 450, 550, and 620 nm filters."
+      },
+      {
+        "q": "Can PhD lx System connect to an LIS?",
+        "a": "Yes. It supports bidirectional ASTM connectivity through RS-232 or TCP/IP."
+      },
+      {
+        "q": "Who supplies PhD lx System in Ukraine?",
+        "a": "LabWell is a Bio-Rad partner and supplier in Ukraine, providing supply, installation, staff training, and service support."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Request a PhD lx System consultation",
+    "text": "Describe your IFA and EIA assays, protocols, and workflow, and we will help assess a suitable PhD lx System configuration and LIS connection.",
+    "messagePrefill": "I am interested in PhD lx System. "
+  }
+}

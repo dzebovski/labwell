@@ -1,0 +1,188 @@
+{
+  "slug": "molecision-s6",
+  "url": "/products/molecision-s6",
+  "kind": "instrument",
+  "brand": "Snibe",
+  "seo": {
+    "title": "Molecision S6 — digital PCR system Snibe | LabWell",
+    "description": "Molecision S6 is a Snibe digital PCR system for nucleic acid quantification: 16 samples per run and 5 fluorescence channels. Supplied by LabWell in Ukraine."
+  },
+  "T1_breadcrumbs": [
+    "Home",
+    "Products",
+    "Laboratory equipment",
+    "Molecular diagnostics",
+    "Molecision S6"
+  ],
+  "T2_hero": {
+    "brand": "Snibe",
+    "eyebrow": "Digital PCR system",
+    "h1": "Molecision S6 — digital PCR system",
+    "lead": "Designed for nucleic acid quantification in a modular configuration tailored to the laboratory workflow. The system processes 16 samples per run."
+    "keyFacts": [
+      {
+        "value": "16",
+        "label": "samples per run"
+      },
+      {
+        "value": "5",
+        "label": "fluorescence channels"
+      },
+      {
+        "value": "more than 25,000",
+        "label": "droplets per run"
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "View specifications",
+      "href": "#specs"
+    },
+    "image": {
+      "alt": "Molecision S6 instrument view"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "What Molecision S6 is and who it is for",
+    "text": "Molecision S6 is a Snibe digital PCR system for nucleic acid quantification. It processes 16 samples per run through five fluorescence channels, while its modular configuration can be arranged for the laboratory workflow. According to Snibe, a run takes approximately 2.5 hours and generates more than 25,000 droplets."
+  },
+  "T4_specs": {
+    "show": true,
+    "h2": "Molecision S6 specifications",
+    "caption": "According to the manufacturer",
+    "rows": [
+      {
+        "label": "Run capacity",
+        "value": "16 samples"
+      },
+      {
+        "label": "Run duration",
+        "value": "approximately 2.5 h"
+      },
+      {
+        "label": "Fluorescence channels",
+        "value": "5"
+      },
+      {
+        "label": "Droplets per run",
+        "value": "more than 25,000"
+      }
+    ],
+    "fullTechnicalData": {
+      "show": false
+    }
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "Benefits of Molecision S6",
+    "items": [
+      {
+        "icon": "settings",
+        "h3": "Workflow-based configuration",
+        "text": "The modular configuration can be arranged around the laboratory workflow. This allows the configuration to reflect how the laboratory organizes its testing."
+      },
+      {
+        "icon": "layers",
+        "h3": "Multi-channel analysis",
+        "text": "Five fluorescence channels are available for nucleic acid quantification. The system processes 16 samples in each run."
+      },
+      {
+        "icon": "droplet",
+        "h3": "Droplet-based workflow",
+        "text": "According to Snibe, the system generates more than 25,000 droplets per run. This figure should be assessed in the context of the specific assay protocol."
+      }
+    ]
+  },
+  "T6_items": {
+    "show": false
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": true,
+    "testMenu": {
+      "h2": "Snibe molecular assays",
+      "title": "Molecular test menu",
+      "text": "The manufacturer’s menu includes assays for sexually transmitted infections and emerging pathogens. Ask LabWell about specific assay names and availability in Ukraine.",
+      "bigNumber": {
+        "value": "12",
+        "label": "entries in the Snibe menu"
+      }
+    },
+    "models": {
+      "h2": "Other Molecision systems",
+      "cards": [
+        {
+          "eyebrow": "Snibe · automated PCR",
+          "title": "Molecision R8",
+          "href": "/products/molecision-r8",
+          "facts": [
+            [
+              "Throughput",
+              "up to 448 tests in 8 h"
+            ],
+            [
+              "Sample positions",
+              "144"
+            ]
+          ]
+        },
+        {
+          "eyebrow": "Snibe · nucleic acid extraction",
+          "title": "Molecision MP",
+          "href": "/products/molecision-mp",
+          "facts": [
+            [
+              "Models",
+              "MP-32 and MP-96"
+            ],
+            [
+              "Extraction time",
+              "from 11 min"
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "T9_documents": {
+    "show": false
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Molecision S6 questions and answers",
+    "items": [
+      {
+        "q": "What is Molecision S6 designed for?",
+        "a": "Molecision S6 is designed for nucleic acid quantification by digital PCR."
+      },
+      {
+        "q": "How many samples does Molecision S6 process per run?",
+        "a": "The system processes 16 samples per run."
+      },
+      {
+        "q": "How long is a Molecision S6 run?",
+        "a": "According to Snibe, a run takes approximately 2.5 hours."
+      },
+      {
+        "q": "Who supplies Molecision S6 in Ukraine?",
+        "a": "LabWell is a Snibe partner and supplier in Ukraine."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Request a consultation about Molecision S6",
+    "text": "Tell us about your quantification needs and laboratory workflow, and we will help assess a Molecision S6 configuration for your laboratory.",
+    "messagePrefill": "I am interested in Molecision S6. "
+  }
+}

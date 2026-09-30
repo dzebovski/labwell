@@ -1,0 +1,232 @@
+{
+  "slug": "liquichek-serum-indices",
+  "url": "/products/liquichek-serum-indices",
+  "kind": "line",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "Liquichek Serum Indices — Bio-Rad HIL Controls | LabWell",
+    "description": "Liquichek Serum Indices are Bio-Rad controls for checking analyzer detection of hemolysis, icterus, and lipemia. Supplied in Ukraine through LabWell."
+  },
+  "T1_breadcrumbs": [
+    "Home",
+    "Products",
+    "Quality control",
+    "Liquichek Serum Indices"
+  ],
+  "T2_hero": {
+    "brand": "Bio-Rad",
+    "eyebrow": "Serum index controls",
+    "h1": "Liquichek Serum Indices — hemolysis, icterus, and lipemia controls",
+    "lead": "Bio-Rad control materials for checking how an analyzer detects hemolysis, icterus, and lipemia in samples.",
+    "keyFacts": [
+      {
+        "value": "4 types",
+        "label": "including non-interfered material"
+      },
+      {
+        "value": "8 products",
+        "label": "in standard and MiniPak formats"
+      },
+      {
+        "value": "14 days",
+        "label": "open-vial stability at 2–8 °C"
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Ordering information",
+      "href": "#items"
+    },
+    "image": {
+      "alt": "Liquichek Serum Indices vials"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "What Liquichek Serum Indices is",
+    "text": "Liquichek Serum Indices is a Bio-Rad control material range for monitoring analyzer detection of hemolysis, icterus, and lipemia in samples. It includes individual interferents and non-interfered material based on human-source serum. The range is intended for evaluating instrument response during pre-analytical monitoring."
+  },
+  "T4_specs": {
+    "show": true,
+    "h2": "Liquichek Serum Indices specifications",
+    "caption": "According to the manufacturer",
+    "rows": [
+      {
+        "label": "Matrix",
+        "value": "Human-source serum"
+      },
+      {
+        "label": "Intended use",
+        "value": "Monitors instrument detection of hemolysis, icterus, and lipemia (HIL) interferences"
+      },
+      {
+        "label": "Shelf life",
+        "value": "2 years at −20 to −70 °C"
+      },
+      {
+        "label": "Open-vial stability",
+        "value": "14 days at 2–8 °C"
+      },
+      {
+        "label": "Closed-vial stability",
+        "value": "14 days at 2–8 °C"
+      },
+      {
+        "label": "Frozen aliquot stability",
+        "value": "28 days at −20 to −70 °C"
+      }
+    ]
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "Benefits of Liquichek Serum Indices",
+    "items": [
+      {
+        "icon": "scan-search",
+        "h3": "HIL module verification",
+        "text": "The materials help evaluate instrument response to hemolysis, icterus, and lipemia during pre-analytical monitoring."
+      },
+      {
+        "icon": "snowflake",
+        "h3": "Defined storage periods",
+        "text": "After opening, material is stable for 14 days at 2–8 °C, while a frozen aliquot is stable for 28 days at −20 to −70 °C, according to the manufacturer."
+      }
+    ]
+  },
+  "T6_items": {
+    "show": true,
+    "h2": "Liquichek Serum Indices ordering information",
+    "summary": "8 products · 4 material types",
+    "columns": [
+      "Catalog no.",
+      "Name",
+      "Pack size"
+    ],
+    "rows": [
+      {
+        "catalogNumber": "12012693",
+        "name": "Hemolysis",
+        "packSize": "6 × 4 mL"
+      },
+      {
+        "catalogNumber": "12012694",
+        "name": "Icterus",
+        "packSize": "6 × 4 mL"
+      },
+      {
+        "catalogNumber": "12012695",
+        "name": "Lipemia",
+        "packSize": "6 × 4 mL"
+      },
+      {
+        "catalogNumber": "12012696",
+        "name": "Non-interfered",
+        "packSize": "6 × 4 mL"
+      },
+      {
+        "catalogNumber": "12012697",
+        "name": "Hemolysis MiniPak",
+        "packSize": "1 × 4 mL"
+      },
+      {
+        "catalogNumber": "12012698",
+        "name": "Icterus MiniPak",
+        "packSize": "1 × 4 mL"
+      },
+      {
+        "catalogNumber": "12012699",
+        "name": "Lipemia MiniPak",
+        "packSize": "1 × 4 mL"
+      },
+      {
+        "catalogNumber": "12012700",
+        "name": "Non-interfered MiniPak",
+        "packSize": "1 × 4 mL"
+      }
+    ],
+    "footnote": "Ask a LabWell manager about the range supplied in Ukraine.",
+    "cta": {
+      "label": "Request product information",
+      "href": "#contact"
+    }
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": true,
+    "h2": "Other Bio-Rad quality controls",
+    "allLink": {
+      "label": "All quality controls",
+      "href": "/products"
+    },
+    "cards": [
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "InteliQ",
+        "href": "/products/inteliq"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Immunoassay controls",
+        "href": "/products/immunoassay-controls"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Chemistry controls",
+        "href": "/products/chemistry-controls"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Infectious disease controls",
+        "href": "/products/infectious-disease-controls"
+      }
+    ]
+  },
+  "T9_documents": {
+    "show": true,
+    "h2": "Liquichek Serum Indices documents",
+    "items": [
+      {
+        "title": "Liquichek Serum Indices",
+        "meta": "Brochure · PDF · English",
+        "href": "https://www.bio-rad.com/sites/default/files/2025-03/LiquidSerumIndicies-Q-1652.pdf"
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Liquichek Serum Indices: questions and answers",
+    "items": [
+      {
+        "q": "What is Liquichek Serum Indices used for?",
+        "a": "It is used to monitor how an analyzer detects hemolysis, icterus, and lipemia in samples."
+      },
+      {
+        "q": "Which materials are available in the range?",
+        "a": "The range includes Hemolysis, Icterus, Lipemia, and Non-interfered materials. These materials are also available in MiniPak formats."
+      },
+      {
+        "q": "How should Liquichek Serum Indices be stored after opening?",
+        "a": "After opening, the material is stable for 14 days at 2–8 °C, according to the manufacturer."
+      },
+      {
+        "q": "Who supplies Liquichek Serum Indices in Ukraine?",
+        "a": "LabWell is a Bio-Rad partner and supplier in Ukraine. Ask a manager about the range of individual products."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.itemsForLine"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Request advice on Liquichek Serum Indices",
+    "text": "Share the material type and format you need, and a manager will confirm the ordering options.",
+    "messagePrefill": "I am interested in Liquichek Serum Indices. "
+  }
+}

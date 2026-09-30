@@ -1,0 +1,232 @@
+{
+  "slug": "liquichek-serum-indices",
+  "url": "/products/liquichek-serum-indices",
+  "kind": "line",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "Liquichek Serum Indices — HIL-контролі Bio-Rad | LabWell",
+    "description": "Liquichek Serum Indices — контролі Bio-Rad для перевірки виявлення гемолізу, іктеричності й ліпемії аналізатором. Постачання в Україні — LabWell."
+  },
+  "T1_breadcrumbs": [
+    "Головна",
+    "Продукція",
+    "Контроль якості",
+    "Liquichek Serum Indices"
+  ],
+  "T2_hero": {
+    "brand": "Bio-Rad",
+    "eyebrow": "Контролі сироваткових індексів",
+    "h1": "Liquichek Serum Indices — контролі гемолізу, іктеричності й ліпемії",
+    "lead": "Контрольні матеріали Bio-Rad для перевірки того, як аналізатор виявляє гемоліз, іктеричність і ліпемію у зразках.",
+    "keyFacts": [
+      {
+        "value": "4 типи",
+        "label": "матеріалів, включно з неінтерферованим"
+      },
+      {
+        "value": "8 позицій",
+        "label": "у стандартних форматах і MiniPak"
+      },
+      {
+        "value": "14 днів",
+        "label": "стабільність відкритого флакона при 2–8 °C"
+      }
+    ],
+    "primaryCta": {
+      "label": "Отримати консультацію",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Позиції для замовлення",
+      "href": "#items"
+    },
+    "image": {
+      "alt": "Флакони Liquichek Serum Indices"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "Що таке Liquichek Serum Indices",
+    "text": "Liquichek Serum Indices — це лінійка контрольних матеріалів Bio-Rad для перевірки виявлення аналізатором гемолізу, іктеричності та ліпемії у зразках. Вона містить окремі інтерференти та неінтерферований матеріал на основі сироватки людського походження. Лінійка призначена для оцінювання реакції системи під час переданалітичного контролю."
+  },
+  "T4_specs": {
+    "show": true,
+    "h2": "Характеристики Liquichek Serum Indices",
+    "caption": "За даними виробника",
+    "rows": [
+      {
+        "label": "Матриця",
+        "value": "Сироватка людського походження"
+      },
+      {
+        "label": "Призначення",
+        "value": "Контроль виявлення аналізатором гемолізу, іктеричності та ліпемії (HIL)"
+      },
+      {
+        "label": "Строк придатності",
+        "value": "2 роки при −20…−70 °C"
+      },
+      {
+        "label": "Стабільність після відкриття",
+        "value": "14 днів при 2–8 °C"
+      },
+      {
+        "label": "Стабільність закритого флакона",
+        "value": "14 днів при 2–8 °C"
+      },
+      {
+        "label": "Стабільність замороженої аліквоти",
+        "value": "28 днів при −20…−70 °C"
+      }
+    ]
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "Переваги Liquichek Serum Indices",
+    "items": [
+      {
+        "icon": "scan-search",
+        "h3": "Перевірка HIL-модуля",
+        "text": "Матеріали дають змогу оцінити реакцію системи на гемоліз, іктеричність і ліпемію під час переданалітичного контролю."
+      },
+      {
+        "icon": "snowflake",
+        "h3": "Передбачуване зберігання",
+        "text": "Після відкриття матеріал стабільний 14 днів при 2–8 °C, а заморожена аліквота — 28 днів при −20…−70 °C, за даними виробника."
+      }
+    ]
+  },
+  "T6_items": {
+    "show": true,
+    "h2": "Позиції Liquichek Serum Indices для замовлення",
+    "summary": "8 позицій · 4 типи матеріалу",
+    "columns": [
+      "Кат. №",
+      "Назва",
+      "Фасування"
+    ],
+    "rows": [
+      {
+        "catalogNumber": "12012693",
+        "name": "Hemolysis",
+        "packSize": "6 × 4 mL"
+      },
+      {
+        "catalogNumber": "12012694",
+        "name": "Icterus",
+        "packSize": "6 × 4 mL"
+      },
+      {
+        "catalogNumber": "12012695",
+        "name": "Lipemia",
+        "packSize": "6 × 4 mL"
+      },
+      {
+        "catalogNumber": "12012696",
+        "name": "Non-interfered",
+        "packSize": "6 × 4 mL"
+      },
+      {
+        "catalogNumber": "12012697",
+        "name": "Hemolysis MiniPak",
+        "packSize": "1 × 4 mL"
+      },
+      {
+        "catalogNumber": "12012698",
+        "name": "Icterus MiniPak",
+        "packSize": "1 × 4 mL"
+      },
+      {
+        "catalogNumber": "12012699",
+        "name": "Lipemia MiniPak",
+        "packSize": "1 × 4 mL"
+      },
+      {
+        "catalogNumber": "12012700",
+        "name": "Non-interfered MiniPak",
+        "packSize": "1 × 4 mL"
+      }
+    ],
+    "footnote": "Асортимент для України уточнює менеджер LabWell.",
+    "cta": {
+      "label": "Надіслати запит на позиції",
+      "href": "#contact"
+    }
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": true,
+    "h2": "Інші контролі якості Bio-Rad",
+    "allLink": {
+      "label": "Увесь контроль якості",
+      "href": "/products"
+    },
+    "cards": [
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "InteliQ",
+        "href": "/products/inteliq"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Контролі для імуноаналізу",
+        "href": "/products/immunoassay-controls"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Контролі для біохімії",
+        "href": "/products/chemistry-controls"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Контролі для інфекційних досліджень",
+        "href": "/products/infectious-disease-controls"
+      }
+    ]
+  },
+  "T9_documents": {
+    "show": true,
+    "h2": "Документи Liquichek Serum Indices",
+    "items": [
+      {
+        "title": "Liquichek Serum Indices",
+        "meta": "Брошура · PDF · англійською",
+        "href": "https://www.bio-rad.com/sites/default/files/2025-03/LiquidSerumIndicies-Q-1652.pdf"
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Питання й відповіді про Liquichek Serum Indices",
+    "items": [
+      {
+        "q": "Для чого призначені Liquichek Serum Indices?",
+        "a": "Вони призначені для перевірки того, як аналізатор виявляє гемоліз, іктеричність і ліпемію у зразках."
+      },
+      {
+        "q": "Які матеріали входять до лінійки?",
+        "a": "Лінійка містить Hemolysis, Icterus, Lipemia та Non-interfered. Ці матеріали також представлені у форматах MiniPak."
+      },
+      {
+        "q": "Як зберігати Liquichek Serum Indices після відкриття?",
+        "a": "Після відкриття матеріал стабільний 14 днів при 2–8 °C, за даними виробника."
+      },
+      {
+        "q": "Хто постачає Liquichek Serum Indices в Україні?",
+        "a": "LabWell — партнер і постачальник Bio-Rad в Україні. Асортимент конкретних позицій уточнює менеджер."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.itemsForLine"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Отримати консультацію щодо Liquichek Serum Indices",
+    "text": "Вкажіть потрібний тип матеріалу та формат — менеджер уточнить позиції для замовлення.",
+    "messagePrefill": "Цікавить Liquichek Serum Indices. "
+  }
+}

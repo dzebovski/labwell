@@ -1,0 +1,176 @@
+{
+  "slug": "phd-lx-system",
+  "url": "/products/phd-lx-system",
+  "kind": "instrument",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "PhD lx System — платформа для IFA та EIA | LabWell",
+    "description": "PhD lx System — відкрита платформа Bio-Rad для автоматизації IFA та EIA: 4 фільтри рідера й двонапрямне LIS-підключення. Сервіс в Україні — LabWell."
+  },
+  "T1_breadcrumbs": [
+    "Головна",
+    "Продукція",
+    "Лабораторне обладнання",
+    "Автоімунне тестування",
+    "PhD lx System"
+  ],
+  "T2_hero": {
+    "brand": "Bio-Rad",
+    "eyebrow": "Автоматизована платформа IFA та EIA",
+    "h1": "PhD lx System — платформа для автоматизації IFA та EIA",
+    "lead": "Відкрита система Bio-Rad для автоматизації рутинних етапів серологічних досліджень.",
+    "keyFacts": [
+      {
+        "value": "IFA + EIA",
+        "label": "методики на одній платформі"
+      },
+      {
+        "value": "405–620 нм",
+        "label": "діапазон 4 фільтрів рідера"
+      },
+      {
+        "value": "RS-232 або TCP/IP",
+        "label": "двонапрямне підключення до LIS"
+      }
+    ],
+    "primaryCta": {
+      "label": "Отримати консультацію",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Характеристики",
+      "href": "#specs"
+    },
+    "image": {
+      "alt": "Система PhD lx для автоматизації ІФА"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "Що таке PhD lx System і для кого вона",
+    "text": "PhD lx System — це відкрита автоматизована платформа Bio-Rad для обробки IFA та EIA аналізів. Вона підтримує протоколи Bio-Rad і сторонніх виробників та допомагає автоматизувати рутинні етапи підготовки й виконання серологічних досліджень. Майстер програмування допомагає налаштовувати протоколи, а двонапрямне ASTM-підключення через RS-232 або TCP/IP — завантажувати робочі списки з LIS."
+  },
+  "T4_specs": {
+    "show": true,
+    "h2": "Характеристики PhD lx System",
+    "caption": "За даними виробника",
+    "rows": [
+      {
+        "label": "Фільтри мікропланшетного рідера",
+        "value": "405, 450, 550, 620 нм"
+      },
+      {
+        "label": "Підключення до LIS",
+        "value": "двонапрямлене ASTM; RS-232 або TCP/IP"
+      }
+    ]
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "Переваги PhD lx System",
+    "items": [
+      {
+        "icon": "settings",
+        "h3": "Гнучка автоматизація",
+        "text": "Система працює з IFA та EIA дослідженнями й підтримує власні та сторонні протоколи. Магнітні штативи та стійка допомагають організувати реагенти під час запуску."
+      },
+      {
+        "icon": "shield-check",
+        "h3": "Контроль робочого процесу",
+        "text": "За даними виробника, система веде аудит дій, завантажує робочі списки з LIS та автоматично видаляє повітряні бульбашки. Це дає лабораторії дані про виконані дії під час запуску."
+      },
+      {
+        "icon": "panel-top-close",
+        "h3": "Захист чутливих аналізів",
+        "text": "Темна кришка захищає чутливі аналізи від світла, пилу й протягів. Мікропланшетний рідер працює з фільтрами 405, 450, 550 і 620 нм."
+      }
+    ]
+  },
+  "T6_items": {
+    "show": true,
+    "h2": "Позиції для PhD lx System",
+    "columns": [
+      "Кат. №",
+      "Назва",
+      "Фасування"
+    ],
+    "rows": [
+      {
+        "catalogNumber": "426-0400",
+        "name": "PhD lx System (110/220V)",
+        "packSize": "1 unit"
+      },
+      {
+        "catalogNumber": "426-0401",
+        "name": "PhD lx Workstation with IFA and EIA hardware",
+        "packSize": "1 unit"
+      },
+      {
+        "catalogNumber": "426-0138",
+        "name": "PhD IFA Conjugate Reagent Tubes and Caps",
+        "packSize": "4/pk"
+      }
+    ],
+    "cta": {
+      "label": "Надіслати запит на позиції",
+      "href": "#contact"
+    }
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": true,
+    "h2": "Пов'язане обладнання Bio-Rad",
+    "cards": [
+      {
+        "eyebrow": "Bio-Rad · EIA",
+        "title": "EVOLIS System",
+        "href": "/products/evolis-system"
+      }
+    ]
+  },
+  "T9_documents": {
+    "show": true,
+    "h2": "Документи PhD lx System",
+    "items": [
+      {
+        "title": "PhD lx System brochure",
+        "meta": "Брошура · PDF · англійською",
+        "href": "https://www.bio-rad.com/webroot/web/pdf/cdg/solutions/Clinical%20Immunology/doc_Q-800_dg18-0035.pdf"
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Питання й відповіді про PhD lx System",
+    "items": [
+      {
+        "q": "Які методики автоматизує PhD lx System?",
+        "a": "Система автоматизує обробку IFA та EIA аналізів. Вона підтримує протоколи Bio-Rad і сторонніх виробників."
+      },
+      {
+        "q": "Які фільтри має мікропланшетний рідер PhD lx?",
+        "a": "Рідер має фільтри 405, 450, 550 і 620 нм."
+      },
+      {
+        "q": "Чи підключається PhD lx System до LIS?",
+        "a": "Так, система підтримує двонапрямлене ASTM-підключення через RS-232 або TCP/IP."
+      },
+      {
+        "q": "Хто постачає PhD lx System в Україні?",
+        "a": "LabWell — партнер і постачальник Bio-Rad в Україні: постачання, інсталяція, навчання персоналу й сервісна підтримка."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Отримати консультацію щодо PhD lx System",
+    "text": "Опишіть потрібні IFA та EIA дослідження, протоколи й робочий процес — допоможемо оцінити конфігурацію PhD lx System та підключення до LIS.",
+    "messagePrefill": "Цікавить PhD lx System. "
+  }
+}

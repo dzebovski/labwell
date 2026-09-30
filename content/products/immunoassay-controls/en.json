@@ -1,0 +1,202 @@
+{
+  "slug": "immunoassay-controls",
+  "url": "/products/immunoassay-controls",
+  "kind": "line",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "Bio-Rad Immunoassay Quality Controls | LabWell",
+    "description": "Bio-Rad immunoassay controls for precision monitoring in routine and specialty testing. InteliQ and Liquichek ranges supplied in Ukraine by LabWell."
+  },
+  "T1_breadcrumbs": [
+    "Home",
+    "Products",
+    "Quality control",
+    "Immunoassay quality controls"
+  ],
+  "T2_hero": {
+    "brand": "Bio-Rad",
+    "eyebrow": "Quality control range",
+    "h1": "Bio-Rad immunoassay quality controls",
+    "lead": "Independent control materials for monitoring precision in routine and specialty immunoassays.",
+    "keyFacts": [
+      {
+        "value": "InteliQ",
+        "label": "Specialty Immunoassay and Tumor Marker Control"
+      },
+      {
+        "value": "Liquichek",
+        "label": "Specialty Immunoassay Plus Control"
+      },
+      {
+        "value": "LTA–3",
+        "label": "Specialty Immunoassay Control (InteliQ) levels"
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Ordering information",
+      "href": "#items"
+    },
+    "image": {
+      "alt": "Liquichek Specialty Immunoassay Plus control vials"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "What are Bio-Rad immunoassay quality controls?",
+    "text": "Immunoassay Quality Controls are Bio-Rad independent control materials for monitoring immunoassay precision. The range covers controls for therapeutic drug monitoring, infectious disease, tumor markers, and other specialty testing. The item list includes InteliQ and Liquichek products, including Specialty Immunoassay, Tumor Marker, and Specialty Immunoassay Plus Control. Product- and lot-specific details determine the available levels and stability."
+  },
+  "T4_specs": {
+    "show": false
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "Benefits of immunoassay quality controls",
+    "items": [
+      {
+        "icon": "chart-line",
+        "h3": "Precision monitoring",
+        "text": "According to the manufacturer, the materials are intended to monitor the precision of applicable methods. Laboratories can select controls for routine or specialty immunoassays, including tumor marker and infectious disease testing."
+      }
+    ]
+  },
+  "T6_items": {
+    "show": true,
+    "h2": "Immunoassay control ordering information",
+    "summary": "InteliQ and Liquichek controls",
+    "columns": [
+      "Catalog no.",
+      "Name"
+    ],
+    "rows": [
+      {
+        "catalogNumber": "12008276",
+        "name": "Specialty Immunoassay Control (InteliQ), Level LTA"
+      },
+      {
+        "catalogNumber": "12008277",
+        "name": "Specialty Immunoassay Control (InteliQ), Level 1"
+      },
+      {
+        "catalogNumber": "12008278",
+        "name": "Specialty Immunoassay Control (InteliQ), Level 2"
+      },
+      {
+        "catalogNumber": "12008279",
+        "name": "Specialty Immunoassay Control (InteliQ), Level 3"
+      },
+      {
+        "catalogNumber": "12008289",
+        "name": "Tumor Marker Control (InteliQ), Level 1"
+      },
+      {
+        "catalogNumber": "12008290",
+        "name": "Tumor Marker Control (InteliQ), Level 2"
+      },
+      {
+        "catalogNumber": "12008291",
+        "name": "Tumor Marker Control (InteliQ), Level 3"
+      },
+      {
+        "catalogNumber": "12015644",
+        "name": "Specialty Immunoassay Plus Control (Liquichek), Level Low"
+      },
+      {
+        "catalogNumber": "12015645",
+        "name": "Specialty Immunoassay Plus Control (Liquichek), Level 1"
+      },
+      {
+        "catalogNumber": "12015646",
+        "name": "Specialty Immunoassay Plus Control (Liquichek), Level 2"
+      },
+      {
+        "catalogNumber": "12015647",
+        "name": "Specialty Immunoassay Plus Control (Liquichek), Level 3"
+      }
+    ],
+    "footnote": "Catalog numbers are from the official Bio-Rad catalog. Ask a LabWell manager about the range supplied in Ukraine.",
+    "cta": {
+      "label": "Request ordering information",
+      "href": "#contact"
+    }
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": true,
+    "h2": "Other Bio-Rad quality controls",
+    "allLink": {
+      "label": "All quality controls",
+      "href": "/products"
+    },
+    "cards": [
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "InteliQ",
+        "href": "/products/inteliq"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Chemistry quality controls",
+        "href": "/products/chemistry-controls"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Infectious disease controls",
+        "href": "/products/infectious-disease-controls"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Molecular controls",
+        "href": "/products/molecular-controls"
+      }
+    ]
+  },
+  "T9_documents": {
+    "show": true,
+    "h2": "Immunoassay control documents",
+    "items": [
+      {
+        "title": "Quality Control Products Catalog",
+        "meta": "Catalog · PDF · English",
+        "href": "https://www.bio-rad.com/webroot/web/pdf/cdg/literature/Q-1118.pdf"
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Immunoassay quality control questions",
+    "items": [
+      {
+        "q": "What are Immunoassay Quality Controls used for?",
+        "a": "They are used to monitor precision in routine and specialty immunoassays. Specific characteristics depend on the product and lot."
+      },
+      {
+        "q": "Which ranges are included?",
+        "a": "The list includes InteliQ Specialty Immunoassay and Tumor Marker Control, plus Liquichek Specialty Immunoassay Plus Control."
+      },
+      {
+        "q": "Which Specialty Immunoassay Control (InteliQ) levels are listed?",
+        "a": "The list includes Level LTA and Levels 1, 2, and 3."
+      },
+      {
+        "q": "Who supplies Bio-Rad controls in Ukraine?",
+        "a": "LabWell is a Bio-Rad partner and supplier in Ukraine."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.itemsForLine"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Ask about immunoassay quality controls",
+    "text": "Tell us the testing methods and levels you need, and we will help identify the relevant Bio-Rad items.",
+    "messagePrefill": "I am interested in Bio-Rad immunoassay quality controls. "
+  }
+}

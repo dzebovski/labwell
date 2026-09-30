@@ -1,0 +1,192 @@
+{
+  "slug": "molecision-r8",
+  "url": "/products/molecision-r8",
+  "kind": "instrument",
+  "brand": "Snibe",
+  "seo": {
+    "title": "Molecision R8 — automated PCR system Snibe | LabWell",
+    "description": "Molecision R8 is an automated Snibe PCR system for molecular diagnostics: up to 448 tests in 8 hours and 144 sample positions. Supplied by LabWell in Ukraine."
+  },
+  "T1_breadcrumbs": [
+    "Home",
+    "Products",
+    "Laboratory equipment",
+    "Molecular diagnostics",
+    "Molecision R8"
+  ],
+  "T2_hero": {
+    "brand": "Snibe",
+    "eyebrow": "Fully automated PCR system",
+    "h1": "Molecision R8 — automated PCR system",
+    "lead": "Combines sample preparation and PCR analysis in a single automated workflow. Nine racks provide capacity for 144 samples."
+    "keyFacts": [
+      {
+        "value": "up to 448",
+        "label": "tests in 8 hours"
+      },
+      {
+        "value": "144",
+        "label": "sample positions"
+      },
+      {
+        "value": "113 min",
+        "label": "to first result"
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "View specifications",
+      "href": "#specs"
+    },
+    "image": {
+      "alt": "Molecision R8 instrument view"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "What Molecision R8 is and who it is for",
+    "text": "Molecision R8 is a fully automated Snibe PCR system for molecular diagnostics. It combines sample preparation and analysis in one workflow, provides 144 sample positions, and requires less than 2.2 m² of floor space. According to the manufacturer, the first batch of results is available in approximately 113 minutes."
+  },
+  "T4_specs": {
+    "show": true,
+    "h2": "Molecision R8 specifications",
+    "caption": "According to the manufacturer",
+    "rows": [
+      {
+        "label": "Throughput in 8 hours",
+        "value": "up to 448 tests"
+      },
+      {
+        "label": "Sample positions",
+        "value": "144"
+      },
+      {
+        "label": "Footprint",
+        "value": "less than 2.2 m²"
+      },
+      {
+        "label": "Time to first result",
+        "value": "113 min"
+      },
+      {
+        "label": "Sample racks",
+        "value": "9"
+      }
+    ],
+    "fullTechnicalData": {
+      "show": false
+    }
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "Benefits of Molecision R8",
+    "items": [
+      {
+        "icon": "workflow",
+        "h3": "One automated workflow",
+        "text": "Sample preparation and PCR analysis are combined within a fully automated system. The laboratory runs both stages as part of one workflow."
+      },
+      {
+        "icon": "test-tubes",
+        "h3": "Organized sample loading",
+        "text": "Nine racks accommodate 144 samples, helping the laboratory organize loading into the system. The configuration supports throughput of up to 448 tests in 8 hours."
+      },
+      {
+        "icon": "minimize",
+        "h3": "Compact footprint",
+        "text": "The system requires less than 2.2 m² of laboratory floor space. This provides a clear reference when planning where to install the analyzer."
+      }
+    ]
+  },
+  "T6_items": {
+    "show": false
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": true,
+    "testMenu": {
+      "h2": "Snibe molecular assays",
+      "title": "Molecular test menu",
+      "text": "The manufacturer’s menu includes assays for sexually transmitted infections and emerging pathogens. Ask LabWell about specific assay names and availability in Ukraine.",
+      "bigNumber": {
+        "value": "12",
+        "label": "entries in the Snibe menu"
+      }
+    },
+    "models": {
+      "h2": "Other Molecision systems",
+      "cards": [
+        {
+          "eyebrow": "Snibe · digital PCR",
+          "title": "Molecision S6",
+          "href": "/products/molecision-s6",
+          "facts": [
+            [
+              "Run capacity",
+              "16 samples"
+            ],
+            [
+              "Fluorescence channels",
+              "5"
+            ]
+          ]
+        },
+        {
+          "eyebrow": "Snibe · nucleic acid extraction",
+          "title": "Molecision MP",
+          "href": "/products/molecision-mp",
+          "facts": [
+            [
+              "Models",
+              "MP-32 and MP-96"
+            ],
+            [
+              "Extraction time",
+              "from 11 min"
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "T9_documents": {
+    "show": false
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Molecision R8 questions and answers",
+    "items": [
+      {
+        "q": "What does Molecision R8 automate?",
+        "a": "Molecision R8 automates sample preparation and PCR analysis within one workflow."
+      },
+      {
+        "q": "What is the throughput of Molecision R8?",
+        "a": "Up to 448 tests in 8 hours."
+      },
+      {
+        "q": "When is the first Molecision R8 result available?",
+        "a": "According to the manufacturer, the first batch of results is available in approximately 113 minutes."
+      },
+      {
+        "q": "Who supplies Molecision R8 in Ukraine?",
+        "a": "LabWell is a Snibe partner and supplier in Ukraine."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Request a consultation about Molecision R8",
+    "text": "Tell us about your sample load and molecular diagnostics needs, and we will help assess Molecision R8 for your laboratory workflow.",
+    "messagePrefill": "I am interested in Molecision R8. "
+  }
+}

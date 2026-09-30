@@ -1,0 +1,202 @@
+{
+  "slug": "immunoassay-controls",
+  "url": "/products/immunoassay-controls",
+  "kind": "line",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "Контролі для імуноаналізу Bio-Rad | LabWell",
+    "description": "Контролі Bio-Rad для моніторингу прецизійності рутинних і спеціалізованих імуноаналізів. Лінійки InteliQ і Liquichek, постачання в Україні — LabWell."
+  },
+  "T1_breadcrumbs": [
+    "Головна",
+    "Продукція",
+    "Контроль якості",
+    "Контролі для імуноаналізу"
+  ],
+  "T2_hero": {
+    "brand": "Bio-Rad",
+    "eyebrow": "Лінійка контролів якості",
+    "h1": "Контролі Bio-Rad для імуноаналізу",
+    "lead": "Незалежні контрольні матеріали для моніторингу прецизійності рутинних і спеціалізованих імуноаналізів.",
+    "keyFacts": [
+      {
+        "value": "InteliQ",
+        "label": "Specialty Immunoassay і Tumor Marker Control"
+      },
+      {
+        "value": "Liquichek",
+        "label": "Specialty Immunoassay Plus Control"
+      },
+      {
+        "value": "LTA–3",
+        "label": "рівні Specialty Immunoassay Control (InteliQ)"
+      }
+    ],
+    "primaryCta": {
+      "label": "Отримати консультацію",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Позиції для замовлення",
+      "href": "#items"
+    },
+    "image": {
+      "alt": "Флакони контролю Liquichek Specialty Immunoassay Plus"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "Що таке контролі Bio-Rad для імуноаналізу",
+    "text": "Immunoassay Quality Controls — це лінійка незалежних контрольних матеріалів Bio-Rad для моніторингу прецизійності імуноаналізів. Асортимент охоплює контролі для терапевтичного моніторингу, інфекційних захворювань, онкомаркерів та інших спеціалізованих тестів. У переліку позицій є продукти InteliQ і Liquichek, зокрема Specialty Immunoassay, Tumor Marker та Specialty Immunoassay Plus Control. Конкретні рівні та стабільність залежать від продукту й партії."
+  },
+  "T4_specs": {
+    "show": false
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "Переваги контролів для імуноаналізу",
+    "items": [
+      {
+        "icon": "chart-line",
+        "h3": "Моніторинг прецизійності",
+        "text": "Матеріали призначені для моніторингу прецизійності відповідних методів, за даними виробника. Лабораторія може обрати контроль для рутинних або спеціалізованих імуноаналізів, включно з онкомаркерами та інфекційними дослідженнями."
+      }
+    ]
+  },
+  "T6_items": {
+    "show": true,
+    "h2": "Позиції контролів для імуноаналізу",
+    "summary": "Контролі InteliQ і Liquichek",
+    "columns": [
+      "Кат. №",
+      "Назва"
+    ],
+    "rows": [
+      {
+        "catalogNumber": "12008276",
+        "name": "Specialty Immunoassay Control (InteliQ), Level LTA"
+      },
+      {
+        "catalogNumber": "12008277",
+        "name": "Specialty Immunoassay Control (InteliQ), Level 1"
+      },
+      {
+        "catalogNumber": "12008278",
+        "name": "Specialty Immunoassay Control (InteliQ), Level 2"
+      },
+      {
+        "catalogNumber": "12008279",
+        "name": "Specialty Immunoassay Control (InteliQ), Level 3"
+      },
+      {
+        "catalogNumber": "12008289",
+        "name": "Tumor Marker Control (InteliQ), Level 1"
+      },
+      {
+        "catalogNumber": "12008290",
+        "name": "Tumor Marker Control (InteliQ), Level 2"
+      },
+      {
+        "catalogNumber": "12008291",
+        "name": "Tumor Marker Control (InteliQ), Level 3"
+      },
+      {
+        "catalogNumber": "12015644",
+        "name": "Specialty Immunoassay Plus Control (Liquichek), Level Low"
+      },
+      {
+        "catalogNumber": "12015645",
+        "name": "Specialty Immunoassay Plus Control (Liquichek), Level 1"
+      },
+      {
+        "catalogNumber": "12015646",
+        "name": "Specialty Immunoassay Plus Control (Liquichek), Level 2"
+      },
+      {
+        "catalogNumber": "12015647",
+        "name": "Specialty Immunoassay Plus Control (Liquichek), Level 3"
+      }
+    ],
+    "footnote": "Каталожні номери — за офіційним каталогом Bio-Rad. Асортимент для України уточнює менеджер.",
+    "cta": {
+      "label": "Надіслати запит на позиції",
+      "href": "#contact"
+    }
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": true,
+    "h2": "Інші контролі якості Bio-Rad",
+    "allLink": {
+      "label": "Увесь контроль якості",
+      "href": "/products"
+    },
+    "cards": [
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "InteliQ",
+        "href": "/products/inteliq"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Контролі для біохімії",
+        "href": "/products/chemistry-controls"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Контролі для інфекційних досліджень",
+        "href": "/products/infectious-disease-controls"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Молекулярні контролі",
+        "href": "/products/molecular-controls"
+      }
+    ]
+  },
+  "T9_documents": {
+    "show": true,
+    "h2": "Документи контролів для імуноаналізу",
+    "items": [
+      {
+        "title": "Quality Control Products Catalog",
+        "meta": "Каталог · PDF · англійською",
+        "href": "https://www.bio-rad.com/webroot/web/pdf/cdg/literature/Q-1118.pdf"
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Питання й відповіді про контролі для імуноаналізу",
+    "items": [
+      {
+        "q": "Для чого призначені Immunoassay Quality Controls?",
+        "a": "Для моніторингу прецизійності рутинних і спеціалізованих імуноаналізів. Конкретні характеристики залежать від продукту та партії."
+      },
+      {
+        "q": "Які серії входять до цієї лінійки?",
+        "a": "У переліку є Specialty Immunoassay і Tumor Marker Control серії InteliQ, а також Specialty Immunoassay Plus Control серії Liquichek."
+      },
+      {
+        "q": "Які рівні має Specialty Immunoassay Control (InteliQ)?",
+        "a": "У переліку є Level LTA та Level 1, Level 2 і Level 3."
+      },
+      {
+        "q": "Хто постачає контролі Bio-Rad в Україні?",
+        "a": "LabWell — партнер і постачальник Bio-Rad в Україні."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.itemsForLine"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Отримати консультацію щодо контролів для імуноаналізу",
+    "text": "Вкажіть методи досліджень і потрібні рівні — допоможемо уточнити відповідні позиції Bio-Rad.",
+    "messagePrefill": "Цікавлять контролі Bio-Rad для імуноаналізу. "
+  }
+}

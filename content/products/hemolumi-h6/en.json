@@ -1,0 +1,148 @@
+{
+  "slug": "hemolumi-h6",
+  "url": "/products/hemolumi-h6",
+  "kind": "instrument",
+  "brand": "Snibe",
+  "seo": {
+    "title": "Hemolumi H6 — automated hemostasis analyzer | LabWell",
+    "description": "Hemolumi H6 is a Snibe hemostasis analyzer for coagulation testing: up to 450 tests/h and 84 sample positions. LabWell supplies it in Ukraine."
+  },
+  "T1_breadcrumbs": [
+    "Home",
+    "Products",
+    "Laboratory equipment",
+    "Hemostasis",
+    "Hemolumi H6"
+  ],
+  "T2_hero": {
+    "brand": "Snibe",
+    "eyebrow": "Automated hemostasis analyzer",
+    "h1": "Hemolumi H6 — automated hemostasis analyzer",
+    "lead": "Automates coagulation testing with optical detection and a magnetic bead method in one system. Separate sample and reagent positions support routine workflow organization.",
+    "keyFacts": [
+      {
+        "value": "up to 450",
+        "label": "tests per hour"
+      },
+      {
+        "value": "84",
+        "label": "sample positions"
+      },
+      {
+        "value": "69",
+        "label": "reagent positions"
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "View specifications",
+      "href": "#specs"
+    },
+    "image": {
+      "alt": "Hemolumi H6 instrument view"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "What Hemolumi H6 is and who it is for",
+    "text": "Hemolumi H6 is an automated Snibe hemostasis analyzer for coagulation testing. It combines optical detection with a magnetic bead method and provides 84 sample positions and 69 reagent positions. According to Snibe, the analyzer supports at least five hours of unattended operation, while reagents remain stable onboard for more than seven days."
+  },
+  "T4_specs": {
+    "show": true,
+    "h2": "Hemolumi H6 specifications",
+    "caption": "According to the manufacturer",
+    "rows": [
+      {
+        "label": "Throughput",
+        "value": "up to 450 tests/h"
+      },
+      {
+        "label": "Sample positions",
+        "value": "84"
+      },
+      {
+        "label": "Reagent positions",
+        "value": "69"
+      },
+      {
+        "label": "Unattended operation",
+        "value": "at least 5 h"
+      },
+      {
+        "label": "Onboard reagent stability",
+        "value": "more than 7 days"
+      }
+    ],
+    "fullTechnicalData": {
+      "show": false
+    }
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "Benefits of Hemolumi H6",
+    "items": [
+      {
+        "icon": "workflow",
+        "h3": "Two detection methods",
+        "text": "The laboratory gets optical detection and a magnetic bead method in one automated analyzer. Both approaches are used for coagulation testing."
+      },
+      {
+        "icon": "clock",
+        "h3": "Less operator intervention",
+        "text": "According to Snibe, the system supports at least five hours of unattended operation. This allows part of the workflow to proceed without constant presence at the analyzer."
+      },
+      {
+        "icon": "test-tubes",
+        "h3": "Longer onboard storage",
+        "text": "Onboard reagent stability of more than seven days helps simplify day-to-day workflow planning. Reagents can remain directly in the system for longer."
+      }
+    ]
+  },
+  "T6_items": {
+    "show": false
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": false
+  },
+  "T9_documents": {
+    "show": false
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Hemolumi H6 questions and answers",
+    "items": [
+      {
+        "q": "What is Hemolumi H6 used for?",
+        "a": "Hemolumi H6 is designed for coagulation testing. It combines optical detection with a magnetic bead method."
+      },
+      {
+        "q": "What is the throughput of Hemolumi H6?",
+        "a": "Up to 450 tests per hour."
+      },
+      {
+        "q": "How many sample and reagent positions does Hemolumi H6 have?",
+        "a": "The analyzer provides 84 sample positions and 69 reagent positions."
+      },
+      {
+        "q": "Who supplies Hemolumi H6 in Ukraine?",
+        "a": "LabWell is a Snibe partner and supplier in Ukraine."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Request a consultation about Hemolumi H6",
+    "text": "Tell us about your laboratory needs and expected coagulation testing workload, and we will help assess Hemolumi H6 for your workflow.",
+    "messagePrefill": "I am interested in Hemolumi H6. "
+  }
+}

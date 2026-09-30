@@ -1,0 +1,208 @@
+{
+  "slug": "variant-ii",
+  "url": "/products/variant-ii",
+  "kind": "instrument",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "VARIANT II — Bio-Rad hemoglobin system | LabWell",
+    "description": "VARIANT II is an automated Bio-Rad system for HbA1c and β-thalassemia: 10 samples as standard or 50 with the optional loader. Supply and service by LabWell."
+  },
+  "T1_breadcrumbs": [
+    "Home",
+    "Products",
+    "Laboratory equipment",
+    "Hemoglobinopathies",
+    "VARIANT II"
+  ],
+  "T2_hero": {
+    "brand": "Bio-Rad",
+    "eyebrow": "Automated hemoglobin testing system",
+    "h1": "VARIANT II — system for HbA1c and β-thalassemia",
+    "lead": "An automated Bio-Rad system that brings diabetes HbA1c and β-thalassemia testing together on one platform.",
+    "keyFacts": [
+      {
+        "value": "10",
+        "label": "samples in the base configuration"
+      },
+      {
+        "value": "50",
+        "label": "samples with the optional rack loader"
+      },
+      {
+        "value": "HbA1c + β-thalassemia",
+        "label": "programs on one platform"
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Specifications",
+      "href": "#specs"
+    },
+    "image": {
+      "alt": "VARIANT II Hemoglobin Testing System, front view"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "What VARIANT II is and who it is for",
+    "text": "VARIANT II is a fully automated Bio-Rad system for HbA1c and β-thalassemia testing. It allows a laboratory to run diabetes testing and hemoglobinopathy studies on one platform. Base capacity can be expanded with an optional rack loader that also supports continuous loading."
+  },
+  "T4_specs": {
+    "show": true,
+    "h2": "VARIANT II specifications",
+    "caption": "According to the manufacturer",
+    "rows": [
+      {
+        "label": "Sample positions",
+        "value": "10"
+      },
+      {
+        "label": "Chromatographic station dimensions (W × D × H)",
+        "value": "53.2 × 27.2 × 40.7 cm"
+      },
+      {
+        "label": "Sampling station dimensions (W × D × H)",
+        "value": "45.5 × 61.6 × 59.6 cm"
+      },
+      {
+        "label": "Capacity",
+        "value": "10 samples; 50 samples and continuous loading are available with the optional rack loader"
+      },
+      {
+        "label": "Uncrated chromatographic station weight",
+        "value": "≤35 kg"
+      },
+      {
+        "label": "Uncrated sampling station weight",
+        "value": "≤54.5 kg"
+      },
+      {
+        "label": "Power input requirements",
+        "value": "100–120 V or 200–240 V, 50/60 Hz"
+      },
+      {
+        "label": "Power consumption",
+        "value": "200 VA maximum (2 A maximum)"
+      },
+      {
+        "label": "Operating environment",
+        "value": "15–35 °C; 10–90% non-condensing humidity"
+      }
+    ]
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "Benefits of VARIANT II",
+    "items": [
+      {
+        "icon": "workflow",
+        "h3": "Less manual preparation",
+        "text": "The sampling station accepts barcoded primary tubes, draws material from the closed tube, dilutes it and injects it into the chromatographic station. Separate manual sample preparation is not required."
+      },
+      {
+        "icon": "repeat-2",
+        "h3": "Two tasks on one platform",
+        "text": "Programs for HbA1c and β-thalassemia operate on the same system. For VARIANT II Dual Program, the manufacturer describes rapid switching between methods without changing the column or buffers."
+      },
+      {
+        "icon": "database",
+        "h3": "Centralised data management",
+        "text": "Bio-Rad Clinical Data Management Software processes results. According to the manufacturer, the software can transmit them to a laboratory information system in real time."
+      }
+    ]
+  },
+  "T6_items": {
+    "show": true,
+    "h2": "VARIANT II ordering information",
+    "columns": [
+      "Catalog number",
+      "Name",
+      "Pack size"
+    ],
+    "rows": [
+      {
+        "catalogNumber": "270-2000",
+        "name": "VARIANT II Hemoglobin Testing System",
+        "packSize": "[PACK SIZE]"
+      },
+      {
+        "catalogNumber": "270-2101NU",
+        "name": "VARIANT II Hemoglobin A1c Program Reorder Pack",
+        "packSize": "1,000 tests"
+      },
+      {
+        "catalogNumber": "270-2103",
+        "name": "VARIANT II β-Thalassemia Reorder Pack",
+        "packSize": "250 tests"
+      },
+      {
+        "catalogNumber": "270-2154",
+        "name": "VARIANT II β-Thalassemia Reorder Pack",
+        "packSize": "500 tests"
+      },
+      {
+        "catalogNumber": "270-2500",
+        "name": "VARIANT II Dual Program Reorder Pack",
+        "packSize": "500 tests"
+      },
+      {
+        "catalogNumber": "740",
+        "name": "Lyphochek Diabetes Control, Bilevel",
+        "packSize": "6 × 0.5 mL"
+      },
+      {
+        "catalogNumber": "553",
+        "name": "Lyphochek Hemoglobin A₂ Control, Bilevel",
+        "packSize": "4 × 0.5 mL"
+      }
+    ],
+    "cta": {
+      "label": "Send an item request",
+      "href": "#contact"
+    }
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": false
+  },
+  "T9_documents": {
+    "show": false
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "VARIANT II questions and answers",
+    "items": [
+      {
+        "q": "Which tests is VARIANT II designed for?",
+        "a": "VARIANT II is designed for HbA1c and β-thalassemia testing on one platform."
+      },
+      {
+        "q": "How many samples does VARIANT II hold?",
+        "a": "Base capacity is 10 samples. With the optional rack loader, 50 samples and continuous loading are available."
+      },
+      {
+        "q": "Does VARIANT II require manual sample preparation?",
+        "a": "No. The station draws material from a closed primary tube, dilutes it and injects it into the chromatographic station."
+      },
+      {
+        "q": "Who supplies VARIANT II in Ukraine?",
+        "a": "LabWell is a Bio-Rad partner and supplier in Ukraine."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Request a consultation about VARIANT II",
+    "text": "Tell us about your laboratory tasks and expected sample workload, and we will help assess the configuration, programs and required materials.",
+    "messagePrefill": "I am interested in VARIANT II. "
+  }
+}

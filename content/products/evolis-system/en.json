@@ -1,0 +1,189 @@
+{
+  "slug": "evolis-system",
+  "url": "/products/evolis-system",
+  "kind": "instrument",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "EVOLIS System — automated EIA processor | LabWell",
+    "description": "EVOLIS System is an open Bio-Rad EIA processor for laboratories handling 30,000–100,000 tests annually. Supply and service in Ukraine from LabWell."
+  },
+  "T1_breadcrumbs": [
+    "Home",
+    "Products",
+    "Laboratory equipment",
+    "Autoimmune testing",
+    "EVOLIS System"
+  ],
+  "T2_hero": {
+    "brand": "Bio-Rad",
+    "eyebrow": "Automated EIA processor",
+    "h1": "EVOLIS System — automated processor for EIA",
+    "lead": "An open Bio-Rad microplate system that automates enzyme immunoassay processing stages.",
+    "keyFacts": [
+      {
+        "value": "up to 180",
+        "label": "primary tubes"
+      },
+      {
+        "value": "4–7",
+        "label": "plates per worklist"
+      },
+      {
+        "value": "30,000–100,000",
+        "label": "tests per year"
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Specifications",
+      "href": "#specs"
+    },
+    "image": {
+      "alt": "EVOLIS automated system"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "What EVOLIS System is and who it is for",
+    "text": "EVOLIS System is an automated open Bio-Rad microplate processor for EIA methods. Designed for laboratories running 30,000–100,000 tests annually, it automates dispensing, washing, incubation, and reading. Its open architecture allows EIA protocols to be configured, while capacity for up to 180 primary tubes and 4–7 plates supports batch-based sample processing within a worklist."
+  },
+  "T4_specs": {
+    "show": true,
+    "h2": "EVOLIS System specifications",
+    "caption": "According to the manufacturer",
+    "rows": [
+      {
+        "label": "Sample positions",
+        "value": "up to 180 primary tubes"
+      },
+      {
+        "label": "Annual workload",
+        "value": "30,000–100,000 tests per year"
+      },
+      {
+        "label": "Plates per worklist",
+        "value": "4–7"
+      },
+      {
+        "label": "Incubators",
+        "value": "4 temperature-controlled and 4 ambient, light-protected"
+      }
+    ]
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "EVOLIS System benefits",
+    "items": [
+      {
+        "icon": "workflow",
+        "h3": "Automated EIA workflow",
+        "text": "EVOLIS System handles dispensing, washing, incubation, and reading of microtiter plates. This brings consecutive EIA stages together in one automated system."
+      },
+      {
+        "icon": "sliders-horizontal",
+        "h3": "Configurable protocols",
+        "text": "The open architecture supports protocol configuration for EIA assays. Four temperature-controlled incubators and four light-protected ambient incubators provide the conditions specified by each protocol."
+      },
+      {
+        "icon": "refresh-cw",
+        "h3": "Continuous operation",
+        "text": "According to the manufacturer, the system supports continuous loading and bidirectional LIS connectivity. Disposable tips, positive identification, and triple detection help control material handling."
+      }
+    ]
+  },
+  "T6_items": {
+    "show": true,
+    "h2": "EVOLIS System ordering information",
+    "columns": [
+      "Catalog no.",
+      "Name",
+      "Pack size"
+    ],
+    "rows": [
+      {
+        "catalogNumber": "89818B",
+        "name": "EVOLIS, Complete",
+        "packSize": "[PACK SIZE NOT PROVIDED]"
+      },
+      {
+        "catalogNumber": "89611",
+        "name": "Conductive Tips (300 µl) (samples)",
+        "packSize": "18 × 960"
+      },
+      {
+        "catalogNumber": "89612",
+        "name": "Conductive Tips (1,100 µl) (reagents)",
+        "packSize": "10 × 960"
+      },
+      {
+        "catalogNumber": "12015656",
+        "name": "WIN10 PC OUS + Pre-Installed EVOLIS SW",
+        "packSize": "1 unit"
+      }
+    ],
+    "cta": {
+      "label": "Request ordering information",
+      "href": "#contact"
+    }
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": true,
+    "h2": "Related Bio-Rad equipment",
+    "cards": [
+      {
+        "eyebrow": "Bio-Rad · EIA / IFA",
+        "title": "PhD lx System",
+        "href": "/products/phd-lx-system"
+      }
+    ]
+  },
+  "T9_documents": {
+    "show": true,
+    "h2": "EVOLIS System documents",
+    "items": [
+      {
+        "title": "Serology Screening Catalog",
+        "meta": "Catalog · PDF · English",
+        "href": "https://www.bio-rad.com/sites/default/files/2024-05/idd-catalog-rev-g-2024-04-v4_pf380_dg24-0114.pdf"
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "EVOLIS System questions and answers",
+    "items": [
+      {
+        "q": "What workload is EVOLIS System designed for?",
+        "a": "The system is designed for 30,000–100,000 tests per year."
+      },
+      {
+        "q": "Which EIA stages does EVOLIS System automate?",
+        "a": "It automates dispensing, washing, incubation, and reading of microtiter plates."
+      },
+      {
+        "q": "How many samples and plates can EVOLIS System handle?",
+        "a": "It accommodates up to 180 primary tubes and 4–7 plates per worklist."
+      },
+      {
+        "q": "Who supplies EVOLIS System in Ukraine?",
+        "a": "LabWell is a Bio-Rad partner and supplier in Ukraine, providing supply, installation, staff training, and service support."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Request an EVOLIS System consultation",
+    "text": "Tell us about your annual workload, EIA methods, and LIS connectivity needs, and we will help assess whether EVOLIS System suits your laboratory.",
+    "messagePrefill": "I am interested in EVOLIS System. "
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "slug": "molecular-controls",
+  "url": "/products/molecular-controls",
+  "kind": "line",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "Molecular Controls — Bio-Rad Controls | LabWell",
+    "description": "Exact Diagnostics molecular quality controls and verification panels from Bio-Rad for laboratory testing. LabWell is a Bio-Rad partner and supplier in Ukraine."
+  },
+  "T1_breadcrumbs": [
+    "Home",
+    "Products",
+    "Quality control",
+    "Molecular controls"
+  ],
+  "T2_hero": {
+    "brand": "Bio-Rad",
+    "eyebrow": "Controls for molecular diagnostics",
+    "h1": "Molecular Controls — quality controls and panels",
+    "lead": "Exact Diagnostics quality controls and verification panels from Bio-Rad for molecular testing across multiple diagnostic areas.",
+    "keyFacts": [
+      {
+        "value": "Run controls",
+        "label": "materials for routine test runs"
+      },
+      {
+        "value": "Verification panels",
+        "label": "panels with multiple levels or concentrations"
+      },
+      {
+        "value": "JCV and CT/NG",
+        "label": "areas represented in the selection"
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Ordering information",
+      "href": "#items"
+    },
+    "image": {
+      "alt": "Exact Diagnostics CT/NG molecular control kit"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "What Bio-Rad molecular controls are",
+    "text": "Molecular Quality Controls and Panels is an Exact Diagnostics range from Bio-Rad for molecular diagnostics. The catalog covers transplantation, virology, STIs, microbiology, hospital-associated and respiratory infections, and tick-borne diseases. The listed selection includes products for JCV and CT/NG. Material composition and the number of levels or concentrations depend on the individual test."
+  },
+  "T4_specs": {
+    "show": false
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "Benefits of molecular controls",
+    "items": [
+      {
+        "icon": "chart-no-axes-combined",
+        "h3": "Characterized target values",
+        "text": "According to the manufacturer, ddPCR establishes target values for some products, while selected values are calibrated to WHO international standards."
+      }
+    ]
+  },
+  "T6_items": {
+    "show": true,
+    "h2": "Molecular control ordering information",
+    "summary": "Selection of JCV and CT/NG products",
+    "columns": [
+      "Catalog no.",
+      "Name",
+      "Pack size"
+    ],
+    "rows": [
+      {
+        "catalogNumber": "JCVL101",
+        "name": "Exact Diagnostics JCV, Low Run Control",
+        "packSize": "5 × 1.0 mL"
+      },
+      {
+        "catalogNumber": "JCVH102",
+        "name": "Exact Diagnostics JCV, High Run Control",
+        "packSize": "5 × 1.0 mL"
+      },
+      {
+        "catalogNumber": "JCVP100",
+        "name": "Exact Diagnostics JCV, Verification Panel",
+        "packSize": "6 × 1.0 mL"
+      },
+      {
+        "catalogNumber": "CTNGPOS",
+        "name": "Exact Diagnostics CT/NG, Positive Run Control",
+        "packSize": "6 × 2.0 mL"
+      },
+      {
+        "catalogNumber": "CTNGP200",
+        "name": "Exact Diagnostics CT/NG, Verification Panel",
+        "packSize": "9 × 1.0 mL"
+      },
+      {
+        "catalogNumber": "CTNGB200",
+        "name": "Exact Diagnostics CT/NG, Verification Bundle",
+        "packSize": "5 kits"
+      }
+    ],
+    "footnote": "This is a selection of JCV and CT/NG products. Ask a LabWell manager about the range supplied in Ukraine.",
+    "cta": {
+      "label": "Request product information",
+      "href": "#contact"
+    }
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": true,
+    "h2": "Other Bio-Rad quality controls",
+    "allLink": {
+      "label": "All quality controls",
+      "href": "/products"
+    },
+    "cards": [
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "InteliQ",
+        "href": "/products/inteliq"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Immunoassay controls",
+        "href": "/products/immunoassay-controls"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Infectious disease controls",
+        "href": "/products/infectious-disease-controls"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Chemistry controls",
+        "href": "/products/chemistry-controls"
+      }
+    ]
+  },
+  "T9_documents": {
+    "show": true,
+    "h2": "Molecular control documents",
+    "items": [
+      {
+        "title": "Quality Control Products Catalog",
+        "meta": "Catalog · PDF · English",
+        "href": "https://www.bio-rad.com/sites/default/files/webroot/web/pdf/cdg/literature/Q-1118.pdf"
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Molecular controls: questions and answers",
+    "items": [
+      {
+        "q": "What are Exact Diagnostics molecular controls?",
+        "a": "They are Bio-Rad quality controls and verification panels for molecular diagnostics."
+      },
+      {
+        "q": "Which areas does the range cover?",
+        "a": "The range covers transplantation, virology, STIs, microbiology, hospital-associated and respiratory infections, and tick-borne diseases."
+      },
+      {
+        "q": "What does the molecular control range include?",
+        "a": "It includes run controls and verification panels with multiple levels or concentrations. Composition depends on the individual test."
+      },
+      {
+        "q": "Who supplies Bio-Rad molecular controls in Ukraine?",
+        "a": "LabWell is a Bio-Rad partner and supplier in Ukraine. Ask a manager about the range of individual products."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.itemsForLine"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Request advice on molecular controls",
+    "text": "Share the testing area and the control or panel you need, and a manager will confirm the available range.",
+    "messagePrefill": "I am interested in Bio-Rad molecular controls. "
+  }
+}

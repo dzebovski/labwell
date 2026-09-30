@@ -1,0 +1,194 @@
+{
+  "slug": "chemistry-controls",
+  "url": "/products/chemistry-controls",
+  "kind": "line",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "Bio-Rad Chemistry Quality Controls | LabWell",
+    "description": "Bio-Rad chemistry controls for precision monitoring in serum and urine testing. Liquid Liquichek and lyophilized Lyphochek controls supplied by LabWell."
+  },
+  "T1_breadcrumbs": [
+    "Home",
+    "Products",
+    "Quality control",
+    "Chemistry quality controls"
+  ],
+  "T2_hero": {
+    "brand": "Bio-Rad",
+    "eyebrow": "Quality control range",
+    "h1": "Bio-Rad chemistry quality controls",
+    "lead": "Control materials for monitoring precision in routine and specialized clinical chemistry testing.",
+    "keyFacts": [
+      {
+        "value": "Liquichek",
+        "label": "liquid chemistry controls"
+      },
+      {
+        "value": "Lyphochek",
+        "label": "lyophilized chemistry controls"
+      },
+      {
+        "value": "6 × 3 mL",
+        "label": "Liquichek Lipids Control Levels 1 and 2"
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Ordering information",
+      "href": "#items"
+    },
+    "image": {
+      "alt": "Lyphochek Assayed Chemistry Control vials from the chemistry controls range"
+    }
+  },
+  "T3_about": {
+    "show": true,
+    "h2": "What are Bio-Rad chemistry quality controls?",
+    "text": "Chemistry Quality Controls are Bio-Rad control materials for monitoring precision in clinical chemistry testing. The range includes materials for serum and urine assays in liquid and lyophilized formats. Assayed and unassayed options are available, while multiple levels support monitoring across different concentration ranges."
+  },
+  "T4_specs": {
+    "show": false
+  },
+  "T5_benefits": {
+    "show": true,
+    "h2": "Benefits of chemistry quality controls",
+    "items": [
+      {
+        "icon": "flask",
+        "h3": "Choice of format",
+        "text": "Liquid materials require no reconstitution, while lyophilized controls are reconstituted before use. Laboratories can choose the format that fits their workflow."
+      },
+      {
+        "icon": "layers",
+        "h3": "Broad analyte coverage",
+        "text": "Multi-analyte materials cover a broad range of chemistry tests. For individual products, Bio-Rad provides assigned values across numerous methods and instruments."
+      }
+    ]
+  },
+  "T6_items": {
+    "show": true,
+    "h2": "Chemistry control ordering information",
+    "summary": "Liquichek and Lyphochek controls",
+    "columns": [
+      "Catalog no.",
+      "Name",
+      "Pack size"
+    ],
+    "rows": [
+      {
+        "catalogNumber": "641",
+        "name": "Liquichek Lipids Control, Level 1",
+        "packSize": "6 × 3 mL"
+      },
+      {
+        "catalogNumber": "642",
+        "name": "Liquichek Lipids Control, Level 2",
+        "packSize": "6 × 3 mL"
+      },
+      {
+        "catalogNumber": "640X",
+        "name": "Liquichek Lipids Control, Bilevel MiniPak",
+        "packSize": "2 × 3 mL"
+      },
+      {
+        "catalogNumber": "C-310-5",
+        "name": "Lyphochek Assayed Chemistry Control, Level 1",
+        "packSize": "12 × 5 mL"
+      },
+      {
+        "catalogNumber": "C-315-5",
+        "name": "Lyphochek Assayed Chemistry Control, Level 2",
+        "packSize": "12 × 5 mL"
+      },
+      {
+        "catalogNumber": "313X",
+        "name": "Lyphochek Assayed Chemistry Control, Bilevel MiniPak",
+        "packSize": "2 × 5 mL"
+      }
+    ],
+    "footnote": "Catalog numbers and pack sizes are from the official Bio-Rad catalog. Ask a LabWell manager about the range supplied in Ukraine.",
+    "cta": {
+      "label": "Request ordering information",
+      "href": "#contact"
+    }
+  },
+  "T7_storage": {
+    "show": false
+  },
+  "T8_related": {
+    "show": true,
+    "h2": "Other Bio-Rad quality controls",
+    "allLink": {
+      "label": "All quality controls",
+      "href": "/products"
+    },
+    "cards": [
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "InteliQ",
+        "href": "/products/inteliq"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Immunoassay quality controls",
+        "href": "/products/immunoassay-controls"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Infectious disease controls",
+        "href": "/products/infectious-disease-controls"
+      },
+      {
+        "eyebrow": "Bio-Rad · QC",
+        "title": "Molecular controls",
+        "href": "/products/molecular-controls"
+      }
+    ]
+  },
+  "T9_documents": {
+    "show": true,
+    "h2": "Chemistry control documents",
+    "items": [
+      {
+        "title": "Quality Control Products Catalog",
+        "meta": "Catalog · PDF · English",
+        "href": "https://www.bio-rad.com/webroot/web/pdf/cdg/literature/Q-1118.pdf"
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Chemistry quality control questions",
+    "items": [
+      {
+        "q": "What are Chemistry Quality Controls used for?",
+        "a": "They are used to monitor precision in routine and specialized clinical chemistry testing. The range includes materials for serum and urine assays."
+      },
+      {
+        "q": "How do Liquichek and Lyphochek differ?",
+        "a": "Liquichek controls are liquid and require no reconstitution. Lyphochek controls are lyophilized and are reconstituted before use."
+      },
+      {
+        "q": "Which pack sizes are listed?",
+        "a": "Liquichek Lipids Control is listed in 6 × 3 mL and Bilevel MiniPak 2 × 3 mL; Lyphochek Assayed Chemistry Control in 12 × 5 mL and Bilevel MiniPak 2 × 5 mL."
+      },
+      {
+        "q": "Who supplies Bio-Rad chemistry controls in Ukraine?",
+        "a": "LabWell is a Bio-Rad partner and supplier in Ukraine."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.itemsForLine"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Ask about chemistry quality controls",
+    "text": "Tell us the tests, format, and levels you need, and we will help identify the relevant Bio-Rad items.",
+    "messagePrefill": "I am interested in Bio-Rad chemistry quality controls. "
+  }
+}
