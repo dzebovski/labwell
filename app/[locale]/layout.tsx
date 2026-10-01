@@ -8,6 +8,7 @@ import styles from "@/components/labwell-ui.module.css";
 import { isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { withLocale } from "@/lib/locale-routing";
+import { navPhoto } from "@/lib/site-content/nav-photo";
 import { buildHeaderNavigation } from "@/lib/site-navigation";
 
 import "../globals.css";
@@ -56,7 +57,7 @@ export default async function LocaleLayout({
   }
 
   const dictionary = await getDictionary(locale);
-  const navItems = buildHeaderNavigation(locale, dictionary.navigation);
+  const navItems = buildHeaderNavigation(locale, dictionary.navigation, { photoFor: navPhoto });
 
   return (
     <html
@@ -68,9 +69,13 @@ export default async function LocaleLayout({
           <SiteHeader
             navItems={navItems}
             homeHref={withLocale(locale, "/")}
+            megaMenu={dictionary.megaMenu}
+            search={{ label: dictionary.header.searchLabel, unavailable: dictionary.header.searchSoon }}
+            cta={{ label: dictionary.header.contact, href: withLocale(locale, "/contacts") }}
             languageSwitcher={{
               currentLocale: locale,
               label: dictionary.languageSwitcher.label,
+              currentLabel: dictionary.languageSwitcher.currentLabel.replace("{name}", dictionary.languageSwitcher[locale]),
               names: {
                 uk: dictionary.languageSwitcher.uk,
                 en: dictionary.languageSwitcher.en,

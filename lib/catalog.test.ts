@@ -22,20 +22,8 @@ import {
   type Breadcrumb,
   type ContentPage,
 } from "./catalog.ts";
-import { buildHeaderNavigation } from "./site-navigation.ts";
 
 const labels = { products: "Products", clinicalDirections: "Clinical", brands: "Brands" };
-const navLabels = {
-  products: "Products",
-  clinicalDirections: "Clinical",
-  brands: "Brands",
-  about: "About",
-  services: "Services",
-  contacts: "Contacts",
-  otherSolutions: "Other solutions",
-  portfolio: "Portfolio",
-};
-
 test("content catalog is consistent", () => {
   assert.deepEqual(findCatalogProblems(), []);
 });
@@ -109,8 +97,8 @@ test("breadcrumbs skip Home, link every level and offer siblings", () => {
     crumbs.map((item) => [item.label, item.href]),
     [
       ["Products", "/uk/products"],
-      ["Обладнання / Аналізатори", "/uk/products/equipment"],
-      ["Біохімічні аналізатори", "/uk/products/equipment/biochemistry"],
+      ["Лабораторне обладнання", "/uk/products/equipment"],
+      ["Біохімія та електроліти", "/uk/products/equipment/biochemistry"],
       ["Biossays 240 Plus", null],
     ],
   );
@@ -127,8 +115,8 @@ test("breadcrumbs skip Home, link every level and offer siblings", () => {
 
 test("breadcrumbs of section-less pages and brand pages", () => {
   assert.deepEqual(
-    simplify(getBreadcrumbs(getProduct("gel-testing")!, "en", labels)).map((item) => item.label),
-    ["Products", "Reagents and test systems", "Gel Testing"],
+    simplify(getBreadcrumbs(getProduct("immunohematology-reagents")!, "en", labels)).map((item) => item.label),
+    ["Products", "Reagents and tests", "Immunohematology reagents"],
   );
   const clinical = simplify(getBreadcrumbs(getClinicalPage("oncology", "oncopanel-maglumi-oncomarkers")!, "en", labels));
   assert.deepEqual(clinical[1].href, "/en/clinical-directions/oncology");
@@ -161,8 +149,8 @@ test("category breadcrumbs mark the category itself as current", () => {
   const crumbs = simplify(getCategoryBreadcrumbs(getCategory("catalog", "equipment", "biochemistry")!, "en", labels));
   assert.deepEqual(crumbs.map((item) => [item.label, item.href]), [
     ["Products", "/en/products"],
-    ["Equipment / Analyzers", "/en/products/equipment"],
-    ["Biochemical analyzers", null],
+    ["Laboratory equipment", "/en/products/equipment"],
+    ["Biochemistry and electrolytes", null],
   ]);
   assert.equal(crumbs[2].options?.length, 8);
   const group = simplify(getCategoryBreadcrumbs(getCategory("catalog", "equipment")!, "en", labels));
@@ -226,29 +214,6 @@ test("menu order follows the registry, with explicit order overrides", () => {
   ]);
 });
 
-test("header navigation links products from both catalog and clinical menus", () => {
-  const nav = buildHeaderNavigation("uk", navLabels);
-  const mega = (id: string) => {
-    const item = nav.find((entry) => entry.id === id);
-    assert.ok(item?.type === "mega");
-    return item;
-  };
-
-  const diabetes = mega("clinical-directions").groups.find((group) => group.id === "diabetes-and-metabolism");
-  assert.deepEqual(
-    diabetes?.sections.map((section) => section.label),
-    ["Аналізатори HbA1c", "Other solutions"],
-  );
-  assert.ok(diabetes?.sections[0].links.some((link) => link.href === "/uk/products/d-100"));
-
-  const reagents = mega("products").groups.find((group) => group.id === "reagents");
-  assert.equal(reagents?.sections[0].label, "Portfolio");
-
-  const brandGroups = mega("brands").groups;
-  assert.deepEqual(brandGroups.map((group) => group.label), ["Bio-Rad", "Snibe"]);
-  assert.ok(brandGroups.every((group) => group.logo));
-});
-
 test("reports SEO titles with the site name, duplicate titles and missing item types", () => {
   const product = getProduct("maglumi-x8")!;
   const other = getProduct("maglumi-x6")!;
@@ -272,19 +237,4 @@ test("every product has a name, type and SEO title in both languages", () => {
       assert.ok(!page.seoTitle[locale].includes("Labwell"), `${page.path}: seoTitle (${locale})`);
     }
   }
-});
-
-test("menu leaves carry the item type and a meta line from the key figure", () => {
-  const nav = buildHeaderNavigation("uk", navLabels);
-  const products = nav.find((entry) => entry.id === "products");
-  assert.ok(products?.type === "mega");
-  const leaves = products.groups.flatMap((group) => group.sections.flatMap((section) => section.links));
-  const x8 = leaves.find((leaf) => leaf.href === "/uk/products/maglumi-x8");
-  assert.deepEqual(
-    { label: x8?.label, itemType: x8?.itemType, meta: x8?.meta },
-    { label: "MAGLUMI X8", itemType: "CLIA-аналізатор", meta: "до 600 тестів/год" },
-  );
-  const d10 = leaves.find((leaf) => leaf.href === "/uk/products/d-10");
-  assert.equal(d10?.meta, "Система визначення гемоглобіну");
-  assert.ok(leaves.every((leaf) => !("title" in leaf)));
 });

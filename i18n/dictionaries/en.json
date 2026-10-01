@@ -6,7 +6,8 @@
   "languageSwitcher": {
     "label": "Change language",
     "uk": "Українська",
-    "en": "English"
+    "en": "English",
+    "currentLabel": "Language: {name}"
   },
   "navigation": {
     "products": "Product catalog",
@@ -16,7 +17,12 @@
     "services": "Service & support",
     "contacts": "Contacts",
     "otherSolutions": "Other solutions",
-    "portfolio": "Portfolio"
+    "itemCount": {
+      "one": "{n} item",
+      "other": "{n} items"
+    },
+    "showAll": "{hidden} more · show all {total}",
+    "allBrandProducts": "All {brand} products"
   },
   "accessibility": {
     "home": "LabWell — home",
@@ -60,5 +66,43 @@
   "contentPage": {
     "viewSource": "View source",
     "todoHeading": "What needs completing"
+  },
+  "header": {
+    "contact": "Contact us",
+    "searchLabel": "Search the catalog",
+    "searchSoon": "Search is coming soon"
+  },
+  "megaMenu": {
+    "viewing": "You are viewing",
+    "catalog": {
+      "railTitle": "Product type",
+      "sectionTitle": "Category",
+      "all": "Full catalog",
+      "otherWays": [
+        "By clinical direction",
+        "By brand"
+      ]
+    },
+    "clinical": {
+      "railTitle": "Direction",
+      "sectionTitle": "Subgroup",
+      "all": "All clinical directions",
+      "otherWays": [
+        "By product type",
+        "By brand"
+      ]
+    },
+    "brands": {
+      "all": "All brands",
+      "linesTitle": "Portfolio directions",
+      "about": "About the brand",
+      "itemsInCatalog": "in the catalog"
+    },
+    "searchOtherWay": "Search another way",
+    "details": "Details",
+    "requestPrice": "Request a quote",
+    "consultationText": "Can’t find what you need? We will match a solution to your laboratory’s workload and test menu.",
+    "consultationCta": "Get a consultation",
+    "previewLabel": "Preview"
   }
 }

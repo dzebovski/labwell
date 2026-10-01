@@ -9,6 +9,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
+import ukDictionary from "@/i18n/dictionaries/uk.json";
 import { TokenGrid, type DesignToken } from "@/app/design/design-interactions";
 import { Hero } from "@/components/patterns/hero";
 import { ProductCard, type ProductData } from "@/components/patterns/product-card";
@@ -579,10 +580,11 @@ export default function DesignSystemPage() {
                 </div>
                 <div className={styles.patternFrame}>
                   <SiteHeader
+                    megaMenu={ukDictionary.megaMenu}
                     navItems={navItems}
                     search={{
                       label: "Пошук обладнання",
-                      placeholder: "Пошук обладнання…",
+                      unavailable: "Пошук з’явиться згодом",
                     }}
                     cta={{ label: "Зв’язатися з нами", href: "#components" }}
                     homeHref="#design-title"
@@ -653,8 +655,9 @@ export default function DesignSystemPage() {
                 <div className={styles.desktopViewport}>
                   <div className={styles.desktopViewportInner}>
                     <SiteHeader
+                    megaMenu={ukDictionary.megaMenu}
                       navItems={navItems.slice(0, 3)}
-                      search={{ label: "Пошук", placeholder: "Пошук…" }}
+                      search={{ label: "Пошук", unavailable: "Пошук з’явиться згодом" }}
                       cta={{ label: "Контакт", href: "#components" }}
                       homeHref="#design-title"
                     />
@@ -668,8 +671,9 @@ export default function DesignSystemPage() {
                 <div className={styles.mobileViewport}>
                   <div className={styles.mobileViewportInner}>
                     <SiteHeader
+                    megaMenu={ukDictionary.megaMenu}
                       navItems={navItems}
-                      search={{ label: "Пошук", placeholder: "Пошук обладнання…" }}
+                      search={{ label: "Пошук", unavailable: "Пошук з’явиться згодом" }}
                       cta={{ label: "Зв’язатися", href: "#components" }}
                       homeHref="#design-title"
                     />

@@ -6,7 +6,8 @@
   "languageSwitcher": {
     "label": "Змінити мову",
     "uk": "Українська",
-    "en": "English"
+    "en": "English",
+    "currentLabel": "Мова: {name}"
   },
   "navigation": {
     "products": "Каталог продукції",
@@ -16,7 +17,14 @@
     "services": "Сервіс та підтримка",
     "contacts": "Контакти",
     "otherSolutions": "Інші рішення",
-    "portfolio": "Асортимент"
+    "itemCount": {
+      "one": "{n} позиція",
+      "few": "{n} позиції",
+      "many": "{n} позицій",
+      "other": "{n} позиції"
+    },
+    "showAll": "Ще {hidden} · показати всі {total}",
+    "allBrandProducts": "Усі продукти {brand}"
   },
   "accessibility": {
     "home": "LabWell — головна",
@@ -60,5 +68,43 @@
   "contentPage": {
     "viewSource": "Переглянути джерело",
     "todoHeading": "Що потрібно допрацювати"
+  },
+  "header": {
+    "contact": "Зв’язатися",
+    "searchLabel": "Пошук по каталогу",
+    "searchSoon": "Пошук з’явиться згодом"
+  },
+  "megaMenu": {
+    "viewing": "Ви переглядаєте",
+    "catalog": {
+      "railTitle": "Тип продукції",
+      "sectionTitle": "Категорія",
+      "all": "Весь каталог",
+      "otherWays": [
+        "За клінічним напрямком",
+        "За брендом"
+      ]
+    },
+    "clinical": {
+      "railTitle": "Напрям",
+      "sectionTitle": "Підгрупа",
+      "all": "Усі клінічні напрямки",
+      "otherWays": [
+        "За типом продукції",
+        "За брендом"
+      ]
+    },
+    "brands": {
+      "all": "Усі бренди",
+      "linesTitle": "Напрями портфеля",
+      "about": "Про бренд",
+      "itemsInCatalog": "у каталозі"
+    },
+    "searchOtherWay": "Шукати інакше",
+    "details": "Детальніше",
+    "requestPrice": "Запит ціни",
+    "consultationText": "Не знайшли потрібне? Підберемо рішення під навантаження та тест-меню вашої лабораторії.",
+    "consultationCta": "Отримати консультацію",
+    "previewLabel": "Попередній перегляд"
   }
 }

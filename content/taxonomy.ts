@@ -6,7 +6,7 @@ import type { LocalizedText } from "./define.ts";
  * - `id` values are referenced from content files and must not change; labels can be edited freely.
  * - The order of groups and sections here is the order in the menu.
  * - Items placed in a group without a `section` are listed in that group's default section
- *   ("Portfolio" in the catalog, "Other solutions" in clinical directions), shown last.
+ *   ("Other solutions"), shown last.
  */
 
 export type TaxonomySection = Readonly<{ id: string; label: LocalizedText }>;
@@ -16,32 +16,36 @@ export type TaxonomyGroup = Readonly<{
   sections: readonly TaxonomySection[];
 }>;
 
-/** "Product catalog" menu. Every product has exactly one place here: its canonical location. */
+/**
+ * "Product catalog" menu: product type (group) → direction (section) → pages
+ * (PRODUCT-PAGES-PLAN.md, section 7). Every page has exactly one place here: its canonical location.
+ * A type without directions ("Reagents and tests") lists its pages straight away.
+ */
 export const catalogGroups = [
   {
     id: "equipment",
-    label: { en: "Equipment / Analyzers", uk: "Обладнання / Аналізатори" },
+    label: { en: "Laboratory equipment", uk: "Лабораторне обладнання" },
     sections: [
-      { id: "clia", label: { en: "Immunochemical analyzers (CLIA)", uk: "Імунохімічні аналізатори (CLIA)" } },
-      { id: "biochemistry", label: { en: "Biochemical analyzers", uk: "Біохімічні аналізатори" } },
-      { id: "hba1c", label: { en: "HbA1c analyzers", uk: "Аналізатори HbA1c" } },
-      { id: "blood-group", label: { en: "Blood group analyzers", uk: "Аналізатори груп крові" } },
+      { id: "clia", label: { en: "Immunoassay", uk: "Імуноаналіз" } },
+      { id: "biochemistry", label: { en: "Biochemistry and electrolytes", uk: "Біохімія та електроліти" } },
+      { id: "hemostasis", label: { en: "Hemostasis", uk: "Гемостаз" } },
+      { id: "molecular", label: { en: "Molecular diagnostics", uk: "Молекулярна діагностика" } },
+      { id: "automation", label: { en: "Laboratory automation", uk: "Автоматизація лабораторії" } },
+      { id: "hba1c", label: { en: "Diabetes and hemoglobinopathies", uk: "Діабет і гемоглобінопатії" } },
+      { id: "blood-group", label: { en: "Immunohematology", uk: "Імуногематологія" } },
       { id: "autoimmune-infectious", label: { en: "Autoimmune and infectious", uk: "Автоімунні та інфекційні" } },
-      { id: "automation", label: { en: "Laboratory Automation (TLA)", uk: "Лабораторна автоматизація (TLA)" } },
-      { id: "molecular", label: { en: "Molecular analyzers (PCR)", uk: "Молекулярні аналізатори (ПЛР)" } },
-      { id: "hemostasis", label: { en: "Hemostasis analyzers", uk: "Аналізатори гемостазу" } },
     ],
   },
   {
     id: "reagents",
-    label: { en: "Reagents and test systems", uk: "Реагенти та тест-системи" },
+    label: { en: "Reagents and tests", uk: "Реагенти й тести" },
     sections: [],
   },
   {
     id: "qc-software",
-    label: { en: "Quality Control (QC) and Software", uk: "Контроль якості (QC) та ПЗ" },
+    label: { en: "Quality control and software", uk: "Контроль якості та ПЗ" },
     sections: [
-      { id: "qc", label: { en: "Quality Control (QC)", uk: "Контроль якості (QC)" } },
+      { id: "qc", label: { en: "Quality control", uk: "Контроль якості" } },
       { id: "software", label: { en: "Software", uk: "Програмне забезпечення" } },
     ],
   },

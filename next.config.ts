@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 
+import { legacyRedirectRules } from "./lib/legacy-redirects.ts";
+
 const isDevelopment = process.env.NODE_ENV === "development";
 
 const contentSecurityPolicy = [
@@ -31,6 +33,8 @@ const nextConfig: NextConfig = {
         destination: "/:locale/products",
         permanent: false,
       },
+      // Per-product pages that became sections of group pages or test menus.
+      ...legacyRedirectRules(),
     ];
   },
   async headers() {

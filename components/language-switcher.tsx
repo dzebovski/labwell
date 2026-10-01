@@ -11,11 +11,13 @@ import { LOCALE_COOKIE_NAME, switchLocale } from "@/lib/locale-routing";
 type LanguageSwitcherProps = {
   currentLocale: Locale;
   label: string;
+  /** Accessible name of the trigger: "Language: English". Falls back to `label`. */
+  currentLabel?: string;
   names: Record<Locale, string>;
 };
 
 const localeDetails: Record<Locale, { compact: string; flag: string }> = {
-  uk: { compact: "Укр", flag: "🇺🇦" },
+  uk: { compact: "УКР", flag: "🇺🇦" },
   en: { compact: "EN", flag: "🇬🇧" },
 };
 
@@ -26,6 +28,7 @@ function rememberLocale(locale: Locale) {
 export function LanguageSwitcher({
   currentLocale,
   label,
+  currentLabel,
   names,
 }: LanguageSwitcherProps) {
   const pathname = usePathname() || "/";
@@ -70,13 +73,12 @@ export function LanguageSwitcher({
         <button
           ref={triggerRef}
           type="button"
-          aria-label={label}
+          aria-label={currentLabel ?? label}
           aria-expanded={isOpen}
           aria-haspopup="listbox"
           onClick={() => setIsOpen((open) => !open)}
           className={styles.languageTrigger}
         >
-          <span aria-hidden="true">{current.flag}</span>
           <span>{current.compact}</span>
           <ChevronDown aria-hidden="true" size={14} className={isOpen ? styles.languageChevronOpen : undefined} />
         </button>
@@ -88,7 +90,7 @@ export function LanguageSwitcher({
               const details = localeDetails[locale];
               return (
                 <button key={locale} type="button" role="option" aria-selected={isCurrent} onClick={() => selectLocale(locale)} className={`${styles.languageOption} ${isCurrent ? styles.languageOptionActive : ""}`}>
-                  <span aria-hidden="true">{details.flag}</span>
+                  <span aria-hidden="true">{details.compact}</span>
                   <span>{names[locale]}</span>
                   {isCurrent ? <Check aria-hidden="true" size={16} /> : null}
                 </button>

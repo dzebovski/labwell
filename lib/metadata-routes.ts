@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 import { locales, type Locale } from "../i18n/config.ts";
-import { getRouteParams } from "./catalog.ts";
+import { brandProductsPath, getBrandsWithProducts, getRouteParams } from "./catalog.ts";
 import { withLocale } from "./locale-routing.ts";
 import { listGroupSlugs, listOverviewSlugs, listProductSlugs, listTestMenuSlugs } from "./site-content/load.ts";
 
@@ -68,6 +68,7 @@ export function listPublicPaths(): string[] {
       ["brandSlug", "topicSlug"],
       getRouteParams("/brands", ["brandSlug", "topicSlug"]),
     ),
+    ...getBrandsWithProducts().map((brand) => brandProductsPath(brand.id)),
   ];
 
   return [...new Set(paths)];

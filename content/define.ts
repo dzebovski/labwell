@@ -24,7 +24,9 @@ type EntryBase = {
 
 export type ProductEntry = EntryBase & {
   itemType: LocalizedText;
-  /** Canonical place in the "Product catalog" menu; the page lives at /products/{slug}. */
+  /** Where the page lives: /products/{slug} by default, /test-menus/{slug} for test menus. */
+  basePath?: "/test-menus";
+  /** Canonical place in the "Product catalog" menu. */
   catalog: CatalogPlacement;
   /** Extra links from "Clinical directions" to this same product page. */
   clinical?: readonly (ClinicalPlacement & { note?: LocalizedText })[];

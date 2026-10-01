@@ -205,7 +205,8 @@ a.compareModel:hover .compareName {
 
   .compareCell {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
+    /* A long text value (sample types) wraps in its own column instead of squeezing the model name. */
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
     align-items: baseline;
     gap: 0 var(--space-4);
     padding: var(--space-1) 0;

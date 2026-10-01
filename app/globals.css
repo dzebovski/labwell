@@ -7,6 +7,7 @@
  *   mobile   0–767 px    @media (max-width: 47.9375rem)
  *   tablet   768–1279 px @media (min-width: 48rem) and (max-width: 79.9375rem)
  *   desktop  ≥1280 px    @media (min-width: 80rem)
+ *   full header  ≥1366 px  @media (min-width: 85.375rem) — temporary, until 1280–1365 is designed
  * Check layouts at 390, 768, 1024, 1280 and 1440 px.
  */
 

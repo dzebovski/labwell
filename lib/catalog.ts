@@ -8,6 +8,7 @@ import {
   type TaxonomyGroup,
   type TaxonomySection,
 } from "../content/taxonomy.ts";
+import { isRedirectedPath } from "./legacy-redirects.ts";
 import { withLocale } from "./locale-routing.ts";
 
 export type { LocalizedText } from "../content/define.ts";
@@ -73,10 +74,10 @@ function getBrand(id: BrandId): Brand {
 }
 
 function buildPages(): ContentPage[] {
-  const productRecords = products.map(({ catalog, clinical = [], brand, ...entry }): ContentPage => ({
+  const productRecords = products.map(({ catalog, clinical = [], brand, basePath = "/products", ...entry }): ContentPage => ({
     ...entry,
     kind: "product",
-    path: `/products/${entry.slug}`,
+    path: `${basePath}/${entry.slug}`,
     brand: getBrand(brand),
     placements: [
       { menu: "catalog", group: catalog.group, section: catalog.section, order: catalog.order ?? 0 },
@@ -141,6 +142,9 @@ export function findCatalogProblems(pages: readonly ContentPage[] = contentPages
     if (page.slug && !/^[a-z0-9]+(-[a-z0-9]+)*$/.test(page.slug)) {
       problems.push(`Invalid slug "${page.slug}" (${page.path})`);
     }
+    if (page.kind === "brand" && page.slug === brandProductsSlug) {
+      problems.push(`${page.path} clashes with the brand product listing`);
+    }
 
     const seenMenus = new Set<string>();
     for (const placement of page.placements) {
@@ -169,6 +173,9 @@ export function findCatalogProblems(pages: readonly ContentPage[] = contentPages
 
   return problems;
 }
+
+/** Last segment of `/brands/{brand}/products`, the listing of every product of a brand. */
+export const brandProductsSlug = "products";
 
 const rootPaths: Record<MenuId, string> = {
   catalog: "/products",
@@ -306,6 +313,56 @@ export function getListingBlocks(
   const blocks = other.length > 0 ? [...named, { title: defaultSectionLabel, pages: other }] : named;
   // A group without named sections needs no block heading.
   return named.length === 0 ? blocks.map((block) => ({ pages: block.pages })) : blocks;
+}
+
+export function brandProductsPath(brandId: string) {
+  return `/brands/${brandId}/${brandProductsSlug}`;
+}
+
+/** Catalog pages of a brand (products, groups, overviews, test menus), without addresses that redirect. */
+export function getBrandProducts(brandId: string) {
+  return contentPages.filter(
+    (page) =>
+      page.kind === "product" && page.brand.id === brandId && !isRedirectedPath(page.path),
+  );
+}
+
+/** Brands that have a product listing at `/brands/{brand}/products`. */
+export function getBrandsWithProducts(): Brand[] {
+  return brands.filter((brand) => getBrandProducts(brand.id).length > 0);
+}
+
+/** The pages of one brand, grouped by their place in the catalog menu (type, then direction). */
+export function getBrandProductBlocks(brandId: string, locale: Locale, otherLabel: string): ListingBlock[] {
+  const owned = new Set(getBrandProducts(brandId).map((page) => page.path));
+  const blocks: ListingBlock[] = [];
+  for (const group of catalogGroups) {
+    const hasSections = group.sections.some((section) => getMenuPages("catalog", group.id, section.id).length > 0);
+    for (const section of [...group.sections, undefined]) {
+      const pages = getMenuPages("catalog", group.id, section?.id).filter((page) => owned.has(page.path));
+      if (pages.length === 0) continue;
+      const category = getCategory("catalog", group.id, section?.id);
+      blocks.push({
+        title: section ? section.label[locale] : hasSections ? otherLabel : group.label[locale],
+        href: category ? withLocale(locale, category.path) : undefined,
+        pages,
+      });
+    }
+  }
+  return blocks;
+}
+
+export function getBrandProductsBreadcrumbs(
+  brand: Brand,
+  locale: Locale,
+  labels: RootLabels,
+  currentLabel: string,
+): Breadcrumb[] {
+  return [
+    rootCrumb("brands", locale, labels, false),
+    brandCrumb(brand, locale, false),
+    { label: currentLabel },
+  ];
 }
 
 type RootLabels = { products: string; clinicalDirections: string; brands: string };

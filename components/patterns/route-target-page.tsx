@@ -11,8 +11,7 @@ export async function RouteTargetPage({ locale, path }: { locale: string; path: 
 
   const { category } = target;
   const dictionary = await getDictionary(resolvedLocale);
-  const defaultSectionLabel =
-    category.menu === "catalog" ? dictionary.navigation.portfolio : dictionary.navigation.otherSolutions;
+  const defaultSectionLabel = dictionary.navigation.otherSolutions;
 
   return (
     <ListingPage

@@ -1,32 +1,33 @@
 "use client";
 
-import { ChevronDown, ChevronRight, Menu, X } from "lucide-react";
+import { ChevronDown, ChevronRight, Menu, Search, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Fragment, useEffect, useId, useMemo, useRef, useState, type FocusEvent } from "react";
+import { Fragment, useEffect, useId, useRef, useState, type FocusEvent } from "react";
 
 import { LanguageSwitcher } from "@/components/language-switcher";
 import styles from "@/components/labwell-ui.module.css";
+import { MegaPanel, type MegaMenuLabels } from "@/components/patterns/mega-menu";
 import { IconButton, LabLink, SearchField } from "@/components/ui/primitives";
 import type { Locale } from "@/i18n/config";
-import type {
-  HeaderMegaGroup,
-  HeaderMegaLeaf,
-  HeaderMegaSection,
-  HeaderNavigationItem,
-} from "@/lib/site-navigation";
+import type { HeaderNavigationItem } from "@/lib/site-navigation";
 
 export type HeaderNavItem = HeaderNavigationItem;
 
+type MegaItem = Extract<HeaderNavigationItem, { type: "mega" }>;
+
 export type SiteHeaderProps = {
   navItems: HeaderNavItem[];
-  search?: { label: string; placeholder: string };
+  /** Search is not built: the button is visible but inactive and explains why. */
+  search?: { label: string; unavailable: string };
   cta?: { label: string; href: string };
+  megaMenu: MegaMenuLabels;
   homeHref?: string;
   languageSwitcher?: {
     currentLocale: Locale;
     label: string;
+    currentLabel?: string;
     names: Record<Locale, string>;
   };
   accessibility?: {
@@ -56,24 +57,11 @@ function isCurrentPath(pathname: string, href: string) {
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
-function groupLinksByBrand(links: HeaderMegaLeaf[]) {
-  const groups = new Map<string, HeaderMegaLeaf[]>();
-  links.forEach((link) => groups.set(link.brand, [...(groups.get(link.brand) ?? []), link]));
-  return Array.from(groups.entries());
-}
-
-function firstSection(group: HeaderMegaGroup | undefined) {
-  return group?.sections[0];
-}
-
-function firstLeaf(section: HeaderMegaSection | undefined) {
-  return section?.links[0];
-}
-
 export function SiteHeader({
   navItems,
   search,
   cta,
+  megaMenu,
   homeHref = "/",
   languageSwitcher,
   accessibility = defaultAccessibility,
@@ -81,9 +69,9 @@ export function SiteHeader({
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [desktopOpen, setDesktopOpen] = useState<string | null>(null);
-  const [activeGroupId, setActiveGroupId] = useState<string | null>(null);
-  const [activeSectionId, setActiveSectionId] = useState<string | null>(null);
-  const [activeLeafId, setActiveLeafId] = useState<string | null>(null);
+  /** How the open panel was opened: a click on the tab pins it, hovering does not. */
+  const [pinned, setPinned] = useState(false);
+  const [focusPanel, setFocusPanel] = useState(false);
   const [mobileOpen, setMobileOpen] = useState<string | null>(null);
   const [mobileSections, setMobileSections] = useState<string[]>([]);
   const panelId = useId();
@@ -91,57 +79,46 @@ export function SiteHeader({
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const activeTriggerRef = useRef<HTMLButtonElement | null>(null);
 
-  const activeItem = useMemo(
-    () =>
-      navItems.find(
-        (item): item is Extract<HeaderNavigationItem, { type: "mega" }> =>
-          item.type === "mega" && item.id === desktopOpen,
-      ),
-    [desktopOpen, navItems],
-  );
-  const activeGroup =
-    activeItem?.groups.find((group) => group.id === activeGroupId) ?? activeItem?.groups[0];
-  const activeSection =
-    activeGroup?.sections.find((section) => section.id === activeSectionId) ??
-    firstSection(activeGroup);
-  const activeLeaf =
-    activeSection?.links.find((leaf) => leaf.id === activeLeafId) ?? firstLeaf(activeSection);
+  const activeItem = navItems.find((item): item is MegaItem => item.type === "mega" && item.id === desktopOpen);
 
   function closeDesktopNavigation({ restoreFocus = false } = {}) {
     setDesktopOpen(null);
+    setPinned(false);
+    setFocusPanel(false);
     if (restoreFocus) activeTriggerRef.current?.focus();
   }
 
   function closeNavigation() {
-    setDesktopOpen(null);
+    closeDesktopNavigation();
     setMobileOpen(null);
     setMobileSections([]);
     setIsOpen(false);
   }
 
-  function activateMegaMenu(
-    item: Extract<HeaderNavigationItem, { type: "mega" }>,
-    trigger?: HTMLButtonElement,
-  ) {
+  function openMegaMenu(item: MegaItem, trigger?: HTMLButtonElement | null, options: { pin?: boolean } = {}) {
     if (trigger) activeTriggerRef.current = trigger;
-    const group = item.groups[0];
-    const section = firstSection(group);
     setDesktopOpen(item.id);
-    setActiveGroupId(group?.id ?? null);
-    setActiveSectionId(section?.id ?? null);
-    setActiveLeafId(firstLeaf(section)?.id ?? null);
+    setPinned(Boolean(options.pin));
+    setFocusPanel(false);
   }
 
-  function activateGroup(group: HeaderMegaGroup) {
-    const section = firstSection(group);
-    setActiveGroupId(group.id);
-    setActiveSectionId(section?.id ?? null);
-    setActiveLeafId(firstLeaf(section)?.id ?? null);
+  function switchPanel(panel: MegaItem["panel"]) {
+    const target = navItems.find((item): item is MegaItem => item.type === "mega" && item.panel === panel);
+    if (!target) return;
+    activeTriggerRef.current = document.getElementById(`${panelId}-${target.id}-trigger`) as HTMLButtonElement | null;
+    setDesktopOpen(target.id);
+    setPinned(true);
+    setFocusPanel(true);
   }
 
-  function activateSection(section: HeaderMegaSection) {
-    setActiveSectionId(section.id);
-    setActiveLeafId(firstLeaf(section)?.id ?? null);
+  // Following any link, or going back and forth in history, closes the panels.
+  const [shownPathname, setShownPathname] = useState(pathname);
+  if (shownPathname !== pathname) {
+    setShownPathname(pathname);
+    setDesktopOpen(null);
+    setPinned(false);
+    setMobileOpen(null);
+    setIsOpen(false);
   }
 
   useEffect(() => {
@@ -180,96 +157,6 @@ export function SiteHeader({
     if (next && !event.currentTarget.contains(next as Node)) closeDesktopNavigation();
   }
 
-  function renderMegaPanel(activeItem: Extract<HeaderNavigationItem, { type: "mega" }>) {
-    return (
-      <div id={`${panelId}-${activeItem.id}`} className={styles.megaPanel} role="region" aria-labelledby={`${panelId}-${activeItem.id}-trigger`}>
-        <div className={styles.megaPanelHeader}>
-          <div className={styles.megaBreadcrumb}>
-            <span>LABWELL</span><ChevronRight size={13} aria-hidden="true" />
-            <Link href={activeItem.href} onClick={closeNavigation}>{activeItem.label}</Link>
-          </div>
-          <IconButton label={accessibility.closeMegaMenu ?? accessibility.closeMenu} className={styles.megaCloseButton} onClick={() => closeDesktopNavigation({ restoreFocus: true })}>
-            <X size={18} aria-hidden="true" />
-          </IconButton>
-        </div>
-
-        {activeItem.panel === "brands" ? (
-          <div className={styles.brandMegaGrid}>
-            {activeItem.groups.map((group) => {
-              const logo = group.logo;
-              return (
-                <section key={group.id} className={styles.brandMegaColumn}>
-                  <div className={styles.brandMegaHeading}>
-                    <h2>{group.label}</h2>
-                    {logo ? <Image src={logo.src} alt={`${group.label} logo`} width={logo.width} height={logo.height} /> : null}
-                  </div>
-                  <div className={styles.brandMegaLinks}>
-                    {group.sections.flatMap((section) => section.links).map((leaf) => (
-                      <Link key={leaf.id} href={leaf.href} className={styles.megaLeafLink} onClick={closeNavigation}>
-                        <span>{leaf.label}</span><ChevronRight size={15} aria-hidden="true" />
-                      </Link>
-                    ))}
-                  </div>
-                </section>
-              );
-            })}
-          </div>
-        ) : (
-          <div className={styles.megaGrid}>
-            <div className={styles.megaRail}>
-              {activeItem.groups.map((group) => (
-                <button key={group.id} type="button" className={`${styles.megaRailButton} ${activeGroup?.id === group.id ? styles.megaRailButtonActive : ""}`} aria-pressed={activeGroup?.id === group.id} onPointerEnter={() => activateGroup(group)} onClick={() => activateGroup(group)}>
-                  <span>{group.label}</span><ChevronRight size={16} aria-hidden="true" />
-                </button>
-              ))}
-            </div>
-
-            <div className={styles.megaSections}>
-              {activeGroup?.sections.map((section) => (
-                <button key={section.id} type="button" className={`${styles.megaSectionButton} ${activeSection?.id === section.id ? styles.megaSectionButtonActive : ""}`} aria-pressed={activeSection?.id === section.id} onPointerEnter={() => activateSection(section)} onClick={() => activateSection(section)}>
-                  <span>{section.label}</span><ChevronRight size={15} aria-hidden="true" />
-                </button>
-              ))}
-            </div>
-
-            <div className={styles.megaResults}>
-              <div className={styles.megaBrandGroups}>
-                {groupLinksByBrand(activeSection?.links ?? []).map(([brand, links]) => {
-                  const logo = links[0]?.logo;
-                  return (
-                    <section key={brand} className={styles.megaBrandGroup}>
-                      <div className={styles.megaBrandLabel}>
-                        <span>{brand}</span>
-                        {logo ? <Image src={logo.src} alt={`${brand} logo`} width={logo.width} height={logo.height} /> : null}
-                      </div>
-                      <div>
-                        {links.map((leaf) => (
-                          <Link key={leaf.id} href={leaf.href} className={`${styles.megaLeafLink} ${activeLeaf?.id === leaf.id ? styles.megaLeafLinkActive : ""}`} onPointerEnter={() => setActiveLeafId(leaf.id)} onFocus={() => setActiveLeafId(leaf.id)} onClick={closeNavigation}>
-                            <span>{leaf.label}</span><ChevronRight size={15} aria-hidden="true" />
-                          </Link>
-                        ))}
-                      </div>
-                    </section>
-                  );
-                })}
-              </div>
-
-              {activeLeaf ? (
-                <aside className={styles.megaPreview} aria-live="polite">
-                  <span className={styles.megaPreviewBrand}>{activeLeaf.brand}</span>
-                  <h3>{activeLeaf.label}</h3>
-                  {activeLeaf.itemType ? <p className={styles.megaPreviewType}>{activeLeaf.itemType}</p> : null}
-                  <p>{activeLeaf.description}</p>
-                  <span className={styles.megaPreviewAction}>{activeLeaf.label}<ChevronRight size={15} aria-hidden="true" /></span>
-                </aside>
-              ) : null}
-            </div>
-          </div>
-        )}
-      </div>
-    );
-  }
-
   const logo = (
     <Image src="/logo_LABWELL.png" alt="LabWell" width={180} height={40} className={styles.headerLogo} priority />
   );
@@ -296,11 +183,11 @@ export function SiteHeader({
                   href={item.href}
                   className={`${styles.headerNavLink} ${isActive ? styles.headerNavLinkActive : ""}`}
                   aria-current={pathname === item.href ? "page" : undefined}
-                  onPointerEnter={() => closeDesktopNavigation()}
+                  onPointerEnter={(event) => event.pointerType === "mouse" && closeDesktopNavigation()}
                   onFocus={() => closeDesktopNavigation()}
                   onClick={closeNavigation}
                 >
-                  {item.label}
+                  <span className={styles.headerNavLabel} data-label={item.label}>{item.label}</span>
                 </Link>
               );
             }
@@ -314,28 +201,60 @@ export function SiteHeader({
                   className={`${styles.headerNavButton} ${isActive ? styles.headerNavLinkActive : ""}`}
                   aria-expanded={isDropdownOpen}
                   aria-controls={`${panelId}-${item.id}`}
-                  onPointerEnter={(event) => activateMegaMenu(item, event.currentTarget)}
+                  onPointerEnter={(event) => {
+                    if (event.pointerType === "mouse" && !isDropdownOpen) openMegaMenu(item, event.currentTarget);
+                  }}
                   onFocus={() => {
                     if (desktopOpen && !isDropdownOpen) closeDesktopNavigation();
                   }}
-                  onClick={(event) =>
-                    isDropdownOpen ? closeDesktopNavigation() : activateMegaMenu(item, event.currentTarget)
-                  }
+                  onClick={(event) => {
+                    // Opened by hovering: the first click keeps the panel open instead of closing it.
+                    if (isDropdownOpen && pinned) closeDesktopNavigation();
+                    else openMegaMenu(item, event.currentTarget, { pin: true });
+                  }}
                 >
-                  {item.label}
+                  <span className={styles.headerNavLabel} data-label={item.label}>{item.label}</span>
                   <ChevronDown size={14} aria-hidden="true" />
                 </button>
                 {/* Rendered right after its trigger so Tab moves from the trigger into the panel. */}
-                {isDropdownOpen && activeItem ? renderMegaPanel(activeItem) : null}
+                {isDropdownOpen && activeItem ? (
+                  <MegaPanel
+                    key={activeItem.id}
+                    item={activeItem}
+                    id={`${panelId}-${activeItem.id}`}
+                    labels={megaMenu}
+                    closeLabel={accessibility.closeMegaMenu ?? accessibility.closeMenu}
+                    contactHref={cta?.href ?? "/contacts"}
+                    onNavigate={closeNavigation}
+                    onClose={() => closeDesktopNavigation({ restoreFocus: true })}
+                    onSwitch={switchPanel}
+                    autoFocus={focusPanel}
+                  />
+                ) : null}
               </Fragment>
             );
           })}
         </nav>
 
         <div className={styles.headerActions}>
-          {search ? <SearchField id={`${panelId}-desktop-search`} label={search.label} placeholder={search.placeholder} hideLabel containerClassName={styles.headerSearch} /> : null}
+          {search ? (
+            <div className={styles.headerSearch}>
+              <button
+                type="button"
+                className={styles.headerSearchButton}
+                aria-label={search.label}
+                aria-disabled="true"
+                aria-describedby={`${panelId}-search-tip`}
+              >
+                <Search size={18} aria-hidden="true" />
+              </button>
+              <span id={`${panelId}-search-tip`} role="tooltip" className={styles.headerSearchTip}>
+                {search.unavailable}
+              </span>
+            </div>
+          ) : null}
           {languageSwitcher ? <LanguageSwitcher {...languageSwitcher} /> : null}
-          {cta ? <LabLink href={cta.href} variant="button-primary">{cta.label}</LabLink> : null}
+          {cta ? <LabLink href={cta.href} variant="button-primary" className={styles.headerCta}>{cta.label}</LabLink> : null}
         </div>
 
         <IconButton ref={menuButtonRef} label={isOpen ? accessibility.closeMenu : accessibility.openMenu} aria-expanded={isOpen} aria-controls={panelId} className={styles.headerMenuButton} onClick={() => setIsOpen((open) => !open)}>
@@ -359,33 +278,59 @@ export function SiteHeader({
                   {isGroupOpen ? (
                     <div className={styles.headerMobileSubmenu}>
                       <Link href={item.href} className={styles.headerMobileAllLink} onClick={closeNavigation}>{item.label}<ChevronRight size={15} aria-hidden="true" /></Link>
-                      {item.groups.map((group) => {
-                        const isSectionOpen = mobileSections.includes(group.id);
-                        return (
-                          <div key={group.id} className={styles.headerMobileSubmenuItem}>
-                            <button type="button" className={styles.headerMobileSubmenuButton} aria-expanded={isSectionOpen} onClick={() => toggleMobileSection(group.id)}>
-                              <span>{group.label}</span><ChevronDown size={16} aria-hidden="true" />
-                            </button>
-                            {isSectionOpen ? (
-                              <div className={styles.headerMobileNestedList}>
-                                {group.sections.map((section) => (
-                                  <section key={section.id} className={styles.headerMobileSection}>
-                                    {group.sections.length > 1 ? <h3>{section.label}</h3> : null}
-                                    {section.links.map((leaf) => <Link key={leaf.id} href={leaf.href} className={styles.headerMobileNestedLink} onClick={closeNavigation}>{leaf.label}</Link>)}
-                                  </section>
-                                ))}
+                      {item.panel === "brands"
+                        ? item.brands.map((brand) => {
+                            const isBrandOpen = mobileSections.includes(brand.id);
+                            return (
+                              <div key={brand.id} className={styles.headerMobileSubmenuItem}>
+                                <button type="button" className={styles.headerMobileSubmenuButton} aria-expanded={isBrandOpen} onClick={() => toggleMobileSection(brand.id)}>
+                                  <span>{brand.label}</span><ChevronDown size={16} aria-hidden="true" />
+                                </button>
+                                {isBrandOpen ? (
+                                  <div className={styles.headerMobileNestedList}>
+                                    <section className={styles.headerMobileSection}>
+                                      <Link href={brand.allHref} className={styles.headerMobileNestedLink} onClick={closeNavigation}>{brand.allLabel}</Link>
+                                      {brand.lines.map((line) => <Link key={line.id} href={line.href} className={styles.headerMobileNestedLink} onClick={closeNavigation}>{line.label}</Link>)}
+                                      {brand.about ? <Link href={brand.about.href} className={styles.headerMobileNestedLink} onClick={closeNavigation}>{brand.about.label}</Link> : null}
+                                    </section>
+                                  </div>
+                                ) : null}
                               </div>
-                            ) : null}
-                          </div>
-                        );
-                      })}
+                            );
+                          })
+                        : item.groups.map((group) => {
+                            const isSectionOpen = mobileSections.includes(group.id);
+                            return (
+                              <div key={group.id} className={styles.headerMobileSubmenuItem}>
+                                <button type="button" className={styles.headerMobileSubmenuButton} aria-expanded={isSectionOpen} onClick={() => toggleMobileSection(group.id)}>
+                                  <span>{group.label}</span><ChevronDown size={16} aria-hidden="true" />
+                                </button>
+                                {isSectionOpen ? (
+                                  <div className={styles.headerMobileNestedList}>
+                                    {group.sections.length > 0 ? (
+                                      group.sections.map((section) => (
+                                        <section key={section.id} className={styles.headerMobileSection}>
+                                          <h3>{section.label}</h3>
+                                          {section.links.map((leaf) => <Link key={leaf.id} href={leaf.href} className={styles.headerMobileNestedLink} onClick={closeNavigation}>{leaf.label}</Link>)}
+                                        </section>
+                                      ))
+                                    ) : (
+                                      <section className={styles.headerMobileSection}>
+                                        {group.links.map((leaf) => <Link key={leaf.id} href={leaf.href} className={styles.headerMobileNestedLink} onClick={closeNavigation}>{leaf.label}</Link>)}
+                                      </section>
+                                    )}
+                                  </div>
+                                ) : null}
+                              </div>
+                            );
+                          })}
                     </div>
                   ) : null}
                 </div>
               );
             })}
           </nav>
-          {search ? <SearchField id={`${panelId}-mobile-search`} label={search.label} placeholder={search.placeholder} hideLabel /> : null}
+          {search ? <SearchField id={`${panelId}-mobile-search`} label={search.label} placeholder={search.unavailable} hideLabel disabled /> : null}
           {languageSwitcher ? <LanguageSwitcher {...languageSwitcher} /> : null}
           {cta ? <LabLink href={cta.href} variant="button-primary">{cta.label}</LabLink> : null}
         </div>
