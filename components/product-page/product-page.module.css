@@ -1200,10 +1200,14 @@ a.relatedCard:hover {
 
 @media (min-width: 64rem) {
   .heroGrid {
-    grid-template-columns: minmax(0, 1fr) 32.5rem;
+    grid-template-columns: minmax(0, 1fr) var(--hero-media, 32.5rem);
     align-items: center;
     gap: 3.5rem;
     margin-top: var(--space-6);
+  }
+
+  .heroGrid[data-align="end"] {
+    align-items: end;
   }
 
   .heroMedia {

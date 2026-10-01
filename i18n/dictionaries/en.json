@@ -47,6 +47,10 @@
     "phone": "Phone",
     "email": "Email",
     "documentBadge": "PDF",
+    "positionLabel": "{n} of {total} on this page",
+    "groupFilter": "Filter by group",
+    "askPrefill": "Interested in {name}. ",
+    "compareCorner": "Metric",
     "form": {
       "required": "Fill in this field",
       "phone": "Enter a valid phone number",

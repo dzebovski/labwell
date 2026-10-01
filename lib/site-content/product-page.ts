@@ -2,9 +2,9 @@ import "server-only";
 
 import type { Metadata } from "next";
 
-import { SITE_URL } from "../site-config.ts";
 import { loadProduct, loadShared, type ContentLocale } from "./load.ts";
 import { buildProductPage, type ProductPageModel } from "./model.ts";
+import { contentMetadata } from "./metadata.ts";
 import { mainPhoto } from "./photos.ts";
 
 export function getProductPageModel(slug: string, locale: ContentLocale): ProductPageModel {
@@ -16,31 +16,8 @@ export function getProductPageModel(slug: string, locale: ContentLocale): Produc
   });
 }
 
-/**
- * title/description from `seo`, canonical to the page itself, hreflang uk/en.
- * `seo.title` already ends with "| LabWell", so it is `absolute`: the locale layout's
- * template would otherwise append the site name a second time.
- */
+/** Metadata of a template T page; see `contentMetadata`. */
 export function getProductMetadata(slug: string, locale: ContentLocale): Metadata {
   const { seo, canonicalPath } = getProductPageModel(slug, locale);
-  return {
-    metadataBase: new URL(SITE_URL),
-    title: { absolute: seo.title },
-    description: seo.description,
-    alternates: {
-      canonical: `/${locale}${canonicalPath}`,
-      languages: {
-        uk: `/uk${canonicalPath}`,
-        en: `/en${canonicalPath}`,
-        "x-default": `/uk${canonicalPath}`,
-      },
-    },
-    openGraph: {
-      type: "website",
-      title: seo.title,
-      description: seo.description,
-      url: `/${locale}${canonicalPath}`,
-      locale: locale === "uk" ? "uk_UA" : "en_US",
-    },
-  };
+  return contentMetadata(seo, canonicalPath, locale);
 }

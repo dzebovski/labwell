@@ -17,6 +17,15 @@ export function ItemsTable({ items }: { items: ItemsModel }) {
         title={items.h2}
         aside={items.summary ? <span className={styles.caption}>{items.summary}</span> : undefined}
       />
+      <OrderTable items={items} />
+    </Section>
+  );
+}
+
+/** The card with the order table: shared by the product page (T6) and the sub-sections of a group page (G3). */
+export function OrderTable({ items }: { items: ItemsModel }) {
+  return (
+    <>
       <div className={`${styles.card} ${styles.tableCard}`}>
         {items.layout === "matrix" ? (
           // Explicit roles keep the table semantics when CSS turns rows into stacked cards on phones.
@@ -86,6 +95,6 @@ export function ItemsTable({ items }: { items: ItemsModel }) {
           </div>
         ) : null}
       </div>
-    </Section>
+    </>
   );
 }

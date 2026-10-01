@@ -81,12 +81,16 @@ test("a CTA that points at a hidden block is dropped", () => {
   assert.equal(noContact.hero.primaryCta, undefined);
 });
 
-test("test-menu and overview links go to current addresses; unknown pages lose the link", () => {
+test("pages from content/ are linked directly; pages not built yet map to current addresses; unknown pages lose the link", () => {
+  // Pilot pages of templates C1, C2 and G exist in content/: no mapping, anchors are kept.
+  assert.equal(resolveHref("/test-menus/snibe-clia-test-menu", "uk"), "/uk/test-menus/snibe-clia-test-menu");
+  assert.equal(resolveHref("/products/maglumi", "en"), "/en/products/maglumi");
+  assert.equal(resolveHref("/products/maglumi-m-series#maglumi-600", "uk"), "/uk/products/maglumi-m-series#maglumi-600");
+  // Not built yet (batch B): still the current address.
   assert.equal(
-    resolveHref("/test-menus/snibe-clia-test-menu", "uk"),
-    "/uk/products/maglumi-clia-test-menu-278-parameters",
+    resolveHref("/test-menus/snibe-biochemistry-test-menu", "uk"),
+    "/uk/products/biochemistry-test-menu",
   );
-  assert.equal(resolveHref("/products/maglumi", "en"), "/en/brands/snibe/maglumi-immunochemistry");
   assert.equal(resolveHref("/services", "en"), "/en/services");
   assert.equal(resolveHref("/products/maglumi-x3", "uk"), "/uk/products/maglumi-x3");
   assert.equal(

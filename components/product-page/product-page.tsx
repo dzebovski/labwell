@@ -26,6 +26,10 @@ export type ProductPageLabels = {
   phone: string;
   email: string;
   documentBadge: string;
+  positionLabel: string;
+  groupFilter: string;
+  askPrefill: string;
+  compareCorner: string;
   form: { required: string; phone: string; email: string };
 };
 

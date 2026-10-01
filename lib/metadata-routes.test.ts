@@ -28,6 +28,10 @@ test("includes template T products and excludes service and redirect-only routes
   const paths = listPublicPaths();
 
   assert.ok(paths.includes("/products/variant-nbs-newborn-screening-system"));
+  // Group, overview and test menu pages from content/ are public too.
+  assert.ok(paths.includes("/products/maglumi-m-series"));
+  assert.ok(paths.includes("/products/maglumi"));
+  assert.ok(paths.includes("/test-menus/snibe-clia-test-menu"));
   assert.ok(!paths.some((path) => path.startsWith("/design")));
   assert.ok(!paths.includes("/products/software"));
   assert.ok(!paths.includes("/products/quality-control/controls"));

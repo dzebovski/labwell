@@ -110,7 +110,7 @@ export type ProductPageModel = {
   related?: { h2: string; allLink?: LinkModel; cards: CardModel[] };
 };
 
-function link(
+export function link(
   item: { label: string; href: string } | undefined,
   locale: SiteLocale,
 ): LinkModel | undefined {
@@ -119,7 +119,7 @@ function link(
   return href ? { label: item.label, href, external: /^https?:/.test(href) } : undefined;
 }
 
-function card(
+export function card(
   item: { eyebrow: string; title: string; href: string; facts?: Array<[string, string]> },
   locale: SiteLocale,
 ): CardModel {
@@ -131,10 +131,103 @@ function card(
   };
 }
 
-function splitH1(h1: string, name: string) {
+export function splitH1(h1: string, name: string) {
   const [head, ...rest] = h1.split(" — ");
   if (rest.length && head === name) return { accent: head, rest: ` — ${rest.join(" — ")}` };
   return { accent: undefined, rest: h1 };
+}
+
+
+/** Breadcrumb labels from content: only "Home" and "Products" are pages; the last item is the current page. */
+export function buildBreadcrumbs(labels: string[], locale: SiteLocale) {
+  const crumbs: Array<{ label: string; href?: string }> = labels.map((label, index) => ({
+    label,
+    href: index === 0 ? `/${locale}` : index === 1 ? `/${locale}/products` : undefined,
+  }));
+  crumbs[crumbs.length - 1].href = undefined;
+  return crumbs;
+}
+
+export function buildFaq(
+  source: ProductContent["T10_faq"],
+  contactShown: boolean,
+  shared: SharedContent,
+  locale: SiteLocale,
+): ProductPageModel["faq"] {
+  if (!source.show) return undefined;
+  const items = source.items.filter((item) => !hasPlaceholder(item.q + item.a));
+  if (!items.length) return undefined;
+  const asideLink = contactShown
+    ? link({ label: shared.faqAside.link, href: "#contact" }, locale)
+    : undefined;
+  return {
+    h2: source.h2,
+    items: items.map((item) => ({ q: item.q, a: item.a, link: link(item.link, locale) })),
+    aside: asideLink ? { text: shared.faqAside.text, link: asideLink } : undefined,
+  };
+}
+
+export function buildLabwell(
+  source: ProductContent["T11_labwell"],
+  shared: SharedContent,
+  locale: SiteLocale,
+): ProductPageModel["labwell"] {
+  if (!source.show) return undefined;
+  const compact = source.use === "shared.labwell.itemsForLine";
+  return {
+    h2: shared.labwell.h2,
+    link: link(shared.labwell.link, locale),
+    compact,
+    items: compact ? shared.labwell.itemsForLine : shared.labwell.items,
+  };
+}
+
+export function buildContact(
+  source: ProductContent["T12_contact"],
+  shared: SharedContent,
+): ContactModel | undefined {
+  if (!source.show) return undefined;
+  const form = shared.contact.form;
+  return {
+    h2: source.h2,
+    text: source.text,
+    messagePrefill: source.messagePrefill,
+    phone: publishable(shared.contact.phone),
+    email: publishable(shared.contact.email),
+    consent: publishable(form.consent),
+    submit: form.submit,
+    fields: form.fields,
+  };
+}
+
+/** Order-table rows: placeholders become empty cells; the pack-size column is dropped when no row has one. */
+export function buildListItems(input: {
+  h2: string;
+  columns: string[];
+  rows: Array<{ name: string; catalogNumber?: string; packSize?: string }>;
+  footnote?: string;
+}): Extract<ItemsModel, { layout: "list" }> | undefined {
+  const rows = input.rows
+    .filter((row) => !hasPlaceholder(row.name))
+    .map((row) => ({
+      name: row.name,
+      catalogNumber: publishable(row.catalogNumber),
+      packSize: publishable(row.packSize),
+    }));
+  if (!rows.length) return undefined;
+  const withPack = rows.some((row) => row.packSize);
+  return {
+    layout: "list",
+    h2: input.h2,
+    columns: withPack ? input.columns : input.columns.slice(0, 2),
+    rows,
+    footnote: publishable(input.footnote),
+  };
+}
+
+/** A CTA that points at a block that is not rendered would be a dead anchor. */
+export function usableLink(cta: LinkModel | undefined, anchors: ReadonlySet<string>) {
+  return cta && (!cta.href.startsWith("#") || anchors.has(cta.href)) ? cta : undefined;
 }
 
 export function buildProductPage(input: {
@@ -148,16 +241,7 @@ export function buildProductPage(input: {
   const name = product.T1_breadcrumbs[product.T1_breadcrumbs.length - 1];
   const h1 = splitH1(product.T2_hero.h1, name);
 
-  const breadcrumbs = product.T1_breadcrumbs.map((label, index) => ({
-    label,
-    href:
-      index === 0
-        ? `/${locale}`
-        : index === 1
-          ? `/${locale}/products`
-          : undefined,
-  }));
-  breadcrumbs[breadcrumbs.length - 1].href = undefined;
+  const breadcrumbs = buildBreadcrumbs(product.T1_breadcrumbs, locale);
 
   const t3 = product.T3_about;
   const t4 = product.T4_specs;
@@ -212,16 +296,8 @@ export function buildProductPage(input: {
         .map((row) => ({ name: row.name, nameUk: publishable(row.nameUk), catalogNumbers: row.catalogNumbers! }));
       if (rows.length) items = { layout: "matrix", columns: t6.columns, rows, ...common };
     } else {
-      const rows = t6.rows
-        .filter((row) => !hasPlaceholder(row.name))
-        .map((row) => ({
-          name: row.name,
-          catalogNumber: publishable(row.catalogNumber),
-          packSize: publishable(row.packSize),
-        }));
-      const withPack = rows.some((row) => row.packSize);
-      const columns = withPack ? t6.columns : t6.columns.slice(0, 2);
-      if (rows.length) items = { layout: "list", columns, rows, ...common };
+      const list = buildListItems({ h2: t6.h2, columns: t6.columns, rows: t6.rows });
+      if (list) items = { ...list, summary: common.summary, footnote: common.footnote, cta: common.cta };
     }
   }
 
@@ -259,34 +335,14 @@ export function buildProductPage(input: {
         }
       : undefined;
 
-  const faqItems = t10.show ? t10.items.filter((item) => !hasPlaceholder(item.q + item.a)) : [];
-  const faqAsideLink = t12.show
-    ? link({ label: shared.faqAside.link, href: "#contact" }, locale)
-    : undefined;
-
-  const labwellSource = t11.show ? shared.labwell : undefined;
-
-  const contactForm = shared.contact.form;
-  const contact: ContactModel | undefined = t12.show
-    ? {
-        h2: t12.h2,
-        text: t12.text,
-        messagePrefill: t12.messagePrefill,
-        phone: publishable(shared.contact.phone),
-        email: publishable(shared.contact.email),
-        consent: publishable(contactForm.consent),
-        submit: contactForm.submit,
-        fields: contactForm.fields,
-      }
-    : undefined;
+  const contact = buildContact(t12, shared);
 
   // A CTA that points at a block that is not rendered would be a dead anchor.
   const anchors = new Set<string>();
   if (contact) anchors.add("#contact");
   if (specs) anchors.add("#specs");
   if (items) anchors.add("#items");
-  const usable = (cta: LinkModel | undefined) =>
-    cta && (!cta.href.startsWith("#") || anchors.has(cta.href)) ? cta : undefined;
+  const usable = (cta: LinkModel | undefined) => usableLink(cta, anchors);
 
   const hero = product.T2_hero;
 
@@ -318,28 +374,8 @@ export function buildProductPage(input: {
     items,
     storage,
     documents,
-    faq:
-      t10.show && faqItems.length
-        ? {
-            h2: t10.h2,
-            items: faqItems.map((item) => ({
-              q: item.q,
-              a: item.a,
-              link: link(item.link, locale),
-            })),
-            aside: faqAsideLink
-              ? { text: shared.faqAside.text, link: faqAsideLink }
-              : undefined,
-          }
-        : undefined,
-    labwell: labwellSource
-      ? {
-          h2: labwellSource.h2,
-          link: link(labwellSource.link, locale),
-          compact: t11.show && t11.use === "shared.labwell.itemsForLine",
-          items: t11.show && t11.use === "shared.labwell.itemsForLine" ? labwellSource.itemsForLine : labwellSource.items,
-        }
-      : undefined,
+    faq: buildFaq(t10, t12.show, shared, locale),
+    labwell: buildLabwell(t11, shared, locale),
     contact,
     related: related && related.cards.length ? related : undefined,
   };

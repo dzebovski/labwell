@@ -47,6 +47,10 @@
     "phone": "Телефон",
     "email": "Email",
     "documentBadge": "PDF",
+    "positionLabel": "{n} / {total} на сторінці",
+    "groupFilter": "Фільтр за групою",
+    "askPrefill": "Цікавить {name}. ",
+    "compareCorner": "Показник",
     "form": {
       "required": "Заповніть це поле",
       "phone": "Вкажіть коректний номер телефону",

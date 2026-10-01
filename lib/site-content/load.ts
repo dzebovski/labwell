@@ -14,6 +14,16 @@ import {
   type ProductContent,
   type SharedContent,
 } from "./schema.ts";
+import {
+  groupSchema,
+  overviewSchema,
+  testMenuSchema,
+  testsSchema,
+  type GroupContent,
+  type OverviewContent,
+  type TestMenuContent,
+  type TestsContent,
+} from "./schema-pages.ts";
 
 export const contentLocales = ["uk", "en"] as const;
 export type ContentLocale = (typeof contentLocales)[number];
@@ -53,9 +63,9 @@ function readJson<T>(file: string, schema: z.ZodType<T>): T {
   return result.data;
 }
 
-/** Slugs that have a page: a folder in `content/products/` with at least one file. */
-export function listProductSlugs(): string[] {
-  const dir = path.join(contentRoot(), "products");
+/** Slugs that have a page: a folder in `content/{section}/` with at least one file. */
+function listSlugs(section: "products" | "groups" | "overviews" | "test-menus"): string[] {
+  const dir = path.join(contentRoot(), section);
   if (!existsSync(dir)) return [];
   return readdirSync(dir, { withFileTypes: true })
     .filter((entry) => entry.isDirectory())
@@ -64,8 +74,103 @@ export function listProductSlugs(): string[] {
     .sort();
 }
 
+export function listProductSlugs(): string[] {
+  return listSlugs("products");
+}
+
+export function listGroupSlugs(): string[] {
+  return listSlugs("groups");
+}
+
+export function listOverviewSlugs(): string[] {
+  return listSlugs("overviews");
+}
+
+export function listTestMenuSlugs(): string[] {
+  return listSlugs("test-menus");
+}
+
 export function hasProductContent(slug: string): boolean {
   return listProductSlugs().includes(slug);
+}
+
+export function hasGroupContent(slug: string): boolean {
+  return listGroupSlugs().includes(slug);
+}
+
+export function hasOverviewContent(slug: string): boolean {
+  return listOverviewSlugs().includes(slug);
+}
+
+export function hasTestMenuContent(slug: string): boolean {
+  return listTestMenuSlugs().includes(slug);
+}
+
+/** What `/products/{slug}` renders from `content/`; products win over groups, groups over overviews. */
+export type ProductsRouteKind = "product" | "group" | "overview";
+
+export function productsRouteKind(slug: string): ProductsRouteKind | undefined {
+  if (hasProductContent(slug)) return "product";
+  if (hasGroupContent(slug)) return "group";
+  if (hasOverviewContent(slug)) return "overview";
+  return undefined;
+}
+
+function checkIdentity(
+  file: string,
+  page: { slug: string; url: string },
+  slug: string,
+  url: string,
+) {
+  if (page.slug !== slug) {
+    throw new SiteContentError(file, `"slug" is "${page.slug}", but the folder is "${slug}"`);
+  }
+  if (page.url !== url) {
+    throw new SiteContentError(file, `"url" is "${page.url}", expected "${url}"`);
+  }
+}
+
+const pageCache = new Map<string, unknown>();
+
+function cached<T>(key: string, read: () => T): T {
+  if (pageCache.has(key)) return pageCache.get(key) as T;
+  const value = read();
+  pageCache.set(key, value);
+  return value;
+}
+
+export function loadGroup(slug: string, locale: ContentLocale): GroupContent {
+  return cached(`group/${slug}/${locale}/${contentRoot()}`, () => {
+    const file = path.join(contentRoot(), "groups", slug, `${locale}.json`);
+    const group = readJson(file, groupSchema);
+    checkIdentity(file, group, slug, `/products/${slug}`);
+    return group;
+  });
+}
+
+export function loadOverview(slug: string, locale: ContentLocale): OverviewContent {
+  return cached(`overview/${slug}/${locale}/${contentRoot()}`, () => {
+    const file = path.join(contentRoot(), "overviews", slug, `${locale}.json`);
+    const overview = readJson(file, overviewSchema);
+    checkIdentity(file, overview, slug, `/products/${slug}`);
+    return overview;
+  });
+}
+
+export function loadTestMenu(slug: string, locale: ContentLocale): TestMenuContent {
+  return cached(`menu/${slug}/${locale}/${contentRoot()}`, () => {
+    const file = path.join(contentRoot(), "test-menus", slug, `${locale}.json`);
+    const menu = readJson(file, testMenuSchema);
+    checkIdentity(file, menu, slug, `/test-menus/${slug}`);
+    return menu;
+  });
+}
+
+/** Groups and test names of a menu: one file for both languages. */
+export function loadTests(slug: string): TestsContent {
+  return cached(`tests/${slug}/${contentRoot()}`, () =>
+    readJson(path.join(contentRoot(), "test-menus", slug, "tests.json"), testsSchema),
+  );
 }
 
 export function loadProduct(slug: string, locale: ContentLocale): ProductContent {
@@ -76,12 +181,7 @@ export function loadProduct(slug: string, locale: ContentLocale): ProductContent
   const file = path.join(contentRoot(), "products", slug, `${locale}.json`);
   const product = readJson(file, productSchema);
 
-  if (product.slug !== slug) {
-    throw new SiteContentError(file, `"slug" is "${product.slug}", but the folder is "${slug}"`);
-  }
-  if (product.url !== `/products/${slug}`) {
-    throw new SiteContentError(file, `"url" is "${product.url}", expected "/products/${slug}"`);
-  }
+  checkIdentity(file, product, slug, `/products/${slug}`);
 
   productCache.set(key, product);
   return product;
@@ -100,4 +200,18 @@ export function loadShared(locale: ContentLocale): SharedContent {
 /** Validates every locale file of one product; throws on the first problem. */
 export function loadProductAllLocales(slug: string) {
   return contentLocales.map((locale) => loadProduct(slug, locale));
+}
+
+/** Validates all files of a group, overview or test menu; throws on the first problem. */
+export function loadGroupAllLocales(slug: string) {
+  return contentLocales.map((locale) => loadGroup(slug, locale));
+}
+
+export function loadOverviewAllLocales(slug: string) {
+  return contentLocales.map((locale) => loadOverview(slug, locale));
+}
+
+export function loadTestMenuAllLocales(slug: string) {
+  loadTests(slug);
+  return contentLocales.map((locale) => loadTestMenu(slug, locale));
 }

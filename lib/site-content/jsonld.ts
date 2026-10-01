@@ -3,6 +3,43 @@ import type { ProductPageModel } from "./model.ts";
 
 type Locale = "uk" | "en";
 
+/** Levels without a page of their own are left out: a breadcrumb item needs a URL. */
+export function breadcrumbListLd(
+  breadcrumbs: Array<{ label: string; href?: string }>,
+  url: string,
+  siteUrl: string,
+): Record<string, unknown> {
+  const absolute = (path: string) => (path.startsWith("http") ? path : `${siteUrl}${path}`);
+  const crumbs = breadcrumbs
+    .map((crumb, index, all) => ({
+      name: crumb.label,
+      item: index === all.length - 1 ? url : crumb.href ? absolute(crumb.href) : undefined,
+    }))
+    .filter((crumb) => crumb.item);
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: crumbs.map((crumb, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: crumb.name,
+      item: crumb.item,
+    })),
+  };
+}
+
+export function faqPageLd(faq: { items: Array<{ q: string; a: string }> }): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.items.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+}
+
 export function buildJsonLd(input: {
   page: ProductPageModel;
   locale: Locale;
@@ -26,37 +63,11 @@ export function buildJsonLd(input: {
     ...(page.hero.imageSrc ? { image: absolute(page.hero.imageSrc) } : {}),
   };
 
-  // Levels without a page of their own are left out: a breadcrumb item needs a URL.
-  const crumbs = page.breadcrumbs
-    .map((crumb, index, all) => ({
-      name: crumb.label,
-      item: index === all.length - 1 ? url : crumb.href ? absolute(crumb.href) : undefined,
-    }))
-    .filter((crumb) => crumb.item);
-  const breadcrumbList = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: crumbs.map((crumb, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: crumb.name,
-      item: crumb.item,
-    })),
-  };
+  const breadcrumbList = breadcrumbListLd(page.breadcrumbs, url, siteUrl);
 
   const result: Array<Record<string, unknown>> = [product, breadcrumbList];
 
-  if (page.faq) {
-    result.push({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: page.faq.items.map((item) => ({
-        "@type": "Question",
-        name: item.q,
-        acceptedAnswer: { "@type": "Answer", text: item.a },
-      })),
-    });
-  }
+  if (page.faq) result.push(faqPageLd(page.faq));
 
   return result;
 }

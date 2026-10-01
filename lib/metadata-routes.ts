@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 import { locales, type Locale } from "../i18n/config.ts";
 import { getRouteParams } from "./catalog.ts";
 import { withLocale } from "./locale-routing.ts";
-import { listProductSlugs } from "./site-content/load.ts";
+import { listGroupSlugs, listOverviewSlugs, listProductSlugs, listTestMenuSlugs } from "./site-content/load.ts";
 
 /** Public static pages that do not need their own generateStaticParams. */
 const staticPaths = [
@@ -35,11 +35,14 @@ export function listPublicPaths(): string[] {
   const productSlugs = new Set([
     ...getRouteParams("/products", ["slug"]).map(({ slug }) => slug),
     ...listProductSlugs(),
+    ...listGroupSlugs(),
+    ...listOverviewSlugs(),
   ]);
 
   const paths = [
     ...staticPaths,
     ...[...productSlugs].map((slug) => `/products/${slug}`),
+    ...listTestMenuSlugs().map((slug) => `/test-menus/${slug}`),
     ...joinRouteParams(
       "/products",
       ["slug", "sectionSlug"],

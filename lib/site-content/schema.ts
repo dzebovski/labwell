@@ -8,17 +8,17 @@ import { z } from "zod";
 
 import { iconNames, isIconName } from "./icon-names.ts";
 
-const text = z.string().trim().min(1);
+export const text = z.string().trim().min(1);
 /** Icon name from the known list; the error shows the offending name and the allowed ones. */
 const icon = text.refine(isIconName, {
   error: (issue) =>
     `unknown icon "${String(issue.input)}". Allowed: ${iconNames.join(", ")}. ` +
     "To add one, extend lib/site-content/icon-names.ts and components/product-page/icons.tsx.",
 });
-const link = z.strictObject({ label: text, href: text });
+export const link = z.strictObject({ label: text, href: text });
 
 /** `{ "show": false }` hides the block; `{ "show": true, ... }` carries its data. */
-function block<Shape extends z.ZodRawShape>(shape: Shape) {
+export function block<Shape extends z.ZodRawShape>(shape: Shape) {
   return z.discriminatedUnion("show", [
     z.strictObject({ show: z.literal(false) }),
     z.strictObject({ show: z.literal(true), ...shape }),
@@ -119,12 +119,15 @@ const documents = block({
   items: z.array(z.strictObject({ title: text, meta: text.optional(), href: text })).min(1),
 });
 
-const faq = block({
+export const faq = block({
   h2: text,
   items: z.array(z.strictObject({ q: text, a: text, link: link.optional() })).min(1),
 });
 
 export const labwellSource = z.enum(["shared.labwell.items", "shared.labwell.itemsForLine"]);
+
+export const labwellBlock = block({ use: labwellSource });
+export const contactBlock = block({ h2: text, text, messagePrefill: z.string().optional() });
 
 export const productSchema = z.strictObject({
   slug: text,
@@ -142,8 +145,8 @@ export const productSchema = z.strictObject({
   T8_related: related,
   T9_documents: documents,
   T10_faq: faq,
-  T11_labwell: block({ use: labwellSource }),
-  T12_contact: block({ h2: text, text, messagePrefill: z.string().optional() }),
+  T11_labwell: labwellBlock,
+  T12_contact: contactBlock,
 });
 
 const labwellItem = z.strictObject({ icon, title: text, text });
