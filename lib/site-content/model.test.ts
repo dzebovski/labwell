@@ -89,7 +89,11 @@ test("test-menu and overview links go to current addresses; unknown pages lose t
   assert.equal(resolveHref("/products/maglumi", "en"), "/en/brands/snibe/maglumi-immunochemistry");
   assert.equal(resolveHref("/services", "en"), "/en/services");
   assert.equal(resolveHref("/products/maglumi-x3", "uk"), "/uk/products/maglumi-x3");
-  assert.equal(resolveHref("/products/molecision-mp", "uk"), null);
+  assert.equal(
+    resolveHref("/products/molecision-mp", "uk"),
+    "/uk/brands/snibe/molecision-molecular-diagnostics",
+  );
+  assert.equal(resolveHref("/products/not-built-yet", "uk"), null);
   assert.equal(resolveHref("/test-menus/unknown", "uk"), null);
   assert.equal(resolveHref("#contact", "uk"), "#contact");
   assert.equal(resolveHref("https://example.com/a.pdf", "uk"), "https://example.com/a.pdf");
@@ -102,7 +106,7 @@ test("related cards without a page are kept as plain text", () => {
       h2: "Інші",
       cards: [
         { eyebrow: "Snibe", title: "Exists", href: "/products/maglumi-x3" },
-        { eyebrow: "Snibe", title: "Not built", href: "/products/molecision-mp" },
+        { eyebrow: "Snibe", title: "Not built", href: "/products/not-built-yet" },
       ],
     },
   });

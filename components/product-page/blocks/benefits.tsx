@@ -5,8 +5,10 @@ import styles from "../product-page.module.css";
 import { Section, SectionHead } from "./shared";
 
 export function Benefits({ benefits }: { benefits: NonNullable<ProductPageModel["benefits"]> }) {
-  // 3 cards: three columns with the icon on top. 1, 2 and 4 cards: two columns, icon on the left.
-  const layout = benefits.items.length === 3 ? "three" : "wide";
+  // 3 cards: three columns with the icon on top. 2 and 4 cards: two columns, icon on the left.
+  // 1 card: one full-width row (heading left, text right) so the grid does not look half empty.
+  const count = benefits.items.length;
+  const layout = count === 1 ? "single" : count === 3 ? "three" : "wide";
 
   return (
     <Section labelledBy="benefits-title">

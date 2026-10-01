@@ -1173,6 +1173,11 @@ a.relatedCard:hover {
     padding: 1.75rem;
   }
 
+  /* One benefit: the grid is a single full-width card (the "wide" grid would leave its right half empty). */
+  .benefitGrid[data-layout="single"] {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .labwellGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1220,6 +1225,17 @@ a.relatedCard:hover {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .benefitGrid[data-layout="single"] .benefit {
+    align-items: center;
+  }
+
+  .benefitGrid[data-layout="single"] .benefitBody {
+    display: grid;
+    grid-template-columns: minmax(0, 18rem) minmax(0, 1fr);
+    align-items: center;
+    column-gap: var(--space-10);
+  }
+
   .benefitGrid[data-layout="three"] .benefit {
     flex-direction: column;
     gap: 0.875rem;
@@ -1244,6 +1260,23 @@ a.relatedCard:hover {
     grid-template-columns: repeat(var(--count, 4), minmax(0, 1fr));
   }
 
+  .labwell[data-stacked] {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-8);
+    align-items: stretch;
+  }
+
+  .labwell[data-stacked] .labwellHead {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Five narrow columns do not fit "Технічне обслуговування" below 80rem: three per row there. */
+  .labwell[data-stacked] .labwellGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .labwellCompact {
     grid-template-columns: 25rem repeat(var(--count, 2), minmax(0, 1fr));
     gap: var(--space-10);
@@ -1257,5 +1290,11 @@ a.relatedCard:hover {
 
   .cardGrid {
     grid-template-columns: repeat(var(--count, 3), minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 80rem) {
+  .labwell[data-stacked] .labwellGrid {
+    grid-template-columns: repeat(var(--count), minmax(0, 1fr));
   }
 }

@@ -42,11 +42,14 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
+import { isIconName, type IconName } from "@/lib/site-content/icon-names";
+
 /**
- * Icon names used in `content/` (kebab-case, as in lucide) → components.
- * Some content names are older lucide names: flask, layout-panel, message, plus-square.
+ * Icon names used in `content/` → components. The names are validated when the
+ * content is loaded (`lib/site-content/icon-names.ts`); `Record<IconName, …>`
+ * makes TypeScript require a component for every name on that list.
  */
-const icons: Record<string, LucideIcon> = {
+const icons: Record<IconName, LucideIcon> = {
   "arrow-left-right": ArrowLeftRight,
   barcode: Barcode,
   box: Box,
@@ -90,11 +93,9 @@ const icons: Record<string, LucideIcon> = {
 };
 
 export function ContentIcon({ name, size = 22 }: { name: string; size?: number }) {
-  const Icon = icons[name];
-  if (!Icon) {
-    throw new Error(
-      `Unknown icon "${name}" in content/. Add it to components/product-page/icons.tsx.`,
-    );
+  if (!isIconName(name)) {
+    throw new Error(`Unknown icon "${name}": the content loader should have rejected it.`);
   }
+  const Icon = icons[name];
   return <Icon aria-hidden="true" size={size} strokeWidth={1.8} />;
 }

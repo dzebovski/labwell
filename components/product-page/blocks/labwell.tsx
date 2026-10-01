@@ -37,7 +37,8 @@ export function Labwell({ labwell }: { labwell: NonNullable<ProductPageModel["la
 
   return (
     <Section labelledBy="labwell-title">
-      <div className={styles.labwell}>
+      {/* More than 4 services: the heading goes above the grid so the cards keep a readable width. */}
+      <div className={styles.labwell} data-stacked={labwell.items.length > 4 ? "true" : undefined}>
         <div className={styles.labwellHead}>
           <h2 id="labwell-title" className={styles.labwellTitle}>
             {labwell.h2}

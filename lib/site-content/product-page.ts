@@ -16,12 +16,16 @@ export function getProductPageModel(slug: string, locale: ContentLocale): Produc
   });
 }
 
-/** title/description from `seo`, canonical to the page itself, hreflang uk/en. */
+/**
+ * title/description from `seo`, canonical to the page itself, hreflang uk/en.
+ * `seo.title` already ends with "| LabWell", so it is `absolute`: the locale layout's
+ * template would otherwise append the site name a second time.
+ */
 export function getProductMetadata(slug: string, locale: ContentLocale): Metadata {
   const { seo, canonicalPath } = getProductPageModel(slug, locale);
   return {
     metadataBase: new URL(SITE_URL),
-    title: seo.title,
+    title: { absolute: seo.title },
     description: seo.description,
     alternates: {
       canonical: `/${locale}${canonicalPath}`,

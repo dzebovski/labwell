@@ -6,7 +6,15 @@
  */
 import { z } from "zod";
 
+import { iconNames, isIconName } from "./icon-names.ts";
+
 const text = z.string().trim().min(1);
+/** Icon name from the known list; the error shows the offending name and the allowed ones. */
+const icon = text.refine(isIconName, {
+  error: (issue) =>
+    `unknown icon "${String(issue.input)}". Allowed: ${iconNames.join(", ")}. ` +
+    "To add one, extend lib/site-content/icon-names.ts and components/product-page/icons.tsx.",
+});
 const link = z.strictObject({ label: text, href: text });
 
 /** `{ "show": false }` hides the block; `{ "show": true, ... }` carries its data. */
@@ -44,7 +52,7 @@ const specs = block({
 
 const benefits = block({
   h2: text,
-  items: z.array(z.strictObject({ icon: text, h3: text, text })).min(1).max(4),
+  items: z.array(z.strictObject({ icon, h3: text, text })).min(1).max(4),
   // No photo source in the content yet (benefit photos are not rendered); the alt is kept for later.
   image: z.strictObject({ show: z.boolean().optional(), alt: text.optional() }).optional(),
 });
@@ -138,7 +146,7 @@ export const productSchema = z.strictObject({
   T12_contact: block({ h2: text, text, messagePrefill: z.string().optional() }),
 });
 
-const labwellItem = z.strictObject({ icon: text, title: text, text });
+const labwellItem = z.strictObject({ icon, title: text, text });
 
 export const sharedSchema = z.strictObject({
   labwell: z.strictObject({

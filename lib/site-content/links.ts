@@ -1,7 +1,7 @@
 /**
  * Turns hrefs from `content/` into hrefs that exist on the site today.
  * The content points at pages that are not built yet (test menus, the MAGLUMI
- * overview, `/products/molecision-mp`); those are mapped to the current address
+ * and Molecision overviews); those are mapped to the current address
  * from the catalog (`lib/catalog.ts`) or dropped (`null`), so the page never links to a 404.
  */
 import { getRouteTarget } from "../catalog.ts";
@@ -14,6 +14,8 @@ export const currentAddress: Readonly<Record<string, string>> = {
   "/test-menus/snibe-clia-test-menu": "/products/maglumi-clia-test-menu-278-parameters",
   "/test-menus/snibe-biochemistry-test-menu": "/products/biochemistry-test-menu",
   "/products/maglumi": "/brands/snibe/maglumi-immunochemistry",
+  // Molecision MP (MP-32, MP-96) has no page of its own yet: its range overview is the closest current page.
+  "/products/molecision-mp": "/brands/snibe/molecision-molecular-diagnostics",
 };
 
 const sectionRoots = new Set([

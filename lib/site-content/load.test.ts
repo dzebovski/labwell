@@ -84,3 +84,50 @@ test("shared content with an unknown form field is rejected", () => {
 
   assert.throws(() => loadShared("uk"), /shared\/uk\.json/);
 });
+
+test("an unknown benefit icon fails at load time with the file, the path and the name", () => {
+  write(
+    "products/demo/uk.json",
+    product({
+      T5_benefits: {
+        show: true,
+        h2: "Переваги",
+        items: [
+          { icon: "truck", h3: "Одна", text: "Текст." },
+          { icon: "ruller" as never, h3: "Друга", text: "Текст." },
+        ],
+      },
+    }),
+  );
+
+  assert.throws(
+    () => loadProduct("demo", "uk"),
+    (error: Error) =>
+      /products\/demo\/uk\.json/.test(error.message) &&
+      /T5_benefits\.items\[1\]\.icon/.test(error.message) &&
+      /unknown icon "ruller"/.test(error.message) &&
+      /ruler/.test(error.message),
+  );
+});
+
+test("an icon that is in the list (ruler) is accepted", () => {
+  write(
+    "products/demo/uk.json",
+    product({
+      T5_benefits: { show: true, h2: "Переваги", items: [{ icon: "ruler", h3: "Розмір", text: "Текст." }] },
+    }),
+  );
+
+  assert.equal(loadProduct("demo", "uk").T5_benefits.show, true);
+});
+
+test("an unknown icon in the shared LabWell block fails at load time", () => {
+  const broken = shared();
+  broken.labwell.items[0].icon = "no-such-icon" as never;
+  write("shared/uk.json", broken);
+
+  assert.throws(
+    () => loadShared("uk"),
+    /shared\/uk\.json[\s\S]*unknown icon "no-such-icon"[\s\S]*labwell\.items\[0\]\.icon/,
+  );
+});
