@@ -177,7 +177,7 @@
       },
       {
         "q": "Who supplies Bio-Rad chemistry controls in Ukraine?",
-        "a": "LabWell is a Bio-Rad partner and supplier in Ukraine."
+        "a": "LabWell is an official Bio-Rad distributor in Ukraine. It helps select the most effective solution for your needs and provides supply and application support."
       }
     ]
   },
@@ -188,7 +188,7 @@
   "T12_contact": {
     "show": true,
     "h2": "Ask about chemistry quality controls",
-    "text": "Tell us the tests, format, and levels you need, and we will help identify the relevant Bio-Rad items.",
+    "text": "Tell us about your tests, preferred format and quality control needs, and we will help select the most effective solution for your laboratory.",
     "messagePrefill": "I am interested in Bio-Rad chemistry quality controls. "
   }
 }

@@ -178,7 +178,7 @@
       },
       {
         "q": "Who supplies Bio-Rad controls in Ukraine?",
-        "a": "LabWell is a Bio-Rad partner and supplier in Ukraine."
+        "a": "LabWell is an official Bio-Rad distributor in Ukraine. It helps select the most effective solution for your needs and provides supply and application support."
       }
     ]
   },
@@ -189,7 +189,7 @@
   "T12_contact": {
     "show": true,
     "h2": "Ask about infectious disease controls",
-    "text": "Tell us the testing method and infectious target, and we will help identify the relevant Bio-Rad items.",
+    "text": "Tell us the testing method and infectious target, and we will help select the most effective solution for your laboratory.",
     "messagePrefill": "I am interested in Bio-Rad infectious disease controls. "
   }
 }

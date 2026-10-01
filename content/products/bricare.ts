@@ -20,8 +20,8 @@ export default defineProduct({
     uk: "Захищене програмне забезпечення для віддаленої діагностики та підтримки клініко-діагностичних приладів Bio-Rad.",
   },
   todoNote: {
-    en: "Confirm Labwell’s service role and access arrangements.",
-    uk: "Підтвердьте роль Labwell у сервісному обслуговуванні та умови надання доступу.",
+    en: "Describe Labwell’s maintenance role and confirm access arrangements.",
+    uk: "Опишіть роль Labwell у технічному обслуговуванні та підтвердьте умови надання доступу.",
   },
   sourceUrl: "https://www.bio-rad.com/product/bricare?ID=MZQ2AUE8Z",
   catalog: { group: "qc-software", section: "software" },

@@ -16,8 +16,8 @@ export default defineBrandPage({
     uk: "Ознайомтеся з системами автоматизації SATLARS для інтегрованих процесів клінічної лабораторії.",
   },
   todoNote: {
-    en: "Build a Labwell brand-category page and confirm installation/service scope.",
-    uk: "Створіть брендово-категорійну сторінку Labwell і підтвердьте обсяг послуг з інсталяції та сервісного обслуговування.",
+    en: "Build a Labwell brand-category page and confirm the available automation configurations.",
+    uk: "Створіть брендово-категорійну сторінку Labwell і підтвердьте доступні конфігурації автоматизації.",
   },
   sourceUrl: "https://www.snibe.com/en/product/Lab_Automation/",
 });
