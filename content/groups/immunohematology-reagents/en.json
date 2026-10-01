@@ -1,0 +1,336 @@
+{
+  "slug": "immunohematology-reagents",
+  "url": "/products/immunohematology-reagents",
+  "kind": "group-lines",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "Bio-Rad immunohematology reagents | LabWell",
+    "description": "Bio-Rad immunohematology reagents for gel and tube testing: ID-Cards, test cells and supporting solutions. Selection and supply in Ukraine by LabWell."
+  },
+  "G1_hero": {
+    "breadcrumbs": [
+      "Home",
+      "Products",
+      "Reagents and tests",
+      "Immunohematology",
+      "Immunohematology reagents"
+    ],
+    "eyebrow": "Bio-Rad · Blood typing and screening",
+    "h1": "Bio-Rad reagents for immunohematology testing",
+    "lead": "Bio-Rad immunohematology reagents are product ranges for blood typing, antibody screening and identification. They cover gel and tube testing, ID-Cards, test cells and supporting solutions for manual and automated workflows.",
+    "keyFacts": [
+      {
+        "value": "3 ranges",
+        "label": "on one page"
+      },
+      {
+        "value": "2 methods",
+        "label": "gel and tube testing"
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "View product ranges",
+      "href": "#lines"
+    },
+    "image": {
+      "alt": "Bio-Rad reagents for immunohematology testing"
+    }
+  },
+  "G2_compare": {
+    "show": false
+  },
+  "G2_sections": {
+    "show": true,
+    "h2": "Reagent ranges",
+    "items": [
+      {
+        "anchor": "gel-testing",
+        "title": "Gel Testing",
+        "text": "ID-Cards, test sera and red-cell test panels for gel agglutination.",
+        "href": "#gel-testing"
+      },
+      {
+        "anchor": "tube-testing",
+        "title": "Tube Testing",
+        "text": "Seraclone monoclonal reagents for ABO antigen and subgroup typing.",
+        "href": "#tube-testing"
+      },
+      {
+        "anchor": "ih-systems-reagents",
+        "title": "IH-System Reagents",
+        "text": "An overview of reagents, test cells, ID-Cards and solutions for manual and automated systems.",
+        "href": "#ih-systems-reagents"
+      }
+    ]
+  },
+  "G3_items": {
+    "show": true,
+    "eyebrow": "Product ranges",
+    "h2": "Reagents for different workflows",
+    "items": [
+      {
+        "anchor": "gel-testing",
+        "productSlug": "gel-testing",
+        "eyebrow": "Gel testing",
+        "h3": "Gel Testing",
+        "text": "Gel Testing is Bio-Rad's immunohematology range for gel agglutination testing with ID-Cards. It includes cards, test sera and red-cell test panels for antigen typing, antibody screening and identification.",
+        "image": {
+          "alt": "Bio-Rad ID gel card and reagent for immunohematology testing"
+        },
+        "keyFacts": [
+          {
+            "value": "ID-Cards",
+            "label": "for antigen typing and antiglobulin testing"
+          },
+          {
+            "value": "6 microtubes",
+            "label": "with anti-IgG and anti-C3d in the LISS/Coombs card"
+          },
+          {
+            "value": "7 weeks",
+            "label": "ID-DiaCell I-II-III stability"
+          }
+        ],
+        "ordering": {
+          "show": true,
+          "h3": "Gel Testing order items",
+          "columns": [
+            "Catalog number",
+            "Name",
+            "Pack size"
+          ],
+          "rows": [
+            {
+              "catalogNumber": "007140",
+              "name": "ID-Card s: 6 x s (Id-n°: 50340)",
+              "packSize": "72 tests, 1 × 12"
+            },
+            {
+              "catalogNumber": "007142",
+              "name": "Test serum ID-Anti-s (Id-n°: 09110)",
+              "packSize": "90 tests, 1 × 5 mL"
+            },
+            {
+              "catalogNumber": "004043",
+              "name": "IgG subclasses (Id-n°: 50890)",
+              "packSize": "12 profiles, 1 × 12"
+            },
+            {
+              "catalogNumber": "007251",
+              "name": "6 x k (Id-n°: 50260)",
+              "packSize": "72 tests, 1 × 12"
+            },
+            {
+              "catalogNumber": "004310",
+              "name": "ID-DiaCell I-II-III (Id-n°: 45184)",
+              "packSize": "200 tests, 3 × 10 mL"
+            },
+            {
+              "catalogNumber": "005310",
+              "name": "ID-DiaCell IP-IIP-IIIP (Id-n°: 45194)",
+              "packSize": "200 tests, 3 × 10 mL"
+            },
+            {
+              "catalogNumber": "004330",
+              "name": "ID-DiaScreen Prophylax (Id-n°: 45660)",
+              "packSize": "100 tests, 6 × 5 mL"
+            }
+          ],
+          "footnote": "Selected items from the official Bio-Rad catalog are shown. Ask a manager about the range available in Ukraine."
+        },
+        "cta": {
+          "label": "Ask about Gel Testing",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ Back to product ranges",
+          "href": "#lines"
+        }
+      },
+      {
+        "anchor": "tube-testing",
+        "productSlug": "tube-testing",
+        "eyebrow": "Tube testing",
+        "h3": "Tube Testing",
+        "text": "Tube Testing is Bio-Rad's range of reagents for immunohematology testing in tubes. Seraclone monoclonal reagents are used to determine ABO antigens and subgroups on human red blood cells by tube or slide testing.",
+        "image": {
+          "alt": "Bio-Rad reagents for tube blood grouping"
+        },
+        "keyFacts": [
+          {
+            "value": "5 types",
+            "label": "Anti-A, Anti-B, Anti-AB, Anti-A1 and Anti-H"
+          },
+          {
+            "value": "ABO",
+            "label": "antigen and subgroup typing"
+          },
+          {
+            "value": "2 methods",
+            "label": "tube or slide testing"
+          }
+        ],
+        "ordering": {
+          "show": true,
+          "h3": "Tube Testing order items",
+          "columns": [
+            "Catalog number",
+            "Name",
+            "Pack size"
+          ],
+          "rows": [
+            {
+              "catalogNumber": "801320",
+              "name": "Seraclone Anti-A (ABO1) - clone A003 (IgM)",
+              "packSize": "10 mL"
+            },
+            {
+              "catalogNumber": "801325",
+              "name": "Seraclone Anti-A (ABO1) - clone A003 (IgM)",
+              "packSize": "10 × 10 mL"
+            },
+            {
+              "catalogNumber": "801345",
+              "name": "Seraclone Anti-B (ABO2) - clone B005 (IgM)",
+              "packSize": "10 mL"
+            },
+            {
+              "catalogNumber": "801350",
+              "name": "Seraclone Anti-B (ABO2) - clone B005 (IgM)",
+              "packSize": "10 × 10 mL"
+            },
+            {
+              "catalogNumber": "801370",
+              "name": "Seraclone Anti-AB (ABO3) - clones BS63/BS85 (IgM)",
+              "packSize": "10 mL"
+            },
+            {
+              "catalogNumber": "801136",
+              "name": "Seraclone Anti-A1 (ABO4) - clone A1",
+              "packSize": "5 mL"
+            },
+            {
+              "catalogNumber": "801165",
+              "name": "Seraclone Anti-H (H1) - clones A46/B.B10",
+              "packSize": "5 mL"
+            }
+          ],
+          "footnote": "Selected items from the official Bio-Rad catalog are shown. Ask a manager about the range available in Ukraine."
+        },
+        "cta": {
+          "label": "Ask about Tube Testing",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ Back to product ranges",
+          "href": "#lines"
+        }
+      },
+      {
+        "anchor": "ih-systems-reagents",
+        "productSlug": "ih-systems-reagents",
+        "eyebrow": "IH system reagents",
+        "h3": "IH-System Reagents",
+        "text": "IH-System Reagents is an overview range of Bio-Rad products for immunohematology testing in manual and automated systems using ID-Cards. It covers gel and tube testing reagents, test cells, ID-Cards and supporting solutions.",
+        "image": {
+          "alt": "ID-DiaCell I-II-III reagents for Bio-Rad IH systems"
+        },
+        "keyFacts": [
+          {
+            "value": "2 formats",
+            "label": "manual and automated systems"
+          },
+          {
+            "value": "ID-Cards",
+            "label": "Bio-Rad system format"
+          },
+          {
+            "value": "5 items",
+            "label": "in the representative list"
+          }
+        ],
+        "ordering": {
+          "show": true,
+          "h3": "IH-System Reagents order items",
+          "columns": [
+            "Catalog number",
+            "Name",
+            "Pack size"
+          ],
+          "rows": [
+            {
+              "catalogNumber": "009260",
+              "name": "ID-Diluent 2",
+              "packSize": "2 × 100 mL"
+            },
+            {
+              "catalogNumber": "004310",
+              "name": "ID-DiaCell I-II-III",
+              "packSize": "200 tests, 3 × 10 mL"
+            },
+            {
+              "catalogNumber": "004330",
+              "name": "ID-DiaScreen Prophylax",
+              "packSize": "100 tests, 6 × 5 mL"
+            },
+            {
+              "catalogNumber": "007140",
+              "name": "ID-Card s",
+              "packSize": "72 tests, 1 × 12"
+            },
+            {
+              "catalogNumber": "801320",
+              "name": "Seraclone Anti-A (ABO1)",
+              "packSize": "10 mL"
+            }
+          ],
+          "footnote": "This representative list overlaps with Gel Testing and Tube Testing. Ask a manager about the range available in Ukraine."
+        },
+        "cta": {
+          "label": "Ask about IH-System Reagents",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ Back to product ranges",
+          "href": "#lines"
+        }
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Questions about immunohematology reagents",
+    "items": [
+      {
+        "q": "Which Bio-Rad reagent ranges are shown on this page?",
+        "a": "Gel Testing for gel agglutination, Tube Testing for tube methods and the IH-System Reagents overview range for manual and automated systems using ID-Cards."
+      },
+      {
+        "q": "How do Gel Testing and Tube Testing differ?",
+        "a": "Gel Testing covers ID-Cards, test sera and test cells for gel agglutination. Tube Testing includes Seraclone monoclonal reagents for ABO antigen typing by tube or slide testing."
+      },
+      {
+        "q": "Does the page list the complete Bio-Rad reagent range?",
+        "a": "No. The page lists selected or representative catalog items; ask a LabWell manager about the range available in Ukraine."
+      },
+      {
+        "q": "Who supplies Bio-Rad immunohematology reagents in Ukraine?",
+        "a": "LabWell is an official Bio-Rad distributor in Ukraine. The company helps select the most effective solution for your needs, supplies products and provides application support."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.itemsForLine"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Select immunohematology reagents",
+    "text": "Tell us the method, equipment and tests you need, and we will help select the most effective solution for your needs.",
+    "messagePrefill": "I am interested in Bio-Rad immunohematology reagents. "
+  }
+}

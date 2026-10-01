@@ -1,0 +1,336 @@
+{
+  "slug": "immunohematology-reagents",
+  "url": "/products/immunohematology-reagents",
+  "kind": "group-lines",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "Реагенти для імуногематології Bio-Rad | LabWell",
+    "description": "Реагенти Bio-Rad для імуногематології: гелеве й пробіркове тестування, ID-карти, тест-клітини та розчини. Підбір і постачання в Україні — LabWell."
+  },
+  "G1_hero": {
+    "breadcrumbs": [
+      "Головна",
+      "Продукція",
+      "Реагенти й тести",
+      "Імуногематологія",
+      "Реагенти для імуногематології"
+    ],
+    "eyebrow": "Bio-Rad · Типування та скринінг крові",
+    "h1": "Реагенти Bio-Rad для імуногематологічних досліджень",
+    "lead": "Реагенти Bio-Rad для імуногематології — це лінійки для типування крові, скринінгу та ідентифікації антитіл. Вони охоплюють гелеве й пробіркове тестування, ID-карти, тест-клітини та допоміжні розчини для ручних і автоматизованих робочих процесів.",
+    "keyFacts": [
+      {
+        "value": "3 лінійки",
+        "label": "на одній сторінці"
+      },
+      {
+        "value": "2 методики",
+        "label": "гелеве й пробіркове тестування"
+      }
+    ],
+    "primaryCta": {
+      "label": "Отримати консультацію",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Переглянути лінійки",
+      "href": "#lines"
+    },
+    "image": {
+      "alt": "Реагенти Bio-Rad для імуногематологічних досліджень"
+    }
+  },
+  "G2_compare": {
+    "show": false
+  },
+  "G2_sections": {
+    "show": true,
+    "h2": "Лінійки реагентів",
+    "items": [
+      {
+        "anchor": "gel-testing",
+        "title": "Gel Testing",
+        "text": "ID-карти, тест-сироватки й еритроцитарні тест-клітини для гелевої аглютинації.",
+        "href": "#gel-testing"
+      },
+      {
+        "anchor": "tube-testing",
+        "title": "Tube Testing",
+        "text": "Моноклональні реагенти Seraclone для визначення антигенів ABO та підгруп.",
+        "href": "#tube-testing"
+      },
+      {
+        "anchor": "ih-systems-reagents",
+        "title": "IH-System Reagents",
+        "text": "Огляд реагентів, тест-клітин, ID-карт і розчинів для ручних та автоматизованих систем.",
+        "href": "#ih-systems-reagents"
+      }
+    ]
+  },
+  "G3_items": {
+    "show": true,
+    "eyebrow": "Лінійки",
+    "h2": "Реагенти для різних робочих процесів",
+    "items": [
+      {
+        "anchor": "gel-testing",
+        "productSlug": "gel-testing",
+        "eyebrow": "Гелеве тестування",
+        "h3": "Gel Testing",
+        "text": "Gel Testing — лінійка Bio-Rad для імуногематологічних досліджень методом гелевої аглютинації з ID-картами. До неї входять картки, тест-сироватки та еритроцитарні тест-клітини для визначення антигенів, скринінгу й ідентифікації антитіл.",
+        "image": {
+          "alt": "Гелева ID-карта та реагент Bio-Rad для імуногематологічного тестування"
+        },
+        "keyFacts": [
+          {
+            "value": "ID-карти",
+            "label": "для антигенного типування й антиглобулінових тестів"
+          },
+          {
+            "value": "6 мікропробірок",
+            "label": "з anti-IgG та anti-C3d у картці LISS/Coombs"
+          },
+          {
+            "value": "7 тижнів",
+            "label": "стабільність ID-DiaCell I-II-III"
+          }
+        ],
+        "ordering": {
+          "show": true,
+          "h3": "Позиції Gel Testing для замовлення",
+          "columns": [
+            "Каталожний номер",
+            "Назва",
+            "Фасування"
+          ],
+          "rows": [
+            {
+              "catalogNumber": "007140",
+              "name": "ID-Card s: 6 x s (Id-n°: 50340)",
+              "packSize": "72 tests, 1 × 12"
+            },
+            {
+              "catalogNumber": "007142",
+              "name": "Test serum ID-Anti-s (Id-n°: 09110)",
+              "packSize": "90 tests, 1 × 5 mL"
+            },
+            {
+              "catalogNumber": "004043",
+              "name": "IgG subclasses (Id-n°: 50890)",
+              "packSize": "12 profiles, 1 × 12"
+            },
+            {
+              "catalogNumber": "007251",
+              "name": "6 x k (Id-n°: 50260)",
+              "packSize": "72 tests, 1 × 12"
+            },
+            {
+              "catalogNumber": "004310",
+              "name": "ID-DiaCell I-II-III (Id-n°: 45184)",
+              "packSize": "200 tests, 3 × 10 mL"
+            },
+            {
+              "catalogNumber": "005310",
+              "name": "ID-DiaCell IP-IIP-IIIP (Id-n°: 45194)",
+              "packSize": "200 tests, 3 × 10 mL"
+            },
+            {
+              "catalogNumber": "004330",
+              "name": "ID-DiaScreen Prophylax (Id-n°: 45660)",
+              "packSize": "100 tests, 6 × 5 mL"
+            }
+          ],
+          "footnote": "Наведено вибрані позиції з офіційного каталогу Bio-Rad. Асортимент для України уточнює менеджер."
+        },
+        "cta": {
+          "label": "Запитати про Gel Testing",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ До переліку лінійок",
+          "href": "#lines"
+        }
+      },
+      {
+        "anchor": "tube-testing",
+        "productSlug": "tube-testing",
+        "eyebrow": "Пробіркове тестування",
+        "h3": "Tube Testing",
+        "text": "Tube Testing — лінійка Bio-Rad реагентів для імуногематологічних досліджень у пробірках. Моноклональні реагенти Seraclone застосовують для визначення антигенів ABO та підгруп на еритроцитах людини методом у пробірці або на склі.",
+        "image": {
+          "alt": "Реагенти Bio-Rad для визначення групи крові методом пробірки"
+        },
+        "keyFacts": [
+          {
+            "value": "5 типів",
+            "label": "Anti-A, Anti-B, Anti-AB, Anti-A1 та Anti-H"
+          },
+          {
+            "value": "ABO",
+            "label": "визначення антигенів і підгруп"
+          },
+          {
+            "value": "2 методи",
+            "label": "у пробірці або на склі"
+          }
+        ],
+        "ordering": {
+          "show": true,
+          "h3": "Позиції Tube Testing для замовлення",
+          "columns": [
+            "Каталожний номер",
+            "Назва",
+            "Фасування"
+          ],
+          "rows": [
+            {
+              "catalogNumber": "801320",
+              "name": "Seraclone Anti-A (ABO1) - clone A003 (IgM)",
+              "packSize": "10 mL"
+            },
+            {
+              "catalogNumber": "801325",
+              "name": "Seraclone Anti-A (ABO1) - clone A003 (IgM)",
+              "packSize": "10 × 10 mL"
+            },
+            {
+              "catalogNumber": "801345",
+              "name": "Seraclone Anti-B (ABO2) - clone B005 (IgM)",
+              "packSize": "10 mL"
+            },
+            {
+              "catalogNumber": "801350",
+              "name": "Seraclone Anti-B (ABO2) - clone B005 (IgM)",
+              "packSize": "10 × 10 mL"
+            },
+            {
+              "catalogNumber": "801370",
+              "name": "Seraclone Anti-AB (ABO3) - clones BS63/BS85 (IgM)",
+              "packSize": "10 mL"
+            },
+            {
+              "catalogNumber": "801136",
+              "name": "Seraclone Anti-A1 (ABO4) - clone A1",
+              "packSize": "5 mL"
+            },
+            {
+              "catalogNumber": "801165",
+              "name": "Seraclone Anti-H (H1) - clones A46/B.B10",
+              "packSize": "5 mL"
+            }
+          ],
+          "footnote": "Наведено вибрані позиції з офіційного каталогу Bio-Rad. Асортимент для України уточнює менеджер."
+        },
+        "cta": {
+          "label": "Запитати про Tube Testing",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ До переліку лінійок",
+          "href": "#lines"
+        }
+      },
+      {
+        "anchor": "ih-systems-reagents",
+        "productSlug": "ih-systems-reagents",
+        "eyebrow": "Реагенти для IH-систем",
+        "h3": "IH-System Reagents",
+        "text": "IH-System Reagents — оглядова лінійка Bio-Rad для імуногематологічних досліджень у ручних та автоматизованих системах з ID-картами. Вона охоплює реагенти для гелевого й пробіркового тестування, тест-клітини, ID-карти та допоміжні розчини.",
+        "image": {
+          "alt": "Реагенти ID-DiaCell I-II-III для систем Bio-Rad IH"
+        },
+        "keyFacts": [
+          {
+            "value": "2 формати",
+            "label": "ручні та автоматизовані системи"
+          },
+          {
+            "value": "ID-карти",
+            "label": "формат систем Bio-Rad"
+          },
+          {
+            "value": "5 позицій",
+            "label": "у репрезентативному переліку"
+          }
+        ],
+        "ordering": {
+          "show": true,
+          "h3": "Позиції IH-System Reagents для замовлення",
+          "columns": [
+            "Каталожний номер",
+            "Назва",
+            "Фасування"
+          ],
+          "rows": [
+            {
+              "catalogNumber": "009260",
+              "name": "ID-Diluent 2",
+              "packSize": "2 × 100 mL"
+            },
+            {
+              "catalogNumber": "004310",
+              "name": "ID-DiaCell I-II-III",
+              "packSize": "200 tests, 3 × 10 mL"
+            },
+            {
+              "catalogNumber": "004330",
+              "name": "ID-DiaScreen Prophylax",
+              "packSize": "100 tests, 6 × 5 mL"
+            },
+            {
+              "catalogNumber": "007140",
+              "name": "ID-Card s",
+              "packSize": "72 tests, 1 × 12"
+            },
+            {
+              "catalogNumber": "801320",
+              "name": "Seraclone Anti-A (ABO1)",
+              "packSize": "10 mL"
+            }
+          ],
+          "footnote": "Перелік репрезентативний і перетинається з Gel Testing та Tube Testing. Асортимент для України уточнює менеджер."
+        },
+        "cta": {
+          "label": "Запитати про IH-System Reagents",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ До переліку лінійок",
+          "href": "#lines"
+        }
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Питання й відповіді про реагенти для імуногематології",
+    "items": [
+      {
+        "q": "Які лінійки реагентів Bio-Rad представлені на сторінці?",
+        "a": "Gel Testing для гелевої аглютинації, Tube Testing для пробіркових методик та оглядова лінійка IH-System Reagents для ручних і автоматизованих систем з ID-картами."
+      },
+      {
+        "q": "Чим Gel Testing відрізняється від Tube Testing?",
+        "a": "Gel Testing охоплює ID-карти, тест-сироватки й тест-клітини для гелевої аглютинації. Tube Testing містить моноклональні реагенти Seraclone для визначення ABO-антигенів у пробірці або на склі."
+      },
+      {
+        "q": "Чи наведено повний асортимент реагентів Bio-Rad?",
+        "a": "Ні. На сторінці наведено вибрані або репрезентативні каталожні позиції; доступний для України асортимент уточнює менеджер LabWell."
+      },
+      {
+        "q": "Хто постачає реагенти Bio-Rad для імуногематології в Україні?",
+        "a": "LabWell — офіційний дистриб'ютор Bio-Rad в Україні. Компанія допомагає підібрати найефективніше рішення для ваших задач, постачає продукцію та надає аплікаційну підтримку."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.itemsForLine"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Підібрати реагенти для імуногематології",
+    "text": "Вкажіть методику, обладнання та потрібні дослідження — допоможемо підібрати найефективніше рішення для ваших задач.",
+    "messagePrefill": "Цікавлять реагенти Bio-Rad для імуногематології. "
+  }
+}

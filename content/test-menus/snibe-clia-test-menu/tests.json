@@ -1,0 +1,1394 @@
+{
+  "groups": [
+    {
+      "id": "thyroid",
+      "name": {
+        "uk": "Щитоподібна залоза",
+        "en": "Thyroid"
+      },
+      "tests": [
+        {
+          "id": "test-7afe3db850cd",
+          "name": "TSH (3rd Generation)"
+        },
+        {
+          "id": "test-19f7c4ee22a4",
+          "name": "Free T3"
+        },
+        {
+          "id": "test-11fff29e72f8",
+          "name": "TRAb"
+        },
+        {
+          "id": "test-785a47ecd083",
+          "name": "Total T4"
+        },
+        {
+          "id": "test-ccd70c9710ff",
+          "name": "Tg (Thyroglobulin)"
+        },
+        {
+          "id": "test-66ebb101bbb8",
+          "name": "TMA"
+        },
+        {
+          "id": "test-65e0c2bffe46",
+          "name": "Total T3"
+        },
+        {
+          "id": "test-c634101630b4",
+          "name": "TGA (Anti-Tg)"
+        },
+        {
+          "id": "test-d876bc4b967e",
+          "name": "Rev T3"
+        },
+        {
+          "id": "test-d06f6091e97d",
+          "name": "Free T4"
+        },
+        {
+          "id": "test-a1fbdacfe1ba",
+          "name": "Anti-TPO"
+        },
+        {
+          "id": "test-07b5f8c96271",
+          "name": "T-Uptake"
+        }
+      ]
+    },
+    {
+      "id": "tumor-markers",
+      "name": {
+        "uk": "Онкомаркери",
+        "en": "Tumor Markers"
+      },
+      "tests": [
+        {
+          "id": "test-3d5b25960d5e",
+          "name": "AFP"
+        },
+        {
+          "id": "test-94c5d98a9c67",
+          "name": "CEA"
+        },
+        {
+          "id": "test-dc675e324f4d",
+          "name": "Total PSA"
+        },
+        {
+          "id": "test-084378eacd29",
+          "name": "free PSA"
+        },
+        {
+          "id": "test-82483f0fcfd2",
+          "name": "CA 125"
+        },
+        {
+          "id": "test-12019f8e84cf",
+          "name": "CA 15-3"
+        },
+        {
+          "id": "test-53c74d77ca0d",
+          "name": "CA 19-9"
+        },
+        {
+          "id": "test-8cea2477e506",
+          "name": "PAP"
+        },
+        {
+          "id": "test-e9bba8c3874a",
+          "name": "CA 50"
+        },
+        {
+          "id": "test-3afb3eabb6e4",
+          "name": "CYFRA 21-1"
+        },
+        {
+          "id": "test-2f8d8d8a4732",
+          "name": "CA 242"
+        },
+        {
+          "id": "test-2f6a884fa262",
+          "name": "CA 72-4"
+        },
+        {
+          "id": "test-8bff9e9b0435",
+          "name": "NSE"
+        },
+        {
+          "id": "test-4e9a6319b6d9",
+          "name": "S-100"
+        },
+        {
+          "id": "test-f09a404cea9c",
+          "name": "SCCA"
+        },
+        {
+          "id": "test-aa568d8e04ac",
+          "name": "TPA-snibe"
+        },
+        {
+          "id": "test-33b7ec66ec94",
+          "name": "ProGRP"
+        },
+        {
+          "id": "test-c337d2f29f90",
+          "name": "HE4"
+        },
+        {
+          "id": "test-00322c94d829",
+          "name": "HER-2"
+        },
+        {
+          "id": "test-995ccc8595c4",
+          "name": "PIVKA-II"
+        },
+        {
+          "id": "test-c73a324884c8",
+          "name": "*AFP-L3%"
+        },
+        {
+          "id": "test-b6d0a4cc40f7",
+          "name": "Pepsinogen I"
+        },
+        {
+          "id": "test-241e1f74a11a",
+          "name": "Pepsinogen II"
+        },
+        {
+          "id": "test-ddb0cff077a2",
+          "name": "Gastrin-17"
+        },
+        {
+          "id": "test-2f6e9c6b3084",
+          "name": "*p2PSA"
+        }
+      ]
+    },
+    {
+      "id": "fertility",
+      "name": {
+        "uk": "Репродуктивне здоров’я",
+        "en": "Fertility"
+      },
+      "tests": [
+        {
+          "id": "test-a68c905444eb",
+          "name": "FSH"
+        },
+        {
+          "id": "test-3ebe95bc23ae",
+          "name": "LH"
+        },
+        {
+          "id": "test-1bb673ed5704",
+          "name": "Total β-HCG"
+        },
+        {
+          "id": "test-e2c4bc3fe269",
+          "name": "PRL (Prolactin)"
+        },
+        {
+          "id": "test-b84f5f32996f",
+          "name": "Estradiol"
+        },
+        {
+          "id": "test-bfe8f2a667f0",
+          "name": "Testosterone"
+        },
+        {
+          "id": "test-f360a6ac232b",
+          "name": "free Testosterone"
+        },
+        {
+          "id": "test-41027065d117",
+          "name": "DHEA-S"
+        },
+        {
+          "id": "test-b678cd4d44fb",
+          "name": "Progesterone"
+        },
+        {
+          "id": "test-774504cce5af",
+          "name": "17-OH Progesterone"
+        },
+        {
+          "id": "test-559bdc5c8d79",
+          "name": "AMH"
+        },
+        {
+          "id": "test-621f1bb60bdb",
+          "name": "SHBG"
+        },
+        {
+          "id": "test-4dcf125e6ef4",
+          "name": "Androstenedione"
+        },
+        {
+          "id": "test-a78997503a0b",
+          "name": "PlGF"
+        },
+        {
+          "id": "test-3f734495fe2c",
+          "name": "sFlt-1"
+        },
+        {
+          "id": "test-b740f9cee06b",
+          "name": "*Inhibin A"
+        },
+        {
+          "id": "test-cd3602966ebf",
+          "name": "*Inhibin B"
+        }
+      ]
+    },
+    {
+      "id": "autoimmune",
+      "name": {
+        "uk": "Аутоімунні захворювання",
+        "en": "Autoimmune"
+      },
+      "tests": [
+        {
+          "id": "test-84df48bbe851",
+          "name": "ANA Screen"
+        },
+        {
+          "id": "test-5a9dc6f54250",
+          "name": "ENA Screen"
+        },
+        {
+          "id": "test-0f13ac283fd0",
+          "name": "Anti-dsDNA IgG"
+        },
+        {
+          "id": "test-d7368e3fee8c",
+          "name": "Anti-Sm IgG"
+        },
+        {
+          "id": "test-307cee622401",
+          "name": "Anti-Rib-P IgG"
+        },
+        {
+          "id": "test-75c0e7a9cd9f",
+          "name": "Anti-SS-B IgG"
+        },
+        {
+          "id": "test-7147cb62bc79",
+          "name": "Anti-SS-A IgG"
+        },
+        {
+          "id": "test-3bf6224399e6",
+          "name": "Anti-Jo-1 IgG"
+        },
+        {
+          "id": "test-905aedcff611",
+          "name": "Anti-Scl-70 IgG"
+        },
+        {
+          "id": "test-76e119e0a35d",
+          "name": "Anti-Centromeres IgG"
+        },
+        {
+          "id": "test-a2527ee68c01",
+          "name": "Anti-Histones IgG"
+        },
+        {
+          "id": "test-4a8d37374a3e",
+          "name": "Anti-nRNP/Sm IgG"
+        },
+        {
+          "id": "test-e79b01f7eca9",
+          "name": "Anti-CCP"
+        },
+        {
+          "id": "test-6c62f98c8614",
+          "name": "tTG IgA"
+        },
+        {
+          "id": "test-d7ac9af78aaf",
+          "name": "tTG IgG"
+        },
+        {
+          "id": "test-e7b08afbd5ad",
+          "name": "DGP IgA"
+        },
+        {
+          "id": "test-599e3d63310f",
+          "name": "DGP IgG"
+        },
+        {
+          "id": "test-323a92ec2b7a",
+          "name": "Anti-M2-3E IgG"
+        },
+        {
+          "id": "test-a1fbdacfe1ba",
+          "name": "Anti-TPO"
+        },
+        {
+          "id": "test-c634101630b4",
+          "name": "TGA (Anti-Tg)"
+        },
+        {
+          "id": "test-11fff29e72f8",
+          "name": "TRAb"
+        },
+        {
+          "id": "test-66ebb101bbb8",
+          "name": "TMA"
+        },
+        {
+          "id": "test-d3ed89ecc5ea",
+          "name": "GAD 65"
+        },
+        {
+          "id": "test-c8d3d229ca11",
+          "name": "Anti-IA2"
+        },
+        {
+          "id": "test-7556b904d203",
+          "name": "ICA"
+        },
+        {
+          "id": "test-ce5f84d017d5",
+          "name": "IAA (Anti Insulin)"
+        },
+        {
+          "id": "test-e9fe017a1901",
+          "name": "Anti-MPO IgG"
+        },
+        {
+          "id": "test-608c5d6febe8",
+          "name": "Anti-Cardiolipin IgG"
+        },
+        {
+          "id": "test-fbb878fbdb86",
+          "name": "Anti-Cardiolipin IgM"
+        },
+        {
+          "id": "test-a1bddc88c8e6",
+          "name": "β2-Glycoprotein I IgG"
+        },
+        {
+          "id": "test-3b43dead220a",
+          "name": "β2-Glycoprotein I IgM"
+        },
+        {
+          "id": "test-162a7ef00960",
+          "name": "Anti-Ro-52 IgG"
+        },
+        {
+          "id": "test-bde757566797",
+          "name": "Anti-PM-Scl IgG"
+        },
+        {
+          "id": "test-727ea5b01112",
+          "name": "Anti-Nucleosome IgG"
+        },
+        {
+          "id": "test-aa7727cbe12d",
+          "name": "*RF IgM"
+        },
+        {
+          "id": "test-3bcdec430a8c",
+          "name": "*RF IgG"
+        },
+        {
+          "id": "test-c80be30c8468",
+          "name": "*RF IgA"
+        },
+        {
+          "id": "test-d0e7289ec884",
+          "name": "*RF Screen"
+        },
+        {
+          "id": "test-687e13154759",
+          "name": "Anti-ZnT8"
+        },
+        {
+          "id": "test-26fd07fbbf68",
+          "name": "Anti-PR3 IgG"
+        },
+        {
+          "id": "test-5c36c57415ba",
+          "name": "Anti-GBM IgG"
+        },
+        {
+          "id": "test-6f473fd0b402",
+          "name": "Anti-Cardiolipin IgA"
+        },
+        {
+          "id": "test-f33e2b3d70e7",
+          "name": "*Anti-Cardiolipin"
+        },
+        {
+          "id": "test-2f379e43007a",
+          "name": "β2-Glycoprotein I IgA"
+        },
+        {
+          "id": "test-b5a33f4d8d9d",
+          "name": "β2-Glycoprotein I"
+        }
+      ]
+    },
+    {
+      "id": "infectious-disease",
+      "name": {
+        "uk": "Інфекційні захворювання",
+        "en": "Infectious Disease"
+      },
+      "tests": [
+        {
+          "id": "test-900a2a884fd2",
+          "name": "HBsAg"
+        },
+        {
+          "id": "test-a1873b9bbd04",
+          "name": "Anti-HBs"
+        },
+        {
+          "id": "test-e7613d471c6a",
+          "name": "HBeAg"
+        },
+        {
+          "id": "test-34f3d01599c0",
+          "name": "Anti-HBe"
+        },
+        {
+          "id": "test-7b6c97be3412",
+          "name": "Anti-HBc"
+        },
+        {
+          "id": "test-c24fd5b8aaaa",
+          "name": "Anti-HBc IgM"
+        },
+        {
+          "id": "test-3782cae1ed26",
+          "name": "Anti-HCV"
+        },
+        {
+          "id": "test-fc5304e68574",
+          "name": "Anti-HAV"
+        },
+        {
+          "id": "test-5bec9cb0b2e1",
+          "name": "HAV IgM"
+        },
+        {
+          "id": "test-1e636e9cb048",
+          "name": "HIV Ab/Ag Combi"
+        },
+        {
+          "id": "test-dd6127fe9a33",
+          "name": "Syphilis"
+        },
+        {
+          "id": "test-f3c7493844a5",
+          "name": "Chagas"
+        },
+        {
+          "id": "test-9192295345d1",
+          "name": "HTLV I+II"
+        },
+        {
+          "id": "test-3b3d91e908e5",
+          "name": "H. pylori IgG"
+        },
+        {
+          "id": "test-40fbf10b9180",
+          "name": "H. pylori IgA"
+        },
+        {
+          "id": "test-0b31f5901b98",
+          "name": "H. pylori IgM"
+        },
+        {
+          "id": "test-8d69f610cfa7",
+          "name": "Dengue Virus IgG"
+        },
+        {
+          "id": "test-e8df9d1a495f",
+          "name": "Dengue Virus NS1"
+        },
+        {
+          "id": "test-4be404749b90",
+          "name": "Monkeypox Virus Ag"
+        },
+        {
+          "id": "test-8e2ad841e45e",
+          "name": "2019-nCoV lgG"
+        },
+        {
+          "id": "test-17535de7ed10",
+          "name": "2019-nCoV lgM"
+        },
+        {
+          "id": "test-02861a26adc2",
+          "name": "SARS-CoV-2 S-RBD IgG"
+        },
+        {
+          "id": "test-19d680935825",
+          "name": "SARS-CoV-2 NAb"
+        },
+        {
+          "id": "test-376cd70c2d04",
+          "name": "SARS-CoV-2 Ag"
+        },
+        {
+          "id": "test-7b7189829008",
+          "name": "Mycoplasma pneumoniae IgG"
+        },
+        {
+          "id": "test-b9f45e3ed923",
+          "name": "Mycoplasma pneumoniae IgM"
+        },
+        {
+          "id": "test-43cd77426c1b",
+          "name": "Chlamydia pneumoniae IgG"
+        },
+        {
+          "id": "test-2de3e09fa9ee",
+          "name": "Chlamydia pneumoniae IgM"
+        },
+        {
+          "id": "test-58f9c073d76e",
+          "name": "*HBV Pre-S1 Ag"
+        },
+        {
+          "id": "test-f8c4dd5e29d1",
+          "name": "HEV IgG"
+        },
+        {
+          "id": "test-fb3e41fdb279",
+          "name": "HEV IgM"
+        },
+        {
+          "id": "test-08faaa54ced9",
+          "name": "Dengue Virus IgM"
+        },
+        {
+          "id": "test-7bbad0447665",
+          "name": "*Respiratory Syncytial Virus IgM"
+        },
+        {
+          "id": "test-8c44be914af8",
+          "name": "*Coxsackievirus B IgM"
+        },
+        {
+          "id": "test-49da77f1d24a",
+          "name": "*Adenovirus IgM"
+        },
+        {
+          "id": "test-e928cc169b62",
+          "name": "*Influenza A Virus IgM"
+        },
+        {
+          "id": "test-273fffc21da5",
+          "name": "*Influenza B Virus IgM"
+        },
+        {
+          "id": "test-4c354353b303",
+          "name": "*Legionella pneumophila IgM"
+        },
+        {
+          "id": "test-c90350b2ff72",
+          "name": "*Human Parainfluenza Virus IgM"
+        },
+        {
+          "id": "test-9332478791fd",
+          "name": "*H. pylori Ag"
+        },
+        {
+          "id": "test-d98cca0d6cc0",
+          "name": "*HDV IgG"
+        },
+        {
+          "id": "test-5c9633e94296",
+          "name": "*HDV IgM"
+        },
+        {
+          "id": "test-210c99686474",
+          "name": "*Anti-HDV"
+        },
+        {
+          "id": "test-20bffee22fa0",
+          "name": "*TB-IGRAs"
+        },
+        {
+          "id": "test-eaaa24dd69de",
+          "name": "*Zika Virus IgG"
+        },
+        {
+          "id": "test-4d71b5eb93ef",
+          "name": "*Zika Virus IgM"
+        },
+        {
+          "id": "test-e9e26392963d",
+          "name": "*Zika Virus NS1"
+        },
+        {
+          "id": "test-ec8c0764e90a",
+          "name": "*Chlamydia trachomatis IgA"
+        },
+        {
+          "id": "test-893a1db8349d",
+          "name": "*Chlamydia trachomatis IgG"
+        },
+        {
+          "id": "test-b5c4c1ac798e",
+          "name": "*HBsAg Confirmatory Test"
+        },
+        {
+          "id": "test-c0138c6b4edd",
+          "name": "*Borrelia IgG"
+        },
+        {
+          "id": "test-6bea27f61a81",
+          "name": "*Borrelia IgM"
+        }
+      ]
+    },
+    {
+      "id": "inflammation-monitoring",
+      "name": {
+        "uk": "Моніторинг запалення",
+        "en": "Inflammation Monitoring"
+      },
+      "tests": [
+        {
+          "id": "test-d3f3eecbbb73",
+          "name": "CRP"
+        },
+        {
+          "id": "test-b46785fe687d",
+          "name": "IL-6 (Interleukin 6)"
+        },
+        {
+          "id": "test-1b9a202d5721",
+          "name": "PCT (Procalcitonin)"
+        },
+        {
+          "id": "test-2cf6ac190e92",
+          "name": "SAA (Serum Amyloid A)"
+        },
+        {
+          "id": "test-401d122bd308",
+          "name": "TNF-α"
+        },
+        {
+          "id": "test-1ea06836dda5",
+          "name": "*VEGF"
+        },
+        {
+          "id": "test-e5d5e4d6f8d3",
+          "name": "*PCT"
+        },
+        {
+          "id": "test-6b764ea1b534",
+          "name": "*CRP"
+        },
+        {
+          "id": "test-c84ef7a65c2a",
+          "name": "lgE"
+        }
+      ]
+    },
+    {
+      "id": "torch",
+      "name": {
+        "uk": "TORCH",
+        "en": "TORCH"
+      },
+      "tests": [
+        {
+          "id": "test-8e549be4d179",
+          "name": "Toxo lgG"
+        },
+        {
+          "id": "test-48dbf1d3c01d",
+          "name": "Toxo lgM"
+        },
+        {
+          "id": "test-5336d58b2694",
+          "name": "Rubella lgG"
+        },
+        {
+          "id": "test-71cd09d56b14",
+          "name": "Rubella lgM"
+        },
+        {
+          "id": "test-7bb5353fe52a",
+          "name": "CMV lgG"
+        },
+        {
+          "id": "test-cf6232c5802b",
+          "name": "CMV lgM"
+        },
+        {
+          "id": "test-162e1d8ae05c",
+          "name": "HSV-1/2 lgG"
+        },
+        {
+          "id": "test-2dfa9cf29c7f",
+          "name": "HSV-1/2 lgM"
+        },
+        {
+          "id": "test-9d3de6d3c245",
+          "name": "HSV-1 IgG"
+        },
+        {
+          "id": "test-c966d6e35ebd",
+          "name": "HSV-2 lgG"
+        },
+        {
+          "id": "test-f07d1c0500c4",
+          "name": "HSV-2 IgM"
+        },
+        {
+          "id": "test-c68816e265c9",
+          "name": "HSV-1 IgM"
+        },
+        {
+          "id": "test-37930d7ab1bc",
+          "name": "*Toxo IgG Avidity"
+        },
+        {
+          "id": "test-8fd9c7de5d38",
+          "name": "*CMV IgG Avidity"
+        },
+        {
+          "id": "test-cd9066b17882",
+          "name": "*Parvovirus B19 IgG"
+        },
+        {
+          "id": "test-5345ce2f8213",
+          "name": "*Parvovirus B19 IgM"
+        }
+      ]
+    },
+    {
+      "id": "bone-metabolism",
+      "name": {
+        "uk": "Кістковий метаболізм",
+        "en": "Bone Metabolism"
+      },
+      "tests": [
+        {
+          "id": "test-23e0a4f768df",
+          "name": "Calcitonin"
+        },
+        {
+          "id": "test-9063e00dc5fb",
+          "name": "25-OH Vitamin D"
+        },
+        {
+          "id": "test-a583c7747fca",
+          "name": "β-CTx"
+        },
+        {
+          "id": "test-6c49f60b0819",
+          "name": "Osteocalcin"
+        },
+        {
+          "id": "test-f2654d1f7ec6",
+          "name": "Intact PTH"
+        },
+        {
+          "id": "test-5bab2c140237",
+          "name": "total P1NP"
+        },
+        {
+          "id": "test-83715a3001b1",
+          "name": "PTH (1-84)"
+        },
+        {
+          "id": "test-8aa4715c1972",
+          "name": "*BAP"
+        }
+      ]
+    },
+    {
+      "id": "ebv",
+      "name": {
+        "uk": "Вірус Епштейна — Барр",
+        "en": "EBV"
+      },
+      "tests": [
+        {
+          "id": "test-bc2c9cb0130f",
+          "name": "EBV VCA lgG"
+        },
+        {
+          "id": "test-b8b57f543027",
+          "name": "EBV VCA lgM"
+        },
+        {
+          "id": "test-b20c50872325",
+          "name": "EBV VCA lgA"
+        },
+        {
+          "id": "test-b6a3073b3e9e",
+          "name": "EBV EA lgG"
+        },
+        {
+          "id": "test-7477bfaf084e",
+          "name": "EBV EA lgA"
+        },
+        {
+          "id": "test-a6db3cbb0530",
+          "name": "EBV NA lgG"
+        },
+        {
+          "id": "test-fb81e7817960",
+          "name": "EBV NA IgA"
+        }
+      ]
+    },
+    {
+      "id": "cardiac",
+      "name": {
+        "uk": "Кардіологічні маркери",
+        "en": "Cardiac"
+      },
+      "tests": [
+        {
+          "id": "test-a9ed8740d902",
+          "name": "CK-MB"
+        },
+        {
+          "id": "test-f9f5d15331ed",
+          "name": "Troponin I"
+        },
+        {
+          "id": "test-3f72aa9dbce4",
+          "name": "Myoglobin"
+        },
+        {
+          "id": "test-d9ed84d5e31b",
+          "name": "hs-cTnl"
+        },
+        {
+          "id": "test-dec08dba1351",
+          "name": "hs-CRP"
+        },
+        {
+          "id": "test-eedcf625c9f2",
+          "name": "H-FABP"
+        },
+        {
+          "id": "test-90ebff6d5301",
+          "name": "NT-proBNP"
+        },
+        {
+          "id": "test-656cec22fab0",
+          "name": "BNP"
+        },
+        {
+          "id": "test-695354854d77",
+          "name": "D-Dimer"
+        },
+        {
+          "id": "test-efe7dcd7a5f7",
+          "name": "Lp-PLA2"
+        },
+        {
+          "id": "test-e94c24a6d20b",
+          "name": "MPO"
+        },
+        {
+          "id": "test-6e523ce9665f",
+          "name": "HCY"
+        },
+        {
+          "id": "test-c841bc0d5507",
+          "name": "sST2"
+        },
+        {
+          "id": "test-cd063717163d",
+          "name": "*hs-cTnl"
+        },
+        {
+          "id": "test-19a195b1553f",
+          "name": "*NT-proBNP"
+        },
+        {
+          "id": "test-0a075b35c079",
+          "name": "*Myoglobin"
+        },
+        {
+          "id": "test-7507095237d6",
+          "name": "*D-Dimer"
+        },
+        {
+          "id": "test-5c3bc6578d4f",
+          "name": "*GDF-15"
+        },
+        {
+          "id": "test-2405e612af57",
+          "name": "*hs-cTnT"
+        },
+        {
+          "id": "test-15f48ff2fd7b",
+          "name": "*H-FABP"
+        },
+        {
+          "id": "test-c549d7d355aa",
+          "name": "*CK-MB"
+        }
+      ]
+    },
+    {
+      "id": "prenatal-screening",
+      "name": {
+        "uk": "Пренатальний скринінг",
+        "en": "Prenatal Screening"
+      },
+      "tests": [
+        {
+          "id": "test-f11a0e20d949",
+          "name": "AFP (Prenatal Screening)"
+        },
+        {
+          "id": "test-94348ae3da9d",
+          "name": "free β-HCG"
+        },
+        {
+          "id": "test-22ff9d66dd9d",
+          "name": "Unconjugated Estriol"
+        },
+        {
+          "id": "test-ba7beaf73285",
+          "name": "PAPP-A"
+        },
+        {
+          "id": "test-b740f9cee06b",
+          "name": "*Inhibin A"
+        }
+      ]
+    },
+    {
+      "id": "hypertension",
+      "name": {
+        "uk": "Артеріальна гіпертензія",
+        "en": "Hypertension"
+      },
+      "tests": [
+        {
+          "id": "test-a007d32da590",
+          "name": "Direct Renin"
+        },
+        {
+          "id": "test-337be78ad0da",
+          "name": "Aldosterone"
+        },
+        {
+          "id": "test-f0839fddda32",
+          "name": "Angiotensin I"
+        },
+        {
+          "id": "test-9ece1a657252",
+          "name": "Angiotensin II"
+        },
+        {
+          "id": "test-9b6dff5b8d45",
+          "name": "Cortisol"
+        },
+        {
+          "id": "test-96977e21e755",
+          "name": "ACTH"
+        }
+      ]
+    },
+    {
+      "id": "glyco-metabolism",
+      "name": {
+        "uk": "Вуглеводний обмін",
+        "en": "Glyco Metabolism"
+      },
+      "tests": [
+        {
+          "id": "test-a1b815f0f324",
+          "name": "C-Peptide"
+        },
+        {
+          "id": "test-47e2518fb19d",
+          "name": "Insulin"
+        },
+        {
+          "id": "test-d3ed89ecc5ea",
+          "name": "GAD 65"
+        },
+        {
+          "id": "test-c8d3d229ca11",
+          "name": "Anti-IA2"
+        },
+        {
+          "id": "test-7556b904d203",
+          "name": "ICA"
+        },
+        {
+          "id": "test-ce5f84d017d5",
+          "name": "IAA (Anti Insulin)"
+        },
+        {
+          "id": "test-714be4d9d529",
+          "name": "Proinsulin"
+        },
+        {
+          "id": "test-7ca15cdff832",
+          "name": "*Glucagon"
+        },
+        {
+          "id": "test-687e13154759",
+          "name": "Anti-ZnT8"
+        },
+        {
+          "id": "test-0d4ba67738e1",
+          "name": "*Adiponectin (ADPN)"
+        }
+      ]
+    },
+    {
+      "id": "coagulation-markers",
+      "name": {
+        "uk": "Маркери коагуляції",
+        "en": "Coagulation Markers"
+      },
+      "tests": [
+        {
+          "id": "test-695354854d77",
+          "name": "D-Dimer"
+        },
+        {
+          "id": "test-dfa50c559539",
+          "name": "TM"
+        },
+        {
+          "id": "test-72c99e1c48ad",
+          "name": "tPAIC"
+        },
+        {
+          "id": "test-7b172cf1ca32",
+          "name": "TAT"
+        },
+        {
+          "id": "test-5195eed19619",
+          "name": "PIC"
+        },
+        {
+          "id": "test-93d62d3d642c",
+          "name": "FDP"
+        }
+      ]
+    },
+    {
+      "id": "stat-x",
+      "name": {
+        "uk": "STAT-X",
+        "en": "STAT-X"
+      },
+      "tests": [
+        {
+          "id": "test-cd063717163d",
+          "name": "*hs-cTnl"
+        },
+        {
+          "id": "test-0a075b35c079",
+          "name": "*Myoglobin"
+        },
+        {
+          "id": "test-e5d5e4d6f8d3",
+          "name": "*PCT"
+        },
+        {
+          "id": "test-19a195b1553f",
+          "name": "*NT-proBNP"
+        },
+        {
+          "id": "test-7507095237d6",
+          "name": "*D-Dimer"
+        },
+        {
+          "id": "test-6b764ea1b534",
+          "name": "*CRP"
+        },
+        {
+          "id": "test-c549d7d355aa",
+          "name": "*CK-MB"
+        },
+        {
+          "id": "test-15f48ff2fd7b",
+          "name": "*H-FABP"
+        }
+      ]
+    },
+    {
+      "id": "metabolism",
+      "name": {
+        "uk": "Метаболізм",
+        "en": "Metabolism"
+      },
+      "tests": [
+        {
+          "id": "test-37dad7b2a572",
+          "name": "IGF-I"
+        },
+        {
+          "id": "test-89334fc84acf",
+          "name": "GH (hGH)"
+        },
+        {
+          "id": "test-17d43f11b2d7",
+          "name": "IGFBP-3"
+        }
+      ]
+    },
+    {
+      "id": "kidney-function",
+      "name": {
+        "uk": "Функція нирок",
+        "en": "Kidney Function"
+      },
+      "tests": [
+        {
+          "id": "test-a157e238793a",
+          "name": "β2 -MG"
+        },
+        {
+          "id": "test-515c88b0f9ec",
+          "name": "Albumin"
+        },
+        {
+          "id": "test-3fca999f608d",
+          "name": "*NGAL"
+        }
+      ]
+    },
+    {
+      "id": "anemia",
+      "name": {
+        "uk": "Анемія",
+        "en": "Anemia"
+      },
+      "tests": [
+        {
+          "id": "test-f402a761bdab",
+          "name": "Vitamin B12"
+        },
+        {
+          "id": "test-0c2b7614dfb6",
+          "name": "EPO"
+        },
+        {
+          "id": "test-4008d8240204",
+          "name": "Ferritin"
+        },
+        {
+          "id": "test-e895a03328c7",
+          "name": "RBC Folate"
+        },
+        {
+          "id": "test-60a77df6178c",
+          "name": "Folate (FA)"
+        },
+        {
+          "id": "test-99b9472ab8f7",
+          "name": "*Anti-Intrinsic Factor"
+        },
+        {
+          "id": "test-46dff2207292",
+          "name": "*Active B12"
+        }
+      ]
+    },
+    {
+      "id": "hepatic-fibrosis",
+      "name": {
+        "uk": "Фіброз печінки",
+        "en": "Hepatic Fibrosis"
+      },
+      "tests": [
+        {
+          "id": "test-8ff9c80d1a77",
+          "name": "Hyaluronic Acid (HA)"
+        },
+        {
+          "id": "test-9394f0ecf334",
+          "name": "C IV"
+        },
+        {
+          "id": "test-54ec43d17c2b",
+          "name": "Cholyglycine"
+        },
+        {
+          "id": "test-1549332a5324",
+          "name": "PIIIP N-P"
+        },
+        {
+          "id": "test-9ebad3a68666",
+          "name": "Laminin"
+        },
+        {
+          "id": "test-7e9b42f345d2",
+          "name": "GP73"
+        }
+      ]
+    },
+    {
+      "id": "drug-monitoring",
+      "name": {
+        "uk": "Моніторинг лікарських засобів",
+        "en": "Drug Monitoring"
+      },
+      "tests": [
+        {
+          "id": "test-85db15c1578f",
+          "name": "Digoxin"
+        },
+        {
+          "id": "test-30ebc9a91279",
+          "name": "CSA (Cyclosporine A)"
+        },
+        {
+          "id": "test-2d3618de760e",
+          "name": "FK 506 (Tacrolimus)"
+        },
+        {
+          "id": "test-0aab8f8a4f15",
+          "name": "*Sirolimus"
+        },
+        {
+          "id": "test-de30c3b9c661",
+          "name": "*Everolimus"
+        },
+        {
+          "id": "test-fd02fa836b3e",
+          "name": "*Mycophenolic Acid"
+        },
+        {
+          "id": "test-b83e47a4048f",
+          "name": "*Methotrexate"
+        }
+      ]
+    },
+    {
+      "id": "veterinary-testing",
+      "name": {
+        "uk": "Ветеринарні дослідження",
+        "en": "Veterinary Testing"
+      },
+      "tests": [
+        {
+          "id": "test-f704d43efe4b",
+          "name": "cTSH"
+        },
+        {
+          "id": "test-a5fde8b3a64e",
+          "name": "cTT4"
+        },
+        {
+          "id": "test-2abc35ec3400",
+          "name": "cFT4"
+        },
+        {
+          "id": "test-0099769086fd",
+          "name": "cCortisol"
+        },
+        {
+          "id": "test-4a522a3e0fd8",
+          "name": "cACTH"
+        },
+        {
+          "id": "test-ff46665ab1e5",
+          "name": "cProgesterone"
+        },
+        {
+          "id": "test-d3d01d87489d",
+          "name": "fProgesterone"
+        },
+        {
+          "id": "test-e8e248d4c4b8",
+          "name": "fCortisol"
+        },
+        {
+          "id": "test-c73754ff794e",
+          "name": "fTT4"
+        },
+        {
+          "id": "test-8e82b9433de2",
+          "name": "fACTH"
+        },
+        {
+          "id": "test-1e4698dc836a",
+          "name": "*fFT4"
+        },
+        {
+          "id": "test-7d586a22ab1f",
+          "name": "*fTSH"
+        },
+        {
+          "id": "test-76d89d6f2c25",
+          "name": "*cTLI"
+        },
+        {
+          "id": "test-eacb20c71e35",
+          "name": "*fTLI"
+        }
+      ]
+    },
+    {
+      "id": "neurology",
+      "name": {
+        "uk": "Неврологія",
+        "en": "Neurology"
+      },
+      "tests": [
+        {
+          "id": "test-8bff9e9b0435",
+          "name": "NSE"
+        },
+        {
+          "id": "test-4e9a6319b6d9",
+          "name": "S-100"
+        },
+        {
+          "id": "test-c39a23e8eacf",
+          "name": "*β-Amyloid (1-40) CSF"
+        },
+        {
+          "id": "test-8a9a757d9565",
+          "name": "*β-Amyloid (1-42) CSF"
+        },
+        {
+          "id": "test-0ca3f762d882",
+          "name": "*Phospho-Tau (181P) CSF"
+        },
+        {
+          "id": "test-6cbac6280fd4",
+          "name": "*Total-Tau CSF"
+        },
+        {
+          "id": "test-a8657affea76",
+          "name": "*β-Amyloid (1-40) Plasma"
+        },
+        {
+          "id": "test-2a75cb8942c1",
+          "name": "*β-Amyloid (1-42) Plasma"
+        },
+        {
+          "id": "test-563f962e44dc",
+          "name": "*Phospho-Tau (181P) Plasma"
+        },
+        {
+          "id": "test-84af174d4e51",
+          "name": "*Phospho-Tau (217P) Plasma"
+        },
+        {
+          "id": "test-fd872cf897a2",
+          "name": "*NfL Plasma"
+        }
+      ]
+    }
+  ]
+}

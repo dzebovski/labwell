@@ -1,0 +1,258 @@
+{
+  "slug": "maglumi",
+  "url": "/products/maglumi",
+  "kind": "overview",
+  "brand": "Snibe",
+  "seo": {
+    "title": "Аналізатори MAGLUMI X — порівняння моделей | LabWell",
+    "description": "Порівняйте автоматичні CLIA-аналізатори MAGLUMI X3, X6, X8 і X10 за продуктивністю, позиціями для зразків і реагентів. Консультація LabWell в Україні."
+  },
+  "C2_hero": {
+    "show": true,
+    "breadcrumbs": [
+      "Головна",
+      "Продукція",
+      "Лабораторне обладнання",
+      "Імуноаналіз",
+      "Аналізатори MAGLUMI"
+    ],
+    "eyebrow": "Огляд серії · CLIA",
+    "h1": "MAGLUMI X — автоматичні CLIA-аналізатори Snibe",
+    "lead": "MAGLUMI X — лінійка повністю автоматичних CLIA-аналізаторів Snibe для лабораторій із різним потоком досліджень. Порівняйте чотири моделі за продуктивністю та кількістю позицій для зразків і реагентів.",
+    "primaryCta": {
+      "label": "Отримати консультацію",
+      "href": "#contact"
+    },
+    "models": [
+      {
+        "productSlug": "maglumi-x3",
+        "image": {
+          "alt": "Автоматичний CLIA-аналізатор MAGLUMI X3, вигляд спереду"
+        }
+      },
+      {
+        "productSlug": "maglumi-x6",
+        "image": {
+          "alt": "Автоматичний CLIA-аналізатор MAGLUMI X6, вигляд спереду"
+        }
+      },
+      {
+        "productSlug": "maglumi-x8",
+        "image": {
+          "alt": "Автоматичний CLIA-аналізатор MAGLUMI X8, вигляд спереду"
+        }
+      },
+      {
+        "productSlug": "maglumi-x10",
+        "image": {
+          "alt": "Автоматичний CLIA-аналізатор MAGLUMI X10, вигляд спереду"
+        }
+      }
+    ]
+  },
+  "C2_compare": {
+    "show": true,
+    "eyebrow": "Порівняння",
+    "h2": "Ключові показники MAGLUMI X",
+    "caption": "За даними Snibe",
+    "models": [
+      {
+        "productSlug": "maglumi-x3",
+        "name": "MAGLUMI X3",
+        "href": "/products/maglumi-x3",
+        "image": {
+          "alt": "Автоматичний CLIA-аналізатор MAGLUMI X3, вигляд спереду"
+        }
+      },
+      {
+        "productSlug": "maglumi-x6",
+        "name": "MAGLUMI X6",
+        "href": "/products/maglumi-x6",
+        "image": {
+          "alt": "Автоматичний CLIA-аналізатор MAGLUMI X6, вигляд спереду"
+        }
+      },
+      {
+        "productSlug": "maglumi-x8",
+        "name": "MAGLUMI X8",
+        "href": "/products/maglumi-x8",
+        "image": {
+          "alt": "Автоматичний CLIA-аналізатор MAGLUMI X8, вигляд спереду"
+        }
+      },
+      {
+        "productSlug": "maglumi-x10",
+        "name": "MAGLUMI X10",
+        "href": "/products/maglumi-x10",
+        "image": {
+          "alt": "Автоматичний CLIA-аналізатор MAGLUMI X10, вигляд спереду"
+        }
+      }
+    ],
+    "rows": [
+      {
+        "label": "Продуктивність одного модуля",
+        "unit": "тестів/год",
+        "values": {
+          "maglumi-x3": "до 200",
+          "maglumi-x6": "до 450",
+          "maglumi-x8": "до 600",
+          "maglumi-x10": "до 1 000"
+        }
+      },
+      {
+        "label": "Продуктивність чотирьох модулів",
+        "unit": "тестів/год",
+        "values": {
+          "maglumi-x3": "н/д",
+          "maglumi-x6": "н/д",
+          "maglumi-x8": "до 2 400",
+          "maglumi-x10": "до 4 000"
+        }
+      },
+      {
+        "label": "Позиції для зразків",
+        "values": {
+          "maglumi-x3": "72",
+          "maglumi-x6": "до 112",
+          "maglumi-x8": "300",
+          "maglumi-x10": "300"
+        }
+      },
+      {
+        "label": "Позиції для реагентів",
+        "values": {
+          "maglumi-x3": "20",
+          "maglumi-x6": "30",
+          "maglumi-x8": "42",
+          "maglumi-x10": "50"
+        }
+      },
+      {
+        "label": "Без втручання оператора після завантаження",
+        "unit": "тестів",
+        "values": {
+          "maglumi-x3": "н/д",
+          "maglumi-x6": "до 2 000",
+          "maglumi-x8": "до 2 800",
+          "maglumi-x10": "до 3 000"
+        }
+      }
+    ],
+    "footnote": "н/д — виробник не вказує показник для моделі. Значення «до» — максимальні за даними виробника."
+  },
+  "C2_cards": {
+    "show": true,
+    "eyebrow": "Моделі",
+    "h2": "Оберіть аналізатор MAGLUMI X",
+    "models": [
+      {
+        "productSlug": "maglumi-x3",
+        "eyebrow": "Невеликі й середні лабораторії",
+        "title": "MAGLUMI X3",
+        "text": "Компактний повністю автоматичний CLIA-аналізатор із продуктивністю до 200 тестів на годину.",
+        "href": "/products/maglumi-x3",
+        "image": {
+          "alt": "Автоматичний CLIA-аналізатор MAGLUMI X3, вигляд спереду"
+        }
+      },
+      {
+        "productSlug": "maglumi-x6",
+        "eyebrow": "Значний потік досліджень",
+        "title": "MAGLUMI X6",
+        "text": "Повністю автоматичний CLIA-аналізатор із продуктивністю до 450 тестів на годину та до 112 позицій для зразків.",
+        "href": "/products/maglumi-x6",
+        "image": {
+          "alt": "Автоматичний CLIA-аналізатор MAGLUMI X6, вигляд спереду"
+        }
+      },
+      {
+        "productSlug": "maglumi-x8",
+        "eyebrow": "Середні й великі лабораторії",
+        "title": "MAGLUMI X8",
+        "text": "Один модуль виконує до 600 тестів на годину, а конфігурація з чотирьох модулів — до 2 400.",
+        "href": "/products/maglumi-x8",
+        "image": {
+          "alt": "Автоматичний CLIA-аналізатор MAGLUMI X8, вигляд спереду"
+        }
+      },
+      {
+        "productSlug": "maglumi-x10",
+        "eyebrow": "Високий потік досліджень",
+        "title": "MAGLUMI X10",
+        "text": "Один модуль виконує до 1 000 тестів на годину, а конфігурація з чотирьох модулів — до 4 000.",
+        "href": "/products/maglumi-x10",
+        "image": {
+          "alt": "Автоматичний CLIA-аналізатор MAGLUMI X10, вигляд спереду"
+        }
+      }
+    ],
+    "related": [
+      {
+        "kind": "group",
+        "eyebrow": "Також від Snibe",
+        "title": "MAGLUMI M Series",
+        "text": "Чотири автоматичні CLIA-аналізатори з продуктивністю до 180 тестів на годину.",
+        "href": "/products/maglumi-m-series",
+        "image": {
+          "alt": "Автоматичні CLIA-аналізатори MAGLUMI M Series"
+        }
+      },
+      {
+        "kind": "test-menu",
+        "eyebrow": "278 параметрів · 22 групи",
+        "title": "Меню CLIA-тестів MAGLUMI",
+        "text": "Перегляньте групи тестів і знайдіть потрібну назву.",
+        "href": "/test-menus/snibe-clia-test-menu",
+        "bigNumber": {
+          "value": "278",
+          "label": "параметрів, за даними Snibe"
+        }
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Питання й відповіді про аналізатори MAGLUMI X",
+    "items": [
+      {
+        "q": "Яка продуктивність аналізаторів MAGLUMI X?",
+        "a": "Один модуль MAGLUMI X3 виконує до 200 тестів на годину, X6 — до 450, X8 — до 600, а X10 — до 1 000 тестів на годину."
+      },
+      {
+        "q": "Які моделі MAGLUMI X можна об’єднувати в конфігурацію з чотирьох модулів?",
+        "a": "Snibe наводить показники для конфігурацій із чотирьох модулів MAGLUMI X8 і X10: до 2 400 і до 4 000 тестів на годину відповідно."
+      },
+      {
+        "q": "Де переглянути меню CLIA-тестів MAGLUMI?",
+        "a": "Окрема сторінка меню містить 278 параметрів, як заявляє Snibe, і пошук за назвою тесту.",
+        "link": {
+          "label": "Меню CLIA-тестів MAGLUMI",
+          "href": "/test-menus/snibe-clia-test-menu"
+        }
+      },
+      {
+        "q": "Які ще аналізатори MAGLUMI представлені на сайті?",
+        "a": "На сторінці MAGLUMI M Series зібрано моделі MAGLUMI 600, 800, 2000 і 2000 Plus із продуктивністю до 180 тестів на годину.",
+        "link": {
+          "label": "Переглянути MAGLUMI M Series",
+          "href": "/products/maglumi-m-series"
+        }
+      },
+      {
+        "q": "Хто постачає й обслуговує аналізатори MAGLUMI в Україні?",
+        "a": "LabWell — офіційний дистриб’ютор Snibe в Україні. Компанія допомагає підібрати найефективніше рішення для ваших задач, постачає обладнання, виконує інсталяцію, навчає персонал, забезпечує гарантійне й післягарантійне технічне обслуговування та аплікаційну підтримку."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Отримати консультацію щодо аналізаторів MAGLUMI",
+    "text": "Розкажіть про потік досліджень і потрібні тести — допоможемо порівняти моделі MAGLUMI для вашої лабораторії.",
+    "messagePrefill": "Цікавлять аналізатори MAGLUMI. "
+  }
+}

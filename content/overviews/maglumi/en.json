@@ -1,0 +1,258 @@
+{
+  "slug": "maglumi",
+  "url": "/products/maglumi",
+  "kind": "overview",
+  "brand": "Snibe",
+  "seo": {
+    "title": "MAGLUMI X analyzers — model comparison | LabWell",
+    "description": "Compare MAGLUMI X3, X6, X8 and X10 automated CLIA analyzers by throughput, sample positions and reagent positions. Consultation from LabWell in Ukraine."
+  },
+  "C2_hero": {
+    "show": true,
+    "breadcrumbs": [
+      "Home",
+      "Products",
+      "Laboratory equipment",
+      "Immunoassay",
+      "MAGLUMI analyzers"
+    ],
+    "eyebrow": "Series overview · CLIA",
+    "h1": "MAGLUMI X — automated CLIA analyzers by Snibe",
+    "lead": "MAGLUMI X is a range of fully automated CLIA analyzers by Snibe for laboratories with different testing workloads. Compare four models by throughput, sample positions and reagent positions.",
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "models": [
+      {
+        "productSlug": "maglumi-x3",
+        "image": {
+          "alt": "MAGLUMI X3 automated CLIA analyzer, front view"
+        }
+      },
+      {
+        "productSlug": "maglumi-x6",
+        "image": {
+          "alt": "MAGLUMI X6 automated CLIA analyzer, front view"
+        }
+      },
+      {
+        "productSlug": "maglumi-x8",
+        "image": {
+          "alt": "MAGLUMI X8 automated CLIA analyzer, front view"
+        }
+      },
+      {
+        "productSlug": "maglumi-x10",
+        "image": {
+          "alt": "MAGLUMI X10 automated CLIA analyzer, front view"
+        }
+      }
+    ]
+  },
+  "C2_compare": {
+    "show": true,
+    "eyebrow": "Comparison",
+    "h2": "Key MAGLUMI X specifications",
+    "caption": "According to Snibe",
+    "models": [
+      {
+        "productSlug": "maglumi-x3",
+        "name": "MAGLUMI X3",
+        "href": "/products/maglumi-x3",
+        "image": {
+          "alt": "MAGLUMI X3 automated CLIA analyzer, front view"
+        }
+      },
+      {
+        "productSlug": "maglumi-x6",
+        "name": "MAGLUMI X6",
+        "href": "/products/maglumi-x6",
+        "image": {
+          "alt": "MAGLUMI X6 automated CLIA analyzer, front view"
+        }
+      },
+      {
+        "productSlug": "maglumi-x8",
+        "name": "MAGLUMI X8",
+        "href": "/products/maglumi-x8",
+        "image": {
+          "alt": "MAGLUMI X8 automated CLIA analyzer, front view"
+        }
+      },
+      {
+        "productSlug": "maglumi-x10",
+        "name": "MAGLUMI X10",
+        "href": "/products/maglumi-x10",
+        "image": {
+          "alt": "MAGLUMI X10 automated CLIA analyzer, front view"
+        }
+      }
+    ],
+    "rows": [
+      {
+        "label": "Single-module throughput",
+        "unit": "tests/hour",
+        "values": {
+          "maglumi-x3": "up to 200",
+          "maglumi-x6": "up to 450",
+          "maglumi-x8": "up to 600",
+          "maglumi-x10": "up to 1,000"
+        }
+      },
+      {
+        "label": "Four-module throughput",
+        "unit": "tests/hour",
+        "values": {
+          "maglumi-x3": "n/a",
+          "maglumi-x6": "n/a",
+          "maglumi-x8": "up to 2,400",
+          "maglumi-x10": "up to 4,000"
+        }
+      },
+      {
+        "label": "Sample positions",
+        "values": {
+          "maglumi-x3": "72",
+          "maglumi-x6": "up to 112",
+          "maglumi-x8": "300",
+          "maglumi-x10": "300"
+        }
+      },
+      {
+        "label": "Reagent positions",
+        "values": {
+          "maglumi-x3": "20",
+          "maglumi-x6": "30",
+          "maglumi-x8": "42",
+          "maglumi-x10": "50"
+        }
+      },
+      {
+        "label": "Walk-away capacity after loading",
+        "unit": "tests",
+        "values": {
+          "maglumi-x3": "n/a",
+          "maglumi-x6": "up to 2,000",
+          "maglumi-x8": "up to 2,800",
+          "maglumi-x10": "up to 3,000"
+        }
+      }
+    ],
+    "footnote": "n/a — the manufacturer does not state this specification for the model. Values marked “up to” are manufacturer-stated maxima."
+  },
+  "C2_cards": {
+    "show": true,
+    "eyebrow": "Models",
+    "h2": "Choose a MAGLUMI X analyzer",
+    "models": [
+      {
+        "productSlug": "maglumi-x3",
+        "eyebrow": "Small and medium laboratories",
+        "title": "MAGLUMI X3",
+        "text": "A compact, fully automated CLIA analyzer delivering up to 200 tests per hour.",
+        "href": "/products/maglumi-x3",
+        "image": {
+          "alt": "MAGLUMI X3 automated CLIA analyzer, front view"
+        }
+      },
+      {
+        "productSlug": "maglumi-x6",
+        "eyebrow": "Substantial testing workloads",
+        "title": "MAGLUMI X6",
+        "text": "A fully automated CLIA analyzer delivering up to 450 tests per hour with up to 112 sample positions.",
+        "href": "/products/maglumi-x6",
+        "image": {
+          "alt": "MAGLUMI X6 automated CLIA analyzer, front view"
+        }
+      },
+      {
+        "productSlug": "maglumi-x8",
+        "eyebrow": "Medium and large laboratories",
+        "title": "MAGLUMI X8",
+        "text": "A single module delivers up to 600 tests per hour, while four modules deliver up to 2,400.",
+        "href": "/products/maglumi-x8",
+        "image": {
+          "alt": "MAGLUMI X8 automated CLIA analyzer, front view"
+        }
+      },
+      {
+        "productSlug": "maglumi-x10",
+        "eyebrow": "High testing workloads",
+        "title": "MAGLUMI X10",
+        "text": "A single module delivers up to 1,000 tests per hour, while four modules deliver up to 4,000.",
+        "href": "/products/maglumi-x10",
+        "image": {
+          "alt": "MAGLUMI X10 automated CLIA analyzer, front view"
+        }
+      }
+    ],
+    "related": [
+      {
+        "kind": "group",
+        "eyebrow": "Also from Snibe",
+        "title": "MAGLUMI M Series",
+        "text": "Four automated CLIA analyzers delivering up to 180 tests per hour.",
+        "href": "/products/maglumi-m-series",
+        "image": {
+          "alt": "MAGLUMI M Series automated CLIA analyzers"
+        }
+      },
+      {
+        "kind": "test-menu",
+        "eyebrow": "278 parameters · 22 groups",
+        "title": "MAGLUMI CLIA test menu",
+        "text": "Browse the test groups and search for a test by name.",
+        "href": "/test-menus/snibe-clia-test-menu",
+        "bigNumber": {
+          "value": "278",
+          "label": "parameters, according to Snibe"
+        }
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "MAGLUMI X analyzer questions and answers",
+    "items": [
+      {
+        "q": "What is the throughput of the MAGLUMI X analyzers?",
+        "a": "A single MAGLUMI X3 module delivers up to 200 tests per hour, X6 up to 450, X8 up to 600, and X10 up to 1,000 tests per hour."
+      },
+      {
+        "q": "Which MAGLUMI X models can be combined in a four-module configuration?",
+        "a": "Snibe provides specifications for four-module MAGLUMI X8 and X10 configurations: up to 2,400 and up to 4,000 tests per hour, respectively."
+      },
+      {
+        "q": "Where can I browse the MAGLUMI CLIA test menu?",
+        "a": "The dedicated menu page presents 278 parameters, as stated by Snibe, with search by test name.",
+        "link": {
+          "label": "MAGLUMI CLIA test menu",
+          "href": "/test-menus/snibe-clia-test-menu"
+        }
+      },
+      {
+        "q": "Which other MAGLUMI analyzers are presented on the website?",
+        "a": "The MAGLUMI M Series page presents MAGLUMI 600, 800, 2000 and 2000 Plus, each delivering up to 180 tests per hour.",
+        "link": {
+          "label": "View the MAGLUMI M Series",
+          "href": "/products/maglumi-m-series"
+        }
+      },
+      {
+        "q": "Who supplies and maintains MAGLUMI analyzers in Ukraine?",
+        "a": "LabWell is an official Snibe distributor in Ukraine. It helps select the most effective solution for your needs and provides supply, installation, staff training, warranty and post-warranty maintenance, and application support."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Request a consultation about MAGLUMI analyzers",
+    "text": "Tell us about your testing workload and required assays, and we will help compare MAGLUMI models for your laboratory.",
+    "messagePrefill": "I am interested in MAGLUMI analyzers. "
+  }
+}

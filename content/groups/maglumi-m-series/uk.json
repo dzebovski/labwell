@@ -1,0 +1,339 @@
+{
+  "slug": "maglumi-m-series",
+  "url": "/products/maglumi-m-series",
+  "kind": "group-series",
+  "brand": "Snibe",
+  "seo": {
+    "title": "MAGLUMI M Series — CLIA-аналізатори Snibe | LabWell",
+    "description": "MAGLUMI M Series — чотири автоматичні CLIA-аналізатори Snibe з продуктивністю до 180 тестів/год і 16–144 позиціями для зразків. LabWell, Україна."
+  },
+  "G1_hero": {
+    "breadcrumbs": [
+      "Головна",
+      "Продукція",
+      "Лабораторне обладнання",
+      "Імуноаналіз",
+      "MAGLUMI M Series"
+    ],
+    "eyebrow": "Серія автоматичних CLIA-аналізаторів",
+    "h1": "MAGLUMI M Series — автоматичні CLIA-аналізатори",
+    "lead": "MAGLUMI M Series — серія з чотирьох автоматичних CLIA-аналізаторів Snibe для лабораторій різного масштабу. Усі моделі виконують до 180 тестів на годину, а кількість позицій для зразків і реагентів дає змогу підібрати прилад під робочий потік лабораторії.",
+    "modelsLabel": "Моделі на сторінці",
+    "models": [
+      {
+        "productSlug": "maglumi-600",
+        "title": "MAGLUMI 600",
+        "anchor": "maglumi-600",
+        "image": {
+          "alt": "CLIA-аналізатор MAGLUMI 600, вигляд приладу"
+        }
+      },
+      {
+        "productSlug": "maglumi-800",
+        "title": "MAGLUMI 800",
+        "anchor": "maglumi-800",
+        "image": {
+          "alt": "CLIA-аналізатор MAGLUMI 800, вигляд приладу"
+        }
+      },
+      {
+        "productSlug": "maglumi-m2000",
+        "title": "MAGLUMI 2000",
+        "anchor": "maglumi-m2000",
+        "image": {
+          "alt": "Автоматичний CLIA-аналізатор MAGLUMI 2000"
+        }
+      },
+      {
+        "productSlug": "maglumi-2000-plus",
+        "title": "MAGLUMI 2000 Plus",
+        "anchor": "maglumi-2000-plus",
+        "image": {
+          "alt": "CLIA-аналізатор MAGLUMI 2000 Plus, вигляд приладу"
+        }
+      }
+    ],
+    "primaryCta": {
+      "label": "Отримати консультацію",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Порівняти моделі",
+      "href": "#compare"
+    }
+  },
+  "G2_compare": {
+    "show": true,
+    "h2": "Порівняння аналізаторів MAGLUMI M Series",
+    "caption": "За даними виробника",
+    "columns": [
+      {
+        "productSlug": "maglumi-600",
+        "title": "MAGLUMI 600",
+        "anchor": "maglumi-600",
+        "image": {
+          "alt": "CLIA-аналізатор MAGLUMI 600, вигляд приладу"
+        }
+      },
+      {
+        "productSlug": "maglumi-800",
+        "title": "MAGLUMI 800",
+        "anchor": "maglumi-800",
+        "image": {
+          "alt": "CLIA-аналізатор MAGLUMI 800, вигляд приладу"
+        }
+      },
+      {
+        "productSlug": "maglumi-m2000",
+        "title": "MAGLUMI 2000",
+        "anchor": "maglumi-m2000",
+        "image": {
+          "alt": "Автоматичний CLIA-аналізатор MAGLUMI 2000"
+        }
+      },
+      {
+        "productSlug": "maglumi-2000-plus",
+        "title": "MAGLUMI 2000 Plus",
+        "anchor": "maglumi-2000-plus",
+        "image": {
+          "alt": "CLIA-аналізатор MAGLUMI 2000 Plus, вигляд приладу"
+        }
+      }
+    ],
+    "rows": [
+      {
+        "label": "Продуктивність",
+        "detail": "тестів/год, до",
+        "values": [
+          "180",
+          "180",
+          "180",
+          "180"
+        ]
+      },
+      {
+        "label": "Позиції для зразків",
+        "values": [
+          "16",
+          "40",
+          "144",
+          "144"
+        ]
+      },
+      {
+        "label": "Позиції для реагентів",
+        "values": [
+          "4",
+          "9",
+          "15",
+          "25"
+        ]
+      },
+      {
+        "label": "Кювети на борту",
+        "detail": "до",
+        "values": [
+          "н/д",
+          "240",
+          "720",
+          "720"
+        ]
+      },
+      {
+        "label": "Підключення до лінії Inpeco",
+        "values": [
+          "н/д",
+          "н/д",
+          "Так",
+          "Так"
+        ]
+      }
+    ],
+    "footnote": "н/д — виробник не вказує показник для моделі. Значення «до» — максимальні за даними виробника."
+  },
+  "G2_sections": {
+    "show": false
+  },
+  "G3_items": {
+    "show": true,
+    "h2": "Моделі MAGLUMI M Series",
+    "items": [
+      {
+        "productSlug": "maglumi-600",
+        "anchor": "maglumi-600",
+        "eyebrow": "Для невеликих лабораторій",
+        "h3": "MAGLUMI 600",
+        "text": "MAGLUMI 600 — автоматичний CLIA-аналізатор серії MAGLUMI M для невеликих лабораторій. Система підтримує безперервне завантаження та пріоритетне виконання термінових досліджень (STAT).",
+        "keyFacts": [
+          {
+            "value": "до 180",
+            "label": "тестів на годину"
+          },
+          {
+            "value": "16",
+            "label": "позицій для зразків"
+          },
+          {
+            "value": "4",
+            "label": "позиції для реагентів"
+          }
+        ],
+        "image": {
+          "alt": "CLIA-аналізатор MAGLUMI 600, вигляд приладу"
+        },
+        "ordering": {
+          "show": false
+        },
+        "cta": {
+          "label": "Запитати про MAGLUMI 600",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ До порівняння",
+          "href": "#compare"
+        }
+      },
+      {
+        "productSlug": "maglumi-800",
+        "anchor": "maglumi-800",
+        "eyebrow": "Для малих і середніх лабораторій",
+        "h3": "MAGLUMI 800",
+        "text": "MAGLUMI 800 — автоматичний CLIA-аналізатор серії MAGLUMI M для малих і середніх лабораторій. На борту можна розмістити до 240 кювет для послідовного виконання досліджень.",
+        "keyFacts": [
+          {
+            "value": "до 180",
+            "label": "тестів на годину"
+          },
+          {
+            "value": "40",
+            "label": "позицій для зразків"
+          },
+          {
+            "value": "9",
+            "label": "позицій для реагентів"
+          }
+        ],
+        "image": {
+          "alt": "CLIA-аналізатор MAGLUMI 800, вигляд приладу"
+        },
+        "ordering": {
+          "show": false
+        },
+        "cta": {
+          "label": "Запитати про MAGLUMI 800",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ До порівняння",
+          "href": "#compare"
+        }
+      },
+      {
+        "productSlug": "maglumi-m2000",
+        "anchor": "maglumi-m2000",
+        "eyebrow": "Для лабораторій різного масштабу",
+        "h3": "MAGLUMI 2000",
+        "text": "MAGLUMI 2000 — автоматичний CLIA-аналізатор сімейства M Series для лабораторій різного масштабу. На борту можна розмістити до 720 кювет. Підключення до лінії Inpeco дає змогу включити аналізатор в автоматизований маршрут зразків.",
+        "keyFacts": [
+          {
+            "value": "до 180",
+            "label": "тестів на годину"
+          },
+          {
+            "value": "144",
+            "label": "позиції для зразків"
+          },
+          {
+            "value": "15",
+            "label": "позицій для реагентів"
+          }
+        ],
+        "image": {
+          "alt": "Автоматичний CLIA-аналізатор MAGLUMI 2000"
+        },
+        "ordering": {
+          "show": false
+        },
+        "cta": {
+          "label": "Запитати про MAGLUMI 2000",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ До порівняння",
+          "href": "#compare"
+        }
+      },
+      {
+        "productSlug": "maglumi-2000-plus",
+        "anchor": "maglumi-2000-plus",
+        "eyebrow": "Для великих і мережевих лабораторій",
+        "h3": "MAGLUMI 2000 Plus",
+        "text": "MAGLUMI 2000 Plus — автоматичний CLIA-аналізатор серії MAGLUMI M для великих лабораторій і мережевих лабораторних служб. На борту можна розмістити до 720 кювет. Snibe вказує можливість підключення до автоматизованої лінії Inpeco.",
+        "keyFacts": [
+          {
+            "value": "до 180",
+            "label": "тестів на годину"
+          },
+          {
+            "value": "144",
+            "label": "позиції для зразків"
+          },
+          {
+            "value": "25",
+            "label": "позицій для реагентів"
+          }
+        ],
+        "image": {
+          "alt": "CLIA-аналізатор MAGLUMI 2000 Plus, вигляд приладу"
+        },
+        "ordering": {
+          "show": false
+        },
+        "cta": {
+          "label": "Запитати про MAGLUMI 2000 Plus",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ До порівняння",
+          "href": "#compare"
+        }
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Питання й відповіді про MAGLUMI M Series",
+    "items": [
+      {
+        "q": "Які моделі входять до MAGLUMI M Series?",
+        "a": "До серії входять MAGLUMI 600, MAGLUMI 800, MAGLUMI 2000 і MAGLUMI 2000 Plus."
+      },
+      {
+        "q": "Яка продуктивність аналізаторів MAGLUMI M Series?",
+        "a": "Кожна з чотирьох моделей виконує до 180 тестів на годину."
+      },
+      {
+        "q": "Чим MAGLUMI 2000 відрізняється від MAGLUMI 2000 Plus?",
+        "a": "Обидві моделі мають 144 позиції для зразків і до 720 кювет на борту. MAGLUMI 2000 має 15 позицій для реагентів, а MAGLUMI 2000 Plus — 25."
+      },
+      {
+        "q": "Яка модель MAGLUMI M Series призначена для невеликої лабораторії?",
+        "a": "MAGLUMI 600 призначений для невеликих лабораторій, а MAGLUMI 800 — для малих і середніх. Вибір моделі залежить від потрібної кількості позицій для зразків і реагентів."
+      },
+      {
+        "q": "Хто постачає й обслуговує MAGLUMI M Series в Україні?",
+        "a": "LabWell — офіційний дистриб'ютор Snibe в Україні. Компанія допомагає підібрати найефективніше рішення для ваших задач, постачає обладнання, виконує інсталяцію, навчає персонал, забезпечує гарантійне й післягарантійне технічне обслуговування та аплікаційну підтримку."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Отримати консультацію щодо MAGLUMI M Series",
+    "text": "Розкажіть про потік досліджень і вимоги до завантаження — допоможемо підібрати модель серії для вашої лабораторії.",
+    "messagePrefill": "Цікавить MAGLUMI M Series. "
+  }
+}

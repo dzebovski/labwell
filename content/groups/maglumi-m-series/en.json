@@ -1,0 +1,339 @@
+{
+  "slug": "maglumi-m-series",
+  "url": "/products/maglumi-m-series",
+  "kind": "group-series",
+  "brand": "Snibe",
+  "seo": {
+    "title": "MAGLUMI M Series — Snibe CLIA analyzers | LabWell",
+    "description": "MAGLUMI M Series includes four automated Snibe CLIA analyzers with throughput up to 180 tests/h and 16–144 sample positions. Supplied in Ukraine by LabWell."
+  },
+  "G1_hero": {
+    "breadcrumbs": [
+      "Home",
+      "Products",
+      "Laboratory equipment",
+      "Immunoassay",
+      "MAGLUMI M Series"
+    ],
+    "eyebrow": "Automated CLIA analyzer series",
+    "h1": "MAGLUMI M Series — automated CLIA analyzers",
+    "lead": "MAGLUMI M Series is a range of four automated Snibe CLIA analyzers for laboratories of different sizes. Every model delivers throughput of up to 180 tests per hour, while the sample and reagent capacities allow laboratories to select an instrument for their workflow.",
+    "modelsLabel": "Models on this page",
+    "models": [
+      {
+        "productSlug": "maglumi-600",
+        "title": "MAGLUMI 600",
+        "anchor": "maglumi-600",
+        "image": {
+          "alt": "MAGLUMI 600 CLIA analyzer, instrument view"
+        }
+      },
+      {
+        "productSlug": "maglumi-800",
+        "title": "MAGLUMI 800",
+        "anchor": "maglumi-800",
+        "image": {
+          "alt": "MAGLUMI 800 CLIA analyzer, instrument view"
+        }
+      },
+      {
+        "productSlug": "maglumi-m2000",
+        "title": "MAGLUMI 2000",
+        "anchor": "maglumi-m2000",
+        "image": {
+          "alt": "MAGLUMI 2000 automated CLIA analyzer"
+        }
+      },
+      {
+        "productSlug": "maglumi-2000-plus",
+        "title": "MAGLUMI 2000 Plus",
+        "anchor": "maglumi-2000-plus",
+        "image": {
+          "alt": "MAGLUMI 2000 Plus CLIA analyzer, instrument view"
+        }
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Compare models",
+      "href": "#compare"
+    }
+  },
+  "G2_compare": {
+    "show": true,
+    "h2": "Compare MAGLUMI M Series analyzers",
+    "caption": "According to the manufacturer",
+    "columns": [
+      {
+        "productSlug": "maglumi-600",
+        "title": "MAGLUMI 600",
+        "anchor": "maglumi-600",
+        "image": {
+          "alt": "MAGLUMI 600 CLIA analyzer, instrument view"
+        }
+      },
+      {
+        "productSlug": "maglumi-800",
+        "title": "MAGLUMI 800",
+        "anchor": "maglumi-800",
+        "image": {
+          "alt": "MAGLUMI 800 CLIA analyzer, instrument view"
+        }
+      },
+      {
+        "productSlug": "maglumi-m2000",
+        "title": "MAGLUMI 2000",
+        "anchor": "maglumi-m2000",
+        "image": {
+          "alt": "MAGLUMI 2000 automated CLIA analyzer"
+        }
+      },
+      {
+        "productSlug": "maglumi-2000-plus",
+        "title": "MAGLUMI 2000 Plus",
+        "anchor": "maglumi-2000-plus",
+        "image": {
+          "alt": "MAGLUMI 2000 Plus CLIA analyzer, instrument view"
+        }
+      }
+    ],
+    "rows": [
+      {
+        "label": "Throughput",
+        "detail": "tests/h, up to",
+        "values": [
+          "180",
+          "180",
+          "180",
+          "180"
+        ]
+      },
+      {
+        "label": "Sample positions",
+        "values": [
+          "16",
+          "40",
+          "144",
+          "144"
+        ]
+      },
+      {
+        "label": "Reagent positions",
+        "values": [
+          "4",
+          "9",
+          "15",
+          "25"
+        ]
+      },
+      {
+        "label": "Onboard cuvettes",
+        "detail": "up to",
+        "values": [
+          "n/a",
+          "240",
+          "720",
+          "720"
+        ]
+      },
+      {
+        "label": "Inpeco automation track connection",
+        "values": [
+          "n/a",
+          "n/a",
+          "Yes",
+          "Yes"
+        ]
+      }
+    ],
+    "footnote": "n/a — the manufacturer does not state this specification for the model. ‘Up to’ values are manufacturer-stated maximums."
+  },
+  "G2_sections": {
+    "show": false
+  },
+  "G3_items": {
+    "show": true,
+    "h2": "MAGLUMI M Series models",
+    "items": [
+      {
+        "productSlug": "maglumi-600",
+        "anchor": "maglumi-600",
+        "eyebrow": "For small laboratories",
+        "h3": "MAGLUMI 600",
+        "text": "MAGLUMI 600 is an automated CLIA analyzer in the MAGLUMI M Series for small laboratories. The system supports continuous loading and priority handling of urgent (STAT) tests.",
+        "keyFacts": [
+          {
+            "value": "up to 180",
+            "label": "tests per hour"
+          },
+          {
+            "value": "16",
+            "label": "sample positions"
+          },
+          {
+            "value": "4",
+            "label": "reagent positions"
+          }
+        ],
+        "image": {
+          "alt": "MAGLUMI 600 CLIA analyzer, instrument view"
+        },
+        "ordering": {
+          "show": false
+        },
+        "cta": {
+          "label": "Ask about MAGLUMI 600",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ Back to comparison",
+          "href": "#compare"
+        }
+      },
+      {
+        "productSlug": "maglumi-800",
+        "anchor": "maglumi-800",
+        "eyebrow": "For small and medium-sized laboratories",
+        "h3": "MAGLUMI 800",
+        "text": "MAGLUMI 800 is an automated CLIA analyzer in the MAGLUMI M Series for small and medium-sized laboratories. It holds up to 240 cuvettes onboard for a series of tests.",
+        "keyFacts": [
+          {
+            "value": "up to 180",
+            "label": "tests per hour"
+          },
+          {
+            "value": "40",
+            "label": "sample positions"
+          },
+          {
+            "value": "9",
+            "label": "reagent positions"
+          }
+        ],
+        "image": {
+          "alt": "MAGLUMI 800 CLIA analyzer, instrument view"
+        },
+        "ordering": {
+          "show": false
+        },
+        "cta": {
+          "label": "Ask about MAGLUMI 800",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ Back to comparison",
+          "href": "#compare"
+        }
+      },
+      {
+        "productSlug": "maglumi-m2000",
+        "anchor": "maglumi-m2000",
+        "eyebrow": "For laboratories of different sizes",
+        "h3": "MAGLUMI 2000",
+        "text": "MAGLUMI 2000 is an automated CLIA analyzer in the M Series for laboratories of different sizes. It holds up to 720 cuvettes onboard. An Inpeco track connection allows the analyzer to join an automated sample route.",
+        "keyFacts": [
+          {
+            "value": "up to 180",
+            "label": "tests per hour"
+          },
+          {
+            "value": "144",
+            "label": "sample positions"
+          },
+          {
+            "value": "15",
+            "label": "reagent positions"
+          }
+        ],
+        "image": {
+          "alt": "MAGLUMI 2000 automated CLIA analyzer"
+        },
+        "ordering": {
+          "show": false
+        },
+        "cta": {
+          "label": "Ask about MAGLUMI 2000",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ Back to comparison",
+          "href": "#compare"
+        }
+      },
+      {
+        "productSlug": "maglumi-2000-plus",
+        "anchor": "maglumi-2000-plus",
+        "eyebrow": "For large and networked laboratories",
+        "h3": "MAGLUMI 2000 Plus",
+        "text": "MAGLUMI 2000 Plus is an automated CLIA analyzer in the MAGLUMI M Series for large and networked laboratories. It holds up to 720 cuvettes onboard. Snibe lists an Inpeco automation track connection.",
+        "keyFacts": [
+          {
+            "value": "up to 180",
+            "label": "tests per hour"
+          },
+          {
+            "value": "144",
+            "label": "sample positions"
+          },
+          {
+            "value": "25",
+            "label": "reagent positions"
+          }
+        ],
+        "image": {
+          "alt": "MAGLUMI 2000 Plus CLIA analyzer, instrument view"
+        },
+        "ordering": {
+          "show": false
+        },
+        "cta": {
+          "label": "Ask about MAGLUMI 2000 Plus",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ Back to comparison",
+          "href": "#compare"
+        }
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Questions and answers about MAGLUMI M Series",
+    "items": [
+      {
+        "q": "Which models are included in MAGLUMI M Series?",
+        "a": "The series includes MAGLUMI 600, MAGLUMI 800, MAGLUMI 2000 and MAGLUMI 2000 Plus."
+      },
+      {
+        "q": "What is the throughput of MAGLUMI M Series analyzers?",
+        "a": "Each of the four models delivers throughput of up to 180 tests per hour."
+      },
+      {
+        "q": "How do MAGLUMI 2000 and MAGLUMI 2000 Plus differ?",
+        "a": "Both models have 144 sample positions and hold up to 720 cuvettes onboard. MAGLUMI 2000 has 15 reagent positions, while MAGLUMI 2000 Plus has 25."
+      },
+      {
+        "q": "Which MAGLUMI M Series model is intended for a small laboratory?",
+        "a": "MAGLUMI 600 is intended for small laboratories, while MAGLUMI 800 is intended for small and medium-sized laboratories. Model selection depends on the required sample and reagent capacity."
+      },
+      {
+        "q": "Who supplies and maintains MAGLUMI M Series in Ukraine?",
+        "a": "LabWell is an official Snibe distributor in Ukraine. It helps select the most effective solution for your needs and provides supply, installation, staff training, warranty and post-warranty maintenance, and application support."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Request a consultation about MAGLUMI M Series",
+    "text": "Tell us about your testing workload and loading requirements, and we will help you select a model for your laboratory.",
+    "messagePrefill": "I am interested in MAGLUMI M Series. "
+  }
+}
