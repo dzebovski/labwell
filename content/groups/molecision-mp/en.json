@@ -1,0 +1,219 @@
+{
+  "slug": "molecision-mp",
+  "url": "/products/molecision-mp",
+  "kind": "group-series",
+  "brand": "Snibe",
+  "seo": {
+    "title": "Molecision MP — nucleic acid extraction by Snibe | LabWell",
+    "description": "Molecision MP — Snibe automated nucleic acid extraction systems: MP-32 processes up to 32 samples per run, MP-96 up to 96. Supplied in Ukraine by LabWell."
+  },
+  "G1_hero": {
+    "breadcrumbs": [
+      "Home",
+      "Products",
+      "Laboratory equipment",
+      "Molecular diagnostics",
+      "Molecision MP"
+    ],
+    "eyebrow": "Automated nucleic acid extractor series",
+    "h1": "Molecision MP — automated nucleic acid extraction systems",
+    "lead": "Molecision MP is a range of two automated Snibe nucleic acid extractors that differ in the number of samples per run: MP-32 processes up to 32 samples and MP-96 up to 96. According to the manufacturer, both systems complete extraction from 11 minutes and work with plasma, serum, whole blood, swabs and other specimen types.",
+    "modelsLabel": "Models on this page",
+    "models": [
+      {
+        "productSlug": "molecision-mp-32",
+        "title": "Molecision MP-32",
+        "anchor": "molecision-mp-32",
+        "image": {
+          "alt": "Molecision MP-32 instrument view"
+        }
+      },
+      {
+        "productSlug": "molecision-mp-96",
+        "title": "Molecision MP-96",
+        "anchor": "molecision-mp-96",
+        "image": {
+          "alt": "Molecision MP-96 instrument view"
+        }
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Compare models",
+      "href": "#compare"
+    }
+  },
+  "G2_compare": {
+    "show": true,
+    "h2": "Compare Molecision MP systems",
+    "caption": "According to the manufacturer",
+    "columns": [
+      {
+        "productSlug": "molecision-mp-32",
+        "title": "Molecision MP-32",
+        "anchor": "molecision-mp-32",
+        "image": {
+          "alt": "Molecision MP-32 instrument view"
+        }
+      },
+      {
+        "productSlug": "molecision-mp-96",
+        "title": "Molecision MP-96",
+        "anchor": "molecision-mp-96",
+        "image": {
+          "alt": "Molecision MP-96 instrument view"
+        }
+      }
+    ],
+    "rows": [
+      {
+        "label": "Samples per run",
+        "detail": "up to",
+        "values": [
+          "32",
+          "96"
+        ]
+      },
+      {
+        "label": "Extraction time",
+        "values": [
+          "from 11 min",
+          "from 11 min"
+        ]
+      },
+      {
+        "label": "Specimen types",
+        "values": [
+          "plasma, serum, whole blood, sputum, saliva, swabs, BALF, CSF, urine, stool",
+          "plasma, serum, whole blood, sputum, saliva, swabs, BALF, CSF, urine, stool"
+        ]
+      },
+      {
+        "label": "Configuration",
+        "values": [
+          "Modular, selected for the laboratory workflow",
+          "Modular, selected for the laboratory workflow"
+        ]
+      }
+    ],
+    "footnote": "‘Up to’ values are manufacturer-stated maximums."
+  },
+  "G2_sections": {
+    "show": false
+  },
+  "G3_items": {
+    "show": true,
+    "h2": "Molecision MP models",
+    "items": [
+      {
+        "productSlug": "molecision-mp-32",
+        "anchor": "molecision-mp-32",
+        "eyebrow": "Up to 32 samples per run",
+        "h3": "Molecision MP-32",
+        "text": "Molecision MP-32 is an automated Snibe nucleic acid extractor that processes 1 to 32 samples per run. According to the manufacturer, extraction takes from 11 minutes. The system has a modular configuration selected for the laboratory workflow and handles different specimen types, including plasma, serum, swabs and urine.",
+        "keyFacts": [
+          {
+            "value": "up to 32",
+            "label": "samples per run"
+          },
+          {
+            "value": "from 11 min",
+            "label": "extraction time, according to the manufacturer"
+          },
+          {
+            "value": "10 types",
+            "label": "of specimen: blood, serum, swabs, saliva and others"
+          }
+        ],
+        "image": {
+          "alt": "Molecision MP-32 instrument view"
+        },
+        "ordering": {
+          "show": false
+        },
+        "cta": {
+          "label": "Ask about Molecision MP-32",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ Back to comparison",
+          "href": "#compare"
+        }
+      },
+      {
+        "productSlug": "molecision-mp-96",
+        "anchor": "molecision-mp-96",
+        "eyebrow": "Up to 96 samples per run",
+        "h3": "Molecision MP-96",
+        "text": "Molecision MP-96 is an automated Snibe nucleic acid extractor that processes 1 to 96 samples per run. According to the manufacturer, extraction takes from 11 minutes. The system has a modular configuration selected for the laboratory workflow and handles different specimen types, including plasma, serum, swabs and urine.",
+        "keyFacts": [
+          {
+            "value": "up to 96",
+            "label": "samples per run"
+          },
+          {
+            "value": "from 11 min",
+            "label": "extraction time, according to the manufacturer"
+          },
+          {
+            "value": "10 types",
+            "label": "of specimen: blood, serum, swabs, saliva and others"
+          }
+        ],
+        "image": {
+          "alt": "Molecision MP-96 instrument view"
+        },
+        "ordering": {
+          "show": false
+        },
+        "cta": {
+          "label": "Ask about Molecision MP-96",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ Back to comparison",
+          "href": "#compare"
+        }
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Questions and answers about Molecision MP",
+    "items": [
+      {
+        "q": "Which models are included in Molecision MP?",
+        "a": "The range includes Molecision MP-32 and Molecision MP-96 — two automated Snibe nucleic acid extractors that differ in the number of samples per run."
+      },
+      {
+        "q": "How many samples does Molecision MP process per run?",
+        "a": "Molecision MP-32 processes 1 to 32 samples per run, and Molecision MP-96 processes 1 to 96."
+      },
+      {
+        "q": "Which specimen types does Molecision MP support?",
+        "a": "According to Snibe, both models work with these specimen types: plasma, serum, whole blood, sputum, saliva, swabs, BALF, CSF, urine, stool."
+      },
+      {
+        "q": "How long does extraction take on Molecision MP?",
+        "a": "According to the manufacturer, extraction takes from 11 minutes."
+      },
+      {
+        "q": "Who supplies and maintains Molecision MP in Ukraine?",
+        "a": "LabWell is an official Snibe distributor in Ukraine. It helps select the most effective solution for your needs and provides supply, installation, staff training, warranty and post-warranty maintenance, and application support."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Request a consultation about Molecision MP",
+    "text": "Tell us how many samples you process per run and which specimen types you use, and we will help you select a system for your laboratory.",
+    "messagePrefill": "I am interested in Molecision MP. "
+  }
+}

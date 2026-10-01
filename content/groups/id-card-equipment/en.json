@@ -1,0 +1,274 @@
+{
+  "slug": "id-card-equipment",
+  "url": "/products/id-card-equipment",
+  "kind": "group-lines",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "Bio-Rad ID-Card equipment | LabWell",
+    "description": "Bio-Rad ID-Card equipment: the ID-Centrifuge L centrifuge, the ID-Incubator L incubator and the semi-automated IH-Reader 24. Supplied in Ukraine by LabWell."
+  },
+  "G1_hero": {
+    "breadcrumbs": [
+      "Home",
+      "Products",
+      "Laboratory equipment",
+      "Immunohematology",
+      "ID-Card equipment"
+    ],
+    "eyebrow": "Bio-Rad · Manual and semi-automated procedures",
+    "h1": "Bio-Rad equipment for ID-Card testing",
+    "lead": "Bio-Rad ID-Card equipment is a centrifuge, an incubator and a reading instrument for immunohematology testing with gel cards. ID-Centrifuge L and ID-Incubator L are designed for manual procedures with ID-Cards and tubes, while IH-Reader 24 centrifuges ID-Cards and reads their gel images in a semi-automated workflow.",
+    "keyFacts": [
+      {
+        "value": "up to 36",
+        "label": "ID-Cards in ID-Incubator L"
+      },
+      {
+        "value": "4",
+        "label": "rotor heads compatible with ID-Centrifuge L"
+      },
+      {
+        "value": "IH-Com",
+        "label": "result interpretation for IH-Reader 24"
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "View equipment",
+      "href": "#lines"
+    },
+    "image": {
+      "alt": "Bio-Rad equipment for immunohematology testing with ID-Cards"
+    }
+  },
+  "G2_compare": {
+    "show": false
+  },
+  "G2_sections": {
+    "show": true,
+    "h2": "Equipment for ID-Cards",
+    "items": [
+      {
+        "anchor": "ih-centrifuge-l",
+        "title": "ID-Centrifuge L",
+        "href": "#ih-centrifuge-l",
+        "text": "A centrifuge for manual procedures with ID-Cards and tubes."
+      },
+      {
+        "anchor": "ih-incubator-l",
+        "title": "ID-Incubator L",
+        "href": "#ih-incubator-l",
+        "text": "An incubator for up to 36 ID-Cards and 24 tubes with independent zones."
+      },
+      {
+        "anchor": "ih-reader-24",
+        "title": "IH-Reader 24",
+        "href": "#ih-reader-24",
+        "text": "A semi-automated instrument for centrifugation and digital reading of ID-Cards."
+      }
+    ]
+  },
+  "G3_items": {
+    "show": true,
+    "eyebrow": "Equipment",
+    "h2": "Equipment for working with ID-Cards",
+    "items": [
+      {
+        "productSlug": "ih-centrifuge-l",
+        "anchor": "ih-centrifuge-l",
+        "eyebrow": "Centrifuge",
+        "h3": "ID-Centrifuge L",
+        "text": "ID-Centrifuge L is a Bio-Rad centrifuge for manual immunohematology procedures with ID-Cards and tubes. The instrument automatically detects the installed rotor head and selects the matching program. Heads are available for 24 ID-Cards, 28 or 12 tubes, and two racks.",
+        "keyFacts": [
+          {
+            "value": "4",
+            "label": "compatible rotor heads"
+          },
+          {
+            "value": "2 formats",
+            "label": "ID-Cards and tubes in one instrument"
+          },
+          {
+            "value": "24 ID-Cards",
+            "label": "in the ID-Card head"
+          }
+        ],
+        "image": {
+          "alt": "ID-Centrifuge L instrument"
+        },
+        "ordering": {
+          "show": true,
+          "h3": "ID-Centrifuge L order items",
+          "columns": [
+            "Catalog number",
+            "Name",
+            "Pack size"
+          ],
+          "rows": [
+            {
+              "catalogNumber": "009201",
+              "name": "ID-Centrifuge L, 1 unit",
+              "packSize": "[ФАСУВАННЯ НЕ ВКАЗАНО]"
+            },
+            {
+              "catalogNumber": "009410",
+              "name": "Head 24 ID-Cards, 1 unit",
+              "packSize": "[ФАСУВАННЯ НЕ ВКАЗАНО]"
+            },
+            {
+              "catalogNumber": "009415",
+              "name": "Head 28 tubes, 1 unit",
+              "packSize": "[ФАСУВАННЯ НЕ ВКАЗАНО]"
+            },
+            {
+              "catalogNumber": "009413",
+              "name": "Head 12 tubes, 1 unit",
+              "packSize": "[ФАСУВАННЯ НЕ ВКАЗАНО]"
+            },
+            {
+              "catalogNumber": "009414",
+              "name": "Head 2 racks, 1 unit",
+              "packSize": "[ФАСУВАННЯ НЕ ВКАЗАНО]"
+            }
+          ],
+          "footnote": "Ask a LabWell manager about configuration and availability of items in Ukraine."
+        },
+        "cta": {
+          "label": "Ask about ID-Centrifuge L",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ Back to equipment",
+          "href": "#lines"
+        }
+      },
+      {
+        "productSlug": "ih-incubator-l",
+        "anchor": "ih-incubator-l",
+        "eyebrow": "Incubator",
+        "h3": "ID-Incubator L",
+        "text": "ID-Incubator L is a Bio-Rad incubator for manual immunohematology procedures with ID-Cards and tubes. Independent incubation zones let you work with different formats in one instrument: three batch timers are available for ID-Cards and two for tubes. Dimensions are 380 × 500 × 230 mm and weight is 13 kg without heads.",
+        "keyFacts": [
+          {
+            "value": "up to 36",
+            "label": "ID-Cards"
+          },
+          {
+            "value": "up to 24",
+            "label": "tubes"
+          },
+          {
+            "value": "15 min at 37 °C",
+            "label": "standard program"
+          }
+        ],
+        "image": {
+          "alt": "ID-Incubator L instrument"
+        },
+        "ordering": {
+          "show": true,
+          "h3": "ID-Incubator L order items",
+          "columns": [
+            "Catalog number",
+            "Name",
+            "Pack size"
+          ],
+          "rows": [
+            {
+              "catalogNumber": "009203",
+              "name": "ID-Incubator L, 1 unit",
+              "packSize": "[ФАСУВАННЯ НЕ ВКАЗАНО]"
+            }
+          ],
+          "footnote": "Ask a LabWell manager about configuration and availability of items in Ukraine."
+        },
+        "cta": {
+          "label": "Ask about ID-Incubator L",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ Back to equipment",
+          "href": "#lines"
+        }
+      },
+      {
+        "productSlug": "ih-reader-24",
+        "anchor": "ih-reader-24",
+        "eyebrow": "Semi-automated reading",
+        "h3": "IH-Reader 24",
+        "text": "IH-Reader 24 is a semi-automated Bio-Rad instrument that centrifuges ID-Cards and reads their gel images after manual preparation. Results are interpreted using IH-Com. According to the manufacturer, results can be transferred to the LIS or viewed remotely via IH-Web.",
+        "keyFacts": [
+          {
+            "value": "2 steps",
+            "label": "centrifugation and reading of ID-Cards"
+          },
+          {
+            "value": "IH-Com",
+            "label": "result interpretation"
+          },
+          {
+            "value": "LIS",
+            "label": "result transfer, according to the manufacturer"
+          }
+        ],
+        "image": {
+          "alt": "IH-Reader 24 gel card instrument"
+        },
+        "ordering": {
+          "show": false
+        },
+        "cta": {
+          "label": "Ask about IH-Reader 24",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ Back to equipment",
+          "href": "#lines"
+        }
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Questions and answers about ID-Card equipment",
+    "items": [
+      {
+        "q": "Which ID-Card equipment is shown on this page?",
+        "a": "ID-Centrifuge L, ID-Incubator L and IH-Reader 24 — Bio-Rad instruments for immunohematology testing with ID-Cards."
+      },
+      {
+        "q": "How many ID-Cards and tubes does ID-Incubator L hold?",
+        "a": "ID-Incubator L holds up to 36 ID-Cards and up to 24 tubes. The ID-Card and tube zones can be used independently."
+      },
+      {
+        "q": "Which rotor heads are available for ID-Centrifuge L?",
+        "a": "Four heads are available: for 24 ID-Cards, for 28 tubes, for 12 tubes and for two racks. The centrifuge automatically detects the installed head."
+      },
+      {
+        "q": "What does IH-Reader 24 do and how does it work with IH-Com?",
+        "a": "IH-Reader 24 centrifuges ID-Cards and captures digital images of their gels after manual preparation. Results are interpreted using IH-Com software.",
+        "link": {
+          "label": "View IH-Com",
+          "href": "/products/bio-rad-software#ih-com"
+        }
+      },
+      {
+        "q": "Who supplies Bio-Rad ID-Card equipment in Ukraine?",
+        "a": "LabWell is an official Bio-Rad distributor in Ukraine. The company helps select the most effective solution for your needs, supplies equipment and provides application support."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Select ID-Card equipment",
+    "text": "Tell us whether your procedures are manual or semi-automated, and we will help you select the most effective solution for your needs.",
+    "messagePrefill": "I am interested in Bio-Rad ID-Card equipment. "
+  }
+}

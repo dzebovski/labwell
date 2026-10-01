@@ -1,0 +1,239 @@
+{
+  "slug": "culture-media",
+  "url": "/products/culture-media",
+  "kind": "group-lines",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "Живильні середовища Bio-Rad для мікробіології | LabWell",
+    "description": "Живильні середовища Bio-Rad: хромогенне UriSelect4 і Columbia Agar з овечою кров’ю — готові чашки по 90 мм та сухі середовища. Постачання в Україні — LabWell."
+  },
+  "G1_hero": {
+    "breadcrumbs": [
+      "Головна",
+      "Продукція",
+      "Реагенти й тести",
+      "Мікробіологія",
+      "Живильні середовища"
+    ],
+    "eyebrow": "Bio-Rad · Клінічна мікробіологія",
+    "h1": "Живильні середовища Bio-Rad для мікробіології",
+    "lead": "Живильні середовища Bio-Rad — це готові чашки та сухі середовища для виділення й культивування мікроорганізмів у клінічних зразках. На сторінці дві лінійки: Chromogenic Culture Media із середовищем UriSelect4 для досліджень збудників інфекцій сечових шляхів та Blood Agar Media на основі Columbia Agar.",
+    "keyFacts": [
+      {
+        "value": "18–24 год",
+        "label": "інтерпретація результатів на UriSelect4, за даними Bio-Rad"
+      },
+      {
+        "value": "20 чашок",
+        "label": "по 90 мм у готовому форматі"
+      },
+      {
+        "value": "500 г і 5 кг",
+        "label": "фасування сухих середовищ"
+      }
+    ],
+    "primaryCta": {
+      "label": "Отримати консультацію",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Переглянути лінійки",
+      "href": "#lines"
+    },
+    "image": {
+      "alt": "Чашки Петрі з живильними середовищами Bio-Rad"
+    }
+  },
+  "G2_compare": {
+    "show": false
+  },
+  "G2_sections": {
+    "show": true,
+    "h2": "Лінійки середовищ",
+    "items": [
+      {
+        "anchor": "chromogenic-culture-media",
+        "title": "Chromogenic Culture Media",
+        "href": "#chromogenic-culture-media",
+        "text": "Хромогенне середовище UriSelect4 для досліджень збудників інфекцій сечових шляхів."
+      },
+      {
+        "anchor": "blood-agar-media",
+        "title": "Blood Agar Media",
+        "href": "#blood-agar-media",
+        "text": "Columbia Agar: готові чашки з овечою кров’ю та сухе середовище."
+      }
+    ]
+  },
+  "G3_items": {
+    "show": true,
+    "eyebrow": "Лінійки",
+    "h2": "Середовища для різних завдань посіву",
+    "items": [
+      {
+        "productSlug": "chromogenic-culture-media",
+        "anchor": "chromogenic-culture-media",
+        "eyebrow": "Хромогенні середовища",
+        "h3": "Chromogenic Culture Media",
+        "text": "Chromogenic Culture Media — лінійка хромогенних середовищ Bio-Rad для культивування та розпізнавання мікроорганізмів у клінічних зразках. У каталозі описано UriSelect4 — неселективне хромогенне агарове середовище для виділення, диференціації та підрахунку мікроорганізмів, пов’язаних з інфекціями сечових шляхів. Воно постачається як готові чашки й у сухому вигляді для приготування.",
+        "keyFacts": [
+          {
+            "value": "18–24 год",
+            "label": "інтерпретація результатів після інкубації, за даними Bio-Rad"
+          },
+          {
+            "value": "4 позиції",
+            "label": "UriSelect4 у різних фасуваннях"
+          },
+          {
+            "value": "2 форми",
+            "label": "готові чашки та сухе середовище"
+          }
+        ],
+        "image": {
+          "alt": "Чашка Петрі з колоніями на хромогенному поживному середовищі"
+        },
+        "ordering": {
+          "show": true,
+          "h3": "Позиції Chromogenic Culture Media для замовлення",
+          "columns": [
+            "Каталожний номер",
+            "Назва",
+            "Фасування"
+          ],
+          "rows": [
+            {
+              "catalogNumber": "63726",
+              "name": "UriSelect4",
+              "packSize": "20 plates of 90 mm"
+            },
+            {
+              "catalogNumber": "63727",
+              "name": "UriSelect4",
+              "packSize": "100 plates of 90 mm"
+            },
+            {
+              "catalogNumber": "64694",
+              "name": "UriSelect4",
+              "packSize": "500 g"
+            },
+            {
+              "catalogNumber": "12013236",
+              "name": "UriSelect4",
+              "packSize": "5 kg"
+            }
+          ],
+          "footnote": "Наведено позиції з офіційного каталогу Bio-Rad. Доступність в Україні уточнює менеджер LabWell."
+        },
+        "cta": {
+          "label": "Запитати про Chromogenic Culture Media",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ До переліку лінійок",
+          "href": "#lines"
+        }
+      },
+      {
+        "productSlug": "blood-agar-media",
+        "anchor": "blood-agar-media",
+        "eyebrow": "Кров’яні агари",
+        "h3": "Blood Agar Media",
+        "text": "Blood Agar Media — лінійка поживних середовищ Bio-Rad для первинного виділення та культивування мікроорганізмів у клінічних зразках. До неї входять готові чашки Columbia Agar з 5 % овечої крові, варіант Columbia CNA Agar для селективного виділення грампозитивних вибагливих мікроорганізмів із полімікробних зразків і сухе середовище Columbia Agar для приготування в лабораторії.",
+        "keyFacts": [
+          {
+            "value": "5 %",
+            "label": "овеча кров у готових чашках Columbia Agar"
+          },
+          {
+            "value": "20 чашок",
+            "label": "діаметром 90 мм у готовому форматі"
+          },
+          {
+            "value": "500 г і 5 кг",
+            "label": "фасування сухого Columbia Agar"
+          }
+        ],
+        "image": {
+          "alt": "Флакон середовища Columbia Agar і чашки Петрі з кров’яним агаром"
+        },
+        "ordering": {
+          "show": true,
+          "h3": "Позиції Blood Agar Media для замовлення",
+          "columns": [
+            "Каталожний номер",
+            "Назва",
+            "Фасування"
+          ],
+          "rows": [
+            {
+              "catalogNumber": "63784",
+              "name": "Columbia Agar + 5% Sheep Blood",
+              "packSize": "20 plates of 90 mm"
+            },
+            {
+              "catalogNumber": "63954",
+              "name": "Columbia CNA Agar + 5% Sheep Blood",
+              "packSize": "20 plates of 90 mm"
+            },
+            {
+              "catalogNumber": "64674",
+              "name": "Columbia Agar",
+              "packSize": "500 g"
+            },
+            {
+              "catalogNumber": "64678",
+              "name": "Columbia Agar",
+              "packSize": "5 kg"
+            }
+          ],
+          "footnote": "Наведено позиції з офіційного каталогу Bio-Rad. Доступність в Україні уточнює менеджер LabWell."
+        },
+        "cta": {
+          "label": "Запитати про Blood Agar Media",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ До переліку лінійок",
+          "href": "#lines"
+        }
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Питання й відповіді про живильні середовища",
+    "items": [
+      {
+        "q": "Які лінійки живильних середовищ Bio-Rad представлені на сторінці?",
+        "a": "Chromogenic Culture Media із середовищем UriSelect4 та Blood Agar Media, до якої входять Columbia Agar з овечою кров’ю, Columbia CNA Agar і сухий Columbia Agar."
+      },
+      {
+        "q": "Для чого призначене середовище UriSelect4?",
+        "a": "UriSelect4 — неселективне хромогенне агарове середовище для виділення, диференціації та підрахунку мікроорганізмів, пов’язаних з інфекціями сечових шляхів. За даними Bio-Rad, результати інтерпретують у межах 18–24 годин після інкубації."
+      },
+      {
+        "q": "Чим Columbia CNA Agar відрізняється від Columbia Agar з овечою кров’ю?",
+        "a": "Columbia CNA Agar + 5 % Sheep Blood містить колістин і налідиксову кислоту для селективного виділення грампозитивних вибагливих мікроорганізмів із полімікробних зразків. Columbia Agar з овечою кров’ю дає змогу спостерігати гемолітичні реакції."
+      },
+      {
+        "q": "У яких фасуваннях доступні середовища?",
+        "a": "Готові чашки — по 20 чашок діаметром 90 мм (UriSelect4 також по 100). Сухі середовища Columbia Agar і UriSelect4 — 500 г і 5 кг."
+      },
+      {
+        "q": "Хто постачає живильні середовища Bio-Rad в Україні?",
+        "a": "LabWell — офіційний дистриб'ютор Bio-Rad в Україні. Компанія допомагає підібрати найефективніше рішення для ваших задач, постачає продукцію та надає аплікаційну підтримку."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.itemsForLine"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Підібрати живильні середовища",
+    "text": "Вкажіть, які мікроорганізми й зразки досліджуєте, — допоможемо підібрати найефективніше рішення для ваших задач.",
+    "messagePrefill": "Цікавлять живильні середовища Bio-Rad. "
+  }
+}

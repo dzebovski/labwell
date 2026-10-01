@@ -1,0 +1,324 @@
+{
+  "slug": "bio-rad-software",
+  "url": "/products/bio-rad-software",
+  "kind": "group-lines",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "Bio-Rad software for laboratories | LabWell",
+    "description": "Bio-Rad software: Unity for quality control, IH-Com for immunohematology and BRiCare for remote instrument monitoring. Selection in Ukraine — LabWell."
+  },
+  "G1_hero": {
+    "breadcrumbs": [
+      "Home",
+      "Products",
+      "Software",
+      "Bio-Rad software"
+    ],
+    "eyebrow": "Bio-Rad · Laboratory software",
+    "h1": "Bio-Rad software for laboratories",
+    "lead": "Bio-Rad software covers quality control, immunohematology data management and remote instrument monitoring. This page covers five products: UnityWeb, Unity Real Time and Unity Next Peer QC for quality control data, IH-Com for immunohematology and BRiCare for remote monitoring of diagnostic instruments.",
+    "keyFacts": [
+      {
+        "value": "3 applications",
+        "label": "Unity for quality control data"
+      },
+      {
+        "value": "IH-Com",
+        "label": "connects Bio-Rad instruments with the LIS"
+      },
+      {
+        "value": "BRiCare",
+        "label": "remote instrument monitoring"
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "View products",
+      "href": "#lines"
+    },
+    "image": {
+      "alt": "Bio-Rad software for laboratories"
+    }
+  },
+  "G2_compare": {
+    "show": false
+  },
+  "G2_sections": {
+    "show": true,
+    "h2": "Software categories",
+    "items": [
+      {
+        "anchor": "unityweb",
+        "title": "Unity for quality control",
+        "href": "#unityweb",
+        "text": "UnityWeb, Unity Real Time and Unity Next Peer QC — quality control data and peer comparison."
+      },
+      {
+        "anchor": "ih-com",
+        "title": "IH-Com",
+        "href": "#ih-com",
+        "text": "Immunohematology laboratory data and connection of Bio-Rad instruments to the LIS."
+      },
+      {
+        "anchor": "bricare",
+        "title": "BRiCare",
+        "href": "#bricare",
+        "text": "Remote monitoring of Bio-Rad diagnostic instrument status."
+      }
+    ]
+  },
+  "G3_items": {
+    "show": true,
+    "eyebrow": "Products",
+    "h2": "Bio-Rad software products",
+    "items": [
+      {
+        "productSlug": "unityweb",
+        "anchor": "unityweb",
+        "eyebrow": "Unity for quality control",
+        "h3": "UnityWeb",
+        "text": "UnityWeb is a Bio-Rad web application for managing quality control data in a medical laboratory. It supports access to quality control data, analysis, review, storage and report generation. The application also provides tools for peer comparison within the Unity Interlaboratory Program.",
+        "keyFacts": [
+          {
+            "value": "Web",
+            "label": "access to quality control data"
+          },
+          {
+            "value": "Reports",
+            "label": "analysis, review, storage and report generation"
+          },
+          {
+            "value": "Peer",
+            "label": "comparison within the Unity Interlaboratory Program"
+          }
+        ],
+        "image": {
+          "alt": "UnityWeb software product image"
+        },
+        "ordering": {
+          "show": false
+        },
+        "cta": {
+          "label": "Ask about UnityWeb",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ Back to products",
+          "href": "#lines"
+        }
+      },
+      {
+        "productSlug": "unity-real-time",
+        "anchor": "unity-real-time",
+        "eyebrow": "Unity for quality control",
+        "h3": "Unity Real Time",
+        "text": "Unity Real Time is Bio-Rad software for working with internal quality control data and peer comparison. It supports statistical process control, trend analysis and peer reports; data can arrive manually or through Bio-Rad connectivity solutions. It is aimed at laboratories that need advanced tools for daily control and process analysis.",
+        "keyFacts": [
+          {
+            "value": "SPC",
+            "label": "statistical process control"
+          },
+          {
+            "value": "Trends",
+            "label": "trend analysis and peer reports"
+          },
+          {
+            "value": "2 ways",
+            "label": "of data entry: manually or through Bio-Rad connectivity solutions"
+          }
+        ],
+        "image": {
+          "alt": "Unity Real Time software product image"
+        },
+        "ordering": {
+          "show": false
+        },
+        "cta": {
+          "label": "Ask about Unity Real Time",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ Back to products",
+          "href": "#lines"
+        }
+      },
+      {
+        "productSlug": "unity-next-peer-qc",
+        "anchor": "unity-next-peer-qc",
+        "eyebrow": "Unity for quality control",
+        "h3": "Unity Next Peer QC",
+        "text": "Unity Next Peer QC is a Bio-Rad web tool for comparing quality control results with peer groups and viewing reports. Users submit quality control data and receive comparison reports. According to Bio-Rad, peer reports are available without a monthly data submission deadline.",
+        "keyFacts": [
+          {
+            "value": "Peer reports",
+            "label": "based on submitted quality control data"
+          },
+          {
+            "value": "No deadline",
+            "label": "for monthly data submission, according to Bio-Rad"
+          },
+          {
+            "value": "2 items",
+            "label": "of annual subscription in the order list"
+          }
+        ],
+        "image": {
+          "alt": "Unity Next Peer QC software product image"
+        },
+        "ordering": {
+          "show": true,
+          "h3": "Unity Next Peer QC order items",
+          "columns": [
+            "Catalog number",
+            "Name",
+            "Pack size"
+          ],
+          "rows": [
+            {
+              "catalogNumber": "11000517",
+              "name": "Unity Next Peer QC (Annual Subscription)",
+              "packSize": "[ФАСУВАННЯ НЕ ВКАЗАНО]"
+            },
+            {
+              "catalogNumber": "11001897",
+              "name": "Unity Next File Upload (Annual Subscription)",
+              "packSize": "[ФАСУВАННЯ НЕ ВКАЗАНО]"
+            }
+          ],
+          "footnote": "Ask a LabWell manager about configuration and availability of items in Ukraine."
+        },
+        "cta": {
+          "label": "Ask about Unity Next Peer QC",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ Back to products",
+          "href": "#lines"
+        }
+      },
+      {
+        "productSlug": "ih-com",
+        "anchor": "ih-com",
+        "eyebrow": "Immunohematology",
+        "h3": "IH-Com",
+        "text": "IH-Com is Bio-Rad software for managing patient, sample, instrument and quality control data in an immunohematology laboratory. It compares a patient’s results with previous data, supports manual test entry and includes a QC module. The manufacturer designs IH-Com to connect Bio-Rad instruments with the LIS.",
+        "keyFacts": [
+          {
+            "value": "LIS",
+            "label": "connects Bio-Rad instruments with the laboratory information system"
+          },
+          {
+            "value": "QC module",
+            "label": "quality control within the software"
+          },
+          {
+            "value": "Several instruments",
+            "label": "connect to a shared software hub, according to Bio-Rad"
+          }
+        ],
+        "image": {
+          "alt": "IH-Com software image"
+        },
+        "ordering": {
+          "show": true,
+          "h3": "IH-Com order items",
+          "columns": [
+            "Catalog number",
+            "Name",
+            "Pack size"
+          ],
+          "rows": [
+            {
+              "catalogNumber": "009000",
+              "name": "IH-Com Kit Fullversion, Data Management Software",
+              "packSize": "[ФАСУВАННЯ НЕ ВКАЗАНО]"
+            }
+          ],
+          "footnote": "Ask a LabWell manager about configuration and availability of items in Ukraine."
+        },
+        "cta": {
+          "label": "Ask about IH-Com",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ Back to products",
+          "href": "#lines"
+        }
+      },
+      {
+        "productSlug": "bricare",
+        "anchor": "bricare",
+        "eyebrow": "Remote instrument support",
+        "h3": "BRiCare",
+        "text": "BRiCare is a Bio-Rad application for remote monitoring of diagnostic instrument status and service support. It sends system diagnostic data to authorized Bio-Rad specialists to help identify faults and prepare for maintenance. Remote sessions are initiated by authorized Bio-Rad personnel and approved by the laboratory.",
+        "keyFacts": [
+          {
+            "value": "Remote",
+            "label": "monitoring of diagnostic instrument status"
+          },
+          {
+            "value": "Encrypted",
+            "label": "equipment status data; patient data is not collected, according to the manufacturer"
+          },
+          {
+            "value": "Approval",
+            "label": "of remote sessions by the laboratory"
+          }
+        ],
+        "image": {
+          "alt": "BRiCare software product image"
+        },
+        "ordering": {
+          "show": false
+        },
+        "cta": {
+          "label": "Ask about BRiCare",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ Back to products",
+          "href": "#lines"
+        }
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Questions and answers about Bio-Rad software",
+    "items": [
+      {
+        "q": "Which Bio-Rad software is shown on this page?",
+        "a": "UnityWeb, Unity Real Time and Unity Next Peer QC for quality control data, IH-Com for the immunohematology laboratory and BRiCare for remote instrument monitoring."
+      },
+      {
+        "q": "How does UnityWeb differ from Unity Next Peer QC?",
+        "a": "UnityWeb supports access to quality control data, analysis, storage and reports, as well as peer comparison. Unity Next Peer QC is designed for comparing quality control data with peer groups: according to Bio-Rad, peer reports are available without a monthly data submission deadline."
+      },
+      {
+        "q": "What is IH-Com used for?",
+        "a": "IH-Com manages patient, sample, instrument and quality control data in an immunohematology laboratory and is designed to connect Bio-Rad instruments with the LIS."
+      },
+      {
+        "q": "Does BRiCare collect patient data?",
+        "a": "The manufacturer states that BRiCare periodically sends encrypted equipment status data and that patient data is not collected."
+      },
+      {
+        "q": "Who supplies Bio-Rad software in Ukraine?",
+        "a": "LabWell is an official Bio-Rad distributor in Ukraine. A manager will help select the most effective solution for your needs and confirm the items available."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Select Bio-Rad software",
+    "text": "Tell us which data and instruments you work with, and we will help you select the most effective solution for your needs.",
+    "messagePrefill": "I am interested in Bio-Rad software. "
+  }
+}

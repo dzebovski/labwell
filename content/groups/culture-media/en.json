@@ -1,0 +1,239 @@
+{
+  "slug": "culture-media",
+  "url": "/products/culture-media",
+  "kind": "group-lines",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "Bio-Rad culture media for microbiology | LabWell",
+    "description": "Bio-Rad culture media: chromogenic UriSelect4 and Columbia Agar with sheep blood — ready 90 mm plates and dry media. Supplied in Ukraine by LabWell."
+  },
+  "G1_hero": {
+    "breadcrumbs": [
+      "Home",
+      "Products",
+      "Reagents and tests",
+      "Microbiology",
+      "Culture media"
+    ],
+    "eyebrow": "Bio-Rad · Clinical microbiology",
+    "h1": "Bio-Rad culture media for microbiology",
+    "lead": "Bio-Rad culture media are ready-to-use plates and dry media for isolating and culturing microorganisms from clinical specimens. This page covers two ranges: Chromogenic Culture Media with UriSelect4 for testing pathogens of urinary tract infections, and Blood Agar Media based on Columbia Agar.",
+    "keyFacts": [
+      {
+        "value": "18–24 h",
+        "label": "result interpretation on UriSelect4, according to Bio-Rad"
+      },
+      {
+        "value": "20 plates",
+        "label": "of 90 mm in the ready-to-use format"
+      },
+      {
+        "value": "500 g and 5 kg",
+        "label": "pack sizes of dry media"
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "View product ranges",
+      "href": "#lines"
+    },
+    "image": {
+      "alt": "Petri dishes with Bio-Rad culture media"
+    }
+  },
+  "G2_compare": {
+    "show": false
+  },
+  "G2_sections": {
+    "show": true,
+    "h2": "Culture media ranges",
+    "items": [
+      {
+        "anchor": "chromogenic-culture-media",
+        "title": "Chromogenic Culture Media",
+        "href": "#chromogenic-culture-media",
+        "text": "UriSelect4 chromogenic medium for testing pathogens of urinary tract infections."
+      },
+      {
+        "anchor": "blood-agar-media",
+        "title": "Blood Agar Media",
+        "href": "#blood-agar-media",
+        "text": "Columbia Agar: ready plates with sheep blood and dry medium."
+      }
+    ]
+  },
+  "G3_items": {
+    "show": true,
+    "eyebrow": "Product ranges",
+    "h2": "Media for different culture tasks",
+    "items": [
+      {
+        "productSlug": "chromogenic-culture-media",
+        "anchor": "chromogenic-culture-media",
+        "eyebrow": "Chromogenic media",
+        "h3": "Chromogenic Culture Media",
+        "text": "Chromogenic Culture Media is a Bio-Rad range of chromogenic media for culturing and recognizing microorganisms in clinical specimens. The catalog describes UriSelect4, a non-selective chromogenic agar medium for isolating, differentiating and counting microorganisms associated with urinary tract infections. It is supplied as ready-to-use plates and as a dry medium for preparation.",
+        "keyFacts": [
+          {
+            "value": "18–24 h",
+            "label": "result interpretation after incubation, according to Bio-Rad"
+          },
+          {
+            "value": "4 items",
+            "label": "UriSelect4 in different pack sizes"
+          },
+          {
+            "value": "2 forms",
+            "label": "ready plates and dry medium"
+          }
+        ],
+        "image": {
+          "alt": "Petri dish with colonies on chromogenic culture medium"
+        },
+        "ordering": {
+          "show": true,
+          "h3": "Chromogenic Culture Media order items",
+          "columns": [
+            "Catalog number",
+            "Name",
+            "Pack size"
+          ],
+          "rows": [
+            {
+              "catalogNumber": "63726",
+              "name": "UriSelect4",
+              "packSize": "20 plates of 90 mm"
+            },
+            {
+              "catalogNumber": "63727",
+              "name": "UriSelect4",
+              "packSize": "100 plates of 90 mm"
+            },
+            {
+              "catalogNumber": "64694",
+              "name": "UriSelect4",
+              "packSize": "500 g"
+            },
+            {
+              "catalogNumber": "12013236",
+              "name": "UriSelect4",
+              "packSize": "5 kg"
+            }
+          ],
+          "footnote": "Items from the official Bio-Rad catalog are shown. Ask a LabWell manager about availability in Ukraine."
+        },
+        "cta": {
+          "label": "Ask about Chromogenic Culture Media",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ Back to product ranges",
+          "href": "#lines"
+        }
+      },
+      {
+        "productSlug": "blood-agar-media",
+        "anchor": "blood-agar-media",
+        "eyebrow": "Blood agars",
+        "h3": "Blood Agar Media",
+        "text": "Blood Agar Media is a Bio-Rad range of nutrient media for primary isolation and culture of microorganisms from clinical specimens. It includes ready-to-use Columbia Agar plates with 5% sheep blood, the Columbia CNA Agar variant for selective isolation of fastidious Gram-positive organisms from polymicrobial specimens, and dry Columbia Agar for preparation in the laboratory.",
+        "keyFacts": [
+          {
+            "value": "5 %",
+            "label": "sheep blood in ready Columbia Agar plates"
+          },
+          {
+            "value": "20 plates",
+            "label": "of 90 mm in the ready-to-use format"
+          },
+          {
+            "value": "500 g and 5 kg",
+            "label": "pack sizes of dry Columbia Agar"
+          }
+        ],
+        "image": {
+          "alt": "Columbia Agar bottle and blood agar Petri dishes"
+        },
+        "ordering": {
+          "show": true,
+          "h3": "Blood Agar Media order items",
+          "columns": [
+            "Catalog number",
+            "Name",
+            "Pack size"
+          ],
+          "rows": [
+            {
+              "catalogNumber": "63784",
+              "name": "Columbia Agar + 5% Sheep Blood",
+              "packSize": "20 plates of 90 mm"
+            },
+            {
+              "catalogNumber": "63954",
+              "name": "Columbia CNA Agar + 5% Sheep Blood",
+              "packSize": "20 plates of 90 mm"
+            },
+            {
+              "catalogNumber": "64674",
+              "name": "Columbia Agar",
+              "packSize": "500 g"
+            },
+            {
+              "catalogNumber": "64678",
+              "name": "Columbia Agar",
+              "packSize": "5 kg"
+            }
+          ],
+          "footnote": "Items from the official Bio-Rad catalog are shown. Ask a LabWell manager about availability in Ukraine."
+        },
+        "cta": {
+          "label": "Ask about Blood Agar Media",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ Back to product ranges",
+          "href": "#lines"
+        }
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Questions and answers about culture media",
+    "items": [
+      {
+        "q": "Which Bio-Rad culture media ranges are shown on this page?",
+        "a": "Chromogenic Culture Media with UriSelect4, and Blood Agar Media, which includes Columbia Agar with sheep blood, Columbia CNA Agar and dry Columbia Agar."
+      },
+      {
+        "q": "What is UriSelect4 medium used for?",
+        "a": "UriSelect4 is a non-selective chromogenic agar medium for isolating, differentiating and counting microorganisms associated with urinary tract infections. According to Bio-Rad, results are interpreted within 18–24 hours of incubation."
+      },
+      {
+        "q": "How does Columbia CNA Agar differ from Columbia Agar with sheep blood?",
+        "a": "Columbia CNA Agar + 5% Sheep Blood contains colistin and nalidixic acid for selective isolation of fastidious Gram-positive organisms from polymicrobial specimens. Columbia Agar with sheep blood allows hemolytic reactions to be observed."
+      },
+      {
+        "q": "Which pack sizes are available?",
+        "a": "Ready-to-use plates come in packs of 20 plates of 90 mm (UriSelect4 also in 100). Dry Columbia Agar and UriSelect4 come in 500 g and 5 kg packs."
+      },
+      {
+        "q": "Who supplies Bio-Rad culture media in Ukraine?",
+        "a": "LabWell is an official Bio-Rad distributor in Ukraine. The company helps select the most effective solution for your needs, supplies products and provides application support."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.itemsForLine"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Select culture media",
+    "text": "Tell us which microorganisms and specimens you test, and we will help you select the most effective solution for your needs.",
+    "messagePrefill": "I am interested in Bio-Rad culture media. "
+  }
+}

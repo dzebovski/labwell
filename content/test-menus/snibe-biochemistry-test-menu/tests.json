@@ -1,0 +1,577 @@
+{
+  "groups": [
+    {
+      "id": "cardiac",
+      "name": {
+        "uk": "Кардіологічні маркери",
+        "en": "Cardiac"
+      },
+      "tests": [
+        {
+          "id": "test-8d5579affb51",
+          "name": "CK"
+        },
+        {
+          "id": "test-a9ed8740d902",
+          "name": "CK-MB"
+        },
+        {
+          "id": "test-b38781b50253",
+          "name": "α-HBDH"
+        },
+        {
+          "id": "test-8442c1229e19",
+          "name": "LDH"
+        },
+        {
+          "id": "test-2796be2e923a",
+          "name": "Hcy"
+        },
+        {
+          "id": "test-1533c7c22d7c",
+          "name": "LDH1"
+        },
+        {
+          "id": "test-7507095237d6",
+          "name": "*D-Dimer"
+        },
+        {
+          "id": "test-bd006b42bb31",
+          "name": "ACE"
+        },
+        {
+          "id": "test-050b509e5da6",
+          "name": "IMA"
+        },
+        {
+          "id": "test-cfc6796b467a",
+          "name": "MYO"
+        },
+        {
+          "id": "test-c805b534b365",
+          "name": "mAST"
+        },
+        {
+          "id": "test-dec08dba1351",
+          "name": "hs-CRP"
+        },
+        {
+          "id": "test-15f48ff2fd7b",
+          "name": "*H-FABP"
+        },
+        {
+          "id": "test-e94c24a6d20b",
+          "name": "MPO"
+        },
+        {
+          "id": "test-e1fab0fda6fd",
+          "name": "*CK-MB mass"
+        },
+        {
+          "id": "test-d5a8f23bb63f",
+          "name": "*Lp-PLA2"
+        }
+      ]
+    },
+    {
+      "id": "diabetes",
+      "name": {
+        "uk": "Діабет",
+        "en": "Diabetes"
+      },
+      "tests": [
+        {
+          "id": "test-16c5ce5e7733",
+          "name": "GLU"
+        },
+        {
+          "id": "test-d3a2b33bd3aa",
+          "name": "LAC"
+        },
+        {
+          "id": "test-edb19951fa51",
+          "name": "HbA1c"
+        },
+        {
+          "id": "test-dc7960398ddf",
+          "name": "GSP"
+        },
+        {
+          "id": "test-6e777157ff4c",
+          "name": "β-Hydroxybutyrate"
+        },
+        {
+          "id": "test-0fbc26485e23",
+          "name": "GA"
+        },
+        {
+          "id": "test-0d4ba67738e1",
+          "name": "*Adiponectin (ADPN)"
+        }
+      ]
+    },
+    {
+      "id": "inorganic-ion",
+      "name": {
+        "uk": "Неорганічні іони",
+        "en": "Inorganic Ion"
+      },
+      "tests": [
+        {
+          "id": "test-6cf71c036321",
+          "name": "P (PHOS)"
+        },
+        {
+          "id": "test-180d88b4d4c8",
+          "name": "Mg"
+        },
+        {
+          "id": "test-203368371fb8",
+          "name": "Ca (Arsenazo Ⅲ)"
+        },
+        {
+          "id": "test-7419d0e8b92d",
+          "name": "CO 2"
+        },
+        {
+          "id": "test-1310fe257974",
+          "name": "Zn"
+        },
+        {
+          "id": "test-93db81b5af8e",
+          "name": "*Cu"
+        },
+        {
+          "id": "test-7308e747d09d",
+          "name": "*Li"
+        }
+      ]
+    },
+    {
+      "id": "hepatic",
+      "name": {
+        "uk": "Функція печінки",
+        "en": "Hepatic"
+      },
+      "tests": [
+        {
+          "id": "test-f7bd60bb5186",
+          "name": "TBA"
+        },
+        {
+          "id": "test-b20a7a50281a",
+          "name": "ALT (SGPT)"
+        },
+        {
+          "id": "test-8c1b414617c0",
+          "name": "AST (SGOT)"
+        },
+        {
+          "id": "test-4d69bb4dd20d",
+          "name": "ALP"
+        },
+        {
+          "id": "test-190693d64b91",
+          "name": "GGT"
+        },
+        {
+          "id": "test-31fbf746d3ef",
+          "name": "TBIL (Vanadate)"
+        },
+        {
+          "id": "test-867c8a523507",
+          "name": "DBIL (Vanadate)"
+        },
+        {
+          "id": "test-23726709e41f",
+          "name": "TP"
+        },
+        {
+          "id": "test-43c7b73b33d8",
+          "name": "ALB"
+        },
+        {
+          "id": "test-b0a72ceb0b38",
+          "name": "Ammonia (AMM)"
+        },
+        {
+          "id": "test-86a7f47b3337",
+          "name": "PA"
+        },
+        {
+          "id": "test-a3d53c623599",
+          "name": "CHE"
+        },
+        {
+          "id": "test-c0e8aac2f408",
+          "name": "AFU"
+        },
+        {
+          "id": "test-ba8ed3c6ced0",
+          "name": "5´-NT"
+        },
+        {
+          "id": "test-e9ba24c6fd58",
+          "name": "Haptoglobin (HPT)"
+        },
+        {
+          "id": "test-fcd3683c6686",
+          "name": "TBIL (DPD)"
+        },
+        {
+          "id": "test-1148aaa19401",
+          "name": "DBIL (DPD)"
+        },
+        {
+          "id": "test-bd80f6ffe8f0",
+          "name": "*CG (Latex)"
+        },
+        {
+          "id": "test-d9a8d7af400e",
+          "name": "*CG (CEDIA)"
+        },
+        {
+          "id": "test-d7539f18951c",
+          "name": "*GLDH"
+        },
+        {
+          "id": "test-8a15fea9a888",
+          "name": "ADA"
+        },
+        {
+          "id": "test-3a031319257c",
+          "name": "*CER"
+        },
+        {
+          "id": "test-c4356b7f4136",
+          "name": "LAP"
+        },
+        {
+          "id": "test-dca9c14f74cc",
+          "name": "GR"
+        },
+        {
+          "id": "test-8b9ed7283eef",
+          "name": "Monoamine Oxidase"
+        }
+      ]
+    },
+    {
+      "id": "inflammation",
+      "name": {
+        "uk": "Запалення",
+        "en": "Inflammation"
+      },
+      "tests": [
+        {
+          "id": "test-17192693692b",
+          "name": "CRP (Full Range)"
+        },
+        {
+          "id": "test-5899a16eb877",
+          "name": "Superoxide Dismutase (SOD)"
+        },
+        {
+          "id": "test-41ddc5dedbc8",
+          "name": "*SAA"
+        }
+      ]
+    },
+    {
+      "id": "lipids",
+      "name": {
+        "uk": "Ліпіди",
+        "en": "Lipids"
+      },
+      "tests": [
+        {
+          "id": "test-192d4ed5d77d",
+          "name": "HDL-C"
+        },
+        {
+          "id": "test-0f1ff17968a4",
+          "name": "LDL-C"
+        },
+        {
+          "id": "test-d5ef0f0e059a",
+          "name": "TC"
+        },
+        {
+          "id": "test-0bf0ac9d0a7d",
+          "name": "TG"
+        },
+        {
+          "id": "test-efba2f4d0c48",
+          "name": "ApoE"
+        },
+        {
+          "id": "test-e8a817695e89",
+          "name": "ApoA1"
+        },
+        {
+          "id": "test-ef52032382f4",
+          "name": "ApoB"
+        },
+        {
+          "id": "test-df58072411aa",
+          "name": "Lp (a)"
+        },
+        {
+          "id": "test-4e2029d2e4b3",
+          "name": "NEFA"
+        },
+        {
+          "id": "test-a9fdb68ad404",
+          "name": "*sdLDL-C"
+        }
+      ]
+    },
+    {
+      "id": "renal",
+      "name": {
+        "uk": "Функція нирок",
+        "en": "Renal"
+      },
+      "tests": [
+        {
+          "id": "test-1ceb3d075004",
+          "name": "Cr (Latex)"
+        },
+        {
+          "id": "test-ac74d9ea9458",
+          "name": "Uric Acid (UA)"
+        },
+        {
+          "id": "test-3e5de50019a1",
+          "name": "Urea"
+        },
+        {
+          "id": "test-cb4d78297422",
+          "name": "Cys-C"
+        },
+        {
+          "id": "test-77137a82698c",
+          "name": "α1-Microglobulin"
+        },
+        {
+          "id": "test-01c3bcf32f45",
+          "name": "β2-Microglobulin"
+        },
+        {
+          "id": "test-11331cecde6d",
+          "name": "mALB"
+        },
+        {
+          "id": "test-f505c5c269fa",
+          "name": "Urine / CSF Protein"
+        },
+        {
+          "id": "test-d716e05929ba",
+          "name": "RBP"
+        },
+        {
+          "id": "test-a244c51ad99c",
+          "name": "NAG"
+        },
+        {
+          "id": "test-fcb1d2b34d83",
+          "name": "α2-Macroglobulin"
+        },
+        {
+          "id": "test-73f5bddb96cb",
+          "name": "Urine-IgG"
+        },
+        {
+          "id": "test-3fca999f608d",
+          "name": "*NGAL"
+        },
+        {
+          "id": "test-c7ccbe4907de",
+          "name": "*Cr (GLDH)"
+        }
+      ]
+    },
+    {
+      "id": "pancreatic",
+      "name": {
+        "uk": "Підшлункова залоза",
+        "en": "Pancreatic"
+      },
+      "tests": [
+        {
+          "id": "test-84400e34a350",
+          "name": "α-AMY"
+        },
+        {
+          "id": "test-ba7112ee28ad",
+          "name": "LIP"
+        },
+        {
+          "id": "test-2d9dfd951134",
+          "name": "P-AMY"
+        }
+      ]
+    },
+    {
+      "id": "immune",
+      "name": {
+        "uk": "Імунологічні дослідження",
+        "en": "Immune"
+      },
+      "tests": [
+        {
+          "id": "test-ec94e7400b38",
+          "name": "IgM"
+        },
+        {
+          "id": "test-c21a8639ebcd",
+          "name": "IgA"
+        },
+        {
+          "id": "test-fd28d118efef",
+          "name": "IgG"
+        },
+        {
+          "id": "test-8a214cef6d47",
+          "name": "C3"
+        },
+        {
+          "id": "test-08d1623c441b",
+          "name": "C4"
+        },
+        {
+          "id": "test-3eecdf72ea1a",
+          "name": "*C1q"
+        },
+        {
+          "id": "test-985a0051b6bc",
+          "name": "Kappa Light Chain"
+        },
+        {
+          "id": "test-a16c03f6365e",
+          "name": "Lambda Light Chain"
+        },
+        {
+          "id": "test-55f2134d0ac9",
+          "name": "*Free Light Chain kappa"
+        },
+        {
+          "id": "test-16d8f9b598d2",
+          "name": "*Free Light Chain lambda"
+        }
+      ]
+    },
+    {
+      "id": "anemia",
+      "name": {
+        "uk": "Анемія",
+        "en": "Anemia"
+      },
+      "tests": [
+        {
+          "id": "test-e4a8663e44ef",
+          "name": "Transferrin (TRF)"
+        },
+        {
+          "id": "test-bd223c81de7e",
+          "name": "Iron"
+        },
+        {
+          "id": "test-71a880fcd185",
+          "name": "UIBC"
+        },
+        {
+          "id": "test-8f0c243e6e65",
+          "name": "*G6PD"
+        },
+        {
+          "id": "test-d6988c4e9b41",
+          "name": "*Ferritin"
+        }
+      ]
+    },
+    {
+      "id": "rheumatism",
+      "name": {
+        "uk": "Ревматологія",
+        "en": "Rheumatism"
+      },
+      "tests": [
+        {
+          "id": "test-5f2551b2c3e6",
+          "name": "ASO"
+        },
+        {
+          "id": "test-585f45ee4ce0",
+          "name": "RF"
+        }
+      ]
+    },
+    {
+      "id": "ise",
+      "name": {
+        "uk": "Іоноселективні електроди",
+        "en": "ISE"
+      },
+      "tests": [
+        {
+          "id": "test-f905a5c009ab",
+          "name": "Na +"
+        },
+        {
+          "id": "test-2e936e6610b2",
+          "name": "K +"
+        },
+        {
+          "id": "test-724245b5ef8e",
+          "name": "CI -"
+        },
+        {
+          "id": "test-307bfceed27f",
+          "name": "Ca 2+"
+        },
+        {
+          "id": "test-d18eae6d1eef",
+          "name": "pH"
+        },
+        {
+          "id": "test-8b863c9f076d",
+          "name": "*Li +"
+        }
+      ]
+    },
+    {
+      "id": "therapeutic-drug-monitoring",
+      "name": {
+        "uk": "Терапевтичний моніторинг препаратів",
+        "en": "Therapeutic Drug Monitoring"
+      },
+      "tests": [
+        {
+          "id": "test-5ab53d49fe7b",
+          "name": "*Carbamazepine"
+        },
+        {
+          "id": "test-3221c3ada8de",
+          "name": "*Phenobarbital"
+        },
+        {
+          "id": "test-561cec9d7d96",
+          "name": "*Valproic Acid"
+        },
+        {
+          "id": "test-ac5bdb0ac6e7",
+          "name": "*Vancomycin"
+        },
+        {
+          "id": "test-b83e47a4048f",
+          "name": "*Methotrexate"
+        },
+        {
+          "id": "test-04015e992326",
+          "name": "*Phenytoin"
+        }
+      ]
+    }
+  ]
+}

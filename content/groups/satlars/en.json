@@ -1,0 +1,222 @@
+{
+  "slug": "satlars",
+  "url": "/products/satlars",
+  "kind": "group-lines",
+  "brand": "Snibe",
+  "seo": {
+    "title": "SATLARS — Snibe laboratory automation | LabWell",
+    "description": "SATLARS — Snibe laboratory automation systems: T8, TCA with RFID tracking and the compact mini-T8 (2.2 m²). Selection and supply in Ukraine by LabWell."
+  },
+  "G1_hero": {
+    "breadcrumbs": [
+      "Home",
+      "Products",
+      "Laboratory equipment",
+      "Laboratory automation",
+      "SATLARS"
+    ],
+    "eyebrow": "Snibe · Laboratory automation",
+    "h1": "SATLARS — laboratory automation systems from Snibe",
+    "lead": "SATLARS is a range of Snibe laboratory automation systems for sample transport, preparation and tracking. This page covers three systems: SATLARS-T8, SATLARS-TCA and the compact SATLARS mini-T8, which occupies 2.2 m². The SATLARS-T8 and SATLARS-TCA configurations are selected for the laboratory workflow.",
+    "keyFacts": [
+      {
+        "value": "2.2 m²",
+        "label": "footprint of SATLARS mini-T8"
+      },
+      {
+        "value": "4 lanes",
+        "label": "bidirectional transport system of SATLARS-T8"
+      },
+      {
+        "value": "RFID",
+        "label": "sample tracking in SATLARS-TCA"
+      }
+    ],
+    "primaryCta": {
+      "label": "Request a consultation",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "View systems",
+      "href": "#lines"
+    },
+    "image": {
+      "alt": "SATLARS laboratory automation systems from Snibe"
+    }
+  },
+  "G2_compare": {
+    "show": false
+  },
+  "G2_sections": {
+    "show": true,
+    "h2": "SATLARS systems",
+    "items": [
+      {
+        "anchor": "satlars-t8",
+        "title": "SATLARS-T8",
+        "href": "#satlars-t8",
+        "text": "Sample transport and preparation with a bidirectional four-lane transport system."
+      },
+      {
+        "anchor": "satlars-tca",
+        "title": "SATLARS-TCA",
+        "href": "#satlars-tca",
+        "text": "A configurable system with RFID sample tracking."
+      },
+      {
+        "anchor": "satlars-mini-t8",
+        "title": "SATLARS mini-T8",
+        "href": "#satlars-mini-t8",
+        "text": "A compact system from sample loading to storage, 2.2 m²."
+      }
+    ]
+  },
+  "G3_items": {
+    "show": true,
+    "eyebrow": "Systems",
+    "h2": "SATLARS laboratory automation systems",
+    "items": [
+      {
+        "productSlug": "satlars-t8",
+        "anchor": "satlars-t8",
+        "eyebrow": "Sample transport and preparation",
+        "h3": "SATLARS-T8",
+        "text": "SATLARS-T8 is a modular Snibe laboratory automation system for sample transport and preparation. Its bidirectional four-lane transport system prioritizes urgent samples, and a continuous centrifuge with two manipulators helps organize sample preparation. The configuration can be adapted to the laboratory workflow.",
+        "keyFacts": [
+          {
+            "value": "4 lanes",
+            "label": "in the bidirectional transport system"
+          },
+          {
+            "value": "2 manipulators",
+            "label": "in the continuous centrifuge"
+          },
+          {
+            "value": "Priority",
+            "label": "for urgent samples"
+          }
+        ],
+        "image": {
+          "alt": "SATLARS-T8 instrument view"
+        },
+        "ordering": {
+          "show": false
+        },
+        "cta": {
+          "label": "Ask about SATLARS-T8",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ Back to systems",
+          "href": "#lines"
+        }
+      },
+      {
+        "productSlug": "satlars-tca",
+        "anchor": "satlars-tca",
+        "eyebrow": "Configurable system",
+        "h3": "SATLARS-TCA",
+        "text": "SATLARS-TCA is a Snibe laboratory automation system that combines sample-handling steps in a configurable layout. RFID provides sample tracking within the system, and automated operations reduce the need to move samples by hand. Snibe states that the system was developed jointly with Thermo Fisher.",
+        "keyFacts": [
+          {
+            "value": "RFID",
+            "label": "sample tracking within the system"
+          },
+          {
+            "value": "Thermo Fisher",
+            "label": "joint development, according to Snibe"
+          },
+          {
+            "value": "Modular",
+            "label": "configuration selected for the workflow"
+          }
+        ],
+        "image": {
+          "alt": "SATLARS-TCA instrument view"
+        },
+        "ordering": {
+          "show": false
+        },
+        "cta": {
+          "label": "Ask about SATLARS-TCA",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ Back to systems",
+          "href": "#lines"
+        }
+      },
+      {
+        "productSlug": "satlars-mini-t8",
+        "anchor": "satlars-mini-t8",
+        "eyebrow": "Compact system",
+        "h3": "SATLARS mini-T8",
+        "text": "SATLARS mini-T8 is a compact automated Snibe system covering the sample path from loading to storage. Its sample processing unit combines 14 functions, while a camera with sample recognition and automatic quality control support the workflow. The footprint is 2.2 m².",
+        "keyFacts": [
+          {
+            "value": "2.2 m²",
+            "label": "footprint"
+          },
+          {
+            "value": "14",
+            "label": "functions in the sample processing unit"
+          },
+          {
+            "value": "Camera",
+            "label": "with sample recognition"
+          }
+        ],
+        "image": {
+          "alt": "SATLARS mini-T8 instrument view"
+        },
+        "ordering": {
+          "show": false
+        },
+        "cta": {
+          "label": "Ask about SATLARS mini-T8",
+          "href": "#contact"
+        },
+        "backLink": {
+          "label": "↑ Back to systems",
+          "href": "#lines"
+        }
+      }
+    ]
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Questions and answers about SATLARS",
+    "items": [
+      {
+        "q": "Which SATLARS systems are shown on this page?",
+        "a": "SATLARS-T8, SATLARS-TCA and the compact SATLARS mini-T8 — Snibe laboratory automation systems."
+      },
+      {
+        "q": "How much space does SATLARS mini-T8 need?",
+        "a": "According to Snibe, the footprint of SATLARS mini-T8 is 2.2 m²."
+      },
+      {
+        "q": "How are samples transported in SATLARS-T8?",
+        "a": "SATLARS-T8 has a bidirectional four-lane transport system that supports priority handling of urgent samples."
+      },
+      {
+        "q": "How are samples tracked in SATLARS-TCA?",
+        "a": "SATLARS-TCA uses RFID to track samples within the system. Snibe also states that this system was developed jointly with Thermo Fisher."
+      },
+      {
+        "q": "Who supplies and maintains SATLARS in Ukraine?",
+        "a": "LabWell is an official Snibe distributor in Ukraine. It helps select the most effective solution for your needs and provides supply, installation, staff training, warranty and post-warranty maintenance, and application support."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Select a SATLARS automation system",
+    "text": "Tell us about your sample workflow and available space, and we will help you select the most effective solution for your needs.",
+    "messagePrefill": "I am interested in a SATLARS automation system. "
+  }
+}

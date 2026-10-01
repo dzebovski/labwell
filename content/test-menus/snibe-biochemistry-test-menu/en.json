@@ -1,0 +1,65 @@
+{
+  "slug": "snibe-biochemistry-test-menu",
+  "url": "/test-menus/snibe-biochemistry-test-menu",
+  "kind": "test-menu",
+  "brand": "Snibe",
+  "seo": {
+    "title": "Snibe biochemistry test menu: 114 tests | LabWell",
+    "description": "Snibe biochemistry test menu: 114 tests in 13 groups, searchable by assay name. Ask LabWell about the availability of individual tests in Ukraine."
+  },
+  "C1_hero": {
+    "show": true,
+    "breadcrumbs": [
+      "Home",
+      "Products",
+      "Reagents and tests",
+      "Snibe biochemistry test menu"
+    ],
+    "brand": "Snibe",
+    "eyebrow": "Test menu · Biochemistry",
+    "h1": "Snibe biochemistry test menu — 114 tests",
+    "lead": "The Snibe biochemistry test menu is the manufacturer’s list of biochemistry assays, organized by group. According to Snibe’s current list, the menu covers 114 tests in 13 groups, including cardiac markers, liver and kidney function, lipids and ion-selective electrodes; assay names are reproduced verbatim from the manufacturer. Ask a LabWell manager about the availability of individual tests in Ukraine.",
+    "stats": [
+      {
+        "value": "114",
+        "label": "tests, according to the current Snibe list"
+      },
+      {
+        "value": "13",
+        "label": "test groups"
+      }
+    ]
+  },
+  "C1_search": {
+    "show": true,
+    "searchLabel": "Search by assay name",
+    "placeholder": "Assay name, such as ALT, GLU or HbA1c",
+    "foundLabel": "Found {count}",
+    "resetLabel": "Reset",
+    "allGroupsLabel": "All groups",
+    "groupCountLabel": "{count} tests",
+    "empty": {
+      "title": "Test not found",
+      "text": "Check the spelling or send us a message, and we will ask about test availability.",
+      "cta": {
+        "label": "Ask about this test",
+        "href": "#contact"
+      }
+    }
+  },
+  "C1_analyzers": {
+    "show": false
+  },
+  "T10_faq": {
+    "show": false
+  },
+  "T11_labwell": {
+    "show": false
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Need a test that is not listed?",
+    "text": "LabWell is an official Snibe distributor in Ukraine. Send us the test name, and we will ask about its availability.",
+    "messagePrefill": "I am looking for this test: "
+  }
+}
