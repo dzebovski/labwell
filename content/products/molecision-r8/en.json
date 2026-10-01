@@ -112,11 +112,7 @@
     "testMenu": {
       "h2": "Snibe molecular assays",
       "title": "Molecular test menu",
-      "text": "The manufacturer’s menu includes assays for sexually transmitted infections and emerging pathogens. Ask LabWell about specific assay names and availability in Ukraine.",
-      "bigNumber": {
-        "value": "12",
-        "label": "entries in the Snibe menu"
-      }
+      "text": "Ask LabWell to confirm the molecular test list for this system and the availability of individual assays in Ukraine."
     },
     "models": {
       "h2": "Other Molecision systems",

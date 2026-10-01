@@ -4,7 +4,7 @@
   "kind": "instrument",
   "brand": "Snibe",
   "seo": {
-    "title": "MAGLUMI X10 — automated CLIA analyzer | LabWell",
+    "title": "MAGLUMI X10 — automated CLIA analyzer Snibe | LabWell",
     "description": "MAGLUMI X10 is a fully automated Snibe CLIA analyzer delivering up to 1,000 tests/hour for high-volume laboratories. Supply and service in Ukraine by LabWell."
   },
   "T1_breadcrumbs": [
@@ -48,7 +48,7 @@
   "T3_about": {
     "show": true,
     "h2": "What MAGLUMI X10 is and who it is for",
-    "text": "MAGLUMI X10 is a fully automated Snibe CLIA analyzer for chemiluminescence immunoassay in medium and large laboratories. A single module can operate independently, or four modules can be combined for high testing volumes. TLA/LAS connectivity should be checked for the specific laboratory project."
+    "text": "MAGLUMI X10 is a fully automated Snibe CLIA analyzer for chemiluminescence immunoassay in medium and large laboratories. A single module can operate independently, or four modules can be combined for high testing volumes. Connectivity with total laboratory automation systems should be checked for the specific project."
   },
   "T4_specs": {
     "show": true,
@@ -103,7 +103,7 @@
       {
         "icon": "combine",
         "h3": "Scale high-volume testing",
-        "text": "Individual modules can be combined as the laboratory workload grows. TLA/LAS connectivity should be selected and confirmed for the specific project."
+        "text": "Individual modules can be combined as the laboratory workload grows. Connectivity with total laboratory automation systems should be selected and confirmed for the specific project."
       },
       {
         "icon": "maximize",

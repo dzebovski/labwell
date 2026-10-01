@@ -48,7 +48,7 @@
   "T3_about": {
     "show": true,
     "h2": "What D-100 is and who it is for",
-    "text": "D-100 is an automated Bio-Rad HPLC system for HbA1c measurement. It is designed for medium- and high-volume laboratories that need continuous HbA1c testing. Its throughput supports planning a routine workload without moving to a different measurement method."
+    "text": "D-100 is an automated Bio-Rad high-performance liquid chromatography (HPLC) system for HbA1c measurement. It is designed for medium- and high-volume laboratories that need continuous HbA1c testing. Buffer replacement during operation and automated result review support the continuous workflow."
   },
   "T4_specs": {
     "show": true,
@@ -99,6 +99,11 @@
         "icon": "thermometer",
         "h3": "Defined operating conditions",
         "text": "Manufacturer-specified temperature and humidity ranges help a laboratory assess installation requirements in advance. Power and storage requirements are listed in the specifications."
+      },
+      {
+        "icon": "ruler",
+        "h3": "Installation space planning",
+        "text": "Dimensions, dry and wet weight, and power input requirements are collected in one table. These figures provide a starting point for preparing the instrument workspace."
       }
     ]
   },

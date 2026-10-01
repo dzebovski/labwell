@@ -4,7 +4,7 @@
   "kind": "instrument",
   "brand": "Snibe",
   "seo": {
-    "title": "MAGLUMI X6 — automated CLIA analyzer | LabWell",
+    "title": "MAGLUMI X6 — automated CLIA analyzer Snibe | LabWell",
     "description": "MAGLUMI X6 is a fully automated Snibe CLIA analyzer delivering up to 450 tests/hour for high-volume laboratories. Supply and service in Ukraine by LabWell."
   },
   "T1_breadcrumbs": [
@@ -48,7 +48,7 @@
   "T3_about": {
     "show": true,
     "h2": "What MAGLUMI X6 is and who it is for",
-    "text": "MAGLUMI X6 is a fully automated Snibe CLIA analyzer for chemiluminescence immunoassay in laboratories with substantial testing workloads. It supports walk-away operation after loading and can form part of a modular configuration. The exact TLA/LAS integration should be checked for each laboratory project."
+    "text": "MAGLUMI X6 is a fully automated Snibe CLIA analyzer for chemiluminescence immunoassay in laboratories with substantial testing workloads. It supports walk-away operation after loading and can form part of a modular configuration. Integration with a total laboratory automation system should be checked for each project."
   },
   "T4_specs": {
     "show": true,

@@ -119,6 +119,11 @@
         "icon": "calendar-clock",
         "h3": "Planning high-volume runs",
         "text": "According to the manufacturer, the system produces up to 216 results in 8 hours and up to 648 results in 24 hours. This provides a practical basis for planning large HbA1c runs."
+      },
+      {
+        "icon": "ruler",
+        "h3": "Preparing the installation site",
+        "text": "Separate dimensions and weights are listed for the chromatographic and sampling stations. The table also provides power and operating-environment requirements for site planning."
       }
     ]
   },

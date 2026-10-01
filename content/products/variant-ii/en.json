@@ -111,6 +111,11 @@
         "icon": "database",
         "h3": "Centralised data management",
         "text": "Bio-Rad Clinical Data Management Software processes results. According to the manufacturer, the software can transmit them to a laboratory information system in real time."
+      },
+      {
+        "icon": "layers",
+        "h3": "Flexible sample capacity",
+        "text": "The base configuration handles 10 samples. The optional rack loader expands capacity to 50 samples and adds continuous loading for a different workflow format."
       }
     ]
   },

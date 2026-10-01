@@ -5,7 +5,7 @@
   "brand": "Bio-Rad",
   "seo": {
     "title": "VARIANT nbs — Bio-Rad newborn screening | LabWell",
-    "description": "VARIANT nbs is an automated Bio-Rad HPLC system for newborn hemoglobinopathy screening with up to 1,128 samples per run. Supply and service in Ukraine by LabWell."
+    "description": "VARIANT nbs is a Bio-Rad HPLC system for newborn hemoglobinopathy screening: up to 1,128 samples per run. Supply and service in Ukraine by LabWell."
   },
   "T1_breadcrumbs": [
     "Home",
@@ -48,7 +48,7 @@
   "T3_about": {
     "show": true,
     "h2": "What VARIANT nbs is and who it is for",
-    "text": "VARIANT nbs is an automated Bio-Rad HPLC system for newborn hemoglobinopathy screening. It uses dried blood spots and is designed for newborn screening. According to the manufacturer, the system detects hemoglobins F, A, S, C, D and E."
+    "text": "VARIANT nbs is an automated Bio-Rad high-performance liquid chromatography (HPLC) system for newborn hemoglobinopathy screening. It uses dried blood spots and is designed for newborn screening. According to the manufacturer, the system detects hemoglobins F, A, S, C, D and E, automates analysis and produces advanced reports for result review."
   },
   "T4_specs": {
     "show": true,
@@ -77,7 +77,12 @@
       {
         "icon": "layers",
         "h3": "Capacity for large runs",
-        "text": "Capacity of up to 1,128 samples per run supports planning large newborn screening batches. The system uses dried blood spots for testing."
+        "text": "Capacity of up to 1,128 samples per run provides a basis for planning large newborn screening batches. This is the maximum per-run capacity stated by the manufacturer."
+      },
+      {
+        "icon": "droplet",
+        "h3": "Defined sample format",
+        "text": "The system uses dried blood spots. A laboratory can account for this material type when planning its newborn screening workflow and preparing samples for a run."
       }
     ]
   },
