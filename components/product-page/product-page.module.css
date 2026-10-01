@@ -51,33 +51,6 @@
   padding: var(--space-3) clamp(var(--space-4), 4vw, var(--space-10)) clamp(var(--space-6), 4vw, var(--space-10));
 }
 
-.crumbs {
-  min-height: 2.5rem;
-  font-size: 0.875rem;
-}
-
-.crumbs a,
-.crumbs span[aria-current] {
-  display: inline-flex;
-  align-items: center;
-  min-height: 2.75rem;
-}
-
-.crumbs a {
-  font-weight: 500;
-}
-
-.crumbs [aria-current="page"] {
-  color: var(--color-text-primary);
-  font-weight: 600;
-}
-
-.homeLink {
-  justify-content: center;
-  min-width: 2.75rem;
-  margin-left: -0.75rem;
-}
-
 .heroGrid {
   display: grid;
   gap: var(--space-8);

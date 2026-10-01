@@ -5,25 +5,26 @@ import { PageHeading } from "@/components/patterns/page-heading";
 import styles from "@/components/labwell-ui.module.css";
 import type { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
-import type { Breadcrumb, ListingBlock } from "@/lib/catalog";
+import { crumbLabels } from "@/components/patterns/crumb-labels";
+import type { Trail } from "@/lib/breadcrumbs";
+import type { ListingBlock } from "@/lib/catalog";
 import { withLocale } from "@/lib/locale-routing";
 
 type ListingPageProps = {
   locale: Locale;
   title: string;
-  breadcrumbs: Breadcrumb[];
+  trail: Trail;
   blocks: ListingBlock[];
 };
 
 /** Menu roots and category pages: a heading followed by groups of page cards. */
-export async function ListingPage({ locale, title, breadcrumbs, blocks }: ListingPageProps) {
+export async function ListingPage({ locale, title, trail, blocks }: ListingPageProps) {
   const dictionary = await getDictionary(locale);
 
   return (
     <PageHeading
-      breadcrumbs={breadcrumbs}
-      breadcrumbLabel={dictionary.accessibility.breadcrumbs}
-      chooseLabel={dictionary.accessibility.chooseCategory}
+      trail={trail}
+      crumbLabels={crumbLabels(dictionary)}
       title={title}
     >
       <div className={styles.listing}>

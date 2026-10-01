@@ -1,7 +1,8 @@
 /** Turns a validated test menu (template C1) into what the page renders. Pure function, no I/O. */
+import { trailCrumbs, type Trail } from "../breadcrumbs.ts";
 import type { SiteLocale } from "./links.ts";
 import {
-  buildBreadcrumbs,
+  buildTrail,
   buildContact,
   buildFaq,
   buildLabwell,
@@ -22,6 +23,7 @@ export type TestMenuPageModel = {
   canonicalPath: string;
   seo: TestMenuContent["seo"];
   breadcrumbs: Array<{ label: string; href?: string }>;
+  trail: Trail;
   hero: {
     brand: string;
     eyebrow: string;
@@ -62,6 +64,7 @@ export function buildTestMenuPage(input: {
   if (!hero.show) throw new Error(`C1_hero of "${menu.slug}" must be shown: it holds the page title`);
   const name = hero.breadcrumbs[hero.breadcrumbs.length - 1];
   const h1 = splitH1(hero.h1, name);
+  const trail = buildTrail(hero.breadcrumbs, locale, menu.url);
 
   const groups: MenuGroup[] = tests.groups.map((group) => ({
     id: group.id,
@@ -82,7 +85,8 @@ export function buildTestMenuPage(input: {
     name,
     canonicalPath: menu.url,
     seo: menu.seo,
-    breadcrumbs: buildBreadcrumbs(hero.breadcrumbs, locale),
+    breadcrumbs: trailCrumbs(trail),
+    trail,
     hero: {
       brand: hero.brand,
       eyebrow: hero.eyebrow,

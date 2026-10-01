@@ -1,7 +1,8 @@
 import { ContentDetailPage } from "@/components/patterns/content-detail-page";
 import { ListingPage } from "@/components/patterns/listing-page";
 import { getDictionary } from "@/i18n/dictionaries";
-import { getCategoryBreadcrumbs, getListingBlocks } from "@/lib/catalog";
+import { getCategoryTrail } from "@/lib/breadcrumbs";
+import { getListingBlocks } from "@/lib/catalog";
 import { requireRouteTarget } from "@/lib/content-route";
 
 /** Renders whatever lives at a catalog path: a content page or a category listing. */
@@ -17,7 +18,7 @@ export async function RouteTargetPage({ locale, path }: { locale: string; path: 
     <ListingPage
       locale={resolvedLocale}
       title={(category.section ?? category.group).label[resolvedLocale]}
-      breadcrumbs={getCategoryBreadcrumbs(category, resolvedLocale, dictionary.pages)}
+      trail={getCategoryTrail(category, resolvedLocale)}
       blocks={getListingBlocks(category.menu, resolvedLocale, defaultSectionLabel, category)}
     />
   );

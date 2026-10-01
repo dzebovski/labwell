@@ -3,10 +3,11 @@
  * placeholder rows are dropped, hrefs are resolved, photos are looked up by product slug.
  * Pure function, no I/O (the caller passes `photo`).
  */
+import { trailCrumbs, type Trail } from "../breadcrumbs.ts";
 import { buildCompareRows, type CompareModel } from "./compare.ts";
 import type { SiteLocale } from "./links.ts";
 import {
-  buildBreadcrumbs,
+  buildTrail,
   buildContact,
   buildFaq,
   buildLabwell,
@@ -52,6 +53,7 @@ export type GroupPageModel = {
   canonicalPath: string;
   seo: GroupContent["seo"];
   breadcrumbs: Array<{ label: string; href?: string }>;
+  trail: Trail;
   hero: {
     brand: string;
     eyebrow: string;
@@ -99,6 +101,7 @@ export function buildGroupPage(input: {
   const hero = group.G1_hero;
   const name = hero.breadcrumbs[hero.breadcrumbs.length - 1];
   const h1 = splitH1(hero.h1, name);
+  const trail = buildTrail(hero.breadcrumbs, locale, group.url);
 
   const contact = buildContact(group.T12_contact, shared);
 
@@ -227,7 +230,8 @@ export function buildGroupPage(input: {
     name,
     canonicalPath: group.url,
     seo: group.seo,
-    breadcrumbs: buildBreadcrumbs(hero.breadcrumbs, locale),
+    breadcrumbs: trailCrumbs(trail),
+    trail,
     hero: {
       brand: group.brand,
       eyebrow: hero.eyebrow,

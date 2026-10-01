@@ -3,6 +3,7 @@
  * placeholders are dropped, hrefs are resolved to pages that exist, and the
  * "labwell" block is picked from the shared content. Pure function, no I/O.
  */
+import { getFallbackTrail, getPageTrail, trailCrumbs, type Trail } from "../breadcrumbs.ts";
 import { resolveHref, type SiteLocale } from "./links.ts";
 import { hasPlaceholder, publishable } from "./placeholders.ts";
 import type { ProductContent, SharedContent } from "./schema.ts";
@@ -54,6 +55,7 @@ export type ProductPageModel = {
   canonicalPath: string;
   seo: ProductContent["seo"];
   breadcrumbs: Array<{ label: string; href?: string }>;
+  trail: Trail;
   hero: {
     brand: string;
     eyebrow: string;
@@ -138,14 +140,13 @@ export function splitH1(h1: string, name: string) {
 }
 
 
-/** Breadcrumb labels from content: only "Home" and "Products" are pages; the last item is the current page. */
-export function buildBreadcrumbs(labels: string[], locale: SiteLocale) {
-  const crumbs: Array<{ label: string; href?: string }> = labels.map((label, index) => ({
-    label,
-    href: index === 0 ? `/${locale}` : index === 1 ? `/${locale}/products` : undefined,
-  }));
-  crumbs[crumbs.length - 1].href = undefined;
-  return crumbs;
+/**
+ * Trail of a page: the path comes from the catalog (breadcrumbs v2), the content's own breadcrumb
+ * contributes only the name of the last level. A page that is not in the catalog (test fixtures)
+ * falls back to the content's labels.
+ */
+export function buildTrail(labels: string[], locale: SiteLocale, path: string): Trail {
+  return getPageTrail(path, locale, labels[labels.length - 1]) ?? getFallbackTrail(labels, locale);
 }
 
 export function buildFaq(
@@ -241,7 +242,7 @@ export function buildProductPage(input: {
   const name = product.T1_breadcrumbs[product.T1_breadcrumbs.length - 1];
   const h1 = splitH1(product.T2_hero.h1, name);
 
-  const breadcrumbs = buildBreadcrumbs(product.T1_breadcrumbs, locale);
+  const trail = buildTrail(product.T1_breadcrumbs, locale, product.url);
 
   const t3 = product.T3_about;
   const t4 = product.T4_specs;
@@ -353,7 +354,8 @@ export function buildProductPage(input: {
     name,
     canonicalPath: product.url,
     seo: product.seo,
-    breadcrumbs,
+    breadcrumbs: trailCrumbs(trail),
+    trail,
     hero: {
       brand: hero.brand,
       eyebrow: hero.eyebrow,

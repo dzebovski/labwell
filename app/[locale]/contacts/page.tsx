@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import { crumbLabels } from "@/components/patterns/crumb-labels";
 import { PageHeading } from "@/components/patterns/page-heading";
+import { getStaticTrail } from "@/lib/breadcrumbs";
 import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { createPageMetadata } from "@/lib/page-metadata";
@@ -22,9 +24,8 @@ export default async function ContactsPage({ params }: ContactsPageProps) {
 
   return (
     <PageHeading
-      breadcrumbLabel={dictionary.accessibility.breadcrumbs}
-      chooseLabel={dictionary.accessibility.chooseCategory}
-      breadcrumbs={[{ label: dictionary.pages.contacts }]}
+      trail={getStaticTrail(dictionary.pages.contacts, locale)}
+      crumbLabels={crumbLabels(dictionary)}
       title={dictionary.pages.contacts}
     />
   );

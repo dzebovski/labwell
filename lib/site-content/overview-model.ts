@@ -1,8 +1,9 @@
 /** Turns a validated series overview (template C2) into what the page renders. Pure function, no I/O. */
+import { trailCrumbs, type Trail } from "../breadcrumbs.ts";
 import { buildCompareRows, type CompareModel } from "./compare.ts";
 import type { SiteLocale } from "./links.ts";
 import {
-  buildBreadcrumbs,
+  buildTrail,
   buildContact,
   buildFaq,
   buildLabwell,
@@ -46,6 +47,7 @@ export type OverviewPageModel = {
   canonicalPath: string;
   seo: OverviewContent["seo"];
   breadcrumbs: Array<{ label: string; href?: string }>;
+  trail: Trail;
   hero: {
     brand: string;
     eyebrow: string;
@@ -77,6 +79,7 @@ export function buildOverviewPage(input: {
   if (!hero.show) throw new Error(`C2_hero of "${overview.slug}" must be shown: it holds the page title`);
   const name = hero.breadcrumbs[hero.breadcrumbs.length - 1];
   const h1 = splitH1(hero.h1, name);
+  const trail = buildTrail(hero.breadcrumbs, locale, overview.url);
 
   const contact = buildContact(overview.T12_contact, shared);
   const anchors = new Set<string>(contact ? ["#contact"] : []);
@@ -147,7 +150,8 @@ export function buildOverviewPage(input: {
     name,
     canonicalPath: overview.url,
     seo: overview.seo,
-    breadcrumbs: buildBreadcrumbs(hero.breadcrumbs, locale),
+    breadcrumbs: trailCrumbs(trail),
+    trail,
     hero: {
       brand: overview.brand,
       eyebrow: hero.eyebrow,

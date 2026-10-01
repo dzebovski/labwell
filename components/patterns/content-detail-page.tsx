@@ -4,7 +4,9 @@ import { Breadcrumbs } from "@/components/patterns/breadcrumbs";
 import styles from "@/components/labwell-ui.module.css";
 import type { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
-import { getBreadcrumbs, type ContentPage } from "@/lib/catalog";
+import { crumbLabels } from "@/components/patterns/crumb-labels";
+import { getPageTrail } from "@/lib/breadcrumbs";
+import type { ContentPage } from "@/lib/catalog";
 
 type ContentDetailPageProps = {
   locale: Locale;
@@ -13,16 +15,12 @@ type ContentDetailPageProps = {
 
 export async function ContentDetailPage({ locale, page }: ContentDetailPageProps) {
   const dictionary = await getDictionary(locale);
-  const breadcrumbs = getBreadcrumbs(page, locale, dictionary.pages);
+  const trail = getPageTrail(page.path, locale)!;
 
   return (
     <main className={styles.pageMain}>
       <article className={styles.contentDetail}>
-        <Breadcrumbs
-          items={breadcrumbs}
-          label={dictionary.accessibility.breadcrumbs}
-          chooseLabel={dictionary.accessibility.chooseCategory}
-        />
+        <Breadcrumbs trail={trail} labels={crumbLabels(dictionary)} />
 
         <div className={styles.contentDetailGrid}>
           <div className={styles.contentDetailCopy}>

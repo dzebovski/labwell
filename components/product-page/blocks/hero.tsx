@@ -1,11 +1,11 @@
 import type { CSSProperties, ReactNode } from "react";
 
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowDown, ChevronRight, House, ImageIcon } from "lucide-react";
+import { ArrowDown, ImageIcon } from "lucide-react";
 
-import globalStyles from "@/components/labwell-ui.module.css";
+import { Breadcrumbs, type CrumbLabels } from "@/components/patterns/breadcrumbs";
 import { LabLink } from "@/components/ui/primitives";
+import type { Trail } from "@/lib/breadcrumbs";
 import type { LinkModel, ProductPageModel } from "@/lib/site-content/model";
 
 import styles from "../product-page.module.css";
@@ -15,53 +15,8 @@ const logos: Record<string, { src: string; width: number; height: number }> = {
   Snibe: { src: "/snibe-logo-1.png", width: 113, height: 36 },
 };
 
-type Crumb = { label: string; href?: string };
-
-/** Breadcrumb trail: used by every template (T, G, C1, C2). */
-export function Breadcrumbs({
-  crumbs,
-  labels,
-}: {
-  crumbs: Crumb[];
-  labels: { breadcrumbs: string; home: string };
-}) {
-  return (
-    <nav aria-label={labels.breadcrumbs} className={styles.crumbs}>
-      <ol className={globalStyles.breadcrumbList}>
-        {crumbs.map((crumb, index) => {
-          const isCurrent = index === crumbs.length - 1;
-          return (
-            <li key={`${crumb.label}-${index}`} className={globalStyles.breadcrumbItem}>
-              {index > 0 ? (
-                <ChevronRight
-                  className={globalStyles.breadcrumbSeparator}
-                  size={14}
-                  aria-hidden="true"
-                />
-              ) : null}
-              {isCurrent ? (
-                <span aria-current="page">{crumb.label}</span>
-              ) : crumb.href ? (
-                <Link
-                  href={crumb.href}
-                  className={`${globalStyles.breadcrumbLink}${index === 0 ? ` ${styles.homeLink}` : ""}`}
-                  aria-label={index === 0 ? labels.home : undefined}
-                >
-                  {index === 0 ? <House size={17} aria-hidden="true" /> : crumb.label}
-                </Link>
-              ) : (
-                <span>{crumb.label}</span>
-              )}
-            </li>
-          );
-        })}
-      </ol>
-    </nav>
-  );
-}
-
 export type HeroShellProps = {
-  crumbs: Crumb[];
+  trail: Trail;
   brand: string;
   eyebrow: string;
   h1Accent?: string;
@@ -77,7 +32,7 @@ export type HeroShellProps = {
   /** Width of the right column on wide screens, as a CSS length. */
   mediaWidth?: string;
   alignEnd?: boolean;
-  labels: { breadcrumbs: string; home: string };
+  labels: CrumbLabels;
 };
 
 /**
@@ -90,7 +45,7 @@ export function HeroShell(props: HeroShellProps) {
 
   return (
     <section className={styles.heroCard + " " + styles.card} aria-labelledby="product-title">
-      <Breadcrumbs crumbs={props.crumbs} labels={props.labels} />
+      <Breadcrumbs trail={props.trail} labels={props.labels} />
 
       <div
         className={styles.heroGrid}
@@ -165,13 +120,13 @@ export function Hero({
   labels,
 }: {
   page: ProductPageModel;
-  labels: { breadcrumbs: string; home: string; photoPlaceholder: string };
+  labels: CrumbLabels & { photoPlaceholder: string };
 }) {
   const { hero } = page;
 
   return (
     <HeroShell
-      crumbs={page.breadcrumbs}
+      trail={page.trail}
       brand={hero.brand}
       eyebrow={hero.eyebrow}
       h1Accent={hero.h1Accent}

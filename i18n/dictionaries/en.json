@@ -33,8 +33,7 @@
     "openSubmenu": "Open submenu",
     "closeSubmenu": "Close submenu",
     "closeMegaMenu": "Close navigation panel",
-    "breadcrumbs": "Breadcrumbs",
-    "chooseCategory": "Choose another category"
+    "breadcrumbs": "Breadcrumbs"
   },
   "pages": {
     "home": "Home",
@@ -61,7 +60,9 @@
       "required": "Fill in this field",
       "phone": "Enter a valid phone number",
       "email": "Enter a valid email address"
-    }
+    },
+    "showHidden": "Show hidden levels",
+    "up": "Up one level: {name}"
   },
   "contentPage": {
     "viewSource": "View source",
@@ -104,5 +105,15 @@
     "consultationText": "Can’t find what you need? We will match a solution to your laboratory’s workload and test menu.",
     "consultationCta": "Get a consultation",
     "previewLabel": "Preview"
+  },
+  "breadcrumbs": {
+    "allIn": "All in {name}"
+  },
+  "mobileMenu": {
+    "menu": "Menu",
+    "contact": "Contact us",
+    "language": "Language",
+    "back": "Back: {name}",
+    "allIn": "All in “{name}”"
   }
 }

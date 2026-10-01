@@ -100,18 +100,13 @@ export function LanguageSwitcher({
         ) : null}
       </div>
 
-      <nav aria-label={label} className={styles.languageMobileOptions}>
-        {locales.map((locale) => {
-          const isCurrent = locale === currentLocale;
-          return (
-            <button key={locale} type="button" aria-current={isCurrent ? "page" : undefined} onClick={() => selectLocale(locale)} className={`${styles.languageMobileOption} ${isCurrent ? styles.languageMobileOptionActive : ""}`}>
-              <span aria-hidden="true">{localeDetails[locale].flag}</span>
-              <span>{names[locale]}</span>
-              {isCurrent ? <Check aria-hidden="true" size={16} /> : null}
-            </button>
-          );
-        })}
-      </nav>
+      <div role="group" aria-label={label} className={styles.languageMobileOptions}>
+        {locales.map((locale) => (
+          <button key={locale} type="button" aria-pressed={locale === currentLocale} onClick={() => selectLocale(locale)} className={styles.languageMobileOption}>
+            {names[locale]}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }

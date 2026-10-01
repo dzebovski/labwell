@@ -20,6 +20,8 @@ import styles from "./product-page.module.css";
 export type ProductPageLabels = {
   breadcrumbs: string;
   home: string;
+  showHidden: string;
+  up: string;
   fullTechnicalData: string;
   newTab: string;
   photoPlaceholder: string;

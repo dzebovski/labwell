@@ -70,6 +70,7 @@ export default async function LocaleLayout({
             navItems={navItems}
             homeHref={withLocale(locale, "/")}
             megaMenu={dictionary.megaMenu}
+            mobileMenu={dictionary.mobileMenu}
             search={{ label: dictionary.header.searchLabel, unavailable: dictionary.header.searchSoon }}
             cta={{ label: dictionary.header.contact, href: withLocale(locale, "/contacts") }}
             languageSwitcher={{

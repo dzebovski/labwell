@@ -1,3 +1,4 @@
+import type { CrumbLabels } from "@/components/patterns/breadcrumbs";
 import type { CSSProperties } from "react";
 
 import Link from "next/link";
@@ -19,14 +20,14 @@ export function GroupHero({
   labels,
 }: {
   page: GroupPageModel;
-  labels: { breadcrumbs: string; home: string };
+  labels: CrumbLabels;
 }) {
   const { hero } = page;
   const { media } = hero;
 
   return (
     <HeroShell
-      crumbs={page.breadcrumbs}
+      trail={page.trail}
       brand={hero.brand}
       eyebrow={hero.eyebrow}
       h1Accent={hero.h1Accent}

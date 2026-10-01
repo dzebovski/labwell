@@ -502,13 +502,11 @@
   visibility: hidden;
 }
 
-.headerNavButton svg,
-.headerMobileGroupButton svg {
+.headerNavButton svg {
   transition: transform var(--duration-fast) var(--ease-standard);
 }
 
-.headerNavButton[aria-expanded="true"] svg,
-.headerMobileGroupButton[aria-expanded="true"] svg {
+.headerNavButton[aria-expanded="true"] svg {
   transform: rotate(180deg);
 }
 
@@ -570,119 +568,6 @@
   margin-left: 0.75rem;
 }
 
-.headerMobilePanel {
-  display: grid;
-  gap: 1rem;
-  max-height: calc(100vh - 7rem);
-  overflow-y: auto;
-  padding: 0 1rem 1rem;
-  border-top: 1px solid var(--color-border);
-  animation: reveal var(--duration-base) var(--ease-standard) both;
-}
-
-.headerMobileNav {
-  display: grid;
-  gap: 0.25rem;
-  padding-top: 0.75rem;
-}
-
-.headerMobileNav .headerNavLink {
-  min-height: 2.75rem;
-  padding: 0.75rem;
-  border-radius: var(--radius-control);
-}
-
-.headerMobileNav .headerNavLink:hover {
-  background: var(--color-brand-50);
-}
-
-.headerMobileGroup {
-  border-bottom: 1px solid var(--color-border);
-}
-
-.headerMobileGroupButton {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  min-height: 2.75rem;
-  padding: 0.75rem;
-  color: var(--color-text-secondary);
-  background: transparent;
-  border: 0;
-  border-radius: var(--radius-control);
-  font-size: 0.875rem;
-  font-weight: var(--font-weight-semibold);
-  text-align: left;
-  cursor: pointer;
-}
-
-.headerMobileGroupButton:hover {
-  color: var(--color-brand-700);
-  background: var(--color-brand-50);
-}
-
-.headerMobileSubmenu {
-  display: grid;
-  gap: 0.125rem;
-  padding: 0 0 0.625rem 0.75rem;
-}
-
-.headerMobileSubmenuItem {
-  display: grid;
-}
-
-.headerMobileSubmenuRow {
-  display: flex;
-  align-items: stretch;
-}
-
-.headerMobileSubmenuLink,
-.headerMobileNestedLink {
-  display: flex;
-  flex: 1;
-  align-items: center;
-  min-height: 2.5rem;
-  padding: 0.625rem 0.75rem;
-  color: var(--color-text-secondary);
-  border-radius: var(--radius-control);
-  font-size: 0.8125rem;
-  font-weight: var(--font-weight-semibold);
-  text-decoration: none;
-}
-
-.headerMobileExpandButton {
-  display: grid;
-  width: 2.5rem;
-  min-height: 2.5rem;
-  place-items: center;
-  color: var(--color-text-secondary);
-  background: transparent;
-  border: 0;
-  border-radius: var(--radius-control);
-  cursor: pointer;
-}
-
-.headerMobileSubmenuLink:hover,
-.headerMobileNestedLink:hover,
-.headerMobileExpandButton:hover {
-  color: var(--color-brand-700);
-  background: var(--color-brand-50);
-}
-
-.headerMobileNestedList {
-  display: grid;
-  gap: 0.125rem;
-  margin-left: 0.75rem;
-  padding-left: 0.75rem;
-  border-left: 1px solid var(--color-brand-200);
-  animation: reveal var(--duration-base) var(--ease-standard) both;
-}
-
-.headerMobileNestedLink {
-  font-weight: var(--font-weight-medium);
-}
-
 /*
  * Full header from 1366 px: at 1280–1365 it is ~35–70 px too wide (measured), and there is no design for
  * that range yet (plan 4.1). Below it the burger opens the current mobile menu.
@@ -693,8 +578,7 @@
     display: flex;
   }
 
-  .headerMenuButton,
-  .headerMobilePanel {
+  .headerMenuButton {
     display: none;
   }
 }
@@ -723,119 +607,6 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-panel);
   box-shadow: var(--shadow-card);
-}
-
-.breadcrumbList {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.375rem;
-  color: var(--color-text-muted);
-  font-size: 0.8125rem;
-  font-weight: var(--font-weight-medium);
-}
-
-.breadcrumbItem {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.375rem;
-}
-
-.breadcrumbSeparator {
-  flex: 0 0 auto;
-  color: var(--color-border-control);
-}
-
-.breadcrumbLink {
-  color: var(--color-text-secondary);
-  text-decoration: none;
-  text-underline-offset: 0.2em;
-}
-
-.breadcrumbLink:hover {
-  color: var(--color-brand-700);
-  text-decoration: underline;
-}
-
-.breadcrumbMenu {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.125rem;
-}
-
-.breadcrumbMenuTrigger {
-  display: inline-grid;
-  width: 1.5rem;
-  height: 1.5rem;
-  place-items: center;
-  padding: 0;
-  color: var(--color-text-muted);
-  background: transparent;
-  border: 1px solid transparent;
-  border-radius: var(--radius-control);
-  cursor: pointer;
-  transition:
-    color var(--duration-fast) var(--ease-standard),
-    background-color var(--duration-fast) var(--ease-standard),
-    border-color var(--duration-fast) var(--ease-standard);
-}
-
-.breadcrumbMenuTrigger:hover,
-.breadcrumbMenuTrigger[aria-expanded="true"] {
-  color: var(--color-brand-800);
-  background: var(--color-brand-50);
-  border-color: var(--color-brand-200);
-}
-
-.breadcrumbMenuTrigger svg {
-  transition: transform var(--duration-fast) var(--ease-standard);
-}
-
-.breadcrumbMenuList {
-  position: absolute;
-  top: calc(100% + 0.4rem);
-  left: 0;
-  z-index: 30;
-  display: grid;
-  width: max-content;
-  min-width: 14rem;
-  max-width: min(22rem, calc(100vw - 2 * var(--container-gutter)));
-  margin: 0;
-  padding: 0.35rem;
-  list-style: none;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-card);
-  box-shadow: var(--shadow-elevated);
-  animation: reveal var(--duration-base) var(--ease-standard) both;
-}
-
-.breadcrumbMenuOption {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  min-height: 2.5rem;
-  padding: 0.55rem 0.7rem;
-  color: var(--color-text-secondary);
-  border-radius: var(--radius-control);
-  font-size: 0.8125rem;
-  font-weight: var(--font-weight-medium);
-  text-decoration: none;
-}
-
-.breadcrumbMenuOption:hover,
-.breadcrumbMenuOptionActive {
-  color: var(--color-brand-800);
-  background: var(--color-brand-50);
-}
-
-.breadcrumbMenuOptionActive {
-  font-weight: var(--font-weight-semibold);
 }
 
 .listing {
@@ -1310,67 +1081,6 @@
   margin-top: auto;
 }
 
-/* Rows of the current mobile menu (replaced in step 8.2). */
-.headerMobileSubmenuButton,
-.headerMobileAllLink {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  width: 100%;
-  min-height: 2.75rem;
-  padding: 0.65rem 0.75rem;
-  color: var(--color-text-secondary);
-  background: transparent;
-  border: 0;
-  border-radius: var(--radius-control);
-  font-size: 0.8125rem;
-  font-weight: var(--font-weight-medium);
-  line-height: 1.35;
-  text-align: left;
-  cursor: pointer;
-}
-
-.headerMobileAllLink {
-  margin-bottom: 0.35rem;
-  color: var(--color-brand-700);
-  background: var(--color-brand-50);
-  font-weight: var(--font-weight-semibold);
-  text-decoration: none;
-}
-
-.headerMobileSubmenuButton {
-  min-height: 2.65rem;
-}
-
-.headerMobileSubmenuButton[aria-expanded="true"] {
-  color: var(--color-brand-700);
-  background: var(--color-brand-50);
-}
-
-.headerMobileSubmenuButton svg {
-  flex: 0 0 auto;
-  transition: transform var(--duration-fast) var(--ease-standard);
-}
-
-.headerMobileSubmenuButton[aria-expanded="true"] svg {
-  transform: rotate(180deg);
-}
-
-.headerMobileSection + .headerMobileSection {
-  margin-top: 0.75rem;
-}
-
-.headerMobileSection h3 {
-  margin: 0 0 0.25rem;
-  padding: 0.4rem 0.75rem;
-  color: var(--color-text-muted);
-  font-size: 0.6875rem;
-  font-weight: var(--font-weight-bold);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 .languageSwitcher {
   position: relative;
   min-width: 0;
@@ -1428,8 +1138,7 @@
   animation: reveal var(--duration-base) var(--ease-standard) both;
 }
 
-.languageOption,
-.languageMobileOption {
+.languageOption {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
@@ -1447,27 +1156,41 @@
 }
 
 .languageOption:hover,
-.languageOptionActive,
-.languageMobileOption:hover,
-.languageMobileOptionActive {
+.languageOptionActive {
   color: var(--color-brand-800);
   background: var(--color-brand-50);
 }
 
-.languageOptionActive,
-.languageMobileOptionActive {
+.languageOptionActive {
   font-weight: var(--font-weight-semibold);
 }
 
+/* Segmented control of the mobile menu. */
 .languageMobileOptions {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.5rem;
-  padding-top: 0.25rem;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  background: var(--color-canvas);
+  border-radius: 0.625rem;
 }
 
 .languageMobileOption {
-  border: 1px solid var(--color-border);
+  height: var(--control-md);
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius-control);
+  font-size: var(--text-small-size);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+}
+
+.languageMobileOption[aria-pressed="true"] {
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+  box-shadow: 0 1px 2px rgb(11 38 63 / 0.08);
+  font-weight: var(--font-weight-semibold);
 }
 
 @media (min-width: 85.375rem) {

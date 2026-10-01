@@ -1,3 +1,4 @@
+import type { CrumbLabels } from "@/components/patterns/breadcrumbs";
 import { LabLink } from "@/components/ui/primitives";
 import type { TestMenuPageModel } from "@/lib/site-content/menu-model";
 
@@ -12,12 +13,12 @@ export function TestMenuHero({
   labels,
 }: {
   page: TestMenuPageModel;
-  labels: { breadcrumbs: string; home: string };
+  labels: CrumbLabels;
 }) {
   const { hero } = page;
   return (
     <HeroShell
-      crumbs={page.breadcrumbs}
+      trail={page.trail}
       brand={hero.brand}
       eyebrow={hero.eyebrow}
       h1Accent={hero.h1Accent}

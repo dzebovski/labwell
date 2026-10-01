@@ -581,6 +581,7 @@ export default function DesignSystemPage() {
                 <div className={styles.patternFrame}>
                   <SiteHeader
                     megaMenu={ukDictionary.megaMenu}
+                    mobileMenu={ukDictionary.mobileMenu}
                     navItems={navItems}
                     search={{
                       label: "Пошук обладнання",
@@ -656,6 +657,7 @@ export default function DesignSystemPage() {
                   <div className={styles.desktopViewportInner}>
                     <SiteHeader
                     megaMenu={ukDictionary.megaMenu}
+                    mobileMenu={ukDictionary.mobileMenu}
                       navItems={navItems.slice(0, 3)}
                       search={{ label: "Пошук", unavailable: "Пошук з’явиться згодом" }}
                       cta={{ label: "Контакт", href: "#components" }}
@@ -672,6 +674,7 @@ export default function DesignSystemPage() {
                   <div className={styles.mobileViewportInner}>
                     <SiteHeader
                     megaMenu={ukDictionary.megaMenu}
+                    mobileMenu={ukDictionary.mobileMenu}
                       navItems={navItems}
                       search={{ label: "Пошук", unavailable: "Пошук з’явиться згодом" }}
                       cta={{ label: "Зв’язатися", href: "#components" }}

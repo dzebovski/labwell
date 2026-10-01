@@ -8,22 +8,17 @@ import {
   contentPages,
   findCatalogProblems,
   getBrandPage,
-  getBreadcrumbs,
   getCategory,
-  getCategoryBreadcrumbs,
   getClinicalPage,
   getListingBlocks,
   getMenuPages,
   getProduct,
-  getRootBreadcrumbs,
   getRouteParams,
   getRouteTarget,
   listPages,
-  type Breadcrumb,
   type ContentPage,
 } from "./catalog.ts";
 
-const labels = { products: "Products", clinicalDirections: "Clinical", brands: "Brands" };
 test("content catalog is consistent", () => {
   assert.deepEqual(findCatalogProblems(), []);
 });
@@ -84,56 +79,6 @@ test("reports duplicate URLs, bad slugs and unknown menu places", () => {
   assert.ok(problems.some((item) => item.includes('unknown section "nope"')));
 });
 
-const simplify = (crumbs: Breadcrumb[]) =>
-  crumbs.map((item) => ({
-    label: item.label,
-    href: item.href ?? null,
-    options: item.options?.map((option) => `${option.current ? "*" : ""}${option.href}`) ?? null,
-  }));
-
-test("breadcrumbs skip Home, link every level and offer siblings", () => {
-  const crumbs = simplify(getBreadcrumbs(getProduct("biossays-240-plus")!, "uk", labels));
-  assert.deepEqual(
-    crumbs.map((item) => [item.label, item.href]),
-    [
-      ["Products", "/uk/products"],
-      ["Лабораторне обладнання", "/uk/products/equipment"],
-      ["Біохімія та електроліти", "/uk/products/equipment/biochemistry"],
-      ["Biossays 240 Plus", null],
-    ],
-  );
-  assert.deepEqual(crumbs[0].options, ["*/uk/products", "/uk/clinical-directions", "/uk/brands"]);
-  assert.deepEqual(crumbs[1].options, [
-    "*/uk/products/equipment",
-    "/uk/products/reagents",
-    "/uk/products/qc-software",
-  ]);
-  assert.equal(crumbs[2].options?.length, 8);
-  assert.ok(crumbs[2].options?.includes("*/uk/products/equipment/biochemistry"));
-  assert.equal(crumbs[3].options, null);
-});
-
-test("breadcrumbs of section-less pages and brand pages", () => {
-  assert.deepEqual(
-    simplify(getBreadcrumbs(getProduct("immunohematology-reagents")!, "en", labels)).map((item) => item.label),
-    ["Products", "Reagents and tests", "Immunohematology reagents"],
-  );
-  const clinical = simplify(getBreadcrumbs(getClinicalPage("oncology", "oncopanel-maglumi-oncomarkers")!, "en", labels));
-  assert.deepEqual(clinical[1].href, "/en/clinical-directions/oncology");
-  assert.equal(clinical[1].options?.length, 7);
-
-  const overview = simplify(getBreadcrumbs(getBrandPage("snibe")!, "en", labels));
-  assert.deepEqual(overview.map((item) => [item.label, item.href]), [["Brands", "/en/brands"], ["Snibe", null]]);
-  assert.deepEqual(overview[1].options, ["/en/brands/bio-rad", "*/en/brands/snibe"]);
-
-  const topic = simplify(getBreadcrumbs(getBrandPage("snibe", "satlars-automation")!, "en", labels));
-  assert.deepEqual(topic.map((item) => [item.label, item.href]), [
-    ["Brands", "/en/brands"],
-    ["Snibe", "/en/brands/snibe"],
-    ["SATLARS (Automation)", null],
-  ]);
-});
-
 test("category pages exist only for non-empty groups and sections", () => {
   assert.ok(getCategory("catalog", "equipment"));
   assert.ok(getCategory("catalog", "equipment", "biochemistry"));
@@ -143,18 +88,6 @@ test("category pages exist only for non-empty groups and sections", () => {
   for (const category of categories) {
     assert.ok(getListingBlocks(category.menu, "en", "Other", category).some((block) => block.pages.length > 0));
   }
-});
-
-test("category breadcrumbs mark the category itself as current", () => {
-  const crumbs = simplify(getCategoryBreadcrumbs(getCategory("catalog", "equipment", "biochemistry")!, "en", labels));
-  assert.deepEqual(crumbs.map((item) => [item.label, item.href]), [
-    ["Products", "/en/products"],
-    ["Laboratory equipment", "/en/products/equipment"],
-    ["Biochemistry and electrolytes", null],
-  ]);
-  assert.equal(crumbs[2].options?.length, 8);
-  const group = simplify(getCategoryBreadcrumbs(getCategory("catalog", "equipment")!, "en", labels));
-  assert.deepEqual(group.map((item) => item.href), ["/en/products", null]);
 });
 
 test("listing blocks for a group list named sections, then the default one", () => {
@@ -187,15 +120,6 @@ test("routes resolve both content pages and categories", () => {
   assert.deepEqual(getRouteParams("/products", ["slug", "sectionSlug"]).find((params) => params.sectionSlug === "clia"), {
     slug: "equipment",
     sectionSlug: "clia",
-  });
-});
-
-test("root breadcrumbs mark the section root as current", () => {
-  const [root] = simplify(getRootBreadcrumbs("clinical", "en", labels));
-  assert.deepEqual(root, {
-    label: "Clinical",
-    href: null,
-    options: ["/en/products", "*/en/clinical-directions", "/en/brands"],
   });
 });
 

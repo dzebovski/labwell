@@ -7,9 +7,9 @@ import { getDictionary } from "@/i18n/dictionaries";
 import {
   brandProductsPath,
   getBrandProductBlocks,
-  getBrandProductsBreadcrumbs,
   getBrandsWithProducts,
 } from "@/lib/catalog";
+import { getBrandProductsTrail } from "@/lib/breadcrumbs";
 import { createPageMetadata } from "@/lib/page-metadata";
 
 /** Every product of a brand, grouped by product type and direction (/brands/snibe/products). */
@@ -45,7 +45,7 @@ export default async function BrandProductsPage({ params }: Props) {
     <ListingPage
       locale={locale}
       title={title}
-      breadcrumbs={getBrandProductsBreadcrumbs(brand, locale, dictionary.pages, title)}
+      trail={getBrandProductsTrail(brand.id, title, locale)}
       blocks={getBrandProductBlocks(brand.id, locale, dictionary.navigation.otherSolutions)}
     />
   );

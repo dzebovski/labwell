@@ -4,7 +4,8 @@ import { notFound } from "next/navigation";
 import { ListingPage } from "@/components/patterns/listing-page";
 import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
-import { getListingBlocks, getRootBreadcrumbs } from "@/lib/catalog";
+import { getRootTrail } from "@/lib/breadcrumbs";
+import { getListingBlocks } from "@/lib/catalog";
 import { createPageMetadata } from "@/lib/page-metadata";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -25,7 +26,7 @@ export default async function BrandsPage({ params }: Props) {
     <ListingPage
       locale={locale}
       title={dictionary.pages.brands}
-      breadcrumbs={getRootBreadcrumbs("brands", locale, dictionary.pages)}
+      trail={getRootTrail("brands", locale)}
       blocks={getListingBlocks("brands", locale, dictionary.navigation.otherSolutions)}
     />
   );

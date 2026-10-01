@@ -1,30 +1,21 @@
 import type { ReactNode } from "react";
 
-import { Breadcrumbs } from "@/components/patterns/breadcrumbs";
+import { Breadcrumbs, type CrumbLabels } from "@/components/patterns/breadcrumbs";
 import styles from "@/components/labwell-ui.module.css";
-import type { Breadcrumb } from "@/lib/catalog";
-
-export type BreadcrumbItem = Breadcrumb;
+import type { Trail } from "@/lib/breadcrumbs";
 
 type PageHeadingProps = {
-  breadcrumbs: Breadcrumb[];
+  trail: Trail;
+  crumbLabels: CrumbLabels;
   title: string;
-  breadcrumbLabel: string;
-  chooseLabel: string;
   children?: ReactNode;
 };
 
-export function PageHeading({
-  breadcrumbs,
-  title,
-  breadcrumbLabel,
-  chooseLabel,
-  children,
-}: PageHeadingProps) {
+export function PageHeading({ trail, crumbLabels, title, children }: PageHeadingProps) {
   return (
     <main className={styles.pageMain}>
       <section className={styles.pageHeading}>
-        <Breadcrumbs items={breadcrumbs} label={breadcrumbLabel} chooseLabel={chooseLabel} />
+        <Breadcrumbs trail={trail} labels={crumbLabels} />
         <h1 className={styles.pageTitle}>{title}</h1>
         {children}
       </section>
