@@ -1,0 +1,17 @@
+{
+  "seo": {
+    "title": "Contact LabWell — Snibe and Bio-Rad in Ukraine",
+    "description": "Contact LabWell, an official distributor of Snibe and Bio-Rad in Ukraine. Find our phone number, address and enquiry form for products, services and support."
+  },
+  "h1": "Contact us",
+  "lead": "LabWell is an official distributor of Snibe and Bio-Rad in Ukraine. Contact us about solution selection, supply, installation and training, maintenance or application support.",
+  "details": {
+    "title": "How to reach LabWell",
+    "phoneLabel": "Phone",
+    "addressLabel": "Address"
+  },
+  "contact": {
+    "title": "Send an enquiry",
+    "text": "Tell us about your laboratory’s needs or ask a question about an instrument, reagent or control. Leave your name and phone number in the form so we can contact you."
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "seo": {
+    "title": "Snibe and Bio-Rad Services and Maintenance | LabWell",
+    "description": "LabWell supplies Snibe and Bio-Rad instruments, reagents and controls, with solution selection, installation, training, maintenance and application support."
+  },
+  "h1": "Services and maintenance",
+  "lead": "LabWell is an official distributor of Snibe and Bio-Rad in Ukraine. We help you choose a solution, supply instruments, reagents and controls, and provide services for all instruments from both brands.",
+  "services": [
+    {
+      "id": "solution-selection",
+      "title": "Solution selection",
+      "text": "We help you select the most effective solution for your needs. Contact LabWell to discuss your laboratory’s requirements."
+    },
+    {
+      "id": "supply",
+      "title": "Supply",
+      "text": "We supply Snibe and Bio-Rad instruments, reagents and controls. Contact LabWell about the instruments and materials your laboratory needs."
+    },
+    {
+      "id": "installation-training",
+      "title": "Installation and training",
+      "text": "We install Snibe and Bio-Rad instruments. We train your laboratory staff to operate them."
+    },
+    {
+      "id": "maintenance",
+      "title": "Maintenance",
+      "text": "We provide warranty and post-warranty maintenance. This service covers all Snibe and Bio-Rad instruments."
+    },
+    {
+      "id": "application-support",
+      "title": "Application support",
+      "text": "A specialist advises on reagent performance and helps you interpret results. If a result is erroneous, they help you investigate possible causes."
+    }
+  ],
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "question": "Which instruments do LabWell’s services cover?",
+        "answer": "All LabWell services are available for all Snibe and Bio-Rad instruments, from solution selection to maintenance and application support."
+      },
+      {
+        "question": "Does LabWell train staff to use the instrument?",
+        "answer": "Yes, LabWell installs the instrument and trains your staff to operate it. Installation and training are available for all Snibe and Bio-Rad instruments."
+      },
+      {
+        "question": "Is maintenance available after the warranty ends?",
+        "answer": "Yes, LabWell provides both warranty and post-warranty maintenance for all Snibe and Bio-Rad instruments."
+      },
+      {
+        "question": "What can I ask an application support specialist?",
+        "answer": "You can ask about reagent performance, result interpretation and possible causes of erroneous results. A LabWell specialist helps you work through these questions."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Discuss your needs with a specialist",
+    "text": "Tell us which tests your laboratory performs or what you need help with. We will help you select a solution and answer your questions.",
+    "link": {
+      "label": "Contact LabWell",
+      "href": "/contacts"
+    }
+  }
+}
