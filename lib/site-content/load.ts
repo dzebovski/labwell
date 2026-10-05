@@ -15,6 +15,13 @@ import {
   type SharedContent,
 } from "./schema.ts";
 import {
+  directionIds,
+  directionSchema,
+  homeSchema,
+  type DirectionContent,
+  type HomeContent,
+} from "./schema-directions.ts";
+import {
   groupSchema,
   overviewSchema,
   testMenuSchema,
@@ -64,7 +71,7 @@ function readJson<T>(file: string, schema: z.ZodType<T>): T {
 }
 
 /** Slugs that have a page: a folder in `content/{section}/` with at least one file. */
-function listSlugs(section: "products" | "groups" | "overviews" | "test-menus"): string[] {
+function listSlugs(section: "products" | "groups" | "overviews" | "test-menus" | "directions"): string[] {
   const dir = path.join(contentRoot(), section);
   if (!existsSync(dir)) return [];
   return readdirSync(dir, { withFileTypes: true })
@@ -195,6 +202,45 @@ export function loadShared(locale: ContentLocale): SharedContent {
   const shared = readJson(path.join(contentRoot(), "shared", `${locale}.json`), sharedSchema);
   sharedCache.set(key, shared);
   return shared;
+}
+
+/** Folders of `content/directions/`; each must be a group or direction of the catalog taxonomy. */
+export function listDirectionIds(): string[] {
+  return listSlugs("directions");
+}
+
+export function hasDirectionContent(id: string): boolean {
+  return listDirectionIds().includes(id);
+}
+
+/** Text of a catalog group or direction (template D): `content/directions/{id}/{locale}.json`. */
+export function loadDirection(id: string, locale: ContentLocale): DirectionContent {
+  return cached(`direction/${id}/${locale}/${contentRoot()}`, () => {
+    const file = path.join(contentRoot(), "directions", id, `${locale}.json`);
+    if (!directionIds.includes(id)) {
+      throw new SiteContentError(
+        file,
+        `"${id}" is not a group or direction of the catalog taxonomy (content/taxonomy.ts). Known ids: ${directionIds.join(", ")}`,
+      );
+    }
+    return readJson(file, directionSchema);
+  });
+}
+
+/** Text of the home page: `content/home/{locale}.json`. */
+export function loadHome(locale: ContentLocale): HomeContent {
+  return cached(`home/${locale}/${contentRoot()}`, () =>
+    readJson(path.join(contentRoot(), "home", `${locale}.json`), homeSchema),
+  );
+}
+
+/** Validates both locale files of a direction, or of the home page; throws on the first problem. */
+export function loadDirectionAllLocales(id: string) {
+  return contentLocales.map((locale) => loadDirection(id, locale));
+}
+
+export function loadHomeAllLocales() {
+  return contentLocales.map((locale) => loadHome(locale));
 }
 
 /** Validates every locale file of one product; throws on the first problem. */

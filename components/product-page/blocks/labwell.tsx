@@ -12,7 +12,12 @@ export function Labwell({ labwell }: { labwell: NonNullable<ProductPageModel["la
   if (labwell.compact) {
     return (
       <Section labelledBy="labwell-title">
-        <div className={`${styles.card} ${styles.labwellCompact}`} style={count}>
+        {/* More than three services: the heading spans the card and the services sit in a row below it. */}
+        <div
+          className={`${styles.card} ${styles.labwellCompact}`}
+          style={count}
+          data-stacked={labwell.items.length > 3 ? "true" : undefined}
+        >
           <div className={styles.labwellHead}>
             <h2 id="labwell-title" className={styles.labwellCompactTitle}>
               {labwell.h2}

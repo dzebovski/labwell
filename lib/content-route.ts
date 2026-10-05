@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { isLocale, type Locale } from "@/i18n/config";
 import { getRouteTarget, type RouteTarget } from "@/lib/catalog";
 import { createPageMetadata } from "@/lib/page-metadata";
+import { getDirectionMetadata } from "@/lib/site-content/directions";
 
 /** Shared by the catalog routes: 404 for an unknown locale or path. */
 export function requireRouteTarget(
@@ -22,6 +23,8 @@ export function routeMetadata(locale: string, path: string): Metadata {
     return createPageMetadata(resolvedLocale, page.seoTitle[resolvedLocale], page.description[resolvedLocale], page.path);
   }
   const { category } = target;
+  // Catalog groups and directions have their own texts in content/directions/.
+  if (category.menu === "catalog") return getDirectionMetadata(category, resolvedLocale);
   const label = (category.section ?? category.group).label[resolvedLocale];
   return createPageMetadata(resolvedLocale, label, category.path);
 }

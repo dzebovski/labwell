@@ -14,16 +14,18 @@ export function contentMetadata(
   canonicalPath: string,
   locale: ContentLocale,
 ): Metadata {
+  // The home page is `/uk`, not `/uk/`.
+  const suffix = canonicalPath === "/" ? "" : canonicalPath;
   return {
     metadataBase: new URL(SITE_URL),
     title: { absolute: seo.title },
     description: seo.description,
     alternates: {
-      canonical: `/${locale}${canonicalPath}`,
+      canonical: `/${locale}${suffix}`,
       languages: {
-        uk: `/uk${canonicalPath}`,
-        en: `/en${canonicalPath}`,
-        "x-default": `/uk${canonicalPath}`,
+        uk: `/uk${suffix}`,
+        en: `/en${suffix}`,
+        "x-default": `/uk${suffix}`,
       },
     },
     ...socialMetadata({ locale, title: seo.title, description: seo.description, path: canonicalPath }),

@@ -121,5 +121,56 @@
     "language": "Мова",
     "back": "Назад: {name}",
     "allIn": "Усе в розділі «{name}»"
+  },
+  "directionPage": {
+    "consult": "Отримати консультацію",
+    "contactHeading": "Отримати консультацію",
+    "faqHeading": "Питання й відповіді",
+    "listDirection": "У цьому напрямі",
+    "listGroup": "У цій групі",
+    "listDirections": "Напрями групи",
+    "details": "Детальніше",
+    "badgeProduct": "Сторінка товару",
+    "badgeGroup": "Групова сторінка",
+    "overviewBadge": "Огляд серії",
+    "menuBadge": "Меню тестів",
+    "filterLabel": "Фільтр за брендом",
+    "filterBrand": "Бренд:",
+    "filterAll": "Усі",
+    "filterStatus": "Показано {shown} з {total}",
+    "pagesInDirection": {
+      "one": "{n} сторінка у напрямі",
+      "few": "{n} сторінки у напрямі",
+      "many": "{n} сторінок у напрямі",
+      "other": "{n} сторінки у напрямі"
+    },
+    "pagesInGroup": {
+      "one": "{n} сторінка в групі",
+      "few": "{n} сторінки в групі",
+      "many": "{n} сторінок у групі",
+      "other": "{n} сторінки в групі"
+    },
+    "directionsInGroup": {
+      "one": "{n} напрям",
+      "few": "{n} напрями",
+      "many": "{n} напрямів",
+      "other": "{n} напряму"
+    },
+    "modelsInSeries": {
+      "one": "{n} модель у серії",
+      "few": "{n} моделі в серії",
+      "many": "{n} моделей у серії",
+      "other": "{n} моделі в серії"
+    }
+  },
+  "homePage": {
+    "consult": "Отримати консультацію",
+    "official": "Офіційний дистриб’ютор",
+    "startHeading": "З чого почати",
+    "directionsHeading": "{name} за напрямами",
+    "allCatalog": "Увесь каталог",
+    "brandsHeading": "Бренди",
+    "contactHeading": "Отримати консультацію",
+    "heroPhotos": "Аналізатори Snibe і Bio-Rad"
   }
 }

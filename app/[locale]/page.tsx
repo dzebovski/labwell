@@ -1,26 +1,36 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import styles from "@/components/labwell-ui.module.css";
-import { company } from "@/content/company";
+import { HomePage } from "@/components/home-page/home-page";
 import { isLocale } from "@/i18n/config";
-import { createPageMetadata } from "@/lib/page-metadata";
+import { getDictionary } from "@/i18n/dictionaries";
+import { getHomeMetadata, getHomeModel } from "@/lib/site-content/home-page";
 
 type HomePageProps = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: HomePageProps): Promise<Metadata> {
   const { locale } = await params;
-  if (!isLocale(locale)) return {};
-  const title = `${company.name} — ${company.tagline[locale]}`;
-  return {
-    ...createPageMetadata(locale, title, company.description[locale], "/"),
-    // The home page is not "… | LabWell": the title already names the site.
-    title: { absolute: title },
-  };
+  return isLocale(locale) ? getHomeMetadata(locale) : {};
 }
 
-export default async function HomePage({ params }: HomePageProps) {
+export default async function Page({ params }: HomePageProps) {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
-  return <main className={styles.homeMain} />;
+  const dictionary = await getDictionary(locale);
+  const texts = dictionary.homePage;
+
+  return (
+    <HomePage
+      model={await getHomeModel(locale)}
+      labels={{
+        consult: texts.consult,
+        official: texts.official,
+        startHeading: texts.startHeading,
+        allCatalog: texts.allCatalog,
+        brandsHeading: texts.brandsHeading,
+        heroPhotos: texts.heroPhotos,
+      }}
+      productLabels={{ ...dictionary.productPage, breadcrumbs: dictionary.accessibility.breadcrumbs }}
+    />
+  );
 }

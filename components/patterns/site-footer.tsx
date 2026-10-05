@@ -36,24 +36,6 @@ export function SiteFooter({ locale, homeHref, model, labels }: SiteFooterProps)
             <Image src={company.logo.src} alt={company.name} width={180} height={40} className={styles.logo} />
           </Link>
           <p className={styles.tagline}>{company.description[locale]}</p>
-          {contacts ? (
-            <ul className={styles.contacts} aria-label={labels.contacts}>
-              {contacts.phone ? (
-                <li>
-                  <a href={contacts.phone.href} className={styles.link}>
-                    {contacts.phone.label}
-                  </a>
-                </li>
-              ) : null}
-              {contacts.email ? (
-                <li>
-                  <a href={contacts.email.href} className={styles.link}>
-                    {contacts.email.label}
-                  </a>
-                </li>
-              ) : null}
-            </ul>
-          ) : null}
         </div>
 
         <nav aria-label={labels.navigation} className={styles.columns}>
@@ -78,6 +60,24 @@ export function SiteFooter({ locale, homeHref, model, labels }: SiteFooterProps)
 
       <div className={styles.bottom}>
         <p>{labels.copyright}</p>
+        {contacts ? (
+          <ul className={styles.contacts} aria-label={labels.contacts}>
+            {contacts.phone ? (
+              <li>
+                <a href={contacts.phone.href} className={styles.contactLink}>
+                  {contacts.phone.label}
+                </a>
+              </li>
+            ) : null}
+            {contacts.email ? (
+              <li>
+                <a href={contacts.email.href} className={styles.contactLink}>
+                  {contacts.email.label}
+                </a>
+              </li>
+            ) : null}
+          </ul>
+        ) : null}
       </div>
     </footer>
   );

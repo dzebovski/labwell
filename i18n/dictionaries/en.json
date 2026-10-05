@@ -119,5 +119,48 @@
     "language": "Language",
     "back": "Back: {name}",
     "allIn": "All in “{name}”"
+  },
+  "directionPage": {
+    "consult": "Request a consultation",
+    "contactHeading": "Request a consultation",
+    "faqHeading": "Questions and answers",
+    "listDirection": "In this direction",
+    "listGroup": "In this group",
+    "listDirections": "Directions in this group",
+    "details": "Learn more",
+    "badgeProduct": "Product page",
+    "badgeGroup": "Group page",
+    "overviewBadge": "Series overview",
+    "menuBadge": "Test menu",
+    "filterLabel": "Filter by brand",
+    "filterBrand": "Brand:",
+    "filterAll": "All",
+    "filterStatus": "Showing {shown} of {total}",
+    "pagesInDirection": {
+      "one": "{n} page in this direction",
+      "other": "{n} pages in this direction"
+    },
+    "pagesInGroup": {
+      "one": "{n} page in this group",
+      "other": "{n} pages in this group"
+    },
+    "directionsInGroup": {
+      "one": "{n} direction",
+      "other": "{n} directions"
+    },
+    "modelsInSeries": {
+      "one": "{n} model in the series",
+      "other": "{n} models in the series"
+    }
+  },
+  "homePage": {
+    "consult": "Request a consultation",
+    "official": "Official distributor",
+    "startHeading": "Where to start",
+    "directionsHeading": "{name} by direction",
+    "allCatalog": "Full catalog",
+    "brandsHeading": "Brands",
+    "contactHeading": "Request a consultation",
+    "heroPhotos": "Snibe and Bio-Rad analyzers"
   }
 }

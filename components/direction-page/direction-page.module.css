@@ -1,0 +1,814 @@
+/* Template D: a group or direction page of the catalog. Mobile-first; tokens come from app/globals.css. */
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding: var(--space-2) clamp(var(--space-4), 4vw, var(--space-10)) clamp(var(--space-6), 4vw, var(--space-10));
+}
+
+.heroGrid {
+  display: grid;
+  gap: var(--space-5);
+  margin-top: var(--space-2);
+}
+
+.heroCopy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  min-width: 0;
+}
+
+.heroLogos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) var(--space-4);
+}
+
+.cardLogo {
+  display: block;
+  width: auto;
+  height: 1.25rem;
+}
+
+.heroLogos .cardLogo {
+  height: 1.5rem;
+}
+
+.cardBrandName {
+  font-size: 0.875rem;
+}
+
+.h1 {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: clamp(1.875rem, 4.4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+
+.lead {
+  max-width: 45rem;
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: clamp(1rem, 2vw, 1.1875rem);
+  line-height: 1.58;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--control-lg);
+  padding: 0 1.125rem;
+  color: var(--color-brand-700);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: var(--color-surface);
+  border: 1px solid var(--color-brand-300);
+  border-radius: var(--radius-control);
+  transition: background-color var(--duration-fast) var(--ease-standard);
+}
+
+.cta:hover {
+  color: var(--color-brand-800);
+  background: var(--color-brand-50);
+}
+
+/* ---------- Lists ---------- */
+
+.count {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.filterLabel {
+  margin-right: var(--space-1);
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+.chip {
+  min-height: var(--touch-target);
+  padding: 0 var(--space-4);
+  color: var(--color-text-primary);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-round);
+  cursor: pointer;
+  transition:
+    background-color var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard);
+}
+
+.chip:hover {
+  border-color: var(--color-brand-300);
+}
+
+.chip[aria-pressed="true"] {
+  color: white;
+  background: var(--color-brand-600);
+  border-color: var(--color-brand-600);
+}
+
+.chip:focus-visible,
+.cta:focus-visible,
+.stretch:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* A card is one link: the title link covers the whole card (its text stays the accessible name). */
+.stretch {
+  color: inherit;
+  text-decoration: none;
+}
+
+.stretch::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: "";
+}
+
+.stretch:focus-visible {
+  outline: none;
+}
+
+/* ---------- Tiles (products) ---------- */
+
+.tiles,
+.wides,
+.banners,
+.directions {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tiles > li,
+.directions > li,
+.banners > li,
+.wides > li {
+  display: flex;
+  min-width: 0;
+}
+
+.tile,
+.wide,
+.banner,
+.directionCard {
+  position: relative;
+  display: grid;
+  width: 100%;
+  min-width: 0;
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  transition:
+    border-color var(--duration-fast) var(--ease-standard),
+    box-shadow var(--duration-fast) var(--ease-standard);
+}
+
+.tile:hover,
+.wide:hover,
+.directionCard:hover,
+.banner:hover {
+  border-color: var(--color-brand-300);
+  box-shadow: var(--shadow-card);
+}
+
+.tile:has(.stretch:focus-visible),
+.wide:has(.stretch:focus-visible),
+.directionCard:has(.stretch:focus-visible),
+.banner:has(.stretch:focus-visible) {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* Mobile: photo thumbnail on the left, text on the right (the mock-up at 390 px). */
+.tile {
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-3);
+  padding: var(--space-3);
+  align-items: start;
+}
+
+.tile[data-media] {
+  grid-template-columns: 6rem minmax(0, 1fr);
+  gap: 0.875rem;
+}
+
+.tileMedia,
+.wideMedia,
+.directionMedia {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(160deg, #f7fafb 0%, #e6eef2 100%);
+  border: 1px solid var(--color-surface-subtle);
+}
+
+.tileMedia {
+  width: 6rem;
+  height: 6rem;
+  border-radius: var(--radius-control);
+}
+
+.photo {
+  object-fit: contain;
+  padding: var(--space-2);
+  /* Photos on a white background melt into the frame; photos with a transparent one are not affected. */
+  mix-blend-mode: multiply;
+}
+
+.photoEmpty {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  color: var(--color-border-control);
+}
+
+.tileBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.tileTitle,
+.wideTitle,
+.bannerTitle,
+.directionTitle {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.tileTitle {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.tileType,
+.wideType {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.8125rem;
+  line-height: 1.4;
+}
+
+.tileFacts,
+.wideStats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  margin: var(--space-1) 0 0;
+}
+
+.fact {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: var(--space-1);
+  min-width: 0;
+  font-size: 0.8125rem;
+}
+
+.factLabel {
+  color: var(--color-text-secondary);
+}
+
+.factValue {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.more {
+  display: none;
+  align-items: center;
+  gap: 0.375rem;
+  margin-top: var(--space-2);
+  color: var(--color-brand-700);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* ---------- Wide cards (groups, single page) ---------- */
+
+.wides {
+  gap: var(--space-3);
+}
+
+.wide {
+  grid-template-columns: 6rem minmax(0, 1fr);
+  grid-template-areas:
+    "media body"
+    "media stats";
+  column-gap: 0.875rem;
+  align-items: start;
+  padding: var(--space-3);
+}
+
+.wide:not(:has(.wideMedia)) {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "body"
+    "stats";
+}
+
+.wideMedia {
+  grid-area: media;
+  width: 6rem;
+  height: 6rem;
+  border-radius: var(--radius-control);
+}
+
+.wideBody {
+  grid-area: body;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  height: 1.375rem;
+  padding: 0 0.5rem;
+  color: var(--color-brand-700);
+  white-space: nowrap;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  background: var(--color-brand-50);
+  border-radius: var(--radius-round);
+}
+
+.wideTitle {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.wideStats {
+  grid-area: stats;
+}
+
+.wideArrow {
+  display: none;
+}
+
+/* ---------- Banners (series overview, test menu) ---------- */
+
+.banner {
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border-radius: 1rem;
+}
+
+.banner[data-tone="menu"] {
+  color: white;
+  background: var(--color-brand-950);
+  border-color: var(--color-brand-950);
+}
+
+.banner[data-tone="menu"]:hover {
+  border-color: var(--color-brand-400);
+}
+
+.bannerIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-brand-700);
+  background: var(--color-brand-50);
+  border-radius: var(--radius-card);
+}
+
+.bannerNumber {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.bannerBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.bannerEyebrow {
+  color: var(--color-brand-700);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.banner[data-tone="menu"] .bannerEyebrow {
+  color: var(--color-brand-300);
+}
+
+.bannerTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.bannerSub {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+.banner[data-tone="menu"] .bannerSub {
+  color: var(--color-brand-200);
+}
+
+.bannerArrow {
+  flex: none;
+  color: var(--color-brand-700);
+}
+
+.banner[data-tone="menu"] .bannerArrow {
+  color: white;
+}
+
+/* ---------- Direction cards (group page, home) ---------- */
+
+.directions {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.625rem;
+}
+
+.directionCard {
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
+}
+
+.directionMedia {
+  height: 6rem;
+  border-width: 0 0 1px;
+}
+
+.directionBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-height: 4rem;
+  padding: 0.625rem var(--space-3);
+}
+
+.directionLogos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+}
+
+.directionTitle {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-2);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.directionArrow {
+  display: none;
+  flex: none;
+  margin-top: 0.125rem;
+  color: var(--color-brand-700);
+}
+
+.directionCount {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+}
+
+/* ---------- ≥ 48rem ---------- */
+
+@media (min-width: 48rem) {
+  .tiles,
+  .banners {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-4);
+  }
+
+  .banners[data-count="1"] {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tiles[data-cols="1"] {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tile,
+  .tile[data-media] {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: var(--radius-card);
+  }
+
+  .tileMedia {
+    width: 100%;
+    height: 12.5rem;
+    border-width: 0 0 1px;
+    border-radius: 0;
+  }
+
+  .tileBody {
+    flex: 1;
+    gap: var(--space-2);
+    padding: var(--space-5);
+  }
+
+  .tileTitle {
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+
+  .tileType {
+    min-height: 2.625rem;
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .tile:not([data-media]) .tileType {
+    min-height: 0;
+  }
+
+  .tileFacts {
+    margin-top: auto;
+    gap: 0;
+  }
+
+  .tileFacts .fact {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--space-3);
+    padding: var(--space-2) 0;
+    font-size: 0.875rem;
+    border-top: 1px solid var(--color-surface-subtle);
+  }
+
+  .tileFacts .factLabel {
+    min-width: 0;
+    color: var(--color-text-muted);
+  }
+
+  .tileFacts .factValue {
+    flex: none;
+    max-width: 60%;
+    text-align: right;
+    overflow-wrap: anywhere;
+  }
+
+  .more {
+    display: flex;
+  }
+
+  .wide {
+    grid-template-columns: 14rem minmax(0, 1fr);
+    padding: 0;
+    column-gap: 0;
+    align-items: stretch;
+    overflow: hidden;
+  }
+
+  .wide:not(:has(.wideMedia)) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .wideMedia {
+    width: 100%;
+    height: auto;
+    min-height: 11.25rem;
+    border-width: 0 1px 0 0;
+    border-radius: 0;
+  }
+
+  .wide:not(:has(.wideMedia)) .wideBody {
+    padding-top: var(--space-6);
+  }
+
+  .wideBody {
+    justify-content: center;
+    gap: var(--space-2);
+    padding: var(--space-6) var(--space-6) var(--space-3);
+  }
+
+  .wideTitle {
+    font-size: 1.375rem;
+    line-height: 1.25;
+  }
+
+  .wideType {
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+  }
+
+  .wideStats {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-4) var(--space-5);
+    margin: 0;
+    padding: 0 var(--space-6) var(--space-6);
+  }
+
+  .wideStats .fact {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    gap: 0.125rem;
+    padding-left: var(--space-5);
+    border-left: 1px solid var(--color-surface-subtle);
+  }
+
+  .wideStats .factValue {
+    font-size: 1.375rem;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  .wideStats .factLabel {
+    max-width: 14rem;
+    color: var(--color-text-muted);
+    font-size: 0.8125rem;
+    line-height: 1.35;
+  }
+
+  .banner {
+    padding: 1.75rem 2rem;
+    gap: var(--space-5);
+  }
+
+  .bannerNumber {
+    font-size: 3.25rem;
+  }
+
+  .bannerTitle {
+    font-size: 1.25rem;
+  }
+
+  .directions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-4);
+  }
+
+  .directionMedia {
+    height: 9.375rem;
+  }
+
+  .directionBody {
+    padding: var(--space-4) var(--space-5);
+    gap: var(--space-2);
+  }
+
+  .directionTitle {
+    font-size: 1.125rem;
+  }
+
+  .directionArrow {
+    display: block;
+  }
+
+  .directionCount {
+    font-size: 0.8125rem;
+  }
+}
+
+/* ---------- ≥ 64rem ---------- */
+
+@media (min-width: 64rem) {
+  .heroGrid {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    gap: 3rem;
+    margin-top: var(--space-4);
+  }
+
+  .heroCopy {
+    gap: var(--space-4);
+  }
+
+  .cta {
+    min-height: var(--control-lg);
+    color: white;
+    background: var(--color-brand-600);
+    border-color: var(--color-brand-600);
+  }
+
+  .cta:hover {
+    color: white;
+    background: var(--color-brand-700);
+  }
+
+  .tiles[data-cols="3"],
+  .tiles[data-cols="4"] {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .directions {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .directions[data-count="1"],
+  .directions[data-count="2"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ---------- ≥ 80rem ---------- */
+
+@media (min-width: 80rem) {
+  /* Stats sit to the right of the text; the arrow marks the card as a link. */
+  .wide {
+    grid-template-columns: 20rem minmax(14rem, 1fr) auto;
+    grid-template-areas: "media body stats";
+    align-items: center;
+  }
+
+  .wide:not(:has(.wideMedia)) {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: "body stats";
+  }
+
+  .wideBody {
+    padding: var(--space-6) var(--space-8);
+  }
+
+  .wideStats {
+    flex-wrap: nowrap;
+    padding: var(--space-6) 4.5rem var(--space-6) 0;
+  }
+
+  .wideStats .factLabel {
+    max-width: 9.5rem;
+  }
+
+  .wideArrow {
+    position: absolute;
+    top: 50%;
+    right: var(--space-6);
+    display: block;
+    color: var(--color-brand-700);
+    transform: translateY(-50%);
+  }
+
+  .tiles[data-cols="4"] {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .directions {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .directions[data-count="3"] {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .directions[data-count="1"],
+  .directions[data-count="2"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

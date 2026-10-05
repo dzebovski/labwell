@@ -39,13 +39,28 @@
   line-height: var(--text-small-line);
 }
 
+/* The mock-up puts phone and e-mail at the right end of the bottom row. */
 .contacts {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-1);
+  flex-wrap: wrap;
+  gap: 0 var(--space-4);
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.contactLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  color: var(--color-text-secondary);
+  font-size: var(--text-small-size);
+  text-decoration: none;
+}
+
+.contactLink:hover {
+  color: var(--color-brand-700);
+  text-decoration: underline;
 }
 
 .columns {
@@ -74,6 +89,17 @@
   padding-block: 0.5rem;
   margin-block: -0.5rem;
   text-decoration: none;
+}
+
+/* Phones: the heading link is a full 44 px touch target. */
+@media (max-width: 63.9375rem) {
+  .heading a {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--touch-target);
+    padding-block: 0;
+    margin-block: -0.625rem;
+  }
 }
 
 .heading a:hover {
@@ -106,6 +132,11 @@
 }
 
 .bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-6);
   margin-top: var(--space-8);
   padding-top: var(--space-5);
   border-top: 1px solid var(--color-border);
@@ -132,7 +163,8 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .link {
+  .link,
+  .contactLink {
     min-height: 2rem;
   }
 }

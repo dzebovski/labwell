@@ -842,6 +842,15 @@
   line-height: 1.5;
 }
 
+/* Compact block with more than three services (template D): heading on top, services in rows. */
+.labwellCompact[data-stacked] .labwellHead {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-6);
+}
+
 /* ---------- Contact ---------- */
 
 .contact {
@@ -1260,6 +1269,16 @@ a.relatedCard:hover {
     align-items: center;
   }
 
+  .labwellCompact[data-stacked] {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-6) var(--space-8);
+    align-items: start;
+  }
+
+  .labwellCompact[data-stacked] .labwellHead {
+    grid-column: 1 / -1;
+  }
+
   .contact {
     grid-template-columns: minmax(0, 1fr) 37.5rem;
     gap: 3.5rem;
@@ -1272,6 +1291,10 @@ a.relatedCard:hover {
 
 @media (min-width: 80rem) {
   .labwell[data-stacked] .labwellGrid {
+    grid-template-columns: repeat(var(--count), minmax(0, 1fr));
+  }
+
+  .labwellCompact[data-stacked] {
     grid-template-columns: repeat(var(--count), minmax(0, 1fr));
   }
 }
