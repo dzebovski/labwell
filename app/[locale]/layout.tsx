@@ -3,12 +3,19 @@ import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 
 import { onest } from "@/app/fonts";
+import { JsonLdScripts } from "@/components/product-page/blocks/json-ld";
+import { SiteFooter } from "@/components/patterns/site-footer";
 import { SiteHeader } from "@/components/patterns/site-header";
 import styles from "@/components/labwell-ui.module.css";
+import { company } from "@/content/company";
 import { isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { withLocale } from "@/lib/locale-routing";
+import { SITE_URL } from "@/lib/site-config";
+import { buildOrganizationLd, buildWebSiteLd } from "@/lib/site-content/jsonld-site";
+import { loadShared } from "@/lib/site-content/load";
 import { navPhoto } from "@/lib/site-content/nav-photo";
+import { buildFooter } from "@/lib/site-footer";
 import { buildHeaderNavigation } from "@/lib/site-navigation";
 
 import "../globals.css";
@@ -34,9 +41,11 @@ export async function generateMetadata({
   const dictionary = await getDictionary(locale);
 
   return {
+    // Relative canonical, hreflang and image addresses of every page resolve against this.
+    metadataBase: new URL(SITE_URL),
     // Page titles come without the site name; the template appends it.
     title: { template: `%s | ${dictionary.metadata.title}`, default: dictionary.metadata.title },
-    description: dictionary.metadata.description,
+    description: company.description[locale],
     alternates: {
       languages: {
         uk: "/uk",
@@ -58,6 +67,8 @@ export default async function LocaleLayout({
 
   const dictionary = await getDictionary(locale);
   const navItems = buildHeaderNavigation(locale, dictionary.navigation, { photoFor: navPhoto });
+  const { contact } = loadShared(locale);
+  const footer = buildFooter(navItems, { companyTitle: dictionary.footer.company, contact });
 
   return (
     <html
@@ -95,6 +106,23 @@ export default async function LocaleLayout({
           />
         </div>
         {children}
+        <SiteFooter
+          locale={locale}
+          homeHref={withLocale(locale, "/")}
+          model={footer}
+          labels={{
+            navigation: dictionary.footer.navigation,
+            copyright: dictionary.footer.copyright.replace("{year}", String(new Date().getFullYear())),
+            home: dictionary.accessibility.home,
+            contacts: dictionary.navigation.contacts,
+          }}
+        />
+        <JsonLdScripts
+          data={[
+            buildOrganizationLd({ siteUrl: SITE_URL, locale, contact }),
+            buildWebSiteLd({ siteUrl: SITE_URL, locale }),
+          ]}
+        />
       </body>
     </html>
   );

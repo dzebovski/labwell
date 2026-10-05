@@ -48,7 +48,7 @@
   "T3_about": {
     "show": true,
     "h2": "What MAGLUMI X8 is and who it is for",
-    "text": "MAGLUMI X8 is a fully automated Snibe CLIA analyzer for chemiluminescence immunoassay in medium and large laboratories. A single module can operate independently, or four modules can be combined for higher testing volumes. SATLARS automation connectivity and the availability of individual assays should be confirmed for the relevant market and laboratory project."
+    "text": "MAGLUMI X8 is a fully automated Snibe CLIA analyzer for chemiluminescence immunoassay in medium and large laboratories. A single module can operate independently, or four modules can be combined for higher testing volumes. SATLARS automation connectivity and the assay list for a specific model should be confirmed for the laboratory project."
   },
   "T4_specs": {
     "show": true,
@@ -117,9 +117,9 @@
   "T8_related": {
     "show": true,
     "testMenu": {
-      "h2": "Which tests MAGLUMI X8 performs",
+      "h2": "MAGLUMI series test menu",
       "title": "MAGLUMI CLIA test menu",
-      "text": "The menu spans hormones, tumor markers, infectious and cardiac markers, and other areas. Ask LabWell to confirm which individual assays are available in Ukraine.",
+      "text": "The MAGLUMI CLIA menu covers hormones, tumor markers, infectious and cardiac markers. Ask a manager which assays apply to a specific model.",
       "cta": {
         "label": "Open the test menu",
         "href": "/test-menus/snibe-clia-test-menu"
@@ -204,8 +204,8 @@
         "a": "A single module provides 300 sample positions and 42 reagent positions."
       },
       {
-        "q": "Which tests can MAGLUMI X8 perform?",
-        "a": "The analyzer uses the MAGLUMI CLIA test menu; ask LabWell to confirm which individual assays are available in Ukraine.",
+        "q": "Which tests are in the MAGLUMI series menu?",
+        "a": "The MAGLUMI CLIA menu includes hormones, tumor markers, infectious disease and cardiac markers. Ask a manager which assays apply to a specific model.",
         "link": {
           "label": "MAGLUMI CLIA test menu",
           "href": "/test-menus/snibe-clia-test-menu"

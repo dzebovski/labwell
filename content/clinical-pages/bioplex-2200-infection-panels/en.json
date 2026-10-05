@@ -1,0 +1,79 @@
+{
+  "slug": "bioplex-2200-infection-panels",
+  "url": "/clinical-directions/infectious-diseases/bioplex-2200-infection-panels",
+  "kind": "clinical",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "BioPlex 2200 Infectious Panels | LabWell",
+    "description": "Review Bio-Rad infectious disease panels for BioPlex 2200, explore the multiplex system, and contact LabWell about a laboratory solution in Ukraine."
+  },
+  "hero": {
+    "breadcrumbs": [
+      "Home",
+      "Clinical directions",
+      "Infectious diseases",
+      "BioPlex 2200 infectious disease panels"
+    ],
+    "eyebrow": "Clinical area · multiplex panels",
+    "h1": "BioPlex 2200 infectious disease panels",
+    "lead": "Bio-Rad lists infectious disease panels for the BioPlex 2200 system. This page helps laboratories review those panels and explore the system."
+  },
+  "tests": {
+    "show": true,
+    "h2": "BioPlex 2200 infectious disease panels",
+    "kind": "manufacturer-panels",
+    "items": [
+      "HIV Ag-Ab",
+      "EBV IgG and IgM",
+      "Syphilis Total & RPR",
+      "ToRC IgG and IgM",
+      "MMRV IgG",
+      "MMV IgM",
+      "HSV-1 & HSV-2 IgG"
+    ],
+    "sourceUrl": "https://www.bio-rad.com/webroot/web/pdf/cdg/solutions/Clinical%20Immunology/doc_t-167_dg16-0646.pdf"
+  },
+  "equipment": {
+    "show": true,
+    "h2": "Equipment",
+    "text": "Bio-Rad identifies the BioPlex 2200 system for these panels.",
+    "sourceUrl": "https://www.bio-rad.com/en-uk/product/bioplex-2200-system?ID=179032f7-5b80-4a4d-a5c9-9218a62c6eb3",
+    "items": [
+      {
+        "title": "BioPlex 2200 System",
+        "href": "/products/bioplex-2200-system"
+      }
+    ]
+  },
+  "qc": {
+    "show": false
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Questions and answers",
+    "items": [
+      {
+        "q": "What is included in BioPlex 2200 infectious panels?",
+        "a": "The panel contents above follow the Bio-Rad manufacturer material."
+      },
+      {
+        "q": "Which instrument is used for this panel?",
+        "a": "Bio-Rad associates this panel with the BioPlex 2200 system; follow the instrument link to learn more."
+      },
+      {
+        "q": "How can I discuss a solution for my laboratory?",
+        "a": "Send an inquiry to LabWell using the form on this page."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Discuss your laboratory needs",
+    "text": "LabWell is the official distributor of Snibe and Bio-Rad in Ukraine. Send an inquiry and we will help you choose a solution.",
+    "messagePrefill": "I am interested in BioPlex 2200 infectious panels"
+  }
+}

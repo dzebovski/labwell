@@ -3,7 +3,7 @@
     "eyebrow": "LabWell",
     "h2": "Що робить LabWell",
     "link": {
-      "label": "Сервіс та підтримка",
+      "label": "Послуги та сервіс",
       "href": "/services"
     },
     "items": [
@@ -52,7 +52,7 @@
     ]
   },
   "contact": {
-    "phone": "[ТЕЛЕФОН]",
+    "phone": "+38 (044) 205-58-20",
     "email": "[EMAIL]",
     "form": {
       "fields": [

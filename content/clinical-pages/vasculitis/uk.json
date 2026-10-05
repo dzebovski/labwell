@@ -1,0 +1,75 @@
+{
+  "slug": "vasculitis",
+  "url": "/clinical-directions/autoimmune-diseases/vasculitis",
+  "kind": "clinical",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "Панель Vasculitis BioPlex 2200 | LabWell",
+    "description": "Панель Vasculitis для BioPlex 2200 від Bio-Rad: три антитіла за матеріалами виробника, сторінка системи та консультація LabWell для лабораторії."
+  },
+  "hero": {
+    "breadcrumbs": [
+      "Головна",
+      "Клінічні напрямки",
+      "Аутоімунні захворювання",
+      "Панель Vasculitis для BioPlex 2200"
+    ],
+    "eyebrow": "Клінічний напрям · мультиплексна панель",
+    "h1": "Панель Vasculitis для BioPlex 2200",
+    "lead": "Панель Vasculitis Bio-Rad містить три антитіла, зазначені виробником для системи BioPlex 2200. Перегляньте склад панелі та сторінку обладнання."
+  },
+  "tests": {
+    "show": true,
+    "h2": "Склад панелі Vasculitis",
+    "kind": "manufacturer-panels",
+    "items": [
+      "Anti-MPO",
+      "Anti-PR3",
+      "Anti-GBM"
+    ],
+    "sourceUrl": "https://www.bio-rad.com/webroot/web/pdf/cdg/literature/T-146_Vasculitis.pdf"
+  },
+  "equipment": {
+    "show": true,
+    "h2": "Обладнання",
+    "text": "Bio-Rad зазначає систему BioPlex 2200 для цих панелей.",
+    "sourceUrl": "https://www.bio-rad.com/webroot/web/pdf/cdg/literature/T-146_Vasculitis.pdf",
+    "items": [
+      {
+        "title": "BioPlex 2200 System",
+        "href": "/products/bioplex-2200-system"
+      }
+    ]
+  },
+  "qc": {
+    "show": false
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Питання й відповіді",
+    "items": [
+      {
+        "q": "Що входить до панелі Vasculitis?",
+        "a": "Склад панелі наведено за матеріалами Bio-Rad у блоці вище."
+      },
+      {
+        "q": "На якій системі виконують цю панель?",
+        "a": "Bio-Rad пов’язує цю панель із системою BioPlex 2200; перейдіть до сторінки приладу для опису системи."
+      },
+      {
+        "q": "Як обговорити рішення для лабораторії?",
+        "a": "Надішліть запит LabWell через форму на цій сторінці."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Обговоримо вашу лабораторну задачу",
+    "text": "LabWell — офіційний дистриб’ютор Snibe і Bio-Rad в Україні. Залиште запит — допоможемо підібрати рішення.",
+    "messagePrefill": "Цікавить панель Vasculitis для BioPlex 2200"
+  }
+}

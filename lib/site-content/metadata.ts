@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { SITE_URL } from "../site-config.ts";
+import { socialMetadata } from "../social-metadata.ts";
 import type { ContentLocale } from "./load.ts";
 
 /**
@@ -25,12 +26,6 @@ export function contentMetadata(
         "x-default": `/uk${canonicalPath}`,
       },
     },
-    openGraph: {
-      type: "website",
-      title: seo.title,
-      description: seo.description,
-      url: `/${locale}${canonicalPath}`,
-      locale: locale === "uk" ? "uk_UA" : "en_US",
-    },
+    ...socialMetadata({ locale, title: seo.title, description: seo.description, path: canonicalPath }),
   };
 }

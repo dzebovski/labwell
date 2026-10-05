@@ -104,7 +104,7 @@
         "packSize": "5 kits"
       }
     ],
-    "footnote": "This is a selection of JCV and CT/NG products. Ask a LabWell manager about the range supplied in Ukraine.",
+    "footnote": "This is a selection of JCV and CT/NG products.",
     "cta": {
       "label": "Request product information",
       "href": "#contact"
@@ -172,7 +172,7 @@
       },
       {
         "q": "Who supplies Bio-Rad molecular controls in Ukraine?",
-        "a": "LabWell is an official Bio-Rad distributor in Ukraine. It helps select the most effective solution for your needs and provides supply and application support; ask a manager about the range of individual products."
+        "a": "LabWell is an official Bio-Rad distributor in Ukraine. It helps select the most effective solution for your needs and provides supply and application support."
       }
     ]
   },
@@ -183,7 +183,7 @@
   "T12_contact": {
     "show": true,
     "h2": "Request advice on molecular controls",
-    "text": "Share the testing area and the control or panel you need, and a manager will confirm the available range.",
+    "text": "Share the testing area and the control or panel you need, and we will help select a solution.",
     "messagePrefill": "I am interested in Bio-Rad molecular controls. "
   }
 }

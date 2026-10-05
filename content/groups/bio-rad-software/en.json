@@ -188,7 +188,7 @@
               "packSize": "[ФАСУВАННЯ НЕ ВКАЗАНО]"
             }
           ],
-          "footnote": "Ask a LabWell manager about configuration and availability of items in Ukraine."
+          "footnote": "Ask a LabWell manager about configuration."
         },
         "cta": {
           "label": "Ask about Unity Next Peer QC",
@@ -237,7 +237,7 @@
               "packSize": "[ФАСУВАННЯ НЕ ВКАЗАНО]"
             }
           ],
-          "footnote": "Ask a LabWell manager about configuration and availability of items in Ukraine."
+          "footnote": "Ask a LabWell manager about configuration."
         },
         "cta": {
           "label": "Ask about IH-Com",
@@ -307,7 +307,7 @@
       },
       {
         "q": "Who supplies Bio-Rad software in Ukraine?",
-        "a": "LabWell is an official Bio-Rad distributor in Ukraine. A manager will help select the most effective solution for your needs and confirm the items available."
+        "a": "LabWell is an official Bio-Rad distributor in Ukraine. A manager will help select the most effective solution for your needs."
       }
     ]
   },

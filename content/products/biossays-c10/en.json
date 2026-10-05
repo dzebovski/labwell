@@ -111,9 +111,9 @@
   "T8_related": {
     "show": true,
     "testMenu": {
-      "h2": "Tests available for Biossays C10",
+      "h2": "Snibe biochemistry test menu",
       "title": "Snibe biochemistry test menu",
-      "text": "Explore the Snibe biochemistry test menu. Ask a LabWell representative about the availability of individual tests in Ukraine.",
+      "text": "The Snibe menu contains 114 biochemistry tests in 13 groups. Ask a manager which tests apply to a specific model.",
       "cta": {
         "label": "View the test menu",
         "href": "/test-menus/snibe-biochemistry-test-menu"
@@ -149,7 +149,7 @@
       },
       {
         "q": "What testing does Biossays C10 perform?",
-        "a": "Biossays C10 performs biochemistry and ISE testing through separate channels. It also supports HbA1c measurement in whole blood."
+        "a": "Biossays C10 performs biochemistry and ISE testing through separate channels. Ask a manager which tests apply to this model."
       },
       {
         "q": "How many positions does Biossays C10 provide?",

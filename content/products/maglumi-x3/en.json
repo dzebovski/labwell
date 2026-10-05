@@ -119,9 +119,9 @@
   "T8_related": {
     "show": true,
     "testMenu": {
-      "h2": "Which tests can MAGLUMI X3 perform?",
+      "h2": "MAGLUMI series test menu",
       "title": "MAGLUMI CLIA test menu",
-      "text": "Thyroid, tumor, infectious disease and cardiac markers, among others. Ask a LabWell manager about the availability of individual tests in Ukraine.",
+      "text": "The MAGLUMI CLIA menu covers hormones, tumor markers, infectious and cardiac markers. Ask a manager which assays apply to a specific model.",
       "cta": {
         "label": "View the test menu",
         "href": "/test-menus/snibe-clia-test-menu"
@@ -206,8 +206,8 @@
         "a": "It occupies less than 0.68 m². Samples, reagents and consumables are loaded from the front."
       },
       {
-        "q": "Which tests can MAGLUMI X3 perform?",
-        "a": "It uses the MAGLUMI CLIA menu, which includes thyroid, tumor, infectious disease and cardiac markers, among others. Ask a LabWell manager about individual test availability in Ukraine.",
+        "q": "Which tests are in the MAGLUMI series menu?",
+        "a": "The MAGLUMI CLIA menu includes hormones, tumor markers, infectious disease and cardiac markers. Ask a manager which assays apply to a specific model.",
         "link": {
           "label": "MAGLUMI CLIA test menu",
           "href": "/test-menus/snibe-clia-test-menu"

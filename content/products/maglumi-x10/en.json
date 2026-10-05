@@ -134,9 +134,9 @@
   "T8_related": {
     "show": true,
     "testMenu": {
-      "h2": "Which tests MAGLUMI X10 performs",
+      "h2": "MAGLUMI series test menu",
       "title": "MAGLUMI CLIA test menu",
-      "text": "The menu spans hormones, tumor markers, infectious and cardiac markers, and other areas. Ask LabWell to confirm which individual assays are available in Ukraine.",
+      "text": "The MAGLUMI CLIA menu covers hormones, tumor markers, infectious and cardiac markers. Ask a manager which assays apply to a specific model.",
       "cta": {
         "label": "Open the test menu",
         "href": "/test-menus/snibe-clia-test-menu"
@@ -221,8 +221,8 @@
         "a": "A single module provides 300 sample positions and 50 reagent positions."
       },
       {
-        "q": "Which tests can MAGLUMI X10 perform?",
-        "a": "The analyzer uses the MAGLUMI CLIA test menu; ask LabWell to confirm which individual assays are available in Ukraine.",
+        "q": "Which tests are in the MAGLUMI series menu?",
+        "a": "The MAGLUMI CLIA menu includes hormones, tumor markers, infectious disease and cardiac markers. Ask a manager which assays apply to a specific model.",
         "link": {
           "label": "MAGLUMI CLIA test menu",
           "href": "/test-menus/snibe-clia-test-menu"

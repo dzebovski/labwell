@@ -112,7 +112,7 @@
     "testMenu": {
       "h2": "Snibe molecular assays",
       "title": "Molecular test menu",
-      "text": "Ask LabWell to confirm the molecular test list for this system and the availability of individual assays in Ukraine."
+      "text": "Ask LabWell to confirm the molecular test list for this system."
     },
     "models": {
       "h2": "Other Molecision systems",

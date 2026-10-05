@@ -1,0 +1,82 @@
+{
+  "slug": "maglumi-thyroid-panel",
+  "url": "/clinical-directions/thyroid-function/maglumi-thyroid-panel",
+  "kind": "clinical",
+  "brand": "Snibe",
+  "seo": {
+    "title": "MAGLUMI Thyroid Tests | LabWell",
+    "description": "Explore the Thyroid group in the MAGLUMI CLIA menu, view the complete Snibe assay list, and ask LabWell about the analyzer series for your laboratory."
+  },
+  "hero": {
+    "breadcrumbs": [
+      "Home",
+      "Clinical directions",
+      "Thyroid function",
+      "Thyroid function tests — MAGLUMI"
+    ],
+    "eyebrow": "Clinical area · CLIA",
+    "h1": "Thyroid function tests — MAGLUMI",
+    "lead": "The Thyroid group in the MAGLUMI CLIA menu helps laboratories find the relevant assays and explore the complete Snibe menu."
+  },
+  "tests": {
+    "show": true,
+    "h2": "Thyroid function assays",
+    "kind": "menu-groups",
+    "groups": [
+      {
+        "menuSlug": "snibe-clia-test-menu",
+        "groupId": "thyroid"
+      }
+    ],
+    "menuLink": {
+      "label": "Full MAGLUMI CLIA test menu",
+      "href": "/test-menus/snibe-clia-test-menu#group-thyroid"
+    }
+  },
+  "equipment": {
+    "show": true,
+    "h2": "MAGLUMI analyzers",
+    "text": "MAGLUMI CLIA menu assays run on MAGLUMI analyzers; ask a LabWell manager which assays are supported by a specific model.",
+    "items": [
+      {
+        "title": "MAGLUMI X overview",
+        "href": "/products/maglumi"
+      },
+      {
+        "title": "MAGLUMI M Series",
+        "href": "/products/maglumi-m-series"
+      }
+    ]
+  },
+  "qc": {
+    "show": false
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Questions and answers",
+    "items": [
+      {
+        "q": "Which assays are in the MAGLUMI thyroid assays group?",
+        "a": "The list above uses the assay names from the corresponding Snibe MAGLUMI CLIA menu group."
+      },
+      {
+        "q": "Where can I see the full MAGLUMI CLIA menu?",
+        "a": "The link in the assay section opens the complete Snibe test menu at the relevant group."
+      },
+      {
+        "q": "How do I choose an analyzer for these assays?",
+        "a": "MAGLUMI CLIA menu assays run on MAGLUMI analyzers; ask LabWell which assays are supported by a specific model."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Discuss your laboratory needs",
+    "text": "LabWell is the official distributor of Snibe and Bio-Rad in Ukraine. Send an inquiry and we will help you choose a solution.",
+    "messagePrefill": "I am interested in thyroid function tests"
+  }
+}

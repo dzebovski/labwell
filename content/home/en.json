@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "LabWell — Snibe and Bio-Rad laboratory solutions",
+    "description": "LabWell is an official distributor of Snibe and Bio-Rad in Ukraine. Explore laboratory instruments, reagents and quality controls, with maintenance."
+  },
+  "hero": {
+    "h1": "Snibe and Bio-Rad laboratory instruments, reagents and quality controls",
+    "lead": "LabWell is an official distributor of Snibe and Bio-Rad in Ukraine, offering solution selection, supply, installation, training, maintenance and application support."
+  },
+  "brands": {
+    "snibe": {
+      "description": "Snibe manufactures instruments for clinical laboratories and in vitro diagnostic reagents."
+    },
+    "bio-rad": {
+      "description": "Bio-Rad’s clinical diagnostics portfolio covers diabetes testing, immunohematology, autoimmunity and quality control."
+    }
+  },
+  "contact": {
+    "text": "Tell us about your laboratory’s testing needs, and we will help you find a solution and answer your questions."
+  },
+  "services": {
+    "items": [
+      {
+        "id": "message",
+        "title": "Solution selection",
+        "text": "We help you select the most effective solution for your needs."
+      },
+      {
+        "id": "truck",
+        "title": "Supply",
+        "text": "Instruments, reagents and controls."
+      },
+      {
+        "id": "graduation-cap",
+        "title": "Installation and training",
+        "text": "We install the instrument and train your staff to operate it."
+      },
+      {
+        "id": "wrench",
+        "title": "Maintenance",
+        "text": "We provide warranty and post-warranty maintenance."
+      },
+      {
+        "id": "flask",
+        "title": "Application support",
+        "text": "A specialist advises on reagent performance, result interpretation and possible causes of erroneous results."
+      }
+    ]
+  }
+}

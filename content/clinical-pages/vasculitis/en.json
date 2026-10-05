@@ -1,0 +1,75 @@
+{
+  "slug": "vasculitis",
+  "url": "/clinical-directions/autoimmune-diseases/vasculitis",
+  "kind": "clinical",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "BioPlex 2200 Vasculitis Panel | LabWell",
+    "description": "Review the three antibodies in the Bio-Rad Vasculitis panel for BioPlex 2200, explore the instrument, and contact LabWell about your laboratory."
+  },
+  "hero": {
+    "breadcrumbs": [
+      "Home",
+      "Clinical directions",
+      "Autoimmune diseases",
+      "Vasculitis panel for BioPlex 2200"
+    ],
+    "eyebrow": "Clinical area · multiplex panel",
+    "h1": "Vasculitis panel for BioPlex 2200",
+    "lead": "The Bio-Rad Vasculitis panel lists three antibodies for the BioPlex 2200 system. Review the panel composition and the instrument page."
+  },
+  "tests": {
+    "show": true,
+    "h2": "Vasculitis panel composition",
+    "kind": "manufacturer-panels",
+    "items": [
+      "Anti-MPO",
+      "Anti-PR3",
+      "Anti-GBM"
+    ],
+    "sourceUrl": "https://www.bio-rad.com/webroot/web/pdf/cdg/literature/T-146_Vasculitis.pdf"
+  },
+  "equipment": {
+    "show": true,
+    "h2": "Equipment",
+    "text": "Bio-Rad identifies the BioPlex 2200 system for these panels.",
+    "sourceUrl": "https://www.bio-rad.com/webroot/web/pdf/cdg/literature/T-146_Vasculitis.pdf",
+    "items": [
+      {
+        "title": "BioPlex 2200 System",
+        "href": "/products/bioplex-2200-system"
+      }
+    ]
+  },
+  "qc": {
+    "show": false
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Questions and answers",
+    "items": [
+      {
+        "q": "What is included in the Vasculitis panel?",
+        "a": "The panel contents above follow the Bio-Rad manufacturer material."
+      },
+      {
+        "q": "Which instrument is used for this panel?",
+        "a": "Bio-Rad associates this panel with the BioPlex 2200 system; follow the instrument link to learn more."
+      },
+      {
+        "q": "How can I discuss a solution for my laboratory?",
+        "a": "Send an inquiry to LabWell using the form on this page."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Discuss your laboratory needs",
+    "text": "LabWell is the official distributor of Snibe and Bio-Rad in Ukraine. Send an inquiry and we will help you choose a solution.",
+    "messagePrefill": "I am interested in the BioPlex 2200 Vasculitis panel"
+  }
+}

@@ -95,7 +95,7 @@ test("listing blocks for a group list named sections, then the default one", () 
   assert.deepEqual(
     blocks.map((block) => [block.title, block.href ?? null, block.pages.map((page) => page.slug)]),
     [
-      ["HbA1c analyzers", "/en/clinical-directions/diabetes-and-metabolism/hba1c-analyzers", ["d-100", "d-10", "variant-ii", "variant-ii-turbo"]],
+      ["HbA1c analyzers", "/en/clinical-directions/diabetes-and-metabolism/hba1c-analyzers", ["d-100", "variant-ii", "variant-ii-turbo"]],
       ["Other solutions", null, ["metabolic-panel"]],
     ],
   );

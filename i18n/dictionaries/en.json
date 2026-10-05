@@ -1,7 +1,11 @@
 {
   "metadata": {
-    "title": "Labwell",
-    "description": "Labwell — English website"
+    "title": "LabWell"
+  },
+  "footer": {
+    "navigation": "Footer navigation",
+    "company": "Company",
+    "copyright": "© {year} LabWell. All rights reserved."
   },
   "languageSwitcher": {
     "label": "Change language",
@@ -14,7 +18,7 @@
     "clinicalDirections": "Clinical directions",
     "brands": "Brands",
     "about": "About us",
-    "services": "Service & support",
+    "services": "Services and maintenance",
     "contacts": "Contacts",
     "otherSolutions": "Other solutions",
     "itemCount": {
@@ -41,7 +45,7 @@
     "clinicalDirections": "Clinical directions",
     "brands": "Brands",
     "about": "About us",
-    "services": "Service & support",
+    "services": "Services and maintenance",
     "contacts": "Contacts"
   },
   "productPage": {

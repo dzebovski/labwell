@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useMemo, useState } from "react";
+import { useEffect, useId, useMemo, useState } from "react";
 import { Search } from "lucide-react";
 
 import { LabLink } from "@/components/ui/primitives";
@@ -39,6 +39,18 @@ export function TestMenu({
   const [query, setQuery] = useState("");
   const [groupId, setGroupId] = useState<string | undefined>();
   const inputId = useId();
+
+  // Clinical pages link directly to a menu group. Select that group while keeping
+  // the unfiltered list in the server HTML for search engines and no-JS visitors.
+  useEffect(() => {
+    function selectHashGroup() {
+      const group = /^#group-([a-z0-9-]+)$/.exec(window.location.hash)?.[1];
+      if (group && groups.some((item) => item.id === group)) setGroupId(group);
+    }
+    selectHashGroup();
+    window.addEventListener("hashchange", selectHashGroup);
+    return () => window.removeEventListener("hashchange", selectHashGroup);
+  }, [groups]);
 
   const active = isFilterActive({ query, groupId });
   const result = useMemo(() => filterMenu(groups, { query, groupId }), [groups, query, groupId]);

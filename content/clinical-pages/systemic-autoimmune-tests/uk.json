@@ -1,0 +1,73 @@
+{
+  "slug": "systemic-autoimmune-tests",
+  "url": "/clinical-directions/autoimmune-diseases/systemic-autoimmune-tests",
+  "kind": "clinical",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "ANA Screen BioPlex 2200 | LabWell",
+    "description": "Панель ANA Screen для BioPlex 2200 від Bio-Rad: склад за матеріалами виробника, посилання на систему та консультація LabWell щодо рішення для лабораторії."
+  },
+  "hero": {
+    "breadcrumbs": [
+      "Головна",
+      "Клінічні напрямки",
+      "Аутоімунні захворювання",
+      "Панель ANA Screen для BioPlex 2200"
+    ],
+    "eyebrow": "Клінічний напрям · мультиплексна панель",
+    "h1": "Панель ANA Screen для BioPlex 2200",
+    "lead": "Панель ANA Screen Bio-Rad об’єднує перелічені виробником автоантитіла для досліджень на системі BioPlex 2200. Перегляньте склад панелі й обладнання."
+  },
+  "tests": {
+    "show": true,
+    "h2": "Склад панелі ANA Screen",
+    "kind": "manufacturer-panels",
+    "items": [
+      "ANA Screen: dsDNA, Chromatin, Ribosomal Protein, SS-A (52 and 60), SS-B, Sm, Sm/RNP, RNP (A and 68), Scl-70, Jo-1, Centromere B"
+    ],
+    "sourceUrl": "https://www.bio-rad.com/webroot/web/pdf/cdg/literature/T169_dg110562_bioplex.pdf"
+  },
+  "equipment": {
+    "show": true,
+    "h2": "Обладнання",
+    "text": "Bio-Rad зазначає систему BioPlex 2200 для цих панелей.",
+    "sourceUrl": "https://www.bio-rad.com/en-uk/product/bioplex-2200-system?ID=179032f7-5b80-4a4d-a5c9-9218a62c6eb3",
+    "items": [
+      {
+        "title": "BioPlex 2200 System",
+        "href": "/products/bioplex-2200-system"
+      }
+    ]
+  },
+  "qc": {
+    "show": false
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Питання й відповіді",
+    "items": [
+      {
+        "q": "Що входить до панелі ANA Screen?",
+        "a": "Склад панелі наведено за матеріалами Bio-Rad у блоці вище."
+      },
+      {
+        "q": "На якій системі виконують цю панель?",
+        "a": "Bio-Rad пов’язує цю панель із системою BioPlex 2200; перейдіть до сторінки приладу для опису системи."
+      },
+      {
+        "q": "Як обговорити рішення для лабораторії?",
+        "a": "Надішліть запит LabWell через форму на цій сторінці."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Обговоримо вашу лабораторну задачу",
+    "text": "LabWell — офіційний дистриб’ютор Snibe і Bio-Rad в Україні. Залиште запит — допоможемо підібрати рішення.",
+    "messagePrefill": "Цікавить панель ANA Screen для BioPlex 2200"
+  }
+}

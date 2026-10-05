@@ -1,7 +1,11 @@
 {
   "metadata": {
-    "title": "Labwell",
-    "description": "Labwell — українська версія сайту"
+    "title": "LabWell"
+  },
+  "footer": {
+    "navigation": "Навігація в підвалі сайту",
+    "company": "Компанія",
+    "copyright": "© {year} LabWell. Усі права захищено."
   },
   "languageSwitcher": {
     "label": "Змінити мову",
@@ -14,7 +18,7 @@
     "clinicalDirections": "Клінічні напрямки",
     "brands": "Бренди",
     "about": "Про компанію",
-    "services": "Сервіс та підтримка",
+    "services": "Послуги та сервіс",
     "contacts": "Контакти",
     "otherSolutions": "Інші рішення",
     "itemCount": {
@@ -43,7 +47,7 @@
     "clinicalDirections": "Клінічні напрямки",
     "brands": "Бренди",
     "about": "Про компанію",
-    "services": "Сервіс та підтримка",
+    "services": "Послуги та сервіс",
     "contacts": "Контакти"
   },
   "productPage": {

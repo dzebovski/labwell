@@ -1,0 +1,82 @@
+{
+  "slug": "maglumi-infection-panel",
+  "url": "/clinical-directions/infectious-diseases/maglumi-infection-panel",
+  "kind": "clinical",
+  "brand": "Snibe",
+  "seo": {
+    "title": "MAGLUMI Infectious Disease Tests | LabWell",
+    "description": "Explore the Infectious Disease group in the Snibe MAGLUMI CLIA menu, view the full assay list, and ask LabWell about MAGLUMI laboratory analyzers."
+  },
+  "hero": {
+    "breadcrumbs": [
+      "Home",
+      "Clinical directions",
+      "Infectious diseases",
+      "Infectious disease assays — MAGLUMI"
+    ],
+    "eyebrow": "Clinical area · CLIA",
+    "h1": "Infectious disease assays — MAGLUMI",
+    "lead": "The Infectious Disease group brings together Snibe assays in the MAGLUMI CLIA menu for laboratory infectious disease testing."
+  },
+  "tests": {
+    "show": true,
+    "h2": "Infectious disease assays",
+    "kind": "menu-groups",
+    "groups": [
+      {
+        "menuSlug": "snibe-clia-test-menu",
+        "groupId": "infectious-disease"
+      }
+    ],
+    "menuLink": {
+      "label": "Full MAGLUMI CLIA test menu",
+      "href": "/test-menus/snibe-clia-test-menu#group-infectious-disease"
+    }
+  },
+  "equipment": {
+    "show": true,
+    "h2": "MAGLUMI analyzers",
+    "text": "MAGLUMI CLIA menu assays run on MAGLUMI analyzers; ask a LabWell manager which assays are supported by a specific model.",
+    "items": [
+      {
+        "title": "MAGLUMI X overview",
+        "href": "/products/maglumi"
+      },
+      {
+        "title": "MAGLUMI M Series",
+        "href": "/products/maglumi-m-series"
+      }
+    ]
+  },
+  "qc": {
+    "show": false
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Questions and answers",
+    "items": [
+      {
+        "q": "Which assays are in the MAGLUMI infectious disease assays group?",
+        "a": "The list above uses the assay names from the corresponding Snibe MAGLUMI CLIA menu group."
+      },
+      {
+        "q": "Where can I see the full MAGLUMI CLIA menu?",
+        "a": "The link in the assay section opens the complete Snibe test menu at the relevant group."
+      },
+      {
+        "q": "How do I choose an analyzer for these assays?",
+        "a": "MAGLUMI CLIA menu assays run on MAGLUMI analyzers; ask LabWell which assays are supported by a specific model."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Discuss your laboratory needs",
+    "text": "LabWell is the official distributor of Snibe and Bio-Rad in Ukraine. Send an inquiry and we will help you choose a solution.",
+    "messagePrefill": "I am interested in MAGLUMI infectious disease assays"
+  }
+}

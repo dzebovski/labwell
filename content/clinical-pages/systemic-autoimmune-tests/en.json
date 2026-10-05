@@ -1,0 +1,73 @@
+{
+  "slug": "systemic-autoimmune-tests",
+  "url": "/clinical-directions/autoimmune-diseases/systemic-autoimmune-tests",
+  "kind": "clinical",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "BioPlex 2200 ANA Screen | LabWell",
+    "description": "Explore the Bio-Rad ANA Screen panel for BioPlex 2200, review the manufacturer-listed analytes, and contact LabWell about a laboratory solution."
+  },
+  "hero": {
+    "breadcrumbs": [
+      "Home",
+      "Clinical directions",
+      "Autoimmune diseases",
+      "ANA Screen panel for BioPlex 2200"
+    ],
+    "eyebrow": "Clinical area · multiplex panel",
+    "h1": "ANA Screen panel for BioPlex 2200",
+    "lead": "Bio-Rad lists the autoantibodies included in its ANA Screen panel for BioPlex 2200. Review the panel and its instrument here."
+  },
+  "tests": {
+    "show": true,
+    "h2": "ANA Screen panel composition",
+    "kind": "manufacturer-panels",
+    "items": [
+      "ANA Screen: dsDNA, Chromatin, Ribosomal Protein, SS-A (52 and 60), SS-B, Sm, Sm/RNP, RNP (A and 68), Scl-70, Jo-1, Centromere B"
+    ],
+    "sourceUrl": "https://www.bio-rad.com/webroot/web/pdf/cdg/literature/T169_dg110562_bioplex.pdf"
+  },
+  "equipment": {
+    "show": true,
+    "h2": "Equipment",
+    "text": "Bio-Rad identifies the BioPlex 2200 system for these panels.",
+    "sourceUrl": "https://www.bio-rad.com/en-uk/product/bioplex-2200-system?ID=179032f7-5b80-4a4d-a5c9-9218a62c6eb3",
+    "items": [
+      {
+        "title": "BioPlex 2200 System",
+        "href": "/products/bioplex-2200-system"
+      }
+    ]
+  },
+  "qc": {
+    "show": false
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Questions and answers",
+    "items": [
+      {
+        "q": "What is included in the ANA Screen panel?",
+        "a": "The panel contents above follow the Bio-Rad manufacturer material."
+      },
+      {
+        "q": "Which instrument is used for this panel?",
+        "a": "Bio-Rad associates this panel with the BioPlex 2200 system; follow the instrument link to learn more."
+      },
+      {
+        "q": "How can I discuss a solution for my laboratory?",
+        "a": "Send an inquiry to LabWell using the form on this page."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Discuss your laboratory needs",
+    "text": "LabWell is the official distributor of Snibe and Bio-Rad in Ukraine. Send an inquiry and we will help you choose a solution.",
+    "messagePrefill": "I am interested in the BioPlex 2200 ANA Screen panel"
+  }
+}

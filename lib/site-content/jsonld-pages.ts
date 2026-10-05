@@ -3,6 +3,7 @@
  * Reuses the breadcrumb and FAQ builders of the product page.
  */
 import { breadcrumbListLd, faqPageLd } from "./jsonld.ts";
+import { distributorOffer } from "./jsonld-site.ts";
 import type { GroupPageModel } from "./group-model.ts";
 import type { TestMenuPageModel } from "./menu-model.ts";
 import type { OverviewPageModel } from "./overview-model.ts";
@@ -39,6 +40,7 @@ export function buildGroupJsonLd(input: { page: GroupPageModel; locale: Locale; 
           url: `${url}#${item.anchor}`,
           brand: { "@type": "Brand", name: page.brand },
           manufacturer: { "@type": "Organization", name: page.brand },
+          offers: distributorOffer(siteUrl, locale),
           ...(item.imageSrc ? { image: absolute(siteUrl, item.imageSrc) } : {}),
         },
       })),
@@ -93,6 +95,7 @@ export function buildOverviewJsonLd(input: { page: OverviewPageModel; locale: Lo
           ...(pageUrl(siteUrl, model.href) ? { url: pageUrl(siteUrl, model.href) } : {}),
           brand: { "@type": "Brand", name: page.brand },
           manufacturer: { "@type": "Organization", name: page.brand },
+          offers: distributorOffer(siteUrl, locale),
           ...(model.imageSrc ? { image: absolute(siteUrl, model.imageSrc) } : {}),
         },
       })),

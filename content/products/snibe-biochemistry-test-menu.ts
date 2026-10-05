@@ -17,8 +17,8 @@ export default defineProduct({
     uk: "Меню біохімічних тестів Snibe: 114 тестів",
   },
   description: {
-    en: "Snibe biochemistry test menu: 114 tests in 13 groups, searchable by assay name. Ask LabWell about the availability of individual tests in Ukraine.",
-    uk: "Меню біохімічних тестів Snibe: 114 тестів у 13 групах із пошуком за назвою. Доступність окремих тестів в Україні уточнюйте в менеджера LabWell.",
+    en: "Snibe biochemistry test menu: 114 tests in 13 groups with search by assay name. Explore clinical chemistry and electrolyte assays with LabWell in Ukraine.",
+    uk: "Меню біохімічних тестів Snibe: 114 тестів у 13 групах із пошуком за назвою. Перегляньте біохімічні та електролітні дослідження з LabWell в Україні.",
   },
   sourceUrl: "https://www.snibe.com/en/product/biochemistry_menu/",
   catalog: { group: "reagents" },

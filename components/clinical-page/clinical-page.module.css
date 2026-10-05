@@ -1,0 +1,61 @@
+/* Template K: the same restrained clinical visual language as T/G/C pages. */
+.steps {
+  display: grid;
+  align-self: stretch;
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-panel);
+  background: linear-gradient(145deg, #f1f8fc, #fff 72%);
+}
+.step {
+  display: grid;
+  grid-template-columns: 2rem 1fr auto;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 3.75rem;
+  padding: 0.625rem 0.75rem;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 650;
+  border-radius: 0.65rem;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+.step + .step { border-top: 1px solid var(--color-border); }
+.step:hover, .step:focus-visible { background: #e7f4fc; color: var(--color-brand-700); }
+.stepNumber { color: var(--color-brand-700); font-size: 0.75rem; font-weight: 750; letter-spacing: 0.08em; }
+.testCard { padding: clamp(1.25rem, 3vw, 2rem); }
+.testGroup + .testGroup { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--color-border); }
+.groupHeader { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.5rem 1rem; margin-bottom: 1.25rem; }
+.groupHeader h3 { margin: 0; color: var(--color-text-primary); font-size: 1.25rem; line-height: 1.25; }
+.groupHeader span, .panelCount { color: var(--color-text-secondary); font-size: 0.875rem; }
+.testGrid, .panelGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.625rem; margin: 0; padding: 0; list-style: none; }
+.testGrid li, .panelGrid li { display: flex; align-items: center; min-height: 2.875rem; padding: 0.6rem 0.85rem; border: 1px solid var(--color-border); border-radius: 0.55rem; background: #f7fafc; color: var(--color-text-primary); font-size: 0.875rem; overflow-wrap: anywhere; }
+.testGrid[data-expanded="false"] li:nth-child(n+9) { display: none; }
+.expandButton { display: inline-flex; margin-top: 1rem; padding: 0.45rem 0; border: 0; background: none; color: var(--color-brand-700); font: inherit; font-weight: 700; cursor: pointer; text-decoration: underline; text-underline-offset: 0.2rem; }
+.groupLink { display: inline-flex; margin-top: 1.25rem; color: var(--color-brand-700); font-weight: 700; }
+.panelCount { display: block; margin-bottom: 1.25rem; }
+.panelGrid { margin-bottom: 1.25rem; }
+.sourceLink { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--color-brand-700); font-size: 0.875rem; font-weight: 650; text-decoration: underline; text-underline-offset: 0.2rem; }
+.equipmentText { max-width: 66ch; margin: 0 0 1.5rem; color: var(--color-text-secondary); line-height: 1.65; }
+.equipmentGrid { display: grid; gap: 1rem; grid-template-columns: repeat(1, minmax(0, 1fr)); margin: 0; padding: 0; list-style: none; }
+.equipmentCard { overflow: hidden; transition: border-color 160ms ease, transform 160ms ease; }
+.equipmentCard:hover { border-color: var(--color-brand-700); transform: translateY(-2px); }
+.equipmentLink { display: grid; grid-template-columns: 5rem minmax(0, 1fr) auto; align-items: center; gap: 1rem; min-height: 6.25rem; padding: 0.75rem; color: var(--color-text-primary); text-decoration: none; }
+.equipmentLink strong { font-size: 1rem; line-height: 1.35; }
+.equipmentVisual { position: relative; display: grid; place-items: center; width: 5rem; height: 4.75rem; overflow: hidden; border-radius: 0.5rem; background: #e7f2fa; }
+.equipmentPhoto { object-fit: contain; }
+.equipmentMonogram { color: var(--color-brand-700); font-size: 2rem; font-weight: 800; opacity: 0.45; }
+.qcCard { padding: 1.25rem; }
+@media (min-width: 48rem) {
+  .testGrid, .panelGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .testGrid[data-expanded="false"] li:nth-child(n+9) { display: flex; }
+  .testGrid[data-expanded="false"] li:nth-child(n+13) { display: none; }
+  .expandButton[data-desktop-visible="false"] { display: none; }
+  .equipmentGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .equipmentLink { grid-template-columns: 1fr auto; align-content: start; }
+  .equipmentVisual { grid-column: 1 / -1; width: 100%; height: 9rem; }
+}
+@media (min-width: 75rem) {
+  .testGrid, .panelGrid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}

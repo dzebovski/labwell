@@ -1,0 +1,82 @@
+{
+  "slug": "maglumi-cardiac-markers",
+  "url": "/clinical-directions/cardiology/maglumi-cardiac-markers",
+  "kind": "clinical",
+  "brand": "Snibe",
+  "seo": {
+    "title": "Кардіомаркери MAGLUMI | LabWell",
+    "description": "Кардіомаркери з меню CLIA MAGLUMI від Snibe: назви тестів групи, посилання на повне меню та консультація LabWell про серії аналізаторів MAGLUMI."
+  },
+  "hero": {
+    "breadcrumbs": [
+      "Головна",
+      "Клінічні напрямки",
+      "Кардіологія",
+      "Кардіомаркери в меню CLIA MAGLUMI"
+    ],
+    "eyebrow": "Клінічний напрям · CLIA",
+    "h1": "Кардіомаркери в меню CLIA MAGLUMI",
+    "lead": "Група «Кардіологічні маркери» в меню CLIA MAGLUMI дає лабораторії перелік параметрів Snibe й перехід до повного меню тестів."
+  },
+  "tests": {
+    "show": true,
+    "h2": "Тести групи «Кардіологічні маркери»",
+    "kind": "menu-groups",
+    "groups": [
+      {
+        "menuSlug": "snibe-clia-test-menu",
+        "groupId": "cardiac"
+      }
+    ],
+    "menuLink": {
+      "label": "Усе меню CLIA-тестів MAGLUMI",
+      "href": "/test-menus/snibe-clia-test-menu#group-cardiac"
+    }
+  },
+  "equipment": {
+    "show": true,
+    "h2": "Обладнання MAGLUMI",
+    "text": "Тести меню CLIA MAGLUMI виконують на аналізаторах MAGLUMI; перелік тестів для конкретної моделі уточнює менеджер.",
+    "items": [
+      {
+        "title": "MAGLUMI X — огляд",
+        "href": "/products/maglumi"
+      },
+      {
+        "title": "MAGLUMI M Series",
+        "href": "/products/maglumi-m-series"
+      }
+    ]
+  },
+  "qc": {
+    "show": false
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Питання й відповіді",
+    "items": [
+      {
+        "q": "Які тести входять до групи кардіомаркерів MAGLUMI?",
+        "a": "На сторінці наведено назви тестів із відповідної групи меню CLIA MAGLUMI від Snibe."
+      },
+      {
+        "q": "Де переглянути повне меню CLIA-тестів?",
+        "a": "Посилання в блоці тестів веде до повного меню Snibe з відкритою потрібною групою."
+      },
+      {
+        "q": "Як підібрати аналізатор для цих тестів?",
+        "a": "Тести меню CLIA MAGLUMI виконують на аналізаторах MAGLUMI; перелік тестів для конкретної моделі уточнює менеджер LabWell."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Обговоримо вашу лабораторну задачу",
+    "text": "LabWell — офіційний дистриб’ютор Snibe і Bio-Rad в Україні. Залиште запит — допоможемо підібрати рішення.",
+    "messagePrefill": "Цікавлять кардіомаркери MAGLUMI"
+  }
+}

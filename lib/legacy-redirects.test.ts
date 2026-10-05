@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-import { getProduct } from "./catalog.ts";
+import { getProduct, getRouteTarget } from "./catalog.ts";
 import { legacyRedirectRules, legacyRedirects } from "./legacy-redirects.ts";
 import { listPublicPaths } from "./metadata-routes.ts";
 import { loadGroup, loadTests, productsRouteKind } from "./site-content/load.ts";
@@ -25,6 +25,8 @@ const expected: Record<string, string> = {
   "/products/ih-com": "/products/bio-rad-software#ih-com",
   "/products/maglumi-clia-test-menu-278-parameters": "/test-menus/snibe-clia-test-menu",
   "/products/biochemistry-test-menu": "/test-menus/snibe-biochemistry-test-menu",
+  "/clinical-directions/blood-banks/gel-tube-testing": "/products/immunohematology-reagents",
+  "/clinical-directions/cardiology/cardiac-advance-qc": "/clinical-directions/cardiology",
 };
 
 test("the redirect table matches section 5 of the plan", () => {
@@ -40,12 +42,17 @@ test("every target is a built page and every anchor exists on it", () => {
   for (const destination of Object.values(legacyRedirects)) {
     const [path, anchor] = destination.split("#");
     const [, section, slug] = path.split("/");
+    if (section === "clinical-directions") {
+      assert.ok(getRouteTarget(path), destination);
+      continue;
+    }
     if (section === "test-menus") {
       assert.ok(loadTests(slug).groups.length > 0, destination);
       assert.equal(anchor, undefined, destination);
       continue;
     }
     assert.equal(productsRouteKind(slug), "group", destination);
+    if (anchor === undefined) continue;
     const items = loadGroup(slug, "uk").G3_items;
     assert.ok(items.show, destination);
     const anchors = items.items.map((item) => item.anchor);
@@ -66,7 +73,7 @@ test("rules are permanent and cover both locales", () => {
   assert.equal(rules.length, Object.keys(legacyRedirects).length);
   for (const rule of rules) {
     assert.equal(rule.permanent, true);
-    assert.match(rule.source, /^\/:locale\(uk\|en\)\/products\//);
-    assert.match(rule.destination, /^\/:locale\/(products|test-menus)\//);
+    assert.match(rule.source, /^\/:locale\(uk\|en\)\/(products|clinical-directions)\//);
+    assert.match(rule.destination, /^\/:locale\/(products|test-menus|clinical-directions)\//);
   }
 });

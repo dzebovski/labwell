@@ -47,8 +47,6 @@ import maglumiInfectionPanel from "./clinical/maglumi-infection-panel.ts";
 import systemicAutoimmuneTests from "./clinical/systemic-autoimmune-tests.ts";
 import vasculitis from "./clinical/vasculitis.ts";
 import maglumiCardiacMarkers from "./clinical/maglumi-cardiac-markers.ts";
-import cardiacAdvanceQc from "./clinical/cardiac-advance-qc.ts";
-import gelTubeTesting from "./clinical/gel-tube-testing.ts";
 import bioRad from "./brand-pages/bio-rad.ts";
 import bioRadDiabetes from "./brand-pages/bio-rad-diabetes.ts";
 import bioRadAutoimmunity from "./brand-pages/bio-rad-autoimmunity.ts";
@@ -109,8 +107,6 @@ export const clinicalPages = [
   systemicAutoimmuneTests,
   vasculitis,
   maglumiCardiacMarkers,
-  cardiacAdvanceQc,
-  gelTubeTesting,
 ] as const;
 
 export const brandPages = [

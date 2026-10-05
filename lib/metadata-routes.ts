@@ -19,6 +19,24 @@ const staticPaths = [
 /** Non-public routes that production crawlers must not visit. */
 export const servicePaths = ["/design"] as const;
 
+/**
+ * AI crawlers and assistants that may read the site (plan, decision 9): training, search and
+ * "user asked about this page" agents. A crawler that has its own group ignores the `*` group, so
+ * the group below repeats the service-path rule.
+ */
+export const aiCrawlers = [
+  "GPTBot",
+  "OAI-SearchBot",
+  "ChatGPT-User",
+  "ClaudeBot",
+  "Claude-User",
+  "Claude-SearchBot",
+  "PerplexityBot",
+  "Perplexity-User",
+  "Google-Extended",
+  "Applebot-Extended",
+] as const;
+
 function joinRouteParams(
   prefix: string,
   names: readonly string[],
@@ -103,7 +121,10 @@ export function buildRobots(siteUrl: string): MetadataRoute.Robots {
   return {
     rules: isTestHosting
       ? { userAgent: "*", disallow: "/" }
-      : { userAgent: "*", allow: "/", disallow: [...servicePaths] },
+      : [
+          { userAgent: "*", allow: "/", disallow: [...servicePaths] },
+          { userAgent: [...aiCrawlers], allow: "/", disallow: [...servicePaths] },
+        ],
     sitemap: absoluteUrl(origin, "/sitemap.xml"),
   };
 }

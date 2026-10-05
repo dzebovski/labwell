@@ -1,0 +1,82 @@
+{
+  "slug": "maglumi-infection-panel",
+  "url": "/clinical-directions/infectious-diseases/maglumi-infection-panel",
+  "kind": "clinical",
+  "brand": "Snibe",
+  "seo": {
+    "title": "Інфекційні тести MAGLUMI | LabWell",
+    "description": "Інфекційні тести в меню CLIA MAGLUMI від Snibe: перелік групи, перехід до повного меню та консультація LabWell про лабораторне обладнання MAGLUMI."
+  },
+  "hero": {
+    "breadcrumbs": [
+      "Головна",
+      "Клінічні напрямки",
+      "Інфекційні захворювання",
+      "Тести для інфекційних досліджень — MAGLUMI"
+    ],
+    "eyebrow": "Клінічний напрям · CLIA",
+    "h1": "Тести для інфекційних досліджень — MAGLUMI",
+    "lead": "Група «Інфекційні захворювання» в меню CLIA MAGLUMI зводить тести Snibe для лабораторних інфекційних досліджень в один перелік."
+  },
+  "tests": {
+    "show": true,
+    "h2": "Тести групи «Інфекційні захворювання»",
+    "kind": "menu-groups",
+    "groups": [
+      {
+        "menuSlug": "snibe-clia-test-menu",
+        "groupId": "infectious-disease"
+      }
+    ],
+    "menuLink": {
+      "label": "Усе меню CLIA-тестів MAGLUMI",
+      "href": "/test-menus/snibe-clia-test-menu#group-infectious-disease"
+    }
+  },
+  "equipment": {
+    "show": true,
+    "h2": "Обладнання MAGLUMI",
+    "text": "Тести меню CLIA MAGLUMI виконують на аналізаторах MAGLUMI; перелік тестів для конкретної моделі уточнює менеджер.",
+    "items": [
+      {
+        "title": "MAGLUMI X — огляд",
+        "href": "/products/maglumi"
+      },
+      {
+        "title": "MAGLUMI M Series",
+        "href": "/products/maglumi-m-series"
+      }
+    ]
+  },
+  "qc": {
+    "show": false
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Питання й відповіді",
+    "items": [
+      {
+        "q": "Які тести входять до групи інфекційних тестів MAGLUMI?",
+        "a": "На сторінці наведено назви тестів із відповідної групи меню CLIA MAGLUMI від Snibe."
+      },
+      {
+        "q": "Де переглянути повне меню CLIA-тестів?",
+        "a": "Посилання в блоці тестів веде до повного меню Snibe з відкритою потрібною групою."
+      },
+      {
+        "q": "Як підібрати аналізатор для цих тестів?",
+        "a": "Тести меню CLIA MAGLUMI виконують на аналізаторах MAGLUMI; перелік тестів для конкретної моделі уточнює менеджер LabWell."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Обговоримо вашу лабораторну задачу",
+    "text": "LabWell — офіційний дистриб’ютор Snibe і Bio-Rad в Україні. Залиште запит — допоможемо підібрати рішення.",
+    "messagePrefill": "Цікавлять тести для інфекційних досліджень MAGLUMI"
+  }
+}

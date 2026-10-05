@@ -147,7 +147,7 @@
         "packSize": "1 × 4 mL"
       }
     ],
-    "footnote": "Ask a LabWell manager about the range supplied in Ukraine.",
+    "footnote": "Items are listed from the Bio-Rad catalog.",
     "cta": {
       "label": "Request product information",
       "href": "#contact"
@@ -215,7 +215,7 @@
       },
       {
         "q": "Who supplies Liquichek Serum Indices in Ukraine?",
-        "a": "LabWell is an official Bio-Rad distributor in Ukraine. It helps select the most effective solution for your needs and provides supply and application support; ask a manager about the range of individual products."
+        "a": "LabWell is an official Bio-Rad distributor in Ukraine. It helps select the most effective solution for your needs and provides supply and application support."
       }
     ]
   },
@@ -226,7 +226,7 @@
   "T12_contact": {
     "show": true,
     "h2": "Request advice on Liquichek Serum Indices",
-    "text": "Share the material type and format you need, and a manager will confirm the ordering options.",
+    "text": "LabWell will help select the material type and format you need.",
     "messagePrefill": "I am interested in Liquichek Serum Indices. "
   }
 }

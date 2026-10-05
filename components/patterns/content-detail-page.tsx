@@ -7,6 +7,7 @@ import { getDictionary } from "@/i18n/dictionaries";
 import { crumbLabels } from "@/components/patterns/crumb-labels";
 import { getPageTrail } from "@/lib/breadcrumbs";
 import type { ContentPage } from "@/lib/catalog";
+import { showEditorialContent } from "@/lib/editorial";
 
 type ContentDetailPageProps = {
   locale: Locale;
@@ -16,6 +17,7 @@ type ContentDetailPageProps = {
 export async function ContentDetailPage({ locale, page }: ContentDetailPageProps) {
   const dictionary = await getDictionary(locale);
   const trail = getPageTrail(page.path, locale)!;
+  const editorial = showEditorialContent();
 
   return (
     <main className={styles.pageMain}>
@@ -28,18 +30,20 @@ export async function ContentDetailPage({ locale, page }: ContentDetailPageProps
             <h1 className={styles.contentDetailTitle}>{page.navLabel[locale]}</h1>
             {page.itemType ? <p className={styles.contentDetailType}>{page.itemType[locale]}</p> : null}
             <p className={styles.contentDetailDescription}>{page.description[locale]}</p>
-            <a
-              href={page.sourceUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.detailSourceLink}
-            >
-              {dictionary.contentPage.viewSource}
-              <ArrowUpRight size={17} aria-hidden="true" />
-            </a>
+            {editorial ? (
+              <a
+                href={page.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.detailSourceLink}
+              >
+                {dictionary.contentPage.viewSource}
+                <ArrowUpRight size={17} aria-hidden="true" />
+              </a>
+            ) : null}
           </div>
 
-          {page.todoNote ? (
+          {editorial && page.todoNote ? (
             <aside className={styles.editorialNote}>
               <span className={styles.editorialNoteIcon} aria-hidden="true">
                 <ClipboardCheck size={19} />

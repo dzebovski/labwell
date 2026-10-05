@@ -1,0 +1,82 @@
+{
+  "slug": "metabolic-panel",
+  "url": "/clinical-directions/diabetes-and-metabolism/metabolic-panel",
+  "kind": "clinical",
+  "brand": "Snibe",
+  "seo": {
+    "title": "Snibe Metabolism Tests | LabWell",
+    "description": "Explore the Diabetes and Lipids groups in the Snibe biochemistry menu, open the full assay list, and browse LabWell biochemistry equipment options."
+  },
+  "hero": {
+    "breadcrumbs": [
+      "Home",
+      "Clinical directions",
+      "Diabetes and metabolism",
+      "Tests for carbohydrate and lipid metabolism"
+    ],
+    "eyebrow": "Clinical area · biochemistry",
+    "h1": "Tests for carbohydrate and lipid metabolism",
+    "lead": "This selection combines the Diabetes and Lipids groups in the Snibe biochemistry test menu. Explore both groups and the biochemistry equipment category."
+  },
+  "tests": {
+    "show": true,
+    "h2": "Carbohydrate and lipid metabolism assays",
+    "kind": "menu-groups",
+    "groups": [
+      {
+        "menuSlug": "snibe-biochemistry-test-menu",
+        "groupId": "diabetes"
+      },
+      {
+        "menuSlug": "snibe-biochemistry-test-menu",
+        "groupId": "lipids"
+      }
+    ],
+    "menuLink": {
+      "label": "Full Snibe biochemistry test menu",
+      "href": "/test-menus/snibe-biochemistry-test-menu#group-diabetes"
+    }
+  },
+  "equipment": {
+    "show": true,
+    "h2": "Biochemistry equipment",
+    "text": "Explore equipment for biochemistry testing in the corresponding LabWell catalog category.",
+    "items": [
+      {
+        "title": "Biochemistry and electrolytes",
+        "href": "/products/equipment/biochemistry"
+      }
+    ]
+  },
+  "qc": {
+    "show": false
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Questions and answers",
+    "items": [
+      {
+        "q": "Which test groups are included?",
+        "a": "This selection brings together the Diabetes and Lipids groups from the Snibe biochemistry menu."
+      },
+      {
+        "q": "Where can I see the complete biochemistry menu?",
+        "a": "Follow the test menu link and open either group to browse its assays."
+      },
+      {
+        "q": "Where can I find biochemistry equipment?",
+        "a": "Visit the Biochemistry and electrolytes category in the LabWell catalog."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Discuss your laboratory needs",
+    "text": "LabWell is the official distributor of Snibe and Bio-Rad in Ukraine. Send an inquiry and we will help you choose a solution.",
+    "messagePrefill": "I am interested in biochemistry assays for carbohydrate and lipid metabolism"
+  }
+}

@@ -3,7 +3,7 @@
     "eyebrow": "LabWell",
     "h2": "How LabWell supports your laboratory",
     "link": {
-      "label": "Service and support",
+      "label": "Services and maintenance",
       "href": "/services"
     },
     "items": [
@@ -52,7 +52,7 @@
     ]
   },
   "contact": {
-    "phone": "[PHONE]",
+    "phone": "+38 (044) 205-58-20",
     "email": "[EMAIL]",
     "form": {
       "fields": [

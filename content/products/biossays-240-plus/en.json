@@ -98,9 +98,9 @@
   "T8_related": {
     "show": true,
     "testMenu": {
-      "h2": "Which tests can Biossays 240 Plus perform?",
+      "h2": "Snibe biochemistry test menu",
       "title": "Snibe biochemistry test menu",
-      "text": "The menu contains 13 test groups. Ask a LabWell manager about the availability of individual tests in Ukraine.",
+      "text": "The Snibe menu contains 114 biochemistry tests in 13 groups. Ask a manager which tests apply to a specific model.",
       "cta": {
         "label": "View the test menu",
         "href": "/test-menus/snibe-biochemistry-test-menu"

@@ -1,0 +1,79 @@
+{
+  "slug": "bioplex-2200-infection-panels",
+  "url": "/clinical-directions/infectious-diseases/bioplex-2200-infection-panels",
+  "kind": "clinical",
+  "brand": "Bio-Rad",
+  "seo": {
+    "title": "Інфекційні панелі BioPlex 2200 | LabWell",
+    "description": "Інфекційні панелі BioPlex 2200 від Bio-Rad: перелік панелей виробника, посилання на мультиплексну систему та звернення до LabWell в Україні."
+  },
+  "hero": {
+    "breadcrumbs": [
+      "Головна",
+      "Клінічні напрямки",
+      "Інфекційні захворювання",
+      "Інфекційні панелі BioPlex 2200"
+    ],
+    "eyebrow": "Клінічний напрям · мультиплексні панелі",
+    "h1": "Інфекційні панелі BioPlex 2200",
+    "lead": "Bio-Rad перелічує інфекційні панелі для системи BioPlex 2200. Ця сторінка допомагає лабораторії переглянути панелі виробника й перейти до системи."
+  },
+  "tests": {
+    "show": true,
+    "h2": "Інфекційні панелі BioPlex 2200",
+    "kind": "manufacturer-panels",
+    "items": [
+      "HIV Ag-Ab",
+      "EBV IgG and IgM",
+      "Syphilis Total & RPR",
+      "ToRC IgG and IgM",
+      "MMRV IgG",
+      "MMV IgM",
+      "HSV-1 & HSV-2 IgG"
+    ],
+    "sourceUrl": "https://www.bio-rad.com/webroot/web/pdf/cdg/solutions/Clinical%20Immunology/doc_t-167_dg16-0646.pdf"
+  },
+  "equipment": {
+    "show": true,
+    "h2": "Обладнання",
+    "text": "Bio-Rad зазначає систему BioPlex 2200 для цих панелей.",
+    "sourceUrl": "https://www.bio-rad.com/en-uk/product/bioplex-2200-system?ID=179032f7-5b80-4a4d-a5c9-9218a62c6eb3",
+    "items": [
+      {
+        "title": "BioPlex 2200 System",
+        "href": "/products/bioplex-2200-system"
+      }
+    ]
+  },
+  "qc": {
+    "show": false
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Питання й відповіді",
+    "items": [
+      {
+        "q": "Що входить до інфекційних панелей BioPlex 2200?",
+        "a": "Склад панелі наведено за матеріалами Bio-Rad у блоці вище."
+      },
+      {
+        "q": "На якій системі виконують цю панель?",
+        "a": "Bio-Rad пов’язує цю панель із системою BioPlex 2200; перейдіть до сторінки приладу для опису системи."
+      },
+      {
+        "q": "Як обговорити рішення для лабораторії?",
+        "a": "Надішліть запит LabWell через форму на цій сторінці."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Обговоримо вашу лабораторну задачу",
+    "text": "LabWell — офіційний дистриб’ютор Snibe і Bio-Rad в Україні. Залиште запит — допоможемо підібрати рішення.",
+    "messagePrefill": "Цікавлять інфекційні панелі BioPlex 2200"
+  }
+}

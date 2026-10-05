@@ -30,6 +30,8 @@ export const legacyRedirects: Readonly<Record<string, string>> = {
   ),
   "/products/maglumi-clia-test-menu-278-parameters": "/test-menus/snibe-clia-test-menu",
   "/products/biochemistry-test-menu": "/test-menus/snibe-biochemistry-test-menu",
+  "/clinical-directions/blood-banks/gel-tube-testing": "/products/immunohematology-reagents",
+  "/clinical-directions/cardiology/cardiac-advance-qc": "/clinical-directions/cardiology",
 };
 
 /** Redirect rules for `next.config.ts`: one per old address, for both locales. */

@@ -1,4 +1,5 @@
 /** schema.org structured data for a product page: Product, BreadcrumbList, FAQPage. */
+import { distributorOffer } from "./jsonld-site.ts";
 import type { ProductPageModel } from "./model.ts";
 
 type Locale = "uk" | "en";
@@ -59,6 +60,7 @@ export function buildJsonLd(input: {
     inLanguage: locale,
     brand: { "@type": "Brand", name: page.brand },
     manufacturer: { "@type": "Organization", name: page.brand },
+    offers: distributorOffer(siteUrl, locale),
     ...(category ? { category } : {}),
     ...(page.hero.imageSrc ? { image: absolute(page.hero.imageSrc) } : {}),
   };

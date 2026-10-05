@@ -21,15 +21,4 @@ export default defineProduct({
   },
   sourceUrl: "https://www.bio-rad.com/applications-technologies/ion-exchange-hplc-systems-d-10?ID=PZ8US5MKSK1O",
   catalog: { group: "equipment", section: "hba1c" },
-  clinical: [
-    {
-      direction: "diabetes-and-metabolism",
-      section: "hba1c-analyzers",
-      // Editorial note from the source sheet; "row N" refers to that sheet.
-      note: {
-        en: "Same model as row 10; consider one shared Labwell product page.",
-        uk: "Та сама модель, що й у рядку 10; розгляньте одну спільну сторінку продукту Labwell.",
-      },
-    },
-  ],
 });

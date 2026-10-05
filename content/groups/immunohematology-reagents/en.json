@@ -140,7 +140,7 @@
               "packSize": "100 tests, 6 × 5 mL"
             }
           ],
-          "footnote": "Selected items from the official Bio-Rad catalog are shown. Ask a manager about the range available in Ukraine."
+          "footnote": "Selected items from the official Bio-Rad catalog are shown."
         },
         "cta": {
           "label": "Ask about Gel Testing",
@@ -219,7 +219,7 @@
               "packSize": "5 mL"
             }
           ],
-          "footnote": "Selected items from the official Bio-Rad catalog are shown. Ask a manager about the range available in Ukraine."
+          "footnote": "Selected items from the official Bio-Rad catalog are shown."
         },
         "cta": {
           "label": "Ask about Tube Testing",
@@ -288,7 +288,7 @@
               "packSize": "10 mL"
             }
           ],
-          "footnote": "This representative list overlaps with Gel Testing and Tube Testing. Ask a manager about the range available in Ukraine."
+          "footnote": "This representative list overlaps with Gel Testing and Tube Testing."
         },
         "cta": {
           "label": "Ask about IH-System Reagents",
@@ -315,7 +315,7 @@
       },
       {
         "q": "Does the page list the complete Bio-Rad reagent range?",
-        "a": "No. The page lists selected or representative catalog items; ask a LabWell manager about the range available in Ukraine."
+        "a": "No. The page lists selected or representative catalog items."
       },
       {
         "q": "Who supplies Bio-Rad immunohematology reagents in Ukraine?",

@@ -1,0 +1,138 @@
+.footer {
+  width: min(100% - (var(--container-gutter) * 2), var(--container-max));
+  margin: var(--space-8) auto var(--space-4);
+  padding: var(--space-10) var(--space-6) var(--space-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.logoLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target);
+}
+
+.logo {
+  width: 8.5rem;
+  height: auto;
+}
+
+.tagline {
+  max-width: 24rem;
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--text-small-size);
+  line-height: var(--text-small-line);
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6) var(--space-5);
+}
+
+.heading {
+  margin: 0 0 var(--space-3);
+  font-size: var(--text-label-size);
+  line-height: var(--text-label-line);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--text-label-tracking);
+  text-transform: uppercase;
+}
+
+.heading,
+.heading a {
+  color: var(--color-text-primary);
+}
+
+/* A 24 px-high target without moving the heading: padding grows the link, the negative margin takes it back. */
+.heading a {
+  display: inline-block;
+  padding-block: 0.5rem;
+  margin-block: -0.5rem;
+  text-decoration: none;
+}
+
+.heading a:hover {
+  color: var(--color-brand-700);
+  text-decoration: underline;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  /* Touch target on phones; on desktop the rows are tighter, see below. */
+  min-height: var(--touch-target);
+  color: var(--color-text-secondary);
+  font-size: var(--text-small-size);
+  line-height: var(--text-small-line);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--color-brand-700);
+  text-decoration: underline;
+}
+
+.bottom {
+  margin-top: var(--space-8);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: var(--text-meta-size);
+  line-height: var(--text-meta-line);
+}
+
+.bottom p {
+  margin: 0;
+}
+
+@media (min-width: 64rem) {
+  .footer {
+    padding: var(--space-12) var(--space-10) var(--space-8);
+  }
+
+  .grid {
+    grid-template-columns: minmax(14rem, 1fr) minmax(0, 3fr);
+    gap: var(--space-12);
+  }
+
+  .columns {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .link {
+    min-height: 2rem;
+  }
+}

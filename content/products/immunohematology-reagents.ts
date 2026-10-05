@@ -21,4 +21,5 @@ export default defineProduct({
   },
   sourceUrl: "https://www.bio-rad.com/category/instruments-for-id-system?ID=LO2Q1IFCN",
   catalog: { group: "reagents" },
+  clinical: [{ direction: "blood-banks" }],
 });

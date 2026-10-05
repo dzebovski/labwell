@@ -44,9 +44,20 @@ test("blocks the test hosting origin from indexing", () => {
   });
 });
 
-test("allows production crawling except for service routes", () => {
-  assert.deepEqual(buildRobots(productionUrl), {
-    rules: { userAgent: "*", allow: "/", disallow: ["/design"] },
-    sitemap: `${productionUrl}/sitemap.xml`,
-  });
+test("allows production crawling except for service routes, AI crawlers included", () => {
+  const robots = buildRobots(productionUrl);
+  assert.equal(robots.sitemap, `${productionUrl}/sitemap.xml`);
+
+  const rules = Array.isArray(robots.rules) ? robots.rules : [robots.rules];
+  assert.deepEqual(rules[0], { userAgent: "*", allow: "/", disallow: ["/design"] });
+
+  // No group blocks the site; every named AI crawler has its own group that allows "/" and keeps /design closed.
+  assert.ok(rules.every((rule) => !([] as string[]).concat(rule.disallow ?? []).includes("/")));
+  const named = rules.flatMap((rule) => ([] as string[]).concat(rule.userAgent ?? []));
+  for (const bot of ["GPTBot", "OAI-SearchBot", "ClaudeBot", "PerplexityBot", "Google-Extended"]) {
+    assert.ok(named.includes(bot), bot);
+  }
+  const aiRule = rules.find((rule) => ([] as string[]).concat(rule.userAgent ?? []).includes("GPTBot"));
+  assert.deepEqual(aiRule?.allow, "/");
+  assert.deepEqual(aiRule?.disallow, ["/design"]);
 });

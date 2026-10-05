@@ -1,0 +1,82 @@
+{
+  "slug": "maglumi-thyroid-panel",
+  "url": "/clinical-directions/thyroid-function/maglumi-thyroid-panel",
+  "kind": "clinical",
+  "brand": "Snibe",
+  "seo": {
+    "title": "Тиреоїдні тести MAGLUMI | LabWell",
+    "description": "Тести групи «Щитоподібна залоза» в меню CLIA MAGLUMI: перелік параметрів Snibe, перехід до повного меню та консультація LabWell щодо обладнання."
+  },
+  "hero": {
+    "breadcrumbs": [
+      "Головна",
+      "Клінічні напрямки",
+      "Функція щитоподібної залози",
+      "Тести для оцінки функції щитоподібної залози — MAGLUMI"
+    ],
+    "eyebrow": "Клінічний напрям · CLIA",
+    "h1": "Тести для оцінки функції щитоподібної залози — MAGLUMI",
+    "lead": "Тести групи «Щитоподібна залоза» в меню CLIA MAGLUMI допомагають лабораторії знайти потрібні параметри й перейти до повного меню Snibe."
+  },
+  "tests": {
+    "show": true,
+    "h2": "Тести для функції щитоподібної залози",
+    "kind": "menu-groups",
+    "groups": [
+      {
+        "menuSlug": "snibe-clia-test-menu",
+        "groupId": "thyroid"
+      }
+    ],
+    "menuLink": {
+      "label": "Усе меню CLIA-тестів MAGLUMI",
+      "href": "/test-menus/snibe-clia-test-menu#group-thyroid"
+    }
+  },
+  "equipment": {
+    "show": true,
+    "h2": "Обладнання MAGLUMI",
+    "text": "Тести меню CLIA MAGLUMI виконують на аналізаторах MAGLUMI; перелік тестів для конкретної моделі уточнює менеджер.",
+    "items": [
+      {
+        "title": "MAGLUMI X — огляд",
+        "href": "/products/maglumi"
+      },
+      {
+        "title": "MAGLUMI M Series",
+        "href": "/products/maglumi-m-series"
+      }
+    ]
+  },
+  "qc": {
+    "show": false
+  },
+  "T10_faq": {
+    "show": true,
+    "h2": "Питання й відповіді",
+    "items": [
+      {
+        "q": "Які тести входять до групи тиреоїдних тестів MAGLUMI?",
+        "a": "На сторінці наведено назви тестів із відповідної групи меню CLIA MAGLUMI від Snibe."
+      },
+      {
+        "q": "Де переглянути повне меню CLIA-тестів?",
+        "a": "Посилання в блоці тестів веде до повного меню Snibe з відкритою потрібною групою."
+      },
+      {
+        "q": "Як підібрати аналізатор для цих тестів?",
+        "a": "Тести меню CLIA MAGLUMI виконують на аналізаторах MAGLUMI; перелік тестів для конкретної моделі уточнює менеджер LabWell."
+      }
+    ]
+  },
+  "T11_labwell": {
+    "show": true,
+    "use": "shared.labwell.items"
+  },
+  "T12_contact": {
+    "show": true,
+    "h2": "Обговоримо вашу лабораторну задачу",
+    "text": "LabWell — офіційний дистриб’ютор Snibe і Bio-Rad в Україні. Залиште запит — допоможемо підібрати рішення.",
+    "messagePrefill": "Цікавлять тести для оцінки функції щитоподібної залози"
+  }
+}
