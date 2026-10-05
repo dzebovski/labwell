@@ -1,0 +1,87 @@
+.lead {
+  max-width: 52rem;
+  margin-top: var(--space-6);
+}
+
+.service {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: var(--space-4);
+  padding: clamp(var(--space-5), 4vw, var(--space-8));
+  scroll-margin-top: var(--space-6);
+}
+
+.serviceIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  color: var(--color-brand-700);
+  background: var(--color-canvas);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+
+.serviceCopy {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.serviceCopy > div {
+  margin-bottom: 0;
+}
+
+.details {
+  display: grid;
+  gap: var(--space-6);
+  margin: 0;
+  padding: clamp(var(--space-5), 4vw, var(--space-8));
+}
+
+.details dt {
+  margin-bottom: var(--space-2);
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+.details dd {
+  margin: 0;
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.address {
+  margin: var(--space-2) 0 0;
+  font-style: normal;
+}
+
+.callToAction {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6) var(--space-10);
+  padding: clamp(var(--space-5), 4vw, 3rem);
+}
+
+.callToActionCopy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 45rem;
+}
+
+@media (min-width: 48rem) {
+  .details {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .service {
+    gap: var(--space-6);
+  }
+}

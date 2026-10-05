@@ -22,6 +22,12 @@ import {
   type HomeContent,
 } from "./schema-directions.ts";
 import {
+  contactsPageSchema,
+  servicesPageSchema,
+  type ContactsPageContent,
+  type ServicesPageContent,
+} from "./schema-static-pages.ts";
+import {
   groupSchema,
   overviewSchema,
   testMenuSchema,
@@ -232,6 +238,64 @@ export function loadHome(locale: ContentLocale): HomeContent {
   return cached(`home/${locale}/${contentRoot()}`, () =>
     readJson(path.join(contentRoot(), "home", `${locale}.json`), homeSchema),
   );
+}
+
+/** Text and structure of the services page: `content/pages/services/{locale}.json`. */
+export function loadServicesPage(locale: ContentLocale): ServicesPageContent {
+  return cached(`pages/services/${locale}/${contentRoot()}`, () =>
+    readJson(path.join(contentRoot(), "pages", "services", `${locale}.json`), servicesPageSchema),
+  );
+}
+
+/** Text and structure of the contacts page: `content/pages/contacts/{locale}.json`. */
+export function loadContactsPage(locale: ContentLocale): ContactsPageContent {
+  return cached(`pages/contacts/${locale}/${contentRoot()}`, () =>
+    readJson(path.join(contentRoot(), "pages", "contacts", `${locale}.json`), contactsPageSchema),
+  );
+}
+
+function assertLocaleKeysMatch(
+  section: "services" | "contacts",
+  a: unknown,
+  b: unknown,
+  file: string,
+  field = "",
+) {
+  if (Array.isArray(a) && Array.isArray(b)) {
+    for (let i = 0; i < Math.min(a.length, b.length); i++) {
+      assertLocaleKeysMatch(section, a[i], b[i], file, `${field}[${i}]`);
+    }
+    return;
+  }
+  if (!a || !b || typeof a !== "object" || typeof b !== "object" || Array.isArray(a) || Array.isArray(b)) return;
+  const aKeys = Object.keys(a);
+  const bKeys = Object.keys(b);
+  const mismatch = [...aKeys.filter((key) => !bKeys.includes(key)), ...bKeys.filter((key) => !aKeys.includes(key))][0];
+  if (mismatch) {
+    throw new SiteContentError(file, `locale key mismatch at ${field ? `${field}.` : ""}${mismatch}`);
+  }
+  for (const key of aKeys) {
+    assertLocaleKeysMatch(section, (a as Record<string, unknown>)[key], (b as Record<string, unknown>)[key], file, field ? `${field}.${key}` : key);
+  }
+}
+
+function pageAllLocales<T>(section: "services" | "contacts", loader: (locale: ContentLocale) => T): T[] {
+  const [uk, en] = contentLocales.map(loader);
+  assertLocaleKeysMatch(
+    section,
+    uk,
+    en,
+    path.join(contentRoot(), "pages", section, "en.json"),
+  );
+  return [uk, en];
+}
+
+export function loadServicesPageAllLocales(): ServicesPageContent[] {
+  return pageAllLocales("services", loadServicesPage);
+}
+
+export function loadContactsPageAllLocales(): ContactsPageContent[] {
+  return pageAllLocales("contacts", loadContactsPage);
 }
 
 /** Validates both locale files of a direction, or of the home page; throws on the first problem. */

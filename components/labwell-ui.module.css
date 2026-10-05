@@ -186,6 +186,7 @@
 .input {
   width: 100%;
   min-width: 0;
+  min-height: var(--touch-target);
   color: var(--color-text-primary);
   background: transparent;
   border: 0;
@@ -430,6 +431,7 @@
   display: flex;
   flex: 0 0 auto;
   align-items: center;
+  min-height: var(--touch-target);
   margin-right: auto;
 }
 
@@ -524,8 +526,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: var(--control-md);
-  height: var(--control-md);
+  width: var(--touch-target);
+  height: var(--touch-target);
   color: var(--color-text-secondary);
   background: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -558,6 +560,10 @@
 .headerSearch:hover .headerSearchTip,
 .headerSearch:focus-within .headerSearchTip {
   opacity: 1;
+}
+
+.headerCta {
+  min-height: var(--touch-target);
 }
 
 .headerCta:hover {
@@ -1094,7 +1100,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  height: var(--control-md);
+  height: var(--touch-target);
   padding: 0 0.625rem;
   color: var(--color-text-secondary);
   background: transparent;
@@ -1143,7 +1149,7 @@
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 0.6rem;
-  min-height: 2.5rem;
+  min-height: var(--touch-target);
   padding: 0.55rem 0.7rem;
   color: var(--color-text-secondary);
   background: transparent;
