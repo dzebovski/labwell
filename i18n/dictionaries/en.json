@@ -65,6 +65,9 @@
       "required": "Fill in this field",
       "phone": "Enter a valid phone number",
       "email": "Enter a valid email address",
+      "sending": "Sending…",
+      "sent": "Thank you! Your enquiry has been sent, and a LabWell specialist will contact you soon.",
+      "failed": "We could not send your enquiry. Please try again or call us.",
       "testMode": "The form is in test mode: your enquiry has not been sent. Please call us to discuss your needs."
     },
     "showHidden": "Show hidden levels",
@@ -164,10 +167,5 @@
     "brandsHeading": "Brands",
     "contactHeading": "Request a consultation",
     "heroPhotos": "Snibe and Bio-Rad analyzers"
-  },
-  "privacyPage": {
-    "title": "Privacy policy | LabWell",
-    "description": "LabWell privacy policy: how we handle the data you leave in the enquiry form on this website.",
-    "pending": "The privacy policy is being prepared and will appear on this page soon."
   }
 }

@@ -14,6 +14,7 @@ const staticPaths = [
   "/services",
   "/about",
   "/contacts",
+  "/privacy",
 ] as const;
 
 /** Non-public routes that production crawlers must not visit. */

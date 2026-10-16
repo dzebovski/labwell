@@ -32,7 +32,7 @@ export type ProductPageLabels = {
   groupFilter: string;
   askPrefill: string;
   compareCorner: string;
-  form: { required: string; phone: string; email: string; testMode: string };
+  form: { required: string; phone: string; email: string; sending: string; sent: string; failed: string; testMode: string };
 };
 
 /** Product page, template T. Blocks without data are not in the model, so they are not rendered. */

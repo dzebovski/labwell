@@ -77,6 +77,26 @@ export const aboutPageSchema = z.strictObject({
   contact: z.strictObject({ title: text, text, link }),
 });
 
+const privacyBlock = z.union([
+  text,
+  z.strictObject({ list: z.array(text).min(1) }),
+  z.strictObject({ contact: z.literal(true) }),
+]);
+
+export const privacyPageSchema = z.strictObject({
+  seo,
+  h1: text,
+  lead: text,
+  effective: text,
+  contentsTitle: text,
+  contactLabels: z.strictObject({ email: text, phone: text, address: text }),
+  sections: z
+    .array(z.strictObject({ id: z.string().regex(/^[a-z][a-z-]*$/), title: text, blocks: z.array(privacyBlock).min(1) }))
+    .min(1),
+});
+
+export type PrivacyPageContent = z.infer<typeof privacyPageSchema>;
+export type PrivacyBlock = z.infer<typeof privacyBlock>;
 export type AboutPageContent = z.infer<typeof aboutPageSchema>;
 export type ServicesPageContent = z.infer<typeof servicesPageSchema>;
 export type ContactsPageContent = z.infer<typeof contactsPageSchema>;

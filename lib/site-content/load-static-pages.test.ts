@@ -9,6 +9,8 @@ import {
   loadAboutPageAllLocales,
   loadContactsPage,
   loadContactsPageAllLocales,
+  loadPrivacyPage,
+  loadPrivacyPageAllLocales,
   loadServicesPage,
   loadServicesPageAllLocales,
 } from "./load.ts";
@@ -54,7 +56,7 @@ const aboutPage = () => ({
 describe("static page content (temporary folder)", () => {
   let root: string;
 
-  function write(section: "services" | "contacts" | "about", locale: "uk" | "en", data: unknown) {
+  function write(section: "services" | "contacts" | "about" | "privacy", locale: "uk" | "en", data: unknown) {
     const file = path.join(root, "pages", section, `${locale}.json`);
     mkdirSync(path.dirname(file), { recursive: true });
     writeFileSync(file, typeof data === "string" ? data : JSON.stringify(data));
@@ -108,6 +110,23 @@ describe("static page content (temporary folder)", () => {
     assert.throws(() => loadAboutPage("uk"), /pages\/about\/uk\.json[\s\S]*areas/);
   });
 
+  test("privacy blocks are text, a list or the contact card, nothing else", () => {
+    const page = {
+      seo: { title: "Privacy | LabWell", description: "Privacy description" },
+      h1: "Privacy",
+      lead: "Lead.",
+      effective: "From today.",
+      contentsTitle: "Contents",
+      contactLabels: { email: "Email", phone: "Phone", address: "Address" },
+      sections: [{ id: "data", title: "Data", blocks: ["Text.", { list: ["a", "b"] }, { contact: true }] }],
+    };
+    write("privacy", "uk", page);
+    assert.equal(loadPrivacyPage("uk").sections[0].blocks.length, 3);
+
+    write("privacy", "en", { ...page, sections: [{ id: "data", title: "Data", blocks: [{ table: [] }] }] });
+    assert.throws(() => loadPrivacyPage("en"), /pages\/privacy\/en\.json[\s\S]*sections/);
+  });
+
   test("AllLocales detects mismatched uk/en keys", () => {
     write("contacts", "uk", contactsPage());
     write("contacts", "en", { ...contactsPage(), extra: "x" });
@@ -120,5 +139,6 @@ describe("static page content (real files)", () => {
     assert.equal(loadServicesPageAllLocales().length, 2);
     assert.equal(loadContactsPageAllLocales().length, 2);
     assert.equal(loadAboutPageAllLocales().length, 2);
+    assert.equal(loadPrivacyPageAllLocales().length, 2);
   });
 });

@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "Privacy policy | LabWell",
+    "description": "How LABWELL LLC processes personal data from the LabWell website enquiry form: what we collect, why, who receives it, how long we keep it and your rights."
+  },
+  "h1": "Privacy policy",
+  "lead": "We explain how LABWELL LLC processes the data of people who send an enquiry through this website, and which cookies the website uses.",
+  "effective": "Effective from 16 October 2026.",
+  "contentsTitle": "Contents",
+  "contactLabels": { "email": "Email", "phone": "Phone", "address": "Address" },
+  "sections": [
+    {
+      "id": "controller",
+      "title": "Who processes your data",
+      "blocks": [
+        "The owner (controller) of your personal data is LABWELL LLC, 40U Hlybochytska St., Kyiv, 04050, Ukraine. We process data in accordance with the Law of Ukraine “On Personal Data Protection”.",
+        "For any question about your personal data, contact us:",
+        { "contact": true }
+      ]
+    },
+    {
+      "id": "data",
+      "title": "What data we collect",
+      "blocks": [
+        "From the enquiry form:",
+        {
+          "list": [
+            "your name;",
+            "your phone number;",
+            "your email, if you provide it;",
+            "your message, if you add one."
+          ]
+        },
+        "Together with the enquiry, we automatically receive the address of the page you sent it from and the language version of the website, so we know which instrument or solution you are asking about.",
+        "Providing your name and phone number is voluntary, but without them we cannot reply. Please do not include patient data, health data or other sensitive information in your message — we do not need it."
+      ]
+    },
+    {
+      "id": "purpose",
+      "title": "Purpose and legal basis",
+      "blocks": [
+        {
+          "list": [
+            "Replying to your enquiry, advising you and preparing a quotation — your consent, given by submitting the form, and steps taken at your request before entering into a contract (Article 11 of the Law of Ukraine “On Personal Data Protection”).",
+            "Protecting the form from spam and abuse — our legitimate interest."
+          ]
+        },
+        "We do not use form data for mailing lists and do not make automated decisions about you. You can withdraw your consent at any time; this does not affect the lawfulness of processing before the withdrawal."
+      ]
+    },
+    {
+      "id": "recipients",
+      "title": "Who receives your data",
+      "blocks": [
+        "Enquiries are seen only by LabWell staff who answer customer requests. We also use service providers who process data on our behalf:",
+        {
+          "list": [
+            "Vercel Inc. (USA) — website hosting and form processing;",
+            "Resend (Plus Five Five, Inc., USA) — delivering the enquiry from the form to our mailbox;",
+            "Google LLC (USA) — the mailbox that receives enquiries."
+          ]
+        },
+        "We do not sell data or share it with third parties for their own purposes. We may disclose data to public authorities only where the law expressly requires it."
+      ]
+    },
+    {
+      "id": "transfer",
+      "title": "Transfers outside Ukraine",
+      "blocks": [
+        "The providers listed above may process data on servers in the USA and the EU. We choose providers that ensure adequate data protection. By submitting the form, you consent to such transfers (Article 29 of the Law of Ukraine “On Personal Data Protection”)."
+      ]
+    },
+    {
+      "id": "retention",
+      "title": "How long we keep your data",
+      "blocks": [
+        {
+          "list": [
+            "Enquiries — as long as needed to reply and support your request, but no longer than 3 years from our last contact.",
+            "If we enter into a contract, the data needed for our cooperation is kept for the term of the contract and the periods required by law.",
+            "If you ask us to delete your data or withdraw your consent, we delete it without delay unless the law requires us to keep it longer.",
+            "Vercel’s technical logs are kept briefly for website security; the content of the form is not recorded in them."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rights",
+      "title": "Your rights",
+      "blocks": [
+        "Under Article 8 of the Law of Ukraine “On Personal Data Protection”, you have the right to:",
+        {
+          "list": [
+            "know what data of yours we process, why and who receives it;",
+            "access your data;",
+            "have inaccurate data corrected;",
+            "have your data deleted or its processing stopped;",
+            "object to processing;",
+            "withdraw your consent at any time."
+          ]
+        },
+        "To exercise your rights, write to labwell.operations@gmail.com. We will reply within 30 calendar days.",
+        "You may also lodge a complaint with the Ukrainian Parliament Commissioner for Human Rights (ombudsman.gov.ua) or go to court."
+      ]
+    },
+    {
+      "id": "cookies",
+      "title": "Cookies",
+      "blocks": [
+        "The website does not use analytics or advertising cookies. It stores only one cookie in your browser, and only if you change the website language:",
+        {
+          "list": [
+            "labwell-locale — remembers the language you chose; kept for 1 year."
+          ]
+        },
+        "You can delete cookies in your browser settings. If we add analytics, we will update this page first and ask for your consent."
+      ]
+    },
+    {
+      "id": "changes",
+      "title": "Changes to this policy",
+      "blocks": [
+        "If we change how we process data, we will update this page and the date at the top."
+      ]
+    }
+  ]
+}

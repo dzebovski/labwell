@@ -1316,3 +1316,17 @@ a.relatedCard:hover {
   border: 1px solid var(--color-brand-200);
   border-radius: var(--radius-card);
 }
+
+.formStatus[data-tone="error"] {
+  background: var(--color-surface);
+  border-color: var(--color-danger);
+}
+
+/* Off-screen trap for bots; people and screen readers never reach it. */
+.honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

@@ -24,9 +24,11 @@ import {
 import {
   aboutPageSchema,
   contactsPageSchema,
+  privacyPageSchema,
   servicesPageSchema,
   type AboutPageContent,
   type ContactsPageContent,
+  type PrivacyPageContent,
   type ServicesPageContent,
 } from "./schema-static-pages.ts";
 import {
@@ -263,7 +265,14 @@ export function loadAboutPage(locale: ContentLocale): AboutPageContent {
   );
 }
 
-type StaticPageSection = "services" | "contacts" | "about";
+/** Text of the privacy policy: `content/pages/privacy/{locale}.json`. */
+export function loadPrivacyPage(locale: ContentLocale): PrivacyPageContent {
+  return cached(`pages/privacy/${locale}/${contentRoot()}`, () =>
+    readJson(path.join(contentRoot(), "pages", "privacy", `${locale}.json`), privacyPageSchema),
+  );
+}
+
+type StaticPageSection = "services" | "contacts" | "about" | "privacy";
 
 function assertLocaleKeysMatch(
   section: StaticPageSection,
@@ -339,4 +348,8 @@ export function loadOverviewAllLocales(slug: string) {
 export function loadTestMenuAllLocales(slug: string) {
   loadTests(slug);
   return contentLocales.map((locale) => loadTestMenu(slug, locale));
+}
+
+export function loadPrivacyPageAllLocales(): PrivacyPageContent[] {
+  return pageAllLocales("privacy", loadPrivacyPage);
 }
