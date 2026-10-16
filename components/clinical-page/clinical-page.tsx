@@ -19,6 +19,7 @@ import { mainPhoto } from "@/lib/site-content/photos";
 import { loadShared } from "@/lib/site-content/load";
 import { breadcrumbListLd, faqPageLd } from "@/lib/site-content/jsonld";
 import { serializeJsonLd } from "@/lib/site-content/jsonld";
+import { linkedText } from "@/lib/site-content/placeholders";
 import { SITE_URL } from "@/lib/site-config";
 
 import { ClinicalTestList } from "./clinical-test-list";
@@ -60,6 +61,7 @@ export async function ClinicalPage({ page, locale, labels }: Props) {
         messagePrefill: page.T12_contact.messagePrefill,
         phone: shared.contact.phone.startsWith("[") ? undefined : shared.contact.phone,
         email: shared.contact.email.startsWith("[") ? undefined : shared.contact.email,
+        consent: linkedText(shared.contact.form.consent),
         submit: shared.contact.form.submit,
         fields: shared.contact.form.fields,
       }

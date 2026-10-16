@@ -1,0 +1,152 @@
+{
+  "seo": {
+    "title": "About LabWell — Snibe and Bio-Rad Distributor",
+    "description": "LabWell is an official distributor of Snibe and Bio-Rad in Ukraine, supplying instruments, reagents and controls to labs, from selection to maintenance."
+  },
+  "h1": "About us",
+  "lead": "LabWell is an official distributor of Snibe and Bio-Rad in Ukraine. We supply clinical laboratories with instruments, reagents and quality controls, and support them from solution selection to maintenance.",
+  "facts": {
+    "items": [
+      {
+        "value": "15",
+        "label": "years in laboratory diagnostics"
+      },
+      {
+        "value": "10",
+        "label": "specialists, including engineers and application specialists"
+      },
+      {
+        "value": "ISO 13485",
+        "label": "quality management system"
+      }
+    ]
+  },
+  "intro": {
+    "title": "What LabWell does",
+    "paragraphs": [
+      "Our goal is for every laboratory to get reliable test results and work with confidence every day. To do this, we offer solutions from two manufacturers: Snibe, which makes instruments for clinical laboratories and in vitro diagnostic reagents, and Bio-Rad, which provides systems and materials for clinical diagnostics and quality control.",
+      "Our work goes beyond supply. We help you choose a solution that fits your laboratory’s needs, install instruments, train staff, and provide maintenance and application support for all Snibe and Bio-Rad instruments."
+    ]
+  },
+  "audience": {
+    "title": "Who we work with",
+    "text": "We work with clinical laboratories and healthcare facilities that need instruments, reagents and quality controls for in vitro diagnostics."
+  },
+  "areas": {
+    "title": "Areas",
+    "text": "The LabWell catalog covers the main areas of laboratory diagnostics.",
+    "items": [
+      {
+        "id": "clia",
+        "title": "Immunoassay (CLIA)"
+      },
+      {
+        "id": "biochemistry",
+        "title": "Clinical chemistry and electrolytes"
+      },
+      {
+        "id": "hemostasis",
+        "title": "Hemostasis"
+      },
+      {
+        "id": "molecular",
+        "title": "Molecular diagnostics"
+      },
+      {
+        "id": "hba1c",
+        "title": "Diabetes and hemoglobinopathies"
+      },
+      {
+        "id": "blood-group",
+        "title": "Immunohematology"
+      },
+      {
+        "id": "autoimmune-infectious",
+        "title": "Autoimmune and infectious diseases"
+      },
+      {
+        "id": "qc",
+        "title": "Laboratory quality control"
+      },
+      {
+        "id": "automation",
+        "title": "Laboratory automation"
+      },
+      {
+        "id": "software",
+        "title": "Software"
+      }
+    ]
+  },
+  "approach": {
+    "title": "How we work",
+    "items": [
+      {
+        "id": "solution-selection",
+        "title": "Solution selection",
+        "text": "We discuss your laboratory’s needs and help you select the most effective solution."
+      },
+      {
+        "id": "supply",
+        "title": "Supply",
+        "text": "We supply Snibe and Bio-Rad instruments, reagents and controls."
+      },
+      {
+        "id": "installation-training",
+        "title": "Installation and training",
+        "text": "We install the instrument and train your staff to use it."
+      },
+      {
+        "id": "maintenance",
+        "title": "Maintenance",
+        "text": "We provide warranty and post-warranty maintenance."
+      },
+      {
+        "id": "application-support",
+        "title": "Application support",
+        "text": "We advise on how reagents work, how to interpret results and why a result may be false."
+      }
+    ],
+    "link": {
+      "label": "More about our services",
+      "href": "/services"
+    }
+  },
+  "team": {
+    "title": "Our team",
+    "text": "LabWell has a team of 10 specialists: field service engineers, application specialists and account managers. Our engineers and application specialists are trained by the manufacturers, so they install, maintain and support instruments to Snibe and Bio-Rad standards."
+  },
+  "quality": {
+    "title": "Quality",
+    "text": "LabWell imports, stores, distributes and maintains products under an ISO 13485 certified quality management system. We control the temperature during delivery so that reagents and controls reach your laboratory in the right condition."
+  },
+  "why": {
+    "title": "Why LabWell",
+    "items": [
+      {
+        "title": "15 years of experience",
+        "text": "LabWell is an official distributor of Snibe and Bio-Rad in Ukraine with 15 years of experience working with clinical laboratories."
+      },
+      {
+        "title": "The full cycle in one place",
+        "text": "From solution selection to maintenance: one team and every service for all instruments from both brands."
+      },
+      {
+        "title": "Support after start-up",
+        "text": "After installation, your laboratory is not left on its own: the instrument is maintained, and a specialist helps with reagent performance and result interpretation."
+      }
+    ]
+  },
+  "clients": {
+    "title": "Trusted by",
+    "text": "Clinical laboratories and healthcare facilities across Ukraine that work with instruments, reagents and controls from LabWell."
+  },
+  "contact": {
+    "title": "Discuss your needs with a specialist",
+    "text": "Tell us which tests your laboratory runs, and we will help you choose a solution and answer your questions.",
+    "link": {
+      "label": "Contact LabWell",
+      "href": "/contacts"
+    }
+  }
+}

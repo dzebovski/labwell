@@ -1298,3 +1298,21 @@ a.relatedCard:hover {
     grid-template-columns: repeat(var(--count), minmax(0, 1fr));
   }
 }
+
+.consent a {
+  color: var(--color-brand-700);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.formStatus {
+  flex: 1 1 100%;
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+  color: var(--color-text-primary);
+  font-size: var(--text-small-size);
+  line-height: var(--text-small-line);
+  background: var(--color-brand-50);
+  border: 1px solid var(--color-brand-200);
+  border-radius: var(--radius-card);
+}

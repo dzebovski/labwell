@@ -22,8 +22,10 @@ import {
   type HomeContent,
 } from "./schema-directions.ts";
 import {
+  aboutPageSchema,
   contactsPageSchema,
   servicesPageSchema,
+  type AboutPageContent,
   type ContactsPageContent,
   type ServicesPageContent,
 } from "./schema-static-pages.ts";
@@ -254,8 +256,17 @@ export function loadContactsPage(locale: ContentLocale): ContactsPageContent {
   );
 }
 
+/** Text and structure of the about page: `content/pages/about/{locale}.json`. */
+export function loadAboutPage(locale: ContentLocale): AboutPageContent {
+  return cached(`pages/about/${locale}/${contentRoot()}`, () =>
+    readJson(path.join(contentRoot(), "pages", "about", `${locale}.json`), aboutPageSchema),
+  );
+}
+
+type StaticPageSection = "services" | "contacts" | "about";
+
 function assertLocaleKeysMatch(
-  section: "services" | "contacts",
+  section: StaticPageSection,
   a: unknown,
   b: unknown,
   file: string,
@@ -279,7 +290,7 @@ function assertLocaleKeysMatch(
   }
 }
 
-function pageAllLocales<T>(section: "services" | "contacts", loader: (locale: ContentLocale) => T): T[] {
+function pageAllLocales<T>(section: StaticPageSection, loader: (locale: ContentLocale) => T): T[] {
   const [uk, en] = contentLocales.map(loader);
   assertLocaleKeysMatch(
     section,
@@ -296,6 +307,10 @@ export function loadServicesPageAllLocales(): ServicesPageContent[] {
 
 export function loadContactsPageAllLocales(): ContactsPageContent[] {
   return pageAllLocales("contacts", loadContactsPage);
+}
+
+export function loadAboutPageAllLocales(): AboutPageContent[] {
+  return pageAllLocales("about", loadAboutPage);
 }
 
 /** Validates both locale files of a direction, or of the home page; throws on the first problem. */

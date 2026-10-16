@@ -5,7 +5,7 @@
  */
 import { getFallbackTrail, getPageTrail, trailCrumbs, type Trail } from "../breadcrumbs.ts";
 import { resolveHref, type SiteLocale } from "./links.ts";
-import { hasPlaceholder, publishable } from "./placeholders.ts";
+import { hasPlaceholder, linkedText, publishable, type LinkedText } from "./placeholders.ts";
 import type { ProductContent, SharedContent } from "./schema.ts";
 
 export type LinkModel = { label: string; href: string; external: boolean };
@@ -42,7 +42,7 @@ export type ContactModel = {
   messagePrefill?: string;
   phone?: string;
   email?: string;
-  consent?: string;
+  consent?: LinkedText;
   submit: string;
   fields: SharedContent["contact"]["form"]["fields"];
 };
@@ -195,7 +195,7 @@ export function buildContact(
     messagePrefill: source.messagePrefill,
     phone: publishable(shared.contact.phone),
     email: publishable(shared.contact.email),
-    consent: publishable(form.consent),
+    consent: linkedText(form.consent),
     submit: form.submit,
     fields: form.fields,
   };

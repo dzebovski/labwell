@@ -52,8 +52,8 @@
     ]
   },
   "contact": {
-    "phone": "+38 (044) 205-58-20",
-    "email": "[EMAIL]",
+    "phone": "+38 (067) 405-71-25",
+    "email": "labwell.operations@gmail.com",
     "form": {
       "fields": [
         {
@@ -81,7 +81,7 @@
           "required": false
         }
       ],
-      "consent": "By submitting this form, you agree to the [privacy policy].",
+      "consent": "By submitting this form, you agree to the [privacy policy](/privacy).",
       "submit": "Send"
     }
   },

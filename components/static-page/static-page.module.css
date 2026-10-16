@@ -85,3 +85,213 @@
     gap: var(--space-6);
   }
 }
+
+/* ---------- About ---------- */
+
+.aboutFacts {
+  display: grid;
+  gap: var(--space-4);
+  margin: var(--space-6) 0 0;
+}
+
+.aboutFact {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: var(--space-2);
+  padding: var(--space-5) var(--space-6);
+}
+
+.aboutFactValue {
+  margin: 0;
+  color: var(--color-brand-700);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.aboutFactLabel {
+  color: var(--color-text-secondary);
+  font-size: var(--text-small-size);
+  line-height: var(--text-small-line);
+}
+
+.aboutSplit {
+  display: grid;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.aboutProse {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 45rem;
+  min-width: 0;
+}
+
+.aboutProse > div {
+  margin-bottom: 0;
+}
+
+.aboutAside,
+.aboutPanel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: clamp(var(--space-5), 4vw, var(--space-8));
+  min-width: 0;
+}
+
+.aboutH3 {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: var(--text-h4-size);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--text-h4-line);
+  text-wrap: balance;
+}
+
+.aboutIntroText {
+  max-width: 45rem;
+  margin-top: calc(var(--space-6) * -0.5);
+  margin-bottom: var(--space-6);
+}
+
+.aboutAreas {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.aboutArea {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  min-height: var(--touch-target);
+  padding: var(--space-3) var(--space-4);
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+
+a.aboutArea:hover {
+  color: var(--color-brand-700);
+  border-color: var(--color-brand-300);
+}
+
+a.aboutArea svg {
+  flex: 0 0 auto;
+  color: var(--color-brand-700);
+}
+
+.aboutMore {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--touch-target);
+  color: var(--color-brand-700);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+}
+
+.aboutMore:hover {
+  text-decoration: underline;
+}
+
+.aboutSteps,
+.aboutWhy {
+  display: grid;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.aboutStep {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-6);
+  min-width: 0;
+}
+
+.aboutPair {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.aboutLogos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.aboutLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  min-height: 5.5rem;
+  color: var(--color-text-muted);
+  background: var(--color-surface);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-card);
+}
+
+.aboutLogoBar {
+  width: 4.5rem;
+  height: 0.625rem;
+  background: var(--color-border);
+  border-radius: var(--radius-round);
+}
+
+@media (min-width: 48rem) {
+  .aboutFacts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .aboutAreas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .aboutPair,
+  .aboutSteps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .aboutLogos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .aboutSplit {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    gap: var(--space-10);
+  }
+
+  .aboutWhy {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .aboutLogos {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 80rem) {
+  .aboutSteps {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}

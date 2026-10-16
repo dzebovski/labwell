@@ -3,15 +3,15 @@
  * llms.txt summary and the default social-card text.
  *
  * Only confirmed facts live here (LabWell's answers of 2026-10-01: an official distributor of
- * Snibe and Bio-Rad in Ukraine). The phone number and e-mail come from `content/shared/`, where they
- * may contain placeholders until LabWell sends them. The address below is temporary.
+ * Snibe and Bio-Rad in Ukraine). The phone number and e-mail come from `content/shared/`; a value
+ * there that is still a `[placeholder]` is hidden on the site.
  */
 import type { LocalizedText } from "./define.ts";
 
 export const company = {
   name: "LabWell",
   /**
-   * Legal name and address. Temporary data from LabWell (2026-10-05): replace before launch (task 16).
+   * Legal name and address, confirmed by LabWell on 2026-10-16.
    * Used by the contacts page and its Organization structured data (task 12).
    */
   legalName: { uk: "ТОВ «ЛАБВЕЛЛ»", en: "LABWELL LLC" } satisfies LocalizedText,
@@ -19,7 +19,7 @@ export const company = {
     uk: "04050, м. Київ, вул. Глибочицька, 40У",
     en: "40U Hlybochytska St., Kyiv, 04050, Ukraine",
   } satisfies LocalizedText,
-  /** Structured form of the same temporary address, for PostalAddress on the contacts page. */
+  /** Structured form of the same address, for PostalAddress on the contacts page. */
   postalAddress: {
     streetAddress: { uk: "вул. Глибочицька, 40У", en: "40U Hlybochytska St." } satisfies LocalizedText,
     addressLocality: { uk: "Київ", en: "Kyiv" } satisfies LocalizedText,

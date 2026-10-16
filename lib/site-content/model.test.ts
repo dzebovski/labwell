@@ -5,6 +5,7 @@ import { product, shared } from "./fixtures.ts";
 import { buildJsonLd, serializeJsonLd } from "./jsonld.ts";
 import { resolveHref } from "./links.ts";
 import { buildProductPage } from "./model.ts";
+import { hasPlaceholder, linkedText } from "./placeholders.ts";
 
 function build(overrides: Parameters<typeof product>[0] = {}, sharedOverrides = {}) {
   return buildProductPage({
@@ -146,4 +147,20 @@ test("JSON-LD levels without a page are left out of the breadcrumb", () => {
 
 test("serialised JSON-LD cannot close the script tag", () => {
   assert.equal(serializeJsonLd({ a: "</script>" }).includes("</script>"), false);
+});
+
+test("a Markdown link in the form consent becomes a link, a bare [placeholder] still hides it", () => {
+  const consent = "By submitting this form, you agree to the [privacy policy](/privacy).";
+  assert.equal(hasPlaceholder(consent), false);
+  assert.deepEqual(linkedText(consent), {
+    before: "By submitting this form, you agree to the ",
+    link: { label: "privacy policy", href: "/privacy" },
+    after: ".",
+  });
+  assert.deepEqual(linkedText("Plain text."), { before: "Plain text.", after: "" });
+  assert.equal(linkedText("You agree to the [privacy policy]."), undefined);
+  assert.equal(linkedText("[policy](/privacy) and [EMAIL]"), undefined);
+
+  const page = build({}, { form: { ...shared().contact.form, consent } });
+  assert.equal(page.contact?.consent?.link?.href, "/privacy");
 });

@@ -46,7 +46,8 @@
     "brands": "Brands",
     "about": "About us",
     "services": "Services and maintenance",
-    "contacts": "Contacts"
+    "contacts": "Contacts",
+    "privacy": "Privacy policy"
   },
   "productPage": {
     "home": "Home",
@@ -63,7 +64,8 @@
     "form": {
       "required": "Fill in this field",
       "phone": "Enter a valid phone number",
-      "email": "Enter a valid email address"
+      "email": "Enter a valid email address",
+      "testMode": "The form is in test mode: your enquiry has not been sent. Please call us to discuss your needs."
     },
     "showHidden": "Show hidden levels",
     "up": "Up one level: {name}"
@@ -162,5 +164,10 @@
     "brandsHeading": "Brands",
     "contactHeading": "Request a consultation",
     "heroPhotos": "Snibe and Bio-Rad analyzers"
+  },
+  "privacyPage": {
+    "title": "Privacy policy | LabWell",
+    "description": "LabWell privacy policy: how we handle the data you leave in the enquiry form on this website.",
+    "pending": "The privacy policy is being prepared and will appear on this page soon."
   }
 }

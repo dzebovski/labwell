@@ -12,11 +12,13 @@ export type SiteFooterLabels = {
   copyright: string;
   home: string;
   contacts: string;
+  privacy: string;
 };
 
 type SiteFooterProps = {
   locale: Locale;
   homeHref: string;
+  privacyHref: string;
   model: FooterModel;
   labels: SiteFooterLabels;
 };
@@ -25,7 +27,7 @@ type SiteFooterProps = {
  * Server-rendered site map: the header's mega menu opens on the client, so these links are
  * what a crawler finds in the HTML. Contacts appear only once they are real (see `buildFooter`).
  */
-export function SiteFooter({ locale, homeHref, model, labels }: SiteFooterProps) {
+export function SiteFooter({ locale, homeHref, privacyHref, model, labels }: SiteFooterProps) {
   const { contacts } = model;
 
   return (
@@ -59,7 +61,10 @@ export function SiteFooter({ locale, homeHref, model, labels }: SiteFooterProps)
       </div>
 
       <div className={styles.bottom}>
-        <p>{labels.copyright}</p>
+        <p className={styles.legal}>
+          <span>{labels.copyright}</span>
+          <Link href={privacyHref} className={styles.legalLink}>{labels.privacy}</Link>
+        </p>
         {contacts ? (
           <ul className={styles.contacts} aria-label={labels.contacts}>
             {contacts.phone ? (

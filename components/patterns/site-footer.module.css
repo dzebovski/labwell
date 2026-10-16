@@ -173,3 +173,23 @@
     min-height: 2rem;
   }
 }
+
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 var(--space-4);
+}
+
+.legalLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.legalLink:hover {
+  color: var(--color-text-primary);
+}

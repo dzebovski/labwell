@@ -7,7 +7,7 @@ import type { ServicesPageContent } from "@/lib/site-content/schema-static-pages
 import styles from "./static-page.module.css";
 
 /** Same icons as Labwell; content ids also serve as stable section anchors. */
-const serviceIcons: Record<ServicesPageContent["services"][number]["id"], IconName> = {
+export const serviceIcons: Record<ServicesPageContent["services"][number]["id"], IconName> = {
   "solution-selection": "message",
   supply: "truck",
   "installation-training": "graduation-cap",

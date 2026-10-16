@@ -1,9 +1,13 @@
 "use client";
 
+import Link from "next/link";
+import { useParams } from "next/navigation";
 import { useRef, useState, type FormEvent } from "react";
 
 import globalStyles from "@/components/labwell-ui.module.css";
 import { Button, TextField } from "@/components/ui/primitives";
+import { isLocale } from "@/i18n/config";
+import { withLocale } from "@/lib/locale-routing";
 import type { ContactModel } from "@/lib/site-content/model";
 
 import styles from "../product-page.module.css";
@@ -11,7 +15,7 @@ import styles from "../product-page.module.css";
 type Field = ContactModel["fields"][number];
 type Errors = Partial<Record<Field["name"], string>>;
 
-export type ContactFormMessages = { required: string; phone: string; email: string };
+export type ContactFormMessages = { required: string; phone: string; email: string; testMode: string };
 
 const phonePattern = /^\+?[\d\s()\-.]{7,20}$/;
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
@@ -34,9 +38,8 @@ function validate(fields: Field[], data: FormData, messages: ContactFormMessages
 
 /**
  * Contact form: markup and client-side validation only.
- * TODO(form-submission): the button does not send anything yet. Sending is a separate
- * task (see _tasks/02-build-T.md, "Журнал" → "Що лишилося"): Server Action / API route,
- * email delivery, spam protection, success and error states.
+ * TODO(form-submission): test mode — valid data is not sent; the form says so and offers the
+ * phone instead. Sending is task 13: Server Action / API route, email delivery, spam protection.
  */
 export function ContactForm({
   fields,
@@ -47,11 +50,18 @@ export function ContactForm({
 }: {
   fields: Field[];
   submitLabel: string;
-  consent?: string;
+  consent?: ContactModel["consent"];
   messagePrefill?: string;
   messages: ContactFormMessages;
 }) {
   const [errors, setErrors] = useState<Errors>({});
+  const [testNotice, setTestNotice] = useState(false);
+  const params = useParams<{ locale?: string }>();
+  const consentHref = consent?.link
+    ? params.locale && isLocale(params.locale) && consent.link.href.startsWith("/")
+      ? withLocale(params.locale, consent.link.href)
+      : consent.link.href
+    : undefined;
   const formRef = useRef<HTMLFormElement>(null);
 
   function onSubmit(event: FormEvent<HTMLFormElement>) {
@@ -61,9 +71,12 @@ export function ContactForm({
 
     const firstInvalid = fields.find((field) => nextErrors[field.name]);
     if (firstInvalid) {
+      setTestNotice(false);
       formRef.current?.querySelector<HTMLElement>(`[name="${firstInvalid.name}"]`)?.focus();
+      return;
     }
     // Valid data is intentionally not sent anywhere (see TODO above).
+    setTestNotice(true);
   }
 
   function clearError(name: Field["name"]) {
@@ -124,10 +137,19 @@ export function ContactForm({
       })}
 
       <div className={`${styles.formWide} ${styles.formFoot}`}>
-        {consent ? <p className={styles.consent}>{consent}</p> : null}
+        {consent ? (
+          <p className={styles.consent}>
+            {consent.before}
+            {consent.link && consentHref ? <Link href={consentHref}>{consent.link.label}</Link> : null}
+            {consent.after}
+          </p>
+        ) : null}
         <Button type="submit" size="lg" className={styles.submit}>
           {submitLabel}
         </Button>
+        <p role="status" className={styles.formStatus} hidden={!testNotice}>
+          {messages.testMode}
+        </p>
       </div>
     </form>
   );

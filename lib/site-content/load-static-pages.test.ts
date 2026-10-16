@@ -5,12 +5,14 @@ import path from "node:path";
 import test, { afterEach, beforeEach, describe } from "node:test";
 
 import {
+  loadAboutPage,
+  loadAboutPageAllLocales,
   loadContactsPage,
   loadContactsPageAllLocales,
   loadServicesPage,
   loadServicesPageAllLocales,
 } from "./load.ts";
-import { serviceIds } from "./schema-static-pages.ts";
+import { aboutAreaIds, serviceIds } from "./schema-static-pages.ts";
 
 const servicesPage = () => ({
   seo: { title: "Services | LabWell", description: "Services description" },
@@ -29,10 +31,30 @@ const contactsPage = () => ({
   contact: { title: "Send an enquiry", text: "Tell us about your needs." },
 });
 
+const aboutPage = () => ({
+  seo: { title: "About | LabWell", description: "About description" },
+  h1: "About us",
+  lead: "Introductory text.",
+  facts: { items: [{ value: "15", label: "years" }, { value: "10", label: "specialists" }] },
+  intro: { title: "What we do", paragraphs: ["Paragraph."] },
+  audience: { title: "Who we work with", text: "Laboratories." },
+  areas: { title: "Areas", text: "Catalog areas.", items: aboutAreaIds.map((id) => ({ id, title: id })) },
+  approach: {
+    title: "How we work",
+    items: serviceIds.map((id) => ({ id, title: id, text: "Description" })),
+    link: { label: "Services", href: "/services" },
+  },
+  team: { title: "Team", text: "Engineers." },
+  quality: { title: "Quality", text: "ISO 13485." },
+  why: { title: "Why us", items: [{ title: "Reason", text: "Because." }] },
+  clients: { title: "Clients", text: "Laboratories." },
+  contact: { title: "Contact", text: "Get in touch.", link: { label: "Contact us", href: "/contacts" } },
+});
+
 describe("static page content (temporary folder)", () => {
   let root: string;
 
-  function write(section: "services" | "contacts", locale: "uk" | "en", data: unknown) {
+  function write(section: "services" | "contacts" | "about", locale: "uk" | "en", data: unknown) {
     const file = path.join(root, "pages", section, `${locale}.json`);
     mkdirSync(path.dirname(file), { recursive: true });
     writeFileSync(file, typeof data === "string" ? data : JSON.stringify(data));
@@ -74,6 +96,18 @@ describe("static page content (temporary folder)", () => {
     assert.throws(() => loadServicesPage("uk"), /pages\/services\/uk\.json[\s\S]*services\.\[0\]\.id|services\[0\]\.id/);
   });
 
+  test("loads a valid about page", () => {
+    write("about", "uk", aboutPage());
+    assert.equal(loadAboutPage("uk").facts.items[0].value, "15");
+  });
+
+  test("rejects an about area that is not a catalog direction", () => {
+    const page = aboutPage();
+    page.areas.items[0].id = "equipment" as (typeof page.areas.items)[number]["id"];
+    write("about", "uk", page);
+    assert.throws(() => loadAboutPage("uk"), /pages\/about\/uk\.json[\s\S]*areas/);
+  });
+
   test("AllLocales detects mismatched uk/en keys", () => {
     write("contacts", "uk", contactsPage());
     write("contacts", "en", { ...contactsPage(), extra: "x" });
@@ -85,5 +119,6 @@ describe("static page content (real files)", () => {
   test("all locales of both pages validate and their keys match", () => {
     assert.equal(loadServicesPageAllLocales().length, 2);
     assert.equal(loadContactsPageAllLocales().length, 2);
+    assert.equal(loadAboutPageAllLocales().length, 2);
   });
 });

@@ -109,12 +109,14 @@ export default async function LocaleLayout({
         <SiteFooter
           locale={locale}
           homeHref={withLocale(locale, "/")}
+          privacyHref={withLocale(locale, "/privacy")}
           model={footer}
           labels={{
             navigation: dictionary.footer.navigation,
             copyright: dictionary.footer.copyright.replace("{year}", String(new Date().getFullYear())),
             home: dictionary.accessibility.home,
             contacts: dictionary.navigation.contacts,
+            privacy: dictionary.pages.privacy,
           }}
         />
         <JsonLdScripts
